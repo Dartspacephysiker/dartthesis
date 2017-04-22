@@ -46,6 +46,8 @@
 \RequirePackage[labelfont=bf]{caption}
 %%   Bibliography 
 \RequirePackage{natbib}
+\renewcommand\NAT@open{[} \renewcommand\NAT@close{]}
+
 
 %%   Extra features
 \RequirePackage{hyperref}

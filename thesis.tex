@@ -35,6 +35,13 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[labelfont=bf]{caption}
 
+% A quotation
+\usepackage[french,english]{babel}
+\usepackage{csquotes}
+\usepackage{setspace}
+% \DeclareQuoteAlias{english}{french}
+\AtBeginEnvironment{quote}{\itshape}
+
 % use Linux Libertine font package
 \usepackage{inconsolata}
 \usepackage{fourier}
@@ -125,18 +132,19 @@
 \include{./pre/tex/front_matter}   % Front Matter: title, preface, abstract, etc.
 
 \pagenumbering{arabic}           % Switch to arabic page numbering for chapters
-\doublespacing                   % Document must be double spaced for Dartmouth
+% \doublespacing                   % Document must be double spaced for Dartmouth
+\onehalfspacing
 
 %--- ADD CHAPTERS
-\include{./ch1/tex/chapter1}       % Chapter 1
-\include{./app/tex/appendix}       % Appendicies A & B
+% \include{./ch1/tex/chapter1}       % Chapter 1
+% \include{./app/tex/appendix}       % Appendicies A & B
 %--- END CHAPTERS
 
 % Bibliography using bibtex & natbib w/ MNRAS style formatting
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{mn}
-\bibliography{/directory/structure/papers.bib}
+\bibliographystyle{agufull08}
+\bibliography{refs}
 
 \end{document}
 %--- END THESIS DOCUMENT
