@@ -38,6 +38,13 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[labelfont=bf]{caption}
 
+% Smaller dan dat
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}
+  {0pt}{20pt}{15pt}
+
 % A quotation
 \usepackage[french,english]{babel}
 \usepackage{csquotes}
