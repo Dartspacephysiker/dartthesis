@@ -19,14 +19,17 @@
 \documentclass[12pt]{report}
 
 %--- BEGIN HEADER
-\usepackage[square]{natbib}
+\usepackage[square,sectionbib]{natbib}
+\usepackage{chapterbib}
 \usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+\usepackage{array}
 \usepackage[dvips]{graphicx}
 \usepackage{pslatex}
 \usepackage{epsfig}
+\usepackage[figuresleft]{rotating}
 \usepackage{longtable}
 \usepackage{lscape}
 \usepackage{setspace}
@@ -154,19 +157,20 @@
 \onehalfspacing
 
 %--- ADD CHAPTERS
-\include{./ch1/tex/chapter1}       % Chapter 1
-\include{./ch2/tex/chapter2}       % Chapter 2
-\include{./ch3/tex/chapter3}       % Chapter 3
-\include{./ch4/tex/chapter4}       % Chapter 4
-\include{./ch5/tex/chapter5}       % Chapter 5
+\include{./ch1/tex/chapter}       % Chapter 1
+\include{./ch2/tex/chapter}       % Chapter 2
+\include{./ch3/tex/chapter}       % Chapter 3
+\include{./ch4/tex/chapter}       % Chapter 4
+\include{./ch5/tex/chapter}       % Chapter 5
+\include{./ch6/tex/chapter}       % Chapter 6
 \include{./app/tex/appendix}       % Appendicies A & B
 %--- END CHAPTERS
 
 % Bibliography using bibtex & natbib w/ MNRAS style formatting
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{agufull08}
-\bibliography{refs}
+% \bibliographystyle{agufull08}
+% \bibliography{refs}
 
 \end{document}
 %--- END THESIS DOCUMENT

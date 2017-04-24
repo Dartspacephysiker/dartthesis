@@ -1,0 +1,153 @@
+%------------------------------------------------------------------------%
+% Example appendix section for the thesis template.                      %
+%                                                                        %
+%      Author: Gregory Alexander Feiden                                  %
+%   Institute: Dartmouth College                                         %
+%        Date: 2014 May 17                                               %
+%                                                                        %
+%     License: Beerware (revision 42)                                    %
+%              ----------------------                                    %
+%              Gregory Feiden wrote this file. As long as you retain     %
+%              this notice you can do whatever you want with this code.  %
+%              If we meet some day and you think this code is worth it,  %
+%              you can buy me a beer in return.                          %
+%                                                                        %
+%------------------------------------------------------------------------%
+
+\chapter{Uncertainty Analysis}
+\label{app:A}
+
+  After minimization of systematic error (via laboratory and in situ
+  calibration, for example), an important source of uncertainty for
+  particle detectors is that arising from counting
+  statistics. The strategy for estimating the uncertainty
+  associated with moments derived from a sampled particle distribution
+  $f ( \mathbf{v} ) $ has been generation of statistics of each moment based
+  on Monte Carlo simulation and sampling of $f(\mathbf{v})$ \citep[e.g.][]{Paschmann1998,Gershman2013}
+  However, \citet{Gershman2015} have produced an analytical framework
+  for calculation of both the uncertainty in moments of $f (
+  \mathbf{v} ) $ and the the covariance between moments, by which the
+  uncertainty in arbitrary, differentiable functions of moments are
+  obtainable via standard techniques of linearized uncertainty
+  analysis. In our application these functions are field-aligned
+  current density $j_\parallel = \langle n v_\parallel \rangle$ and
+  average temperature $T = \big ( \langle P_{\parallel} \rangle + 2
+  \langle P_{\perp} \rangle \big ) \big / 3 \langle n \rangle $, where
+  gyrotropy is assumed in the expression for $T$. (FAST ion and
+  electrons ESAs measure only one direction perpendicular to the
+  geomagnetic field.)
+
+  We first derive expressions for $\sigma_{j_\parallel}$ and
+  $\sigma_T$ as functions of the moments of $f(\mathbf{v})$, as well
+  as the related uncertainties and covariances. We then summarize
+  results of \citet{Gershman2015}, who develop analytic expressions
+  for moment uncertainties and covariances of an arbitrary sampled
+  distribution function. Their work, in turn, allows
+  $\sigma_{j_\parallel}$ and $\sigma_T$ to be expressed analytically;
+  final analytic forms for $\sigma_T$ and $\sigma_{j_\parallel}$ are
+  used to calculate the error bars shown in Figures~\ref{ch6:Fig1} and
+  ~\ref{ch6:Fig4}.
+
+  Following \citet{Gershman2015}, let $W$ be a differentiable function
+  of plasma moments $\langle n A_i \rangle $; the linearized
+  uncertainty $\sigma_W$ may be expressed % [cite cite]
+  \begin{equation} \label{appa:eqLinUnc} \sigma_W^2 =
+    \sum\limits_{i}\sum\limits_{j} \bigg ( \frac{ \partial W}{\partial
+      A_i} \bigg ) \bigg ( \frac{ \partial W}{\partial A_j} \bigg )
+    \sigma_{A_i,A_j}.
+  \end{equation}
+  Uncertainty in $j_{\parallel} $ and $T$ are
+  % \begin{linenomath*}
+    \begin{align}
+      \begin{split}
+        \sigma_{j_\parallel}^2 &= \langle v_\parallel \rangle
+        \sigma_{\langle n \rangle}^{2} + \langle n \rangle
+        \sigma_{\langle v_{\parallel} \rangle }^{2} + \sigma_{\langle n
+          \rangle,\langle v_{\parallel} \rangle}.
+        \\
+        \sigma_T^2 &= \frac{1}{9 \langle n \rangle^2} \bigg [
+        \sigma_{\langle P_{\parallel} \rangle}^2 + 4 \bigg (
+        \sigma_{\langle P_{\parallel} \rangle,\langle P_{\perp} \rangle}
+        + \sigma_{\langle P_{\perp} \rangle }^2 \bigg ) \bigg ] -
+        \frac{2 T}{ 3 \langle n \rangle^2} \bigg [ \sigma_{\langle
+          P_{\parallel} \rangle,\langle n \rangle} + 2 \sigma_{\langle
+          P_{\perp} \rangle ,\langle n \rangle} \bigg ] + \bigg (
+        \frac{T}{\langle n \rangle} \bigg )^2 \sigma_{\langle n
+          \rangle}^2.
+      \end{split}
+    \end{align}
+  % \end{linenomath*}
+
+  Calculation of moments of $f(\mathbf{v})$ in these expressions is
+  straightforward. Calculation of moment uncertainties and covariances
+  from $f(\mathbf{v})$, however, requires the following assumptions:
+
+  \begin{enumerate}
+
+  \item The sampling of each phase space volume is unique. For FAST
+    ESAs, which sample energy and pitch angle, this assumption means,
+    for example, that there is no overlap between regions of phase
+    space sampled by each energy-angle detector bin, and that there is
+    no crosstalk.
+
+  \item The sampled phase space density $f(\mathbf{v})$ corresponds to
+    a number of counts $N(\mathbf{v}) = f(\mathbf{v}) \Delta
+    V(\mathbf{v})\Delta X(\mathbf{v})$, where $\Delta V(\mathbf{v})$
+    and $\Delta X (\mathbf{v})$ are respectively the phase space
+    velocity and position volumes sampled by FAST ESAs, and
+    $N(\mathbf{v})$ is a Poisson-distributed random variable.
+
+  \end{enumerate}
+
+  The covariance between moments $\langle n A_i \rangle$ and $\langle
+  n A_j \rangle$ is $\sigma_{\langle n A_i \rangle,\langle n A_j
+    \rangle} = E \big [\langle n A_i \rangle\langle n A_j \rangle \big
+  ] - E \big [\langle n A_i \rangle \big ] E \big [\langle n A_j
+  \rangle \big ]$, where
+  % \begin{linenomath*}
+    \begin{align}
+      \begin{split}
+        E \big [\langle n A_i \rangle\langle n A_j \rangle
+        \big ] &= \iiint \mathbf{d}^3 \mathbf{v} A_i (\mathbf{v}) \iiint \mathbf{d}^3 \mathbf{v'} A_j (\mathbf{v'}) E \big [f(\mathbf{v}) f(\mathbf{v'}) \big ];
+        \\
+        E \big [\langle n A_i \rangle \big ] E \big [\langle n A_j
+        \rangle \big ] &= \iiint \mathbf{d}^3 \mathbf{v} A_i (\mathbf{v}) \iiint \mathbf{d}^3 \mathbf{v'} A_j (\mathbf{v'}) E \big [f(\mathbf{v}) \big ] E \big [ f(\mathbf{v'}) \big ].
+      \end{split}
+    \end{align}
+  % \end{linenomath*}
+  It follows that $ \sigma_{\langle n A_i \rangle,\langle n A_j
+    \rangle } = \iiint \mathbf{d}^3 \mathbf{v} A_i (\mathbf{v}) \iiint
+  \mathbf{d}^3 \mathbf{v'} A_j (\mathbf{v'})
+  \sigma_{f(\mathbf{v}),f(\mathbf{v'})}$; that is, the covariance
+  between any two moments of $f(\mathbf{v})$ depends on the covariance
+  between the points in phase space $\mathbf{v}$ and
+  $\mathbf{v'}$. \citet{Gershman2015} show that if
+  $\sigma_{f(\mathbf{v}),f(\mathbf{v'})}$ is written in terms of the
+  correlation between regions of phase space,
+  % \begin{linenomath*}
+    \begin{equation}
+      \sigma_{f(\mathbf{v}),f(\mathbf{v'})} = \sigma_{f(\mathbf{v})} \sigma_{f(\mathbf{v'})}r(\mathbf{v},\mathbf{v'}),
+    \end{equation}
+  % \end{linenomath*}
+  the first assumption implies $r(\mathbf{v},\mathbf{v'}) \approx
+  \delta_{\mathbf{v v'}}$, while the second assumption implies that
+  the uncertainty of the sampled phase space density is
+  $\sigma_{f(\mathbf{v})} = f (\mathbf{v}) \big / \sqrt{N
+    (\mathbf{v})}$. Thus
+  % \begin{linenomath*}
+    \begin{equation}
+      \sigma_{f(\mathbf{v}),f(\mathbf{v'})} \approx
+      \frac{f^2(\mathbf{v})}{N(\mathbf{v})}, 
+    \end{equation}
+  % \end{linenomath*}
+  which leads to the analytic expression
+  % \begin{linenomath*}
+    \begin{equation} \label{appa:eqFin}
+      \sigma_{\langle n A_i \rangle,\langle n A_j\rangle } \approx \iiint \big ( \mathbf{d}^3 \mathbf{v} \big )^2 A_i (\mathbf{v}) A_j (\mathbf{v}) \frac{f^2(\mathbf{v})}{N(\mathbf{v})} = \Bigg \langle n A_i A_j \big (\mathbf{d}^3 \mathbf{v} \big ) \frac{f(\mathbf{v})}{N(\mathbf{v})} \Bigg \rangle,
+    \end{equation}
+  % \end{linenomath*}
+  where the RHS of \ref{appa:eqFin} represents $\sigma_{\langle n A_i
+    \rangle,\langle n A_j\rangle }$ as a moment of $f(\mathbf{v})$.
+
+\bibliographystyle{agufull08}
+\bibliography{refsa}
