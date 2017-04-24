@@ -19,7 +19,7 @@
 \documentclass[12pt]{report}
 
 %--- BEGIN HEADER
-\usepackage{natbib}
+\usepackage[square]{natbib}
 \usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -65,6 +65,21 @@
   breakatwhitespace=true
   tabsize=4
 }
+
+% Because you've already published a great deal and don't want to fuss with re-typing, use pdfpages!
+% \usepackage[draft]{pdfpages}    %Print box and filename instead of showing pages
+\usepackage[final]{pdfpages}    %Show pages
+
+% Also, because you need to change margins on the fly, define THIS:
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+% Example: 
+% \begin{changemargin}{0.5cm}{0.5cm} 
+% %your text here  
+% \end{changemargin}
+% \def\changemargintb#1#2{\list{}{\topmargin#1\bottommargin#2}\item[]}
+% \let\endchangemargin=\endlist 
+
 
 % Use hyperref to allow for interal and external hyperlinking
 \usepackage[pdftex]{hyperref}
@@ -113,6 +128,9 @@
 \newcommand{\Alf}{Alfv\'{e}n }
 \newcommand{\Alfic}{Alfv\'{e}nic }
 \newcommand{\Alfically}{Alfv\'{e}nically }
+
+\newcommand{\fittedpagenoasp}[2] {\noindent \includegraphics[page=#2, width=\textwidth, height=\textheight]{#1} \vfill \newpage}
+\newcommand{\fittedpage}[2] {\noindent \includegraphics[page=#2, width=\textwidth, height=\textheight, keepaspectratio]{#1} \vfill \newpage}
 %--- END NEW COMMANDS SECTION
 
 %--- CITATION ALIASES
@@ -136,8 +154,12 @@
 \onehalfspacing
 
 %--- ADD CHAPTERS
-% \include{./ch1/tex/chapter1}       % Chapter 1
-% \include{./app/tex/appendix}       % Appendicies A & B
+\include{./ch1/tex/chapter1}       % Chapter 1
+\include{./ch2/tex/chapter2}       % Chapter 2
+\include{./ch3/tex/chapter3}       % Chapter 3
+\include{./ch4/tex/chapter4}       % Chapter 4
+\include{./ch5/tex/chapter5}       % Chapter 5
+\include{./app/tex/appendix}       % Appendicies A & B
 %--- END CHAPTERS
 
 % Bibliography using bibtex & natbib w/ MNRAS style formatting
