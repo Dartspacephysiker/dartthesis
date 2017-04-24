@@ -1,0 +1,8 @@
+#No strangenesses
+*.aux
+*.log
+*.dvi
+*.blg
+*.toc
+*.lof
+*.out
