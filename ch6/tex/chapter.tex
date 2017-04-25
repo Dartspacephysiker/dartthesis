@@ -244,16 +244,23 @@
  \end{equation}
  % \end{linenomath*}
 
- The additional variable $\kappa \in [ \, 3/2, \infty )$ in
- (\ref{ch6:eqKappa1D}) and (\ref{ch6:eqDors}) parameterizes the degree to
- which particle motion is correlated, and is therefore related to the
- ``thermodynamic distance'' between a given stationary,
+ The additional parameter $\kappa \in [ \, 3/2, \infty )$ in
+ (\ref{ch6:eqKappa1D}) and (\ref{ch6:eqDors}) parameterizes the degree
+ to which particle motion is correlated, and is therefore related to
+ the ``thermodynamic distance'' between a given stationary,
  non-equilibrium state and thermal equilibrium. The theoretical
  minimum (in three dimensions) $\kappa_{\textrm{min}} = 3/2$
  corresponds to perfectly correlated motion of particles while $\kappa
  \rightarrow \infty$ corresponds to uncorrelated motion of particles,
  or thermal equilibrium
- \citep{Livadiotis2010,Livadiotis2011,Livadiotis2013}. 
+ \citep{Livadiotis2010,Livadiotis2011,Livadiotis2013}. The review by
+ \citet{Livadiotis2010} shows both theoretical and observational
+ evidence suggesting that $\kappa_t \simeq 2.45$ marks a transition
+ between stationary states that are far from thermal equilibrium,
+ $\kappa \in [ \, 3/2, \kappa_T )$, and near-equilibrium states for
+ which $\kappa \in [ \, \kappa_T, \infty )$. If all other parameters
+ are held fixed, $\kappa \simeq 1.63$ yields the minimum-entropy kappa
+ distribution.
 
  Regarding physical origins, a host of mechanisms leading to
  production of a suprathermal tail exist \citep[e.g., review
@@ -288,7 +295,7 @@
   ``core temperature'' $T_c = T (1-3/2 \kappa)$. The distinction is
   not made in this Letter, however, since the kinetic and
   thermodynamic definitions of temperature are consistent for each
-  type of distribution \citet{Livadiotis2010}.
+  type of distribution \citep{Livadiotis2010}.
 
   Several authors \citep{Maggs1981,Bingham1999,Bingham2000,Mutel2007} have
   modeled 2-D distributions with the general form
@@ -297,51 +304,52 @@
       \kappa) \, = f_{1D}(\, E^*; T, n, \kappa) \, g(\, \theta),
     \end{equation}
   % \end{linenomath*}
-  where $E^*$ and $\theta$ are respectively the (possibly modified)
-  electron energy and pitch angle, $f_{1D}$ is either the 1-D
-  Maxwellian distribution (\ref{ch6:eqMax1D}) or the 1-D kappa
-  distribution (\ref{ch6:eqKappa1D}), and $g(\theta )$ is a function
-  describing, for example, the effects of the mirror force or the
-  maser instability on the source distribution. Each group of authors
-  employing (\ref{ch6:eq2DMod}) prescribe various forms for $g(\theta)$.
-  An alternative strategy, employed \citet{Pritchett1999}, involves
-  reduction of observed 2-D distributions to one dimension via
-  integration.
+    where $E^*$ and $\theta$ are respectively the (possibly modified)
+    electron energy and pitch angle, $f_{1D}$ is either the 1-D
+    Maxwellian distribution (\ref{ch6:eqMax1D}) or the 1-D kappa
+    distribution (\ref{ch6:eqKappa1D}), and $g(\theta )$ is a function
+    describing, for example, the effects of the mirror force or the
+    maser instability on the source distribution. Each group of
+    authors employing the 2-D model (\ref{ch6:eq2DMod}) prescribe
+    various forms for $g(\theta)$.  An alternative strategy presented
+    by \citet{Pritchett1999} involves reduction of observed 2-D
+    distributions to one dimension via integration.
 
   % ---------------- FIGURE 1
 
   \begin{figure}
     \centering
     \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/Kappa_summary--1773-classics}
-    \caption{Previously reported \citep{Elphic1998} FAST observations
-      of inverted V precipitation on Feb 1, 1997. Parameters related
-      to best-fit Maxwellian and kappa distributions are respectively
-      demarked with red crosses and blue x's in panels c--f. (a)
-      $>$300~eV electron pitch-angle distribution. (b) Electron energy
-      spectrum within the magnetospheric source cone
-      ($\theta$$<$~30$^\circ$). (c) $\kappa$ fit parameter for the
-      best-fit kappa distribution. (d) Reduced chi-squared statistic
-      $\chi^2_{\mathrm{red}}$ for each fit type. (e) Observed (black
-      diamonds) and best-fit temperatures. (f) Observed (black
-      diamonds) and best-fit densities. Observed temperature and
-      density in panels e and f are calculated from the differential
-      flux measured within the atmospheric loss cone and over the
-      energy range .3--30~keV. Uncertainties of observed temperatures
-      and densities are calculated using analytic expressions for
-      moment uncertainties of an arbitrary plasma distribution
-      function \citep[][; see Appendix~A]{Gershman2015}.}
+    \caption[Inverted V precipitation observed by FAST during Orbit 1773, and best-fit
+    Maxwellian and kappa distribution parameters]{Previously reported
+      FAST observations of inverted V precipitation on Feb 1, 1997
+      \citep{Elphic1998}. Parameters related to best-fit Maxwellian
+      and kappa distributions are respectively demarked with red
+      crosses and blue x's in panels c--f. (a) $>$300~eV electron
+      pitch-angle distribution. (b) Electron energy spectrum within
+      the magnetospheric source cone ($\theta$$<$~30$^\circ$). (c)
+      $\kappa$ fit parameter for the best-fit kappa distribution. (d)
+      Reduced chi-squared statistic $\chi^2_{\mathrm{red}}$ for each
+      fit type. (e) Observed (black diamonds) and best-fit
+      temperatures. (f) Observed (black diamonds) and best-fit
+      densities. Observed temperature and density in panels e and f
+      are calculated from the differential flux measured within the
+      atmospheric loss cone and over the energy range
+      .3--30~keV. Uncertainties of observed temperatures and densities
+      are calculated using analytic expressions for moment
+      uncertainties of an arbitrary plasma distribution function
+      [\citealt{Gershman2015}; see Appendix~A].}
     \label{ch6:Fig1}
   \end{figure}
 
   % ----------------
 
   In this Letter our focus is the portion of the source population
-  within the atmospheric loss cone, $\theta_{\textrm{lc}}$, which is
-  often near 30$^\circ$ at FAST altitudes. We therefore use $g(\theta)
-  =$~1 and assume the electron energy $E$ is offset by a field-aligned
-  potential drop $\Delta \Phi$, which corresponds to the modified
-  electron energy $E^* = \big( \sqrt{e \Delta \Phi} - \sqrt{E}
-  \big)^2$ in (\ref{ch6:eq2DMod}).
+  within the atmospheric loss cone $\theta_{\textrm{lc}}$, which is
+  often $\sim$30$^\circ$ near FAST apogee at 4100~km. We therefore use
+  $g(\theta) =$~1 in (\ref{ch6:eq2DMod}) and assume the electron
+  energy $E$ is offset by a field-aligned potential drop $\Delta
+  \Phi$, or $E^* = \big( \sqrt{e \Delta \Phi} - \sqrt{E} \big)^2$.
 
   Our procedure for estimating the parameters of $f_{2D}$ in
   (\ref{ch6:eq2DMod}) from measured electron distributions is the
@@ -354,29 +362,31 @@
   differential energy flux distribution over a range of energies and
   angles selected to avoid inclusion of secondaries and other
   background populations. The range of angles includes all within the
-  precipitating loss cone; the range of energies extends from two
-  energy bins below that in which the peak energy flux is observed to
-  the ESA energy limit at 30~keV. Throughout this Letter the reported
-  fit parameters are those resulting from 2-D fits.
+  atmospheric loss cone $\theta_{\textrm{lc}}$; the range of energies
+  extends from two energy bins below that in which the peak energy
+  flux is observed to the ESA energy limit at 30~keV. Throughout this
+  Letter the reported fit parameters are those resulting from 2-D
+  fits.
 
   During an approximately 60-s interval on Feb 1, 1997 that was
   originally reported by \citet{Elphic1998}, the FAST satellite
-  observed inverted V electron precipitation (Figures~\ref{ch6:Fig1}a and
-  \ref{ch6:Fig1}b) and intermittent upgoing ion beams (not shown) near
-  midnight MLT during a period of low geomagnetic activity ($K_p =
-  -1$).
+  observed inverted V electron precipitation (Figures~\ref{ch6:Fig1}a
+  and \ref{ch6:Fig1}b) and intermittent upgoing ion beams (not shown)
+  near midnight MLT during a period of low geomagnetic activity ($K_p
+  =$~1$^-$).
 
   Performing 2-D fits of the electron distributions within the
-  atmospheric loss cone cone shows that many of the distributions are
-  highly-nonthermal, with $\kappa \lesssim$~2.0
-  (Figure~\ref{ch6:Fig1}c). Values of the reduced chi-squared statistic
-  $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) - y_i(x)}{\mathrm{dof}}$
-  for 2-D fits with a kappa distribution are at times much smaller
-  than corresponding $\chi^2_{\textrm{red}}$ values for fits with a
-  Maxwellian distribution (Figure~\ref{ch6:Fig1}c), most markedly during
-  the period between red bars (09:26:54--09:27:05~UT) in
-  Figure~\ref{ch6:Fig1} when $\kappa$ is frequently near the theoretical
-  minimum $\kappa_{\mathrm{min}} =$~3/2.
+  atmospheric loss cone shows that many of the distributions are
+  highly nonthermal, with $\kappa \lesssim$~2.0
+  (Figure~\ref{ch6:Fig1}c). Values of the reduced chi-squared
+  statistic $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) -
+    y_i(x)}{\mathrm{dof}}$ for 2-D fits with a kappa distribution are
+  at times much smaller than corresponding $\chi^2_{\textrm{red}}$
+  values for fits with a Maxwellian distribution
+  (Figure~\ref{ch6:Fig1}c), most markedly during the period between
+  red bars (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when
+  $\kappa$ is frequently near the theoretical minimum
+  $\kappa_{\mathrm{min}} =$~3/2.
 
   % ---------------- FIGURE 2
 
@@ -384,17 +394,18 @@
     \centering
     \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/20170423-nFlux_fit-09_27_01__57-ees--2_avgs-orb_1773}
     \noindent\includegraphics[width=0.9\textwidth,angle=90]{./ch6/figs/orb_1773-Kappa_fit-09_27_01__57}
-    \caption{Electron spectra observed at 09:27:00.94~UT. (a) 1-D
-      differential number flux spectrum (black crosses) obtained by
-      averaging all differential number flux spectra within the
-      magnetospheric source cone, with best-fit Maxwellian and kappa
-      distributions overlaid (red dash-dotted line and blue dashed
-      line, respectively). The uncertainty of each observed
-      differential number flux is calculated by conversion of the
-      corresponding particle count uncertainty $\sqrt{N}$ to units of
-      differential number flux. (b) Best-fit 2-D kappa distribution
-      (solid contours) with the observed 2-D differential energy flux
-      spectrum overlaid (contour lines). }
+    \caption[Example of one- and two-dimensional fits of inverted-V
+    electron distribution functions during Orbit 1773.]{Electron spectra observed at
+      09:27:00.94~UT. (a) 1-D differential number flux spectrum (black
+      crosses) obtained by averaging all differential number flux
+      spectra within the magnetospheric source cone, with best-fit
+      Maxwellian and kappa distributions overlaid (red dash-dotted
+      line and blue dashed line, respectively). The uncertainty of
+      each observed differential number flux is calculated by
+      conversion of the corresponding particle count uncertainty
+      $\sqrt{N}$ to units of differential number flux. (b) Best-fit
+      2-D kappa distribution (solid contours) with the observed 2-D
+      differential energy flux spectrum overlaid (contour lines). }
     \label{ch6:Fig2}
   \end{figure}
 
@@ -429,7 +440,18 @@
     \centering
     \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773_lump1_20170423__kappa_RB_map}
     \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773_lump1_20170423__kappa_RB_map__superbestfit}
-    \caption{}
+    \caption[Orbit 1773: Reduced chi-squared values for observed J-V
+    curves with variable $\kappa$ and $R_B$, fixed $T$, and
+    magnetospheric density $n_m \big ( n_F, \bar{\phi}, \alpha_F \big
+    )$, and corresponding best-fit J-V curves.]{Results of J-V curve
+      fits using equations (\ref{ch6:eqKnight}) and
+      (\ref{ch6:eqDors}). The top panel shows reduced chi-squared
+      values for the J-V relationship observed between 09:26:54 and
+      09:27:05~UT in Figure~\ref{ch6:Fig1}, with variable $\kappa$ and
+      $R_B$, fixed $T$, and magnetospheric density $n_m \big ( n_F,
+      \bar{\phi}, \alpha_F \big )$. The bottom panel shows the
+      observed J-V relation and corresponding best-fit Maxwellian and
+      kappa J-V relations.}
     \label{ch6:Fig3}
   \end{figure}
 
@@ -510,15 +532,15 @@
   j_{\parallel,i} , \Delta \Phi )$ are suitable for our purposes: both
   thermal and nonthermal J-V relations (eqs. \ref{ch6:eqKnight} and
   \ref{ch6:eqDors}) require a single set of magnetospheric source
-  parameters $P_m$, which in turn requires identification periods
+  parameters $P_m$, which in turn requires identification of periods
   during which the observed $P_m$ are sufficiently steady to be
   meaningfully related to the putative source distribution. Perhaps
   not coincidentally the period shown in Figure~\ref{ch6:Fig1} during
-  which $\kappa \lesssim 2$, marked by a pair of red bars, also
-  delineates a period during which the observed densities,
-  temperatures, and kappa values are relatively steady. Having
-  identified an appropriate set of observations, we now describe our
-  methodology for estimating the source parameters $P_m$.
+  which $\kappa \lesssim 2$, 09:26:54--09:27:05~UT, also delineates a
+  period during which the observed density, temperature, and $\kappa$
+  are relatively steady. Having identified an appropriate set of
+  observations, we now describe our methodology for estimating the
+  source parameters $P_m$.
 
   The extreme values of $\kappa$ (Figure~\ref{ch6:Fig1}c) together with
   the steady temperatures (Figures~\ref{ch6:Fig1}e) and densities
@@ -593,16 +615,17 @@
   1.7$); the other is that acceleration takes place at altitudes below
   2~$R_E$. 
 
-  The cause of large gap in ($\kappa, R_B$) parameter space between
-  these scenarios is bifold; both have to do with the linearity
-  condition $\Delta \Phi / k_B T \ll R_B $. First, relative to the
-  thermal J-V relation (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$ the
-  J-V relation (\ref{ch6:eqDors}) is greatly influenced by saturation
-  effects, which arise as the linearity condition is violated. Second,
-  for equal number density and temperature the current densities predicted by
-  the J-V relation (\ref{ch6:eqDors}) can be more than double the
-  corresponding predicted by the thermal J-V relation
-  (\ref{ch6:eqKnight}). 
+  The cause of the large gap in ($\kappa, R_B$) parameter space that
+  separates these scenarios is bifold; both have to do with the
+  linearity condition $\Delta \Phi / k_B T \ll R_B $. First, relative
+  to the thermal J-V relation (\ref{ch6:eqKnight}), for $\kappa
+  \lesssim 2.5$ the J-V relation (\ref{ch6:eqDors}) is greatly
+  influenced by saturation effects, which arise as the linearity
+  condition is violated. Second, for equal number density and
+  temperature, the current density predicted by the J-V relation
+  (\ref{ch6:eqDors}) with $\kappa \simeq 1.65$ is more than double the
+  current density predicted by the thermal J-V relation
+  (\ref{ch6:eqKnight}) at $\Delta \Phi / k_B T =$~10, for example.
 
   As a result, a highly nonthermal source population is plausible in
   Figure~\ref{ch6:Fig3}a in two cases: (1) The source population is
@@ -614,10 +637,10 @@
   population is near (i.e., $<$~2.2~$R_E$) so that the much higher
   number density compensates for current saturation.
 
-  The distinction that must be borne in mind is that, in the present
-  case, a highly nonthermal source is compatible with either a nearby
-  or a distant source region. A source in thermal equilibrium is only
-  compatible with a nearby source region.
+  The distinction that must be borne in mind is that, for the period
+  09:26:54--09:27:05~UT, a highly nonthermal source is compatible with
+  either a nearby or a distant source region. A source in thermal
+  equilibrium is only compatible with a nearby source region.
 
   Both nonthermal and thermal sources are represented in
   Figure~\ref{ch6:Fig3}b, which shows the observed ($j_{\parallel,i},
@@ -661,8 +684,9 @@
 
   A possible objection to this interpretation centers on secondary
   electron production (cite cite). A more conservative estimate is
-  that after mirroring, as has been assumed for Figure~\ref{ch6:Fig2}b,
-  $\phi_T =$~30$^\circ$ and therefore $R_{B,T} =$~4.9. 
+  that after mirroring (as has been assumed for
+  Figure~\ref{ch6:Fig2}b), $\phi_T =$~30$^\circ$ and therefore $R_{B,T}
+  =$~4.9.
 
   \dots
 
@@ -732,7 +756,11 @@
   \begin{figure}
     \centering
     \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/Kappa_summary--1843-classics-1-Ergun_et_al_1998}
-    \caption{}
+    \caption[Inverted V precipitation observed by FAST during orbit
+    1843, and best-fit Maxwellian and kappa distribution
+    parameters]{Previously reported FAST observations of inverted V
+      precipitation on Feb 8, 1997 \citep{Ergun1998a}. See caption for
+      Figure~\ref{ch6:Fig1} for a description of the layout.}
     \label{ch6:Fig4}
   \end{figure}
 
@@ -743,9 +771,11 @@
   \begin{figure}
     \centering
     \noindent\includegraphics[width=0.9\textwidth,angle=90]{./ch6/figs/orb_1843-Kappa_fit-20_50_08__87}
-    \caption{Observed 2-D differential energy flux spectrum at
-      20:50:08.87~UT (contour lines) overlaying the best-fit 2-D kappa
-      distribution (solid contours). }
+    \caption[Example of two-dimensional fit of inverted-V electron
+    distribution functions during Orbit 1843.]{Observed 2-D
+      differential energy flux spectrum at 20:50:08.87~UT (contour
+      lines) overlaying the best-fit 2-D kappa distribution (solid
+      contours).}
     \label{ch6:Fig5}
   \end{figure}
 
@@ -757,7 +787,14 @@
     \centering
     \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__kappa_RB_map__20170422}
     \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__map_linear__bestfit__20170422}
-    \caption{}
+    \caption[Orbit 1843: Reduced chi-squared values for observed J-V
+    curves and corresponding best-fit J-V curves.]{Results of J-V
+      curve fits using equations \ref{ch6:eqKnight} and
+      \ref{ch6:eqDors}. The top panel shows reduced chi-squared values
+      for the J-V relationship observed between 20:49:48 and
+      20:50:11~UT in Figure~\ref{ch6:Fig4}, as in
+      Figure~\ref{ch6:Fig3}. The bottom panel shows the observed J-V
+      relation and corresponding best-fit Maxwellian and kappa J-V relations.}
     \label{ch6:Fig6}
   \end{figure}
 
