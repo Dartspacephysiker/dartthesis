@@ -31,12 +31,14 @@
 \section{A word before things pick up}
 
 If the pursuit of knowledge fills the soul with joy, then
-communication of it brings the soul to overflowing. Science that is
-worth its mettle and of respectable vintage---the ``hard stuff,'' so
-to speak---will be steeped in a laconic grammar befitting pursuit of
-that brand of truth first minted by Bacon, and much later, by Popper's
-inveterate philosophical craft, turned to diamond: careful, measured,
-and repeatable observation, followed by deduction and falsifiable
+communication of it brings the soul to overflowing\footnote{With due
+  piety, we pass over the many and regularly occurring instances of
+  science turned bloodsport.}. Science that is worth its mettle and of
+respectable vintage---the ``hard stuff,'' so to speak---will be
+steeped in a laconic grammar befitting pursuit of that brand of truth
+first minted by Bacon, and much later, by Popper's inveterate
+philosophical craft, turned to diamond: careful, measured, and
+repeatable observation, followed by deduction and falsifiable
 conclusion, corrected for faulty intuition and attended to with utter
 impartiality---or at least a show of it that is on par for winning
 proposals, scoring grant money and keeping up the guise (and make sure
@@ -48,13 +50,198 @@ present work at its outset in the parlance of the commoner---the
 salesman, the nurse, the brickmason, the entrepreneur$^*$---that all
 who desire may sup the elixir, if only for a chapter.
 
-% \section{}
+The drink of the day \emph{Allons-y!}
+
+\section{}
+
+% Keep the old parindent and parskip in \savedparindent and \savedparskip
+\newlength{\savedparindent}
+\newlength{\savedparskip}
+\setlength{\savedparindent}{\parindent}
+\setlength{\savedparskip}{\parskip}
+
+% Now set the new'ns
+\setlength\parindent{0pt}
+\setlength\parskip{1ex plus 2pt minus 1pt}
+\newcommand\X{\par\noindent---~}
 
 
+\X ``What is an \Alf wave?''  
 
-    % SECTION: EXAMPLE OF ADDING A SECTION
-    % \input{./ch1/tex/section1.tex}   
-    % Note: directory is referenced from the **top** level
-    
-% \bibliographystyle{agufull08}
-% \bibliography{refs}
+\X ``A natural low-frequency mode of
+oscillation of a plasma.''  
+
+\X ``Are there high-frequency modes?''  
+
+\X
+``Yes! Plasma mode \& Co.''  
+
+\X ``What makes them high frequency?''
+
+
+\X ``They deal with oscillations too rapid for an ion to participate,
+and such oscillations are totally neglected i ngoing from two-fluid
+theory to MHD---specifically when the Hall term (), which includes (),
+is discarded.''  
+
+\X ``What's the importance of them?''  
+
+\X ``You mean
+in relative terms, or in some abstract, general way?''  
+
+\X ``Both, but
+start with relative terms.''  
+
+\X ``All right. Generality. Wait---let's
+start with some background and history. You're familiar with soun
+waves, right? The idea that the air can vibrate and carry the sound of
+music, the sound of a fog horn, the drop of a pin, yadda yadda?''
+
+\X ``Yeah.''
+
+
+\X ``Cool. Know why the air does that?''
+
+
+\X ``Uhh \dots''
+
+
+\X ``Right. Just think about the speed of sound, which I bet you've
+heard of. We'll call it $v_s$. Here's the thing: in simple
+cases\footnote{We've got to make all kinds of assumptions to make the
+  argument work, but they're not unreasonable for the purpose of our
+  conversation. Check out your favorite intro text if you want to dive
+  into assumptions.} $v_s$ dictates a relationship between the
+wavelength $\lambda$ and frequency $f$ of a particular sound wave. Namely,
+\begin{equation}
+  \label{ch1:eqvs}
+  \lambda f = v_s,
+\end{equation}
+or, just as good,
+\begin{equation}
+  \label{ch1:eqvsdiff}
+  \lambda = \frac{v_s}{f}
+\end{equation}
+What does it mean? That $\lambda$ and $f$ are \emph{proportional}, and
+the so-called \emph{constant of proportionality} is
+$v_s$\footnote{$v_s$ is a magical number that nature picks based on
+  the air temperature $T$ and number density $n$ (i.e., how many air
+  molecules or atoms fit in a box of a size that we agree upon, like
+  1~cm~$\times$~1~cm~$\times$~1~cm). We could say that $v_s = v_s (T,
+  N)$, which is a compact way of saying that 'the speed of sound
+  depends on air temperature and density.'}. For example, when you
+pluck the low E string on a guitar\footnote{No time to quibble with
+  different tunings, now.}, which is the fattest string, it vibrates
+and launches vibrations in the air that vibrate at a frequency of
+about 82~Hz; when you hear it, you might say it is 'knocking at the
+door' of your brain, at your eardrum, 82 times each second: $f_E =
+$~82~Hz. Well, suppose $v_s =$~340~m/s---which is a pretty good answer
+by cereal box standards---the wavelength of that low E, $\lambda_E$ is
+4~m, or about the length of a 1993 Buick Century (my stallion of
+choice). How about the next string up on a guitar (in pitch, that is),
+the A string? $f_A = $~110~Hz, and according to
+equation~(\ref{ch1:eqvs}), $\lambda_A \simeq$~3.1~m, or two road bikes
+placed end-to-end.
+
+\X ``Why am I telling you all this? Because there's an important
+concept illustrated here, what some of us laboratory-bound types call
+a \emph{dispersion relation}. In the very particular case at hand,
+equation~(\ref{ch1:eqvs}) is telling you that if you start ascending
+the E major scale on your guitar so that the pitch steadily increases,
+nature has informed us that the wavelength of each note played gets
+shorter and shorter so that equation~(\ref{ch1:eqvs}) is always true.
+
+\X ``Things don't have to be so simple, of course. In fact, let's turn
+up the heat in a generalized\footnote{In physics speak, when
+  discussing a particular theory the word ``generalized'' signals to
+  all physicists in the area that the ideas are about to become
+  far-reaching, or impossible to comprehend, or take a turn for the
+  worse into quackery. It's a word that can only be taken on a
+  case-by-case basis, so beware!} way. Instead of
+equation~(\ref{ch1:eqvs}), I could tell you something like
+\begin{equation}
+  \label{ch1:eqvsgen}
+  \lambda = \lambda (f,T,N),
+\end{equation}
+which is wonderfully vague. It looks meaningless, doesn't it? But
+no--it's telling you that the wavelength $\lambda$ depends on
+frequency, temperature, and density, just like
+equation~(\ref{ch1:eqvs}); the difference is that I haven't bothered
+to specify \emph{how} they are related. Why? For all its vagueness
+equation~(\ref{ch1:eqvsgen}) buys us power to dream a little. Suppose
+you and I are investigating some exotic fluid---we'll pretend for
+kicks that it behaves sort of like a gas, by which I mean that it can
+be described by quantities like temperature and density that we know
+so well\footnote{If you think you don't know them well, you simply
+  haven't realized that you make everyday decisions, like whether to
+  go running, on the basis of temperature (``Is it too hot out
+  there?'') and density (``Is it really humid?'').}. Let's futher
+pretend that this exotic fluid is made up of charged particles, so
+that it is also subject to electrodynamics and can do fancy things
+under special conditions, like freeze a magnetic field into
+itself\footnote{Within our solar system, the ``frozen magnetic field''
+  thing happens all over the neighborhood, so to speak. It is usually
+  fair to describe the solar wind as an electrodynamic fluid, or
+  ``plasma,'' as some of us are wont to call it, with a ``frozen-in''
+  magnetic field whose field lines twist like the skirt of a ballerina
+  as she twirls, or the water sprayed by the sprinkler head on your
+  lawn as it spins. In the case of the solar wind, these spirals
+  happen because of the rotation of the sun, the flow of the solar
+  wind \emph{away} from the sun, and the whole ``fluid that freezes
+  magnetic fields into itself'' idea.} and conduct electrical
+currents.
+
+\X ``So what might the dispersion relation, the ``updated'' version of
+equation~(\ref{ch1:eqvs}), look like for this bizarre electromagnetic
+fluid? I propose that within our newly discovered exotic fluid,
+\begin{equation}
+  \label{ch1:eqmhd}
+  \lambda = \lambda (f, T, n, B).
+\end{equation}
+On second thought, it's not as exotic as one might ahve hoped. I mean,
+all we did was add the magnetic field $B$! Back in 1942 Hannes
+Alfv\'{e}n pulled this very number\footnote{All right, I've swept a
+  few details under the rug. But not many, considering Alfv\'{e}n's
+  original letter to the publication \textsl{Nature} was only six
+  paragraphs! (In case you didn't know, as far as publishing research
+  goes \textsl{Nature} is considered by many to be the darling of the
+  physical sciences, which comes with all the attendant baggage, or at
+  least a lot of it, that you can imagine.))}, assuming the existence
+of a conducting fluid like we just did, and guess what he found? A
+dispersion relation (I've only changed the units):
+\begin{equation}
+  \label{ch1:eqAlf}
+  \lambda f = \frac{B}{\sqrt{\mu_o m n}} \equiv v_A,
+\end{equation}
+where $v_a$ is the eponymous (and rather famous among plasma
+physicists) Alfv\'{e}n speed, $B$ is the magnetic field strength of
+the bizarro-fluid, and $m$ and $n$ are the mass and numberdensity of
+the ions in this fluid.
+
+
+\X ``Don't let the details cause to to miss the point. The dispersion
+relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
+equation~(\ref{ch1:eqvs}): 'To wit,' as D.J. Griffiths might put it, $
+\lambda f = $(some speed). And to bring you up to speed, at this point
+there is a mountain of textbooks and peer-reviewed literature that
+refer to the Alfv'{e}n speed and (surprise!) Alfv\'{e}n waves. In
+fact, with the solitary exception of chapter~6, gratuitous references
+to Alfv\'{e}n this-and-that are found throughout the chapters
+comprising this thesis; I doubt if there are more than five total
+pages in chapters 2--6 that fail to mention the name.
+
+
+\X ``
+
+
+\X ``
+
+% 
+% 
+% Finished with the parindent stuff? Reset 'em
+\setlength\parindent{\savedparindent}
+\setlength\parskip{\savedparskip}
+
+% And chapter 1 bib
+\bibliographystyle{agufull08}
+\bibliography{refs1}
