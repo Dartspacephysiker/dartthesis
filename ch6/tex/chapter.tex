@@ -163,9 +163,9 @@
   mirror ratio $R_B = B_{i} / B_{m}$,
   % \begin{linenomath*}
     \begin{equation} \label{ch6:eqKnight} j_{\parallel,i} ( \, \Delta \Phi ;
-      T_m, n_m, R_B ) = - e n_m \Big ( \frac{k_B T_m}{2 \pi m_e} \Big
+      T_m, n_m, R_B ) = - e n_m \Big ( \dfrac{k_B T_m}{2 \pi m_e} \Big
       )^{\frac{1}{2}} R_B \Bigg [ 1 - \Big ( 1 - R_B^{-1} \Big )
-      \textrm{exp} \Big \{ - \frac{e \Delta \Phi}{k_B T_m ( R_B - 1 )}
+      \textrm{exp} \Big \{ - \dfrac{e \Delta \Phi}{k_B T_m ( R_B - 1 )}
       \Big \} \Bigg],
     \end{equation}
   % \end{linenomath*}
@@ -196,8 +196,8 @@
   Maxwellian distribution
   % \begin{linenomath*}
   \begin{equation} \label{ch6:eqMax1D} f_{M}( E ; T, n) \, = n \Big (
-    \frac{m}{2 \pi k_{B} T} \Big )^{\frac{3}{2}} \textrm{exp} \Big (
-    - E / k_B T \Big ).
+    \dfrac{m}{2 \pi k_{B} T} \Big )^{\frac{3}{2}} \textrm{exp} \Big (
+    - \dfrac{E}{ k_B T } \Big ).
   \end{equation}
   % \end{linenomath*}
   The spectral shape of this distribution is governed by the
@@ -222,9 +222,9 @@
   is the kappa distribution \citep{Livadiotis2013}
   % \begin{linenomath*}
   \begin{equation} \label{ch6:eqKappa1D} f_{\kappa}(E; T, n, \kappa) =
-    n \Bigg ( \frac{m}{2 \pi (\kappa - \frac{3}{2}) k_{B} T \, } \Bigg
-    )^{\frac{3}{2}} \frac{\Gamma \big ( \kappa + 1 \big ) }{\Gamma
-      \big ( \kappa - \frac{1}{2} \big ) } \Bigg ( 1 + \frac{E}{ \big
+    n \Bigg ( \dfrac{m}{2 \pi (\kappa - \frac{3}{2}) k_{B} T \, } \Bigg
+    )^{\frac{3}{2}} \dfrac{\Gamma \big ( \kappa + 1 \big ) }{\Gamma
+      \big ( \kappa - \frac{1}{2} \big ) } \Bigg ( 1 + \dfrac{E}{ \big
       ( \kappa - \frac{3}{2} \big ) k_B T } \Bigg )^{-1 - \kappa},
   \end{equation}
  % \end{linenomath*}
@@ -234,14 +234,15 @@
  source population in thermal equilibrium, \citet{Dors1999} showed
  that the J-V relation (\ref{ch6:eqKnight}) becomes
   % \begin{linenomath*}
-    \begin{equation} \label{ch6:eqDors} j_{\parallel,i} ( \, \Delta \Phi ;
-      T_m, n_m, \kappa, R_B ) = - e n_m \sqrt{ \frac{k_B T_m (\kappa -
-          \frac{3}{2})}{2 \pi m_e \kappa^{\frac{3}{2}}}} \frac{\Gamma
-        (\kappa + 1)}{\Gamma (\kappa - \frac{1}{2})} \frac{R_B}{
-        (\kappa - 1)} \Bigg[1- \Big(1-R_B^{-1} \Big) \Bigg(1+\frac{e
-        \Delta \Phi}{ k_B T_m (\kappa - \frac{3}{2})(R_B - 1)}
-      \Bigg)^{1-\kappa} \Bigg].
- \end{equation}
+ \begin{align}
+   \label{ch6:eqDors}
+ \begin{array}{ll}
+   j_{\parallel,i} ( \, \Delta \Phi ; T_m, n_m, \kappa, R_B ) &= - e n_m \sqrt{ \dfrac{ k_B T_m (\kappa -
+       \frac{3}{2})}{ 2 \pi m_e}} \dfrac{\Gamma (\kappa + 1)}{\Gamma (\kappa - \frac{1}{2})} \dfrac{R_B}{\kappa (\kappa - 1)} \\
+   &\times \Bigg[1 - \Big(1 - R_B^{-1} \Big) \Bigg(1+\dfrac{e \Delta \Phi}{ k_B
+     T_m (\kappa - \frac{3}{2})(R_B - 1)} \Bigg)^{1-\kappa} \Bigg].
+ \end{array}
+ \end{align}
  % \end{linenomath*}
 
  The additional parameter $\kappa \in [ \, 3/2, \infty )$ in the
@@ -533,9 +534,9 @@
   mirror ratio $R_B$), and potential drop $\Delta \Phi$ via the
   relationship \citep{Ratner1976,Barbosa1977}
   \begin{subequations}
-    \begin{align} n_m \big ( n_F, \bar{\phi}, \alpha_F \big ) &= \frac{n_F}{Q \big ( \bar{\phi}, \alpha_F \big ) }, \\
+    \begin{align} n_m \big ( n_F, \bar{\phi}, \alpha_F \big ) &= \dfrac{n_F}{Q \big ( \bar{\phi}, \alpha_F \big ) }, \\
       Q \big ( \bar{\phi}, \alpha_F \big ) &\equiv 1 + 2 \big ( 1 -
-      \alpha_F \big ) \frac{ \bar{\phi}^{1/2} \, e^{- \alpha_F
+      \alpha_F \big ) \dfrac{ \bar{\phi}^{1/2} \, e^{- \alpha_F
           \bar{\phi}} }{\textrm{erfc} \big ( - \bar{\phi}^{1/2} \big
         )} { \displaystyle \int_{-\sqrt{\bar{\phi}}}^{\infty} } \, dx
       \, e^{\alpha_F x^2} \, \textrm{erfc} \big ( x \big
@@ -558,7 +559,7 @@
   Figure~\ref{ch6:Fig3}a displays contours of $\chi^2_{\textrm{red}} (
   \kappa, R_B )$, where
   \begin{subequations}
-    \begin{align} \chi^2_{\mathrm{red}} = \frac{\sum_i j_{\parallel,i} (\Delta \Phi) - j_{\textrm{pred}\parallel,i}(\Delta \Phi; P_m)}{\mathrm{dof}}; \\
+    \begin{align} \chi^2_{\mathrm{red}} = \dfrac{\sum_i j_{\parallel,i} (\Delta \Phi) - j_{\textrm{pred}\parallel,i}(\Delta \Phi; P_m)}{\mathrm{dof}}; \\
       P_m = \Big \{ n_m ( \hat{n}_F, \bar{\phi} , \alpha_F ),
       \hat{T}_m, R_B, \kappa \, \Big \}. \label{paramFit}
     \end{align}
