@@ -289,41 +289,49 @@ and skip the next two paragraphs.)
 
 Here's a sketch: Pick up a piece of paper. Imagine that during the
 course of one second, an electron comes zipping through it. We'll use
-this to define a unit \emph{number flux} of 1, or \emph {1 electron
-  per sheet of paper per second}. Fair enough? Now, if instead of
-\emph{how many electrons pass through} the sheet of paper in a second
-(number flux), we wanted to know \emph{how much energy the electrons
-  carry through} the sheet of paper in a second (energy flux), we'd
-have to count differently by also asking every individual electron how
-fast it's going, and then summing up the energy contribution of all
-the electrons passing through the page within a second.
+this to define a unit \emph{number flux}, or \emph {1 electron per
+  sheet of paper per second}--we'll call them \emph{epps}. So if over
+the course of two seconds we counted ten electrons come through the
+page, we'd say the average number flux during those two seconds was 5
+epps. Fair enough?  Now, if instead of \emph{how many electrons pass
+  through} the sheet of paper in a second (number flux), we wanted to
+know \emph{how much energy the electrons carry through} the sheet of
+paper in a second (energy flux), we'd have to count differently by
+also asking every individual electron how much energy it has (that is,
+how fast it's going)\footnote{The relationship between kinetic
+  energy---the energy due to motion---and speed is bread and butter
+  for classical (as opposed to quantum) physicists: $E = \frac{1}{2}m
+  v^2.$} and then summing up the energy contribution of all the
+electrons passing through the page within a second.
 
 Last of all, suppose we wanted to know not just the \emph{total}
 electron energy flux through the page, but the \emph{contribution}
-made by electrons \emph{having some limited range of energies} to the
-total energy flux?\footnote{Why would this be useful?  For the same
-  reasons that it would be useful to know [insert TBD analogy].}
-Here's an idea: You could slap an energy filter on the page---never
-mind where we got this little device, just imagine---so that we only
-count electrons with energies between, say, 100~eV and
-200~eV.\footnote{``An 'eV'?''  you say? 1 eV is one
-  electron-volt---which is to say, it's the amount of energy that an
-  electron has after being accelerated through a 1-volt potential
-  difference.} If we added up all the energy carried by \emph{those}
-electrons, repeated the process for electrons having energies of
-200--500~eV, then 500--1200~eV, so on and so forth, we'd have a list
-of electron energy ranges, and an energy flux measurement for each
-energy range, \emph{capisce}? Like this:
+made by electrons \emph{within some energy range} to the total energy
+flux?\footnote{Why would this be useful?  For the same reasons that it
+  would be useful to know [insert TBD analogy].}  Here's an idea: You
+could slap an energy filter on the page---never mind where we got this
+little device, just imagine---so that we only count electrons with
+energies between, say, 100~eV and 200~eV.\footnote{``An 'eV'?''  you
+  say? 1 eV is one electron-volt---which is to say, it's the amount of
+  energy that an electron has after being accelerated through a 1-volt
+  potential difference.} If we added up all the energy carried by
+\emph{those} electrons, repeated the process for electrons having
+energies of 200--500~eV, then 500--1200~eV, so on and so forth, we'd
+have a list of electron energy ranges, and an energy flux measurement
+for each energy range, \emph{capisce}? Like this:
 \begin{equation}
   \label{ch1:eqeFlux}
-  J_{E,\textrm{total}} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots
+  J_{E} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots .
 \end{equation}
+$J_E$ is the total energy flux.
 
 Unfortunately even this description of energy flux isn't enough to
 convey the meaning of the \emph{differential energy flux} I originally
-mentioned, but keep it in mind, because it's close enough for you to
-be able to appreciate what I'm referring to when I bring up broadband
-electrons.
+mentioned,\footnote{\citet{Bruno2013} give a killer introduction to
+  the subject in their Appendix~E. You could also check out some
+  staples like Chapter~5 in \citet{Paschmann1998}.} but keep it in mind
+because it's close enough for you to be able to appreciate what I'm
+referring to in later chapters when I bring up broadband electrons.
 
 Speaking of which, back to broaband electrons. When we fly satellites
 above the aurora and measure the differential energy flux of auroral
@@ -344,9 +352,23 @@ angles. Right---they're all within about 30$^\circ$ of 0$^\circ$. They
 are mostly field-aligned. And the way to make a pitch-angle
 spectrogram is to pick a pitch angle (maybe you could start by looking
 at 0$^\circ$, straight down the magnetic field line) and measure the
-differential energy flux---or $\frac{d J_E}{dE}$---pick a new pitch
-angle and again measure $\frac{d J_E}{dE}$, so on and so forth until
-you've measured $\frac{d J_E}{dE}$ at each pitch angle.
+differential energy flux---or $\frac{d J_E}{dE}$\footnote{Again, the
+  ``deets,'' as I understand young people call them now, can be found
+  in Chapter~5 of \citet{Paschmann1998}.}---pick a new pitch angle and
+again measure $\frac{d J_E}{dE}$, so on and so forth until you've
+measured $\frac{d J_E}{dE}$ at each pitch angle.
+
+Let me back up for a second. If you combine this business of pitch
+angles with our discussion of ``filtered'' electron energy flux, you
+would not be far from what we actually do with particle detectors on
+satellites. The goal with these detectors is to measure \emph{how many
+  particles} (electrons, in our case) at \emph{some pitch angle} and
+over \emph{some range of energies}. If you had made these types of
+measurements for the electrons hanging out at $\sim$4000~km on (date)
+somewhere on the nightside of the earth and had decided to turn that
+information into plots, you might get something like
+Figure~\ref{ch1:FigAlfElec} depending on where exactly you were. I'll
+explain how in a moment.
 
 In the auroral zone---an altitude of a few hundred km and above at
 latitudes\footnote{Magnetic latitude, not geographic latitude.} above
