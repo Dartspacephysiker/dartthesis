@@ -17,36 +17,38 @@
 \chapter{Introduction}
 \label{chp:1}
 
-%---BEGIN INSPIRATION QUOTE 
+% ---BEGIN INSPIRATION QUOTE 
 % \begin{flushright}
-% \begin{minipage}[]{0.55\linewidth}
+%   \begin{minipage}[]{0.55\linewidth}
 %     \begin{flushright}
 %       I don't have ADD; I'm keeping track of a million things at once!  \\{\small \emph{--- David McGaw} }
 %     \end{flushright}
-% \end{minipage}
+%   \end{minipage}
 % \end{flushright}
-%\vspace{\baselineskip}
-%---END INSPIRATIONAL QUOTE
+% \vspace{\baselineskip}
+% ---END INSPIRATIONAL QUOTE
 
 \section{A word before things pick up}
 
 If the pursuit of knowledge fills the soul with joy, then the
-communication of it brings the soul to overflowing\footnote{We pass in
-  piety over the many and ongoing instances in which respectable
-  science has evolved into bloodsport.}. Science worth its mettle and
-of certifiable vintage will be steeped in a laconic grammar befitting
-pursuit of that brand of truth first minted by Bacon, and much later,
-by Popper's inveterate philosophy, turned to diamond: careful,
-measured, and repeatable observation, followed by deduction and
-falsifiable conclusion, corrected for faulty intuition and attended to
-with utter impartiality---or at least a display of it sufficing to
-avoid being given the proverbial lie.
+communication of it brings the soul to overflowing.\footnote{We pass
+  in piety over the many and ongoing instances in which otherwise
+  respectable science has evolved into bloodsport.} Science worth its
+mettle and of certifiable vintage will be steeped in a laconic grammar
+befitting pursuit of that brand of truth first minted by Bacon, and
+much later, by Popper's inveterate philosophy, turned to diamond:
+careful, measured, and repeatable observation, followed by deduction
+and falsifiable prediction, corrected for faulty intuition and
+attended to with utter impartiality---or at least a display of it
+sufficing to avoid being given the lie.
 
 Having drunk reverently, deeply, and frequently from this cup, this
 veritable goblet of gladness, I opt to lay the rudiments of the
-present work at its outset in the parlance of the commoner---the
-salesman, the nurse, the brickmason, the entrepreneur$^*$---that all
-who desire may sup the elixir, if only for a chapter. But if I do not
+present work at its outset in the parlance of the laity---the
+salesman, the nurse, the brickmason, the entrepreneur, the
+custodian\footnote{All honorable occupations held by the author's
+  family members, some of which he has also held.}---that all who
+desire may sup the elixir, if only for a chapter. But if I do not
 disallow that the imbibing of these spirits may spur, in its course,
 to greater heights, I am contrariwise attended by an assurance of the
 impenetrability of succeeding chapters to the mind unequipped with the
@@ -102,6 +104,10 @@ Cool. Know why the air does that?
 \X ``Uhh \dots''
 
 
+% Finished with the parindent stuff? Reset 'em
+\setlength\parindent{\savedparindent}
+\setlength\parskip{\savedparskip}
+
 Right. Just think about the speed of sound, which I bet you've heard
 of. We'll call it $v_s$. Here's the thing: in simple
 cases\footnote{I'm glossing over a lot of the legwork because we've
@@ -124,24 +130,31 @@ each other--inversely proportional, that is-- and the so-called
 sound!\footnote{In practice, scientists prefer the form \ref{ch1:eqvs}
   because $\lambda$ is a length and $f$ indicates ``how many per
   time;'' if you multiply $\lambda$ and $f$ together, you get a
-  ``distance per time,'' or a speed!} $v_s$ is a magical number that
-nature picks based on the air temperature $T$ and number density $n$
-(i.e., how many air molecules or atoms fit in a box of a size that we
-agree upon, like 1~cm~$\times$~1~cm~$\times$~1~cm). We could say that
-$v_s = v_s (T, N)$, which is a compact way of saying that ``the speed
-of sound depends on air temperature and density.'' For example, when
-you pluck the low E string on a guitar, which is the fattest string,
-it vibrates and launches vibrations in the air that vibrate at a
-frequency of about 82~Hz; when you hear it, you might say it is
-``knocking at your door,'' or your eardrum, 82 times each second: $f =
-$~82~Hz. Well, suppose $v_s =$~340~m/s---which is a pretty good answer
-by cereal box standards---the wavelength of that low E, $\lambda$ is
-4~m, or about the length of a 1993 Buick Century (my stallion of
-choice). How about we ascend in pitch to the next string on a guitar,
-the A string?\footnote{No time for quibbling with different tunings,
-  now.} $f = $~110~Hz, and according to equation~(\ref{ch1:eqvs}),
-$\lambda \simeq$~3.1~m--about the distance from the ground to the net
-of a basketball hoop.
+  ``distance per time,'' or a speed!} But how did nature ``know'' to
+pick $v_s$?
+
+It turns out that the properties of a system determines how (or
+perhaps whether) it will resonate---that is, \emph{the system
+  properties determine the dispersion relation}. If you pluck a guitar
+string, say, it will pick a single frequency (and probably harmonics)
+at which to resonate based on how tight, how thick, and how long the
+string is. For the air, $v_s$ is a magical number that nature picks
+based on the air temperature $T$ and number density\footnote{``Number
+  density'' meaning ``how many air molecules or atoms fit in a box of
+  a size that we agree upon,'' like 1~cm~$\times$~1~cm~$\times$~1~cm.}
+$n$.
+
+For example, when you pluck the low E string on a guitar, which is the
+fattest string, it vibrates and launches vibrations in the air that
+vibrate at a frequency of about 82~Hz; when you hear it, it is
+knocking at your eardrum 82 times each second: $f = $~82~Hz. Well,
+suppose $v_s =$~340~m/s---a pretty good answer by cereal box
+standards---the wavelength $\lambda$ of that low E is 4~m, or about
+the length of my 1993 Buick Century Special. How about we ascend in
+pitch to the next string on a guitar, the A string?\footnote{No time
+  for quibbling with different tunings, now.}  $f = $~110~Hz, and
+according to equation~(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m--about
+the distance from the ground to the net of a basketball hoop.
 
 Why am I telling you all this? Because there's an important concept
 illustrated here, what some of us laboratory-bound types call a
@@ -161,21 +174,22 @@ generalized\footnote{In physics speak, when discussing a particular
 way, and tell you something like
 \begin{equation}
   \label{ch1:eqvsgen}
-  \lambda = \lambda (f,T,N),
+  v_s = v_s (T, N),
 \end{equation}
 which is wonderfully vague. It looks meaningless, doesn't it? But
-no--it's telling you that the wavelength $\lambda$ depends on
-frequency, temperature, and density, just like
-equation~(\ref{ch1:eqvs}); the difference is that I haven't bothered
-to specify \emph{how} they are related. Why? For all its vagueness
-equation~(\ref{ch1:eqvsgen}) buys us power to dream a little. Suppose
-you and I are investigating some exotic fluid---we'll pretend for
-kicks that it behaves sort of like a gas, by which I mean that it can
-be described by quantities like temperature and density that we know
-so well.\footnote{If you think you don't know them well, you simply
-  haven't realized that you make everyday decisions, like whether to
-  go running, on the basis of temperature (``Is it too hot out
-  there?'') and density (``Is it going to be gross and humid?'').}
+no--it's telling you that the ``the speed of sound is related to air
+temperature and density,'' just like equation~(\ref{ch1:eqvs}); the
+difference is that I haven't bothered to specify \emph{how} they are
+related. Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys
+us power to dream a little. Suppose you and I are investigating some
+exotic fluid---we'll pretend for kicks that it behaves sort of like a
+gas, by which I mean that it can be described by quantities like
+temperature and density that we know so well.\footnote{If you think
+  you don't know them well, you simply haven't realized that you make
+  everyday decisions, like whether to go running, on the basis of
+  temperature (``Is it too hot out there?'') and density (``Is it
+  going to be gross and humid?'').}
+
 Let's futher pretend that this exotic fluid is made up of charged
 particles, so that it is also subject to electrodynamics and can do
 fancy things under special conditions, like freeze a magnetic field
@@ -196,29 +210,37 @@ equation~(\ref{ch1:eqvs}), look like for this exotic fluid? Back in
 1942 Hannes \Alf proposed that within this putative
 ``magnetohydrodynamic,''\footnote{It might surprise you that at the
   healthy length of eight syllables, this is a word that gets used
-  regularly in plasma physics.} or MHD fluid,
+  regularly in plasma physics.} or MHD, fluid,
 \begin{equation}
   \label{ch1:eqmhd}
-  \lambda = \lambda (f, T, n, B).
+  v = v ( T, n, B).
 \end{equation}
-All he did was suggest dependence on the magnetic field $B$! He went a
-step further and nailed down an explicit dispersion
+Comparing this expression with equation (\ref{ch1:eqvsgen}) informs
+you of this: all he did was suggest dependence on the magnetic field
+$B$!  The reasons why he suggested this dependence, though, are more
+sophisticated than his simply ``taking a crack at it'' and shoving
+another alphabet letter into the right-hand side of equation
+(\ref{ch1:eqvsgen}).\footnote{A good, old-fashioned wild guess is
+  nonetheless a respectable strategy when attacking, for instance,
+  nonlinear differential equations; solving them seems to be the
+  mathematician's equivalent of shooting beer cans off a fencepost.}
+
+He went a step further and nailed down an explicit dispersion
 relation\footnote{I've swept a few details under the rug. But not
   many, considering Alfv\'{e}n's original letter to \textsl{Nature}
   was only six paragraphs! (In case you didn't know, \textsl{Nature}
   is considered by many to be the darling of the physical sciences as
   far as publication goes, the obvious corollary being that most
-  scientists have developed a strong opinion about it or otherwise
-  have emotional baggage related to it.)} (I've only changed the
-units):
+  scientists have developed a strong opinion about or have emotional
+  baggage related to it.)} (I've only changed the units):
 \begin{equation}
   \label{ch1:eqAlf}
   \lambda f = \frac{B}{\sqrt{\mu_o m n}} \equiv v_A,
 \end{equation}
-where $v_A$ is the eponymous (and, I should add, rather famous among
-plasma physicists) \textsl{\Alf speed}, $B$ is the magnetic field
+where $v_A$ is the eponymous and rather famous \textsl{\Alf speed}
+(though I doubt \Alf ever called it that), $B$ is the magnetic field
 strength of the , and $m$ and $n$ are the mass and number density of
-the ions in this fluid. And  
+the ions in this fluid.
 
 Don't let the details cause you to to miss the point: The dispersion
 relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
@@ -229,63 +251,65 @@ equation~(\ref{ch1:eqvs}). To wit\footnote{An expression frequently
   scientists?---public enemies, ask physics majors what classes they
   are taking. Then ask about the textbook for each class, and how
   these majors feel about the textbook author.)}, $ \lambda f = $(some
-speed). And to bring you up to speed, at this point there is a
-mountain of textbooks and peer-reviewed literature that refer to the
-\Alf speed and (surprise!) \Alf waves. Why? In his review of
-experiments dealing with \Alf waves, \cite{Gekelman1999} put it this
-way: ``These waves are ubiquitous in space plasmas and are the means
-by which information about changing currents and magnetic fields are
+speed). 
+
+As an aside, you should be aware that \Alf obtained the result
+(\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid ($n >$~0)
+whose constituent particles are not massless ($m >$~0) and that a
+magnetic field $B$ exists in the fluid. As soon as we start two-timing
+on equation (\ref{ch1:eqAlf}) and telling it that $B =$~0, or that $n
+=$~0 or $m =$~0, violating the assumptions that brought it into being,
+equation (\ref{ch1:eqAlf}) repays the favor in kind informing you that
+(nonsense)~$=$~(nonsense).
+
+Finally, to bring you up to speed, at this point there is a mountain
+of textbooks and peer-reviewed literature that refer to the \Alf speed
+and (surprise!) \Alf waves. Why? In his review of experiments dealing
+with \Alf waves, \cite{Gekelman1999} put it this way: ``These waves
+are ubiquitous in space plasmas and are the means by which information
+about changing currents and magnetic fields are
 communicated.''\footnote{There are also tip-top reviews and reports of
   \Alf waves in the magnetosphere, ionosphere, and the region in
   between \citep{Stasiewicz2000,Berthomier2011,Mottez2015}, in the
   magnetotail \citep{Keiling2009}, at the Sun
   \citep{Mathioudakis2013}, in various combinations of all of these
   places \citep{Wu2016a}, and even around otherworldy objects like
-  neutrino stars \citep{Duncan1996}.} So if there is some disturbance
-like a coronal mass ejection banging on the nose of the bow shock
-(Figure~\ref{ch1:FigBowShock}),
+  neutrino stars \citep{Duncan1996}.} 
 
-  % ---------------- FIGURE 2
-
-  \begin{figure}
-    \centering
-    \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/figbowshock}
-    \caption[The Earth's Bow Shock]{The Earth's Bow Shock [Retrieved
-      from the WIND Magnetic Field Investigation (MFI) Team
-      \href{https://wind.nasa.gov/mfi/team_sciencea.html}{website}].}
-    \label{ch1:FigBowShock}
-  \end{figure}
-
-  % ----------------
-
-  In fact, with the solitary exception of chapter~6, gratuitous
-  references to \Alf this-and-that are found throughout the chapters
-  comprising this thesis; I doubt if there are more than five total
-  pages in chapters 2--6 that fail to mention the name.
+In fact, with the solitary exception of chapter~6, gratuitous
+references to \Alf this-and-that are found throughout the chapters
+comprising this thesis; I doubt if there are more than five total
+pages in chapters 2--6 that fail to mention the name.
 
 
-\section{From waves to waves}
+\section[When dispersion relations become dispersive]{When dispersion
+  relations become dispersive,\protect{\footnote{*gasp!*}} or, ``How I
+  found out that scientists are probably telling you half the story''}
 
+Let's review in a sentence what we just picked up. [Check.] It now
+behooves us to get on a nittier, grittier level with \Alf waves.
 
+Dispersive this and that
 
-\section{From waves to \dots  electrons?}
+\section{From waves to electrons}
 
 Let's talk about the aurora then. Even during geomagnetically quiet
 times, roughly 20~GW\footnote{[Real-life way to comprehend number]}
-\citep{Newell2009} are raining down on the poles of the earth through
-various types of aurora, and so-called ``wave aurora'' (because, you
-know, it's powered by waviness, like \Alf waves!) contributes about
-5\% of the total energy budget. When things pick up---for example,
-during a geomagnetic storm---the electron precipitation associated with
-\Alf waves increases quite a bit, and broadband electron energy and
-number flux can become sizeable fractions of the electron
-precipitation budget.
+\citep{Newell2009} are raining down on the poles\footnote{Magnetic, not geographic.} of the
+earth through various types of aurora, and so-called ``wave aurora''
+(because, you know, it's powered by waviness, like \Alf waves!)
+contributes about 5\% of the total energy budget. When things really
+start moving---for example, during a geomagnetic storm---the electron
+precipitation associated with \Alf waves increases quite a bit, and
+broadband electron energy and number flux can become sizeable
+fractions of the electron precipitation budget.
+
+\subsection{You mean ``broadband'' like DSL?}
 
 But just what are broadband electrons, and what do they have to do
 with \Alf waves? The name refers to the tell-tale signature they leave
-when we plot their differential energy flux---a nasty term, I
-know. (If you are already familiar with the concept of flux, go ahead
-and skip the next two paragraphs.) 
+when we plot their differential energy flux---a nasty-souding term, I
+know.
 
 Here's a sketch: Pick up a piece of paper. Imagine that during the
 course of one second, an electron comes zipping through it. We'll use
@@ -300,14 +324,14 @@ paper in a second (energy flux), we'd have to count differently by
 also asking every individual electron how much energy it has (that is,
 how fast it's going)\footnote{The relationship between kinetic
   energy---the energy due to motion---and speed is bread and butter
-  for classical (as opposed to quantum) physicists: $E = \frac{1}{2}m
-  v^2.$} and then summing up the energy contribution of all the
-electrons passing through the page within a second.
+  for classical (but not quantum) physicists: $E = \frac{1}{2}m v^2.$}
+and then summing up the energy contribution of all the electrons
+passing through the page within a second.
 
 Last of all, suppose we wanted to know not just the \emph{total}
 electron energy flux through the page, but the \emph{contribution}
 made by electrons \emph{within some energy range} to the total energy
-flux?\footnote{Why would this be useful?  For the same reasons that it
+flux.\footnote{Why would this be useful?  For the same reasons that it
   would be useful to know [insert TBD analogy].}  Here's an idea: You
 could slap an energy filter on the page---never mind where we got this
 little device, just imagine---so that we only count electrons with
@@ -326,12 +350,31 @@ for each energy range, \emph{capisce}? Like this:
 $J_E$ is the total energy flux.
 
 Unfortunately even this description of energy flux isn't enough to
-convey the meaning of the \emph{differential energy flux} I originally
-mentioned,\footnote{\citet{Bruno2013} give a killer introduction to
-  the subject in their Appendix~E. You could also check out some
-  staples like Chapter~5 in \citet{Paschmann1998}.} but keep it in mind
-because it's close enough for you to be able to appreciate what I'm
-referring to in later chapters when I bring up broadband electrons.
+convey the meaning of \emph{differential energy flux}, which is what I
+originally mentioned,\footnote{The ``deets,'' as I understand young
+  people call them now, can be found in a killer introduction to the
+  subject located in Appendix~E of the review by
+  \citet{Bruno2013}. You could also check out some staples (for me,
+  anyway) like Chapter~5 in \citet{Paschmann1998}.} but keep the
+description and the following discussion in mind, because it's close
+enough for you to be able to appreciate what I'm referring to in later
+chapters when I bring up broadband electrons.
+
+% ---------------- FIGURE
+
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/Chaston2003_alfelec}
+  \caption[\Alfically accelerated (broadband) electrons]{\Alfically
+    accelerated (often called ``broadband'') electrons observed by
+    the FAST satellite [adapted from Figures~1c and 1d in
+    \citealp{Chaston2003a}]. The upper panel shows a so-called
+    ``pitch-angle spectrogram,'' and the lower panel an ``energy
+    spectrogram'' (see text).}
+  \label{ch1:FigAlfElec}
+\end{figure}
+
+% ----------------
 
 Speaking of which, back to broaband electrons. When we fly satellites
 above the aurora and measure the differential energy flux of auroral
@@ -348,70 +391,126 @@ you these puppies (if I may be permitted the expression) are coming in
 hot.
 
 Take a look at the $y$ axis to get a sense of the range of
-angles. Right---they're all within about 30$^\circ$ of 0$^\circ$. They
+angles. Right: they're all within about 30$^\circ$ of 0$^\circ$. They
 are mostly field-aligned. And the way to make a pitch-angle
 spectrogram is to pick a pitch angle (maybe you could start by looking
-at 0$^\circ$, straight down the magnetic field line) and measure the
-differential energy flux---or $\frac{d J_E}{dE}$\footnote{Again, the
-  ``deets,'' as I understand young people call them now, can be found
-  in Chapter~5 of \citet{Paschmann1998}.}---pick a new pitch angle and
-again measure $\frac{d J_E}{dE}$, so on and so forth until you've
-measured $\frac{d J_E}{dE}$ at each pitch angle.
+at 0$^\circ$, straight down the magnetic field line), sum the
+``filtered'' electron energy fluxes to get $J_E$\footnote{This should
+  really be $\frac{dJ_E}{dE}$, but I'm afraid the return on investment
+  (of \emph{your} time, not mine!) is too low to bother explaining it
+  here. I'm telling you, see what \citet{Bruno2013} have to
+  say. They'll even tell you about those atrocious units you see on
+  the right-hand side of the lower panel, ``eV/cm$^2$-s-sr-eV.''} (use
+equation \ref{ch1:eqeFlux}), pick a new pitch angle and again
+calculate $J_E$, so on and so forth until you've calculated $J_E$ at
+each pitch angle. Now, repeat the entire process over and over again
+at a regular time interval and \emph{plot those data.} Bam!
+Pitch-angle spectrogram.
 
-Let me back up for a second. If you combine this business of pitch
-angles with our discussion of ``filtered'' electron energy flux, you
-would not be far from what we actually do with particle detectors on
-satellites. The goal with these detectors is to measure \emph{how many
+Let me back up for a second. By combining this business of pitch
+angles with our discussion of ``filtered'' measurements of electron
+energy flux, the way we did in the last paragraph, you are not far
+from what we actually do with particle detectors on rockets and
+satellites. The goal of these detectors is to measure \emph{how many
   particles} (electrons, in our case) at \emph{some pitch angle} and
 over \emph{some range of energies}. If you had made these types of
-measurements for the electrons hanging out at $\sim$4000~km on (date)
-somewhere on the nightside of the earth and had decided to turn that
-information into plots, you might get something like
-Figure~\ref{ch1:FigAlfElec} depending on where exactly you were. I'll
-explain how in a moment.
+calculations for the electrons hanging out at $\sim$2700~km on Feb~2,
+1997 somewhere on the nightside of the earth, and had decided to turn
+those calculations into spectrograms, you might get something like
+Figure~\ref{ch1:FigAlfElec} depending on where exactly you were.
+
+% ---------------- FIGURE
+
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/dombeck2013}
+  \caption[Inverted V (monoenergetic) electrons]{Monoenergetically
+    accelerated (often called ``inverted V) electrons observed by
+    the FAST satellite [adapted from Figure~4b in \citet{Dombeck2013}].}
+  \label{ch1:FigDombeck}
+\end{figure}
+
+% ----------------
+
+The plot in the lower panel---a typical example of unimaginatively
+named \emph{energy spectrograms}---shows that ``tell-tale signature''
+of broadband electrons that I mentioned at the beginning of this
+section. What is it saying? Look at the second line of the $y$ axis in
+this case: ``Energy (eV).'' See how virtually all of the action in
+this panel is below 1000~eV, and how the action is more or less
+uniformly hot over energies from 4~eV up to wherever the differential
+energy flux cuts off? Compare that with what you see in
+Figure~\ref{ch1:FigDombeck}, and maybe now you can appreciate why the
+former are called ``broadband.'' 
+
+The way to make this plot is, instead of adding up the contribution to
+differential energy flux from each \emph{energy range} to a given
+\emph{pitch angle} , to add up the contribution to differential energy
+flux from each \emph{pitch angle} to a given \emph{energy range}, and
+\emph{average}. Thus, one might say that each type of spectrogram
+shown in Figure~\ref{ch1:FigAlfElec} is a different way of looking at
+the same coin, and clearly each type of spectrogram conveys different
+information about the local electrons.
+
+You might be saying to yourself (and rightly so), ``What does that
+have to do with \Alf waves? Nothing about Figure~\ref{ch1:FigAlfElec}
+says 'jiggly magnetic field lines' or 'guitar string' to me. Wasn't
+that the idea?'' Yes, young padowan. 
 
 In the auroral zone---an altitude of a few hundred km and above at
-latitudes\footnote{Magnetic latitude, not geographic latitude.} above
-$\sim$60$^\circ$---field-aligned electrons barrel toward the
-atmosphere and are near the top of the list of causes of aurora. The
-complication is, as you might guess, that there are several ways one
-could get field-aligned acceleration.\footnote{\citet{Wygant2002},
-  \citet{Bostrom2003a}, \citet{Morooka2004}, \citet{Newell2009},
-  \citet{Hull2010}, \citet{Mottez2016}, are only a handful among many,
-  many current or recently retired researchers who would love to tell
-  you more, and they aren't even the historical giants, like
-  \citet{Knight1973}, \citet{Evans1974}, \citet{Hasegawa1976}, and
-  \citet{Lyons1980a} (to name a few) who laid the groundwork!}
+latitudes\footnote{As before, I mean magnetic latitude and not
+  geographic.}  above $\sim$60$^\circ$---field-aligned electrons
+barrel toward the atmosphere and are near the top of the list of
+causes of aurora. The complication is, as you might guess, that there
+are several ways one could get field-aligned
+acceleration.\footnote{\citet{Wygant2002}, \citet{Bostrom2003a},
+  \citet{Morooka2004}, \citet{Newell2009}, \citet{Hull2010},
+  \citet{Mottez2016}, are only a handful among many, many current or
+  recently retired researchers who would love to tell you more, and
+  they aren't even the historical giants (like \citet{Knight1973},
+  \citet{Evans1974}, \citet{Hasegawa1976}, and \citet{Lyons1980a}, to
+  name a few) who laid the groundwork!}
 \citet{Chaston2002,Chaston2003a,Chaston2007,Chaston2008} in particular
 will tell you that \Alf waves are certainly on the short list of
-suspects, but how would they know?
+culprits, and are in fact the cause of what we see in
+Figure~\ref{ch1:FigAlfElec}, but how would they know?
 
-The plot in the lower panel---a typical example of the unimaginatively
-named \emph{energy spectrogram}---shows that ``tell-tale signature''
-of broadband electrons that I mentioned at the beginning of this
-section. Remember our definition of energy flux? Total amount of
-energy carried by electrons, through the page, per second?  and
-then to plot the energy fluxes
+\subsection{Why are electrons accelerated along the field line?}
 
-Next, we slap 
 
-  % ---------------- FIGURE
 
-  \begin{figure}
-    \centering
-    \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/Chaston2003_alfelec}
-    \caption[\Alfically accelerated (broadband) electrons]{\Alfically
-      accelerated (often called ``broadband'') electrons observed by
-      the FAST satellite [Adapted from Figures~1c and 1d in
-      \citealp{Chaston2003a}]. The upper panel shows a so-called
-      ``pitch-angle spectrogram,'' and the lower panel an ``energy
-      spectrogram'' (see text).}
-    \label{ch1:FigAlfElec}
-  \end{figure}
+\section{Geomagnetic storms, interplanetary magnetic fields}
 
-  % ----------------
+So if there is some disturbance
+like a coronal mass ejection banging on the nose of the bow shock
+(Figure~\ref{ch1:FigBowShock}),
 
-  
+% ---------------- FIGURE
+
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/figbowshock}
+  \caption[The Earth's Bow Shock]{The Earth's Bow Shock [Retrieved
+    from the WIND Magnetic Field Investigation (MFI) Team
+    \href{https://wind.nasa.gov/mfi/team_sciencea.html}{website}].}
+  \label{ch1:FigBowShock}
+\end{figure}
+
+% ----------------
+
+
+
+Let's get into it
+
+\subsection{The solar wind (that old bully!)}
+
+Solar this 
+
+\subsection{Things that go ``bump'' on the nightside}
+
+And nightside that 
+
+\section{And now, in parting \dots}
 
 % Finished with the parindent stuff? Reset 'em
 \setlength\parindent{\savedparindent}

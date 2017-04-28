@@ -87,7 +87,7 @@
     \renewcommand{\thetable}{\thechapter.\arabic{table}}
     \doublespacing
     \pagestyle{plain}
-    \citestyle{aa}
+    % \citestyle{aa}
 }
 
 \ExecuteOptions{artsci,code}
