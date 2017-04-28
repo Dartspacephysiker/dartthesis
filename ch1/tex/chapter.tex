@@ -56,63 +56,67 @@ several keys of knowledge which I forthwith commence to afford.
 
 \section{Talkin' waves}
 
-% Keep the old parindent and parskip in \savedparindent and \savedparskip
-\newlength{\savedparindent}
-\newlength{\savedparskip}
-\setlength{\savedparindent}{\parindent}
-\setlength{\savedparskip}{\parskip}
+% % Keep the old parindent and parskip in \savedparindent and \savedparskip
+% \newlength{\savedparindent}
+% \newlength{\savedparskip}
+% \setlength{\savedparindent}{\parindent}
+% \setlength{\savedparskip}{\parskip}
 
-% Now set the new'ns
-\setlength\parindent{0pt}
-\setlength\parskip{1ex plus 2pt minus 1pt}
-\newcommand\X{\par\noindent---~}
+% % Now set the new'ns
+% \setlength\parindent{0pt}
+% \setlength\parskip{1ex plus 2pt minus 1pt}
+% \newcommand\X{\par\noindent---~}
 
-\X ``What is an \Alf wave?''  
+% \X ``What is an \Alf wave?''  
 
-A natural low-frequency mode of
-oscillation of a plasma.
+% A natural low-frequency mode of
+% oscillation of a plasma.
 
-\X ``Are there high-frequency modes?''  
+% \X ``Are there high-frequency modes?''  
 
-Yes! Plasma mode \& Co.
+% Yes! Plasma mode \& Co.
 
-\X ``What makes them high frequency?''
-
-
-They deal with oscillations too rapid for an ion to participate,
-and such oscillations are totally neglected i ngoing from two-fluid
-theory to MHD---specifically when the Hall term (), which includes (),
-is discarded.
-
-\X ``What's the importance of them?''  
-
-You mean in relative terms, or in some abstract, general way?
-
-\X ``Both, but start with relative terms.''
-
-All right. Generality. Wait---let's
-start with some background and history. You're familiar with soun
-waves, right? The idea that the air can vibrate and carry the sound of
-music, the sound of a fog horn, the drop of a pin, yadda yadda?
-
-\X ``Yeah.''
+% \X ``What makes them high frequency?''
 
 
-Cool. Know why the air does that?
+% They deal with oscillations too rapid for an ion to participate,
+% and such oscillations are totally neglected i ngoing from two-fluid
+% theory to MHD---specifically when the Hall term (), which includes (),
+% is discarded.
+
+% \X ``What's the importance of them?''  
+
+% You mean in relative terms, or in some abstract, general way?
+
+% \X ``Both, but start with relative terms.''
+
+% Let's start with some background and history. You're familiar with soun
+% waves, right? The idea that the air can vibrate and carry the sound of
+% music, the sound of a fog horn, the drop of a pin, yadda yadda?
+
+% \X ``Yeah.''
 
 
-\X ``Uhh \dots''
+% Cool. Know why the air does that?
+
+
+% \X ``Uhh \dots''
 
 
 % Finished with the parindent stuff? Reset 'em
-\setlength\parindent{\savedparindent}
-\setlength\parskip{\savedparskip}
+% \setlength\parindent{\savedparindent}
+% \setlength\parskip{\savedparskip}
+
+Let's start with some background and history. You're familiar with
+sound waves, right? The idea that the air can vibrate and carry the
+sound of music, the sound of a fog horn, the drop of a pin, yadda
+yadda? 
 
 Right. Just think about the speed of sound, which I bet you've heard
 of. We'll call it $v_s$. Here's the thing: in simple
 cases\footnote{I'm glossing over a lot of the legwork because we've
   got a long way to go in a different direction. Check out your
-  favorite intro text if you want to dive into details.}  $v_s$
+  favorite intro text if you want to dig into details.}  $v_s$
 dictates a relationship between the wavelength $\lambda$ and frequency
 $f$ of a particular sound wave. Namely,
 \begin{equation}
@@ -125,24 +129,12 @@ or, just as good,
   \lambda = \dfrac{v_s}{f}.
 \end{equation}
 What does it mean? That $\lambda$ and $f$ are \emph{proportional} to
-each other--inversely proportional, that is-- and the so-called
+each other---inversely proportional, that is---and the so-called
 \emph{constant of proportionality} is $v_s$, the speed of
 sound!\footnote{In practice, scientists prefer the form \ref{ch1:eqvs}
   because $\lambda$ is a length and $f$ indicates ``how many per
   time;'' if you multiply $\lambda$ and $f$ together, you get a
-  ``distance per time,'' or a speed!} But how did nature ``know'' to
-pick $v_s$?
-
-It turns out that the properties of a system determines how (or
-perhaps whether) it will resonate---that is, \emph{the system
-  properties determine the dispersion relation}. If you pluck a guitar
-string, say, it will pick a single frequency (and probably harmonics)
-at which to resonate based on how tight, how thick, and how long the
-string is. For the air, $v_s$ is a magical number that nature picks
-based on the air temperature $T$ and number density\footnote{``Number
-  density'' meaning ``how many air molecules or atoms fit in a box of
-  a size that we agree upon,'' like 1~cm~$\times$~1~cm~$\times$~1~cm.}
-$n$.
+  ``distance per time,'' or a speed!}
 
 For example, when you pluck the low E string on a guitar, which is the
 fattest string, it vibrates and launches vibrations in the air that
@@ -154,24 +146,35 @@ the length of my 1993 Buick Century Special. How about we ascend in
 pitch to the next string on a guitar, the A string?\footnote{No time
   for quibbling with different tunings, now.}  $f = $~110~Hz, and
 according to equation~(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m--about
-the distance from the ground to the net of a basketball hoop.
+the distance from the ground to the net of a basketball hoop. 
 
-Why am I telling you all this? Because there's an important concept
+Besides talking about the existence of the speed of sound, there's
+another question we might ask: How did the air ``know'' to pick $v_s$
+as the right speed for sound waves to travel? Why not the speed of
+light, $c$? If I hadn't skipped the details that lead to equation
+(\ref{ch1:eqvs}), we would have seen that nature picks $v_s$ based on
+the air temperature $T$ and number density\footnote{``Number density''
+  meaning ``how many air molecules or atoms fit in a box of a size
+  that we agree upon,'' like 1~cm~$\times$~1~cm~$\times$~1~cm.} $n$.
+
+Why are we talking about this? Because there's an important concept
 illustrated here, what some of us laboratory-bound types call a
 \emph{dispersion relation}. In the very particular case at hand,
 equation~(\ref{ch1:eqvs}) is telling you that if you start ascending
 the E major scale on your guitar so that the pitch steadily increases,
 nature has informed us that the wavelength of each note played gets
-shorter and shorter so that equation~(\ref{ch1:eqvs}) is always true.
+shorter and shorter so that equation~(\ref{ch1:eqvs}) is always
+true---which is to say that sound waves always propagate at the speed
+of sound.\footnote{Except when they don't, but like I said, we've got
+  other destinations in mind.}
 
-Things don't have to be so simple, you know. In fact, instead of
+It doesn't have to be so simple, you know. Instead of
 equation~(\ref{ch1:eqvs}) I could turn up the heat in a
-generalized\footnote{In physics speak, when discussing a particular
-  theory the word ``generalized'' signals to all physicists in the
-  area that the ideas are about to become far-reaching, or impossible
-  to comprehend, or take a turn for the worse into quackery. It's a
-  word that can only be taken on a case-by-case basis, so beware!}
-way, and tell you something like
+generalized\footnote{In physics speak, the word ``generalized''
+  signals to all physicists in the area that the ideas are about to
+  become far-reaching, or impossible to comprehend, or worse, descend
+  into quackery. It's a word that can only be taken on a case-by-case
+  basis, so beware!}  way, and tell you something like
 \begin{equation}
   \label{ch1:eqvsgen}
   v_s = v_s (T, N),
@@ -179,17 +182,17 @@ way, and tell you something like
 which is wonderfully vague. It looks meaningless, doesn't it? But
 no--it's telling you that the ``the speed of sound is related to air
 temperature and density,'' just like equation~(\ref{ch1:eqvs}); the
-difference is that I haven't bothered to specify \emph{how} they are
-related. Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys
-us power to dream a little. Suppose you and I are investigating some
-exotic fluid---we'll pretend for kicks that it behaves sort of like a
-gas, by which I mean that it can be described by quantities like
-temperature and density that we know so well.\footnote{If you think
-  you don't know them well, you simply haven't realized that you make
-  everyday decisions, like whether to go running, on the basis of
-  temperature (``Is it too hot out there?'') and density (``Is it
-  going to be gross and humid?'').}
+difference is that equation (\ref{ch1:eqvsgen}) hasn't bothered to
+specify \emph{how} they are related. 
 
+Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys us power
+to dream a little. Suppose you and I are investigating some exotic
+fluid---we'll pretend for kicks that it behaves sort of like a gas, so
+that it can be described by quantities like temperature and density
+that we know so well.\footnote{If you think you don't know them well,
+  you simply haven't realized that you make everyday decisions, like
+  whether to go running, on the basis of temperature (``Is it too hot
+  out there?'') and density (``Is it going to be gross and humid?'').}
 Let's futher pretend that this exotic fluid is made up of charged
 particles, so that it is also subject to electrodynamics and can do
 fancy things under special conditions, like freeze a magnetic field
@@ -202,48 +205,63 @@ into itself\footnote{Within our solar system, the ``frozen magnetic
   on your lawn as it spins. In the case of the solar wind, these
   spirals happen because of the rotation of the sun, the flow of the
   solar wind \emph{away} from the sun, and the whole ``fluid that
-  freezes magnetic fields into itself'' idea.} and conduct electrical
+  freezes magnetic fields into itself'' idea.}  and conduct electrical
 currents.
 
 So what might the dispersion relation, the ``updated'' version of
-equation~(\ref{ch1:eqvs}), look like for this exotic fluid? Back in
-1942 Hannes \Alf proposed that within this putative
+equation~(\ref{ch1:eqvs}), look like for this ungodly
 ``magnetohydrodynamic,''\footnote{It might surprise you that at the
   healthy length of eight syllables, this is a word that gets used
-  regularly in plasma physics.} or MHD, fluid,
+  regularly in plasma physics.} or MHD, fluid? Back in 1942 Hannes
+\Alf proposed
 \begin{equation}
   \label{ch1:eqmhd}
   v = v ( T, n, B).
 \end{equation}
-Comparing this expression with equation (\ref{ch1:eqvsgen}) informs
-you of this: all he did was suggest dependence on the magnetic field
-$B$!  The reasons why he suggested this dependence, though, are more
-sophisticated than his simply ``taking a crack at it'' and shoving
-another alphabet letter into the right-hand side of equation
+Comparing equation \ref{ch1:eqmhd} with equation (\ref{ch1:eqvsgen})
+informs you of this: all he did was suggest dependence on the magnetic
+field $B$!  The reasons why he suggested this dependence, though, are
+more sophisticated than his simply ``taking a crack at it'' and
+shoving another alphabet letter into the right-hand side of equation
 (\ref{ch1:eqvsgen}).\footnote{A good, old-fashioned wild guess is
   nonetheless a respectable strategy when attacking, for instance,
   nonlinear differential equations; solving them seems to be the
   mathematician's equivalent of shooting beer cans off a fencepost.}
 
 He went a step further and nailed down an explicit dispersion
-relation\footnote{I've swept a few details under the rug. But not
-  many, considering Alfv\'{e}n's original letter to \textsl{Nature}
-  was only six paragraphs! (In case you didn't know, \textsl{Nature}
-  is considered by many to be the darling of the physical sciences as
-  far as publication goes, the obvious corollary being that most
-  scientists have developed a strong opinion about or have emotional
-  baggage related to it.)} (I've only changed the units):
+relation\footnote{Some dust-bunny details are going under the rug, but
+  not many, considering Alfv\'{e}n's original letter to
+  \textsl{Nature} was only six paragraphs! (In case you didn't know,
+  \textsl{Nature} is considered by many to be the darling of the
+  physical sciences as far as publication goes, the obvious corollary
+  being that most scientists have developed a strong opinion about or
+  have emotional baggage related to it.)} comparable to equation
+(\ref{ch1:eqvs}):
 \begin{equation}
   \label{ch1:eqAlf}
-  \lambda f = \frac{B}{\sqrt{\mu_o m n}} \equiv v_A,
+  \lambda f = v_A \equiv \frac{B}{\sqrt{\mu_o m n}},
 \end{equation}
-where $v_A$ is the eponymous and rather famous \textsl{\Alf speed}
-(though I doubt \Alf ever called it that), $B$ is the magnetic field
-strength of the , and $m$ and $n$ are the mass and number density of
-the ions in this fluid.
+where $v_A$ is the eponymous and rather famous \textsl{\Alf speed} (I
+doubt \Alf ever called it that), $B$ is the strength of the
+background\footnote{When physicists talk about ``background'' elements
+  to their storyboard, they often just mean that these elements aren't
+  changing, or are changing slowly compared to whatever they want to
+  investigate. For equation (\ref{ch1:eqAlf}), \Alf was assuming the
+  presence of a background magnetic field.} magnetic field, and $m$
+and $n$ are the mass and number density of the ions that make up the
+fluid. 
 
-Don't let the details cause you to to miss the point: The dispersion
-relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
+A small aside: If there were \emph{only} ions present, and no
+electrons to counterbalance the charge of the ions, you can easily
+understand that we couldn't have this conversation because the ions
+would repulse each other and there wouldn't be an MHD fluid to speak
+of. We're only talking about the mass of ions and ignoring electrons
+in equation (\ref{ch1:eqAlf}) because as you may know, even the
+smallest ion (or naked hydrogen, which is just a proton) outweighs an
+electron by almost 2,000 times.
+
+Don't let the details cause you to to miss the point, though. The
+dispersion relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
 equation~(\ref{ch1:eqvs}). To wit\footnote{An expression frequently
   employed by D.J. Griffiths, the celebrated author of undergraduate
   physics textbooks. (If you don't believe me that textbook authors
@@ -251,16 +269,14 @@ equation~(\ref{ch1:eqvs}). To wit\footnote{An expression frequently
   scientists?---public enemies, ask physics majors what classes they
   are taking. Then ask about the textbook for each class, and how
   these majors feel about the textbook author.)}, $ \lambda f = $(some
-speed). 
-
-As an aside, you should be aware that \Alf obtained the result
-(\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid ($n >$~0)
-whose constituent particles are not massless ($m >$~0) and that a
-magnetic field $B$ exists in the fluid. As soon as we start two-timing
-on equation (\ref{ch1:eqAlf}) and telling it that $B =$~0, or that $n
-=$~0 or $m =$~0, violating the assumptions that brought it into being,
-equation (\ref{ch1:eqAlf}) repays the favor in kind informing you that
-(nonsense)~$=$~(nonsense).
+speed). You should be aware of something else: \Alf obtained the
+result (\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid ($n
+>$~0) whose constituent particles are not massless ($m >$~0) and that
+a magnetic field $B$ exists in the fluid. As soon as we start
+two-timing on equation (\ref{ch1:eqAlf}) and telling it that $B =$~0,
+or that $n =$~0 or $m =$~0, violating the assumptions that brought it
+into being, equation (\ref{ch1:eqAlf}) seeks to repay the favor by
+helpfully informing you that (nonsense)~$=$~(nonsense).
 
 Finally, to bring you up to speed, at this point there is a mountain
 of textbooks and peer-reviewed literature that refer to the \Alf speed
@@ -281,15 +297,64 @@ references to \Alf this-and-that are found throughout the chapters
 comprising this thesis; I doubt if there are more than five total
 pages in chapters 2--6 that fail to mention the name.
 
-
 \section[When dispersion relations become dispersive]{When dispersion
-  relations become dispersive,\protect{\footnote{*gasp!*}} or, ``How I
-  found out that scientists are probably telling you half the story''}
+  relations become dispersive,\protect{\footnote{*gasp!*}} or, ``How
+  you found out that scientists are probably only telling you half the
+  story''}
 
 Let's review in a sentence what we just picked up. [Check.] It now
 behooves us to get on a nittier, grittier level with \Alf waves.
 
-Dispersive this and that
+It turns out that the properties of a system determines how (or
+perhaps whether) it will resonate. Stated in alternate fashion,
+\emph{the system properties determine the dispersion relation}. If you
+pluck a guitar string, say, it will pick a single frequency (and
+probably harmonics) at which to resonate based on how tight, how
+thick, and how long the string is. Like we discussed in the last
+section, there is a whole spectrum of frequencies and wavelengths that
+the air allows---the whole range of human hearing\footnote{My own
+  unfounded speculation is that humans must have evolved to hear over
+  the range of frequencies that carry information most meaningful to
+  our survival.}, of course, and much more---but equation
+(\ref{ch1:eqvs}) says that no matter how you slice it, the waves move
+at the constant speed $v_s$. 
+
+Equation (\ref{ch1:eqAlf}) says that the same goes for waves in an MHD
+fluid, at the speed $v_A$ instead of $v_s$, and both equations,
+despite the name we gave them earlier, describe \emph{nondispersive}
+waves. That's what we mean when we say that the speed of a wave is
+fixed, regardless of $\lambda$ and $f$. If sound waves that we're
+familiar with \emph{were} dispersive---imagine waves traveled at a
+speed proportional to their frequency so that higher-frequency waves
+consistently arrived before low-frequency waves---your experience at a
+live concert or symphony would stand to be rather different: audience
+members on the front-row might have a shot at a coherent experience,
+but people in the nosebleeds would run the risk of hearing the violas
+a second or two after they heard the violins!\footnote{The element of
+  surprise in Haydn's famed ``Surprise'' symphony would be a rather
+  difficult, and conceivably impossible, feat to achieve.}
+
+I have now exhausted my stores of knowledge on sound waves, and I'm
+afraid I'm under necessity of submerging you in plasma---theory, that
+is---and subjecting you to the harsh reality that by the numbers, the
+universe at present likes plasma much, much more than it likes the
+ocean of neutral gas that we live under.\footnote{Take comfort knowing
+  that the visible universe is on your side; people like Dennis
+  Gallagher propound the idea that 99\% or more is made up of plasma,
+  which is not hard to believe even if one only takes a stroll around
+  our solar system.} We have to wander outside the realm of our
+direct, or at least regular, experience, where as far as any human
+that has looked (and of which I am aware) can tell, the universe cares
+not if our nosebleed symphony experience is confusing and
+upsetting---by which I mean that dispersive waves are not hard to
+find. In order to forge ahead (and especially to understand what we
+discuss in upcoming chapters), we've got to develop some understanding
+about what leads to dispersive waves, and we've got to do it in the
+context of plasma physics.
+
+Never fear! Many faithful guides have made the trek before us; we're
+going to follow one in right now, in fact
+
 
 \section{From waves to electrons}
 
@@ -513,8 +578,8 @@ And nightside that
 \section{And now, in parting \dots}
 
 % Finished with the parindent stuff? Reset 'em
-\setlength\parindent{\savedparindent}
-\setlength\parskip{\savedparskip}
+% \setlength\parindent{\savedparindent}
+% \setlength\parskip{\savedparskip}
 
 % And chapter 1 bib
 \bibliographystyle{agufull08}
