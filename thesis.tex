@@ -28,16 +28,19 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{array}
+\usepackage{cancel}             %To kill math
 \usepackage[dvips]{graphicx}
 \usepackage{pslatex}
 \usepackage{epsfig}
 \usepackage[figuresleft]{rotating}
 \usepackage{longtable}
 \usepackage{lscape}
+\usepackage{numprint}
 \usepackage{setspace}
 \usepackage{parskip}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames]{xcolor}
+
 \usepackage[labelfont=bf]{caption}
 
 % Smaller dan dat
@@ -161,20 +164,23 @@
 
 \include{./pre/tex/front_matter}   % Front Matter: title, preface, abstract, etc.
 
+% For printing big numbers
+\npthousandsep{ }
+\npdecimalsign{.}
+
 \pagenumbering{arabic}           % Switch to arabic page numbering for chapters
 \doublespacing                    % Thesis must be doubled spaced
 % \onehalfspacing
 
-
 %--- ADD CHAPTERS
-\include{./ch1/tex/chapter}       % Chapter 1
-\include{./ch2/tex/chapter}       % Chapter 2
-\include{./ch3/tex/chapter}       % Chapter 3
-\include{./ch4/tex/chapter}       % Chapter 4
-\include{./ch5/tex/chapter}       % Chapter 5
-\include{./ch6/tex/chapter}       % Chapter 6
-\include{./ch7/tex/chapter}       % Chapter 7
-\include{./app/tex/appendix}       % Appendicies A & B
+\include{./ch1/tex/chapter_v2}       % Chapter 1
+% \include{./ch2/tex/chapter}       % Chapter 2
+% \include{./ch3/tex/chapter}       % Chapter 3
+% \include{./ch4/tex/chapter}       % Chapter 4
+% \include{./ch5/tex/chapter}       % Chapter 5
+% \include{./ch6/tex/chapter}       % Chapter 6
+% \include{./ch7/tex/chapter}       % Chapter 7
+% \include{./app/tex/appendix}       % Appendicies A & B
 %--- END CHAPTERS
 
 % Bibliography using bibtex & natbib w/ AGU citation style

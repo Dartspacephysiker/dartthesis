@@ -45,7 +45,7 @@ sufficing to avoid being given the lie.
 Having drunk reverently, deeply, and frequently from this cup, this
 veritable goblet of gladness, I opt to lay the rudiments of the
 present work at its outset in the parlance of the laity---the
-salesman, the nurse, the brickmason, the entrepreneur, the
+salesman, the nurse, the blockmason, the entrepreneur, the
 custodian\footnote{All honorable occupations held by the author's
   family members, some of which he has also held.}---that all who
 desire may sup the elixir, if only for a chapter. But if I do not
@@ -107,18 +107,16 @@ several keys of knowledge which I forthwith commence to afford.
 % \setlength\parindent{\savedparindent}
 % \setlength\parskip{\savedparskip}
 
-Let's start with some background and history. You're familiar with
-sound waves, right? The idea that the air can vibrate and carry the
-sound of music, the sound of a fog horn, the drop of a pin, yadda
-yadda? 
+Let's start with some background and history. I guess you're familiar with sound
+waves? The idea that the air can vibrate and carry the sound of music, the sound
+of a fog horn, the drop of a pin, yadda yadda?
 
-Right. Just think about the speed of sound, which I bet you've heard
-of. We'll call it $v_s$. Here's the thing: in simple
-cases\footnote{I'm glossing over a lot of the legwork because we've
-  got a long way to go in a different direction. Check out your
-  favorite intro text if you want to dig into details.}  $v_s$
-dictates a relationship between the wavelength $\lambda$ and frequency
-$f$ of a particular sound wave. Namely,
+Right. Just think about the speed of sound, which I bet you've come across
+before. We'll call it $v_s$. Here's the thing: in simple cases\footnote{I'm
+  glossing over a lot of the legwork because we've got a long way to go in a
+  different direction. Check out your favorite intro text if you want to dig
+  into details.}  $v_s$ dictates a relationship between the wavelength $\lambda$
+and frequency $f$ of a particular sound wave. Namely,
 \begin{equation}
   \label{ch1:eqvs}
   \lambda f = v_s,
@@ -128,235 +126,577 @@ or, just as good,
   \label{ch1:eqvsdiff}
   \lambda = \dfrac{v_s}{f}.
 \end{equation}
-What does it mean? That $\lambda$ and $f$ are \emph{proportional} to
-each other---inversely proportional, that is---and the so-called
-\emph{constant of proportionality} is $v_s$, the speed of
-sound!\footnote{In practice, scientists prefer the form \ref{ch1:eqvs}
-  because $\lambda$ is a length and $f$ indicates ``how many per
-  time;'' if you multiply $\lambda$ and $f$ together, you get a
-  ``distance per time,'' or a speed!}
+What do (\ref{ch1:eqvs}) and (\ref{ch1:eqvsdiff}) mean? That $\lambda$ and $f$
+are \emph{proportional} to each other---inversely proportional, that is---and
+the so-called \emph{constant of proportionality} is $v_s$, the speed of
+sound!
 
-For example, when you pluck the low E string on a guitar, which is the
-fattest string, it vibrates and launches vibrations in the air that
-vibrate at a frequency of about 82~Hz; when you hear it, it is
-knocking at your eardrum 82 times each second: $f = $~82~Hz. Well,
-suppose $v_s =$~340~m/s---a pretty good answer by cereal box
-standards---the wavelength $\lambda$ of that low E is 4~m, or about
-the length of my 1993 Buick Century Special. How about we ascend in
-pitch to the next string on a guitar, the A string?\footnote{No time
-  for quibbling with different tunings, now.}  $f = $~110~Hz, and
-according to equation~(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m--about
-the distance from the ground to the net of a basketball hoop. 
+% \footnote{In practice,
+  % scientists prefer the form \ref{ch1:eqvs} because $\lambda$ is a length and
+  % $f$ indicates ``how many per time;'' if you multiply $\lambda$ and $f$
+  % together, you get a ``distance per time,'' or a speed!}
 
-Besides talking about the existence of the speed of sound, there's
-another question we might ask: How did the air ``know'' to pick $v_s$
-as the right speed for sound waves to travel? Why not the speed of
-light, $c$? If I hadn't skipped the details that lead to equation
-(\ref{ch1:eqvs}), we would have seen that nature picks $v_s$ based on
-the air temperature $T$ and number density\footnote{``Number density''
-  meaning ``how many air molecules or atoms fit in a box of a size
-  that we agree upon,'' like 1~cm~$\times$~1~cm~$\times$~1~cm.} $n$.
+For example, when you pluck the low E string on a guitar (which is the fattest
+string)\footnote{We're assuming standard EADGBE tuning. The time fails to
+  quibble with different tunings.} it vibrates; in turn, the vibrating E string
+causes the air pressure to pulsate\footnote{In the lingo, a sound wave is what
+  is known as a \emph{compressional mode}. As we'll see later on, some fluids
+  also support \emph{transverse modes}.} at a frequency of about 82~Hz, and
+those pulsations travel to your ear and everywhere else. When you hear it, it is
+knocking at your eardrum 82 times each second: $f = $~82~Hz.  Well, suppose
+$v_s =$~340~m/s---a pretty good answer by cereal box standards---the wavelength
+$\lambda$ of the sound wave carrying that low E is 4~m, which is about the
+length of my 1993 Buick Century Special. How about we ascend in pitch to the
+next string on guitar, the A string?  $f = $~110~Hz, and according to
+equation~(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m--about the distance from the
+ground to the net of a basketball hoop.
 
-Why are we talking about this? Because there's an important concept
-illustrated here, what some of us laboratory-bound types call a
-\emph{dispersion relation}. In the very particular case at hand,
-equation~(\ref{ch1:eqvs}) is telling you that if you start ascending
-the E major scale on your guitar so that the pitch steadily increases,
-nature has informed us that the wavelength of each note played gets
-shorter and shorter so that equation~(\ref{ch1:eqvs}) is always
-true---which is to say that sound waves always propagate at the speed
-of sound.\footnote{Except when they don't, but like I said, we've got
-  other destinations in mind.}
+You get the picture: if you start ascending the E major scale on your guitar so
+that the pitch of each note steadily increases, nature has informed us that the
+wavelength of the sound wave carrying each note you play gets shorter and
+shorter so that equation~(\ref{ch1:eqvs}) is always true---which is to say that
+sound waves always propagate at the speed of sound.\footnote{Except when they
+  don't, but we'll not rove in this direction because we have other destinations
+  in mind.}
+
+Why are we talking about this? Because there's an important concept illustrated
+here, what some of us laboratory-bound types call a \emph{dispersion relation}
+that I promise you will make cameo appearances, albeit in different costume,
+throughout this thesis. We'll come back to dispersion relations shortly. A more
+pressing issue that deserves your attention is that in their present forms the
+relations (\ref{ch1:eqvs}) and (\ref{ch1:eqvsdiff}), while not wrong, would
+nevertheless make some physicists (shy and delicate creatures as they are)
+uncomfortable. The short explanation is that $f$ measures inverse time while
+$\lambda$ has units of length, which, you may be surprised to learn, would
+represent a gross imbalance to the mind of many a physicist.\footnote{The
+  imbalance is not simply aesthetic, either. There are very good reasons to put
+  time and space on equal footing, far from the least of which is the paving of
+  a conceptual pathway between physical domains of time and space and their
+  spectral counterparts. This pathway turns out to be important for any area of
+  physics that deals heavily in waves, including quantum mechanics.}
+
+\subsection{The wave number $\mathbf{k}$, and a philosophical excursion}
+\label{subsec:k}
+
+To put time and space on equal footing (admittedly only in terms of
+units\footnote{Even if our present aim to achieve equal footing for
+  Equation~(\ref{ch1:eqvs}) is base (we're just changing units, after all), the
+  spirit of our aim is lofty. To truly put time and space on equal footing, on
+  simultaneously quantum and relativistic scales, is among the highest and most
+  sweeping challenges facing the last century or so of physics.}) let me
+introduce you the concept of \emph{spatial frequency}, the typical,\footnote{We
+  are not talking about the \emph{spectroscopic wave number}
+  $\nu \equiv 1 / \lambda$ that I understand is common among chemists.}
+mathematical definition\footnote{Definitions, the troublesome things. I have
+  observed that beginning students in physics are prone to confuse definitions,
+  such as the definitions of wave number (\ref{ch1:eqk}) and work (i.e., the
+  energy resulting from a force acting over a distance), with physical laws. A
+  definition is no such thing. Instead, a definition is some quantity that keeps
+  presenting or suggesting itself in the process of research that makes sense to
+  set aside and give formally bestowed meaning---a \emph{definition}. The root
+  of confusion seems to be that each discipline is heavily steeped in naturally
+  arising, field-specific lingo; intertwinement of lingo with the laws that get
+  described in terms of that lingo produces a trap for unwary laity and budding
+  physicists alike.} of which is
+\begin{equation}
+  \label{ch1:eqk}
+  k = \dfrac{2 \pi}{\lambda}.
+\end{equation}
+``Great,'' I can hear you saying to yourself. ``You managed to obfuscate the
+meaning of wavelength by burying it in the denominator and decorating it with
+superfluous numbers.'' Well, give me a minute to explain.
+
+One way to understand the reason for placing $2 \pi$ in the numerator is that we
+want to compare any frequencies we observe against a comprehensive
+standard.\footnote{I'm altogether avoiding the subject of phase of a cycle; you
+  can find it in any introductory textbook that is worth even an iota of its
+  salt.} ``What standard?'' Great question! Think: a pattern that repeats itself
+at a regular interval (whether spatial or temporal) is a cycle, and the simplest
+and most universal example of a cycle is a \emph{circle}---particularly a circle
+defined to have a radius of 1 (i.e., the unit circle), which has a circumference
+of $2 \pi$.  Adopting the unit circle as our ``standard cycle'' against which to
+measure every other cycle, we compare both temporal and spatial frequencies
+against $2 \pi$, which is the numerical representation of our adopted
+standard.\footnote{At least to me, by comparing various types of cycles against
+  the most basic form of a cycle (which I have unilaterally asserted is the unit
+  circle) we are toeing the line at which we implicitly accept the existence of
+  an archetype---a concept that I understand was first presented by Plato.}
+
+Now that we see the light, may we likewise outfit temporal frequency with a
+factor of $2 \pi$? Let's define
+\begin{equation}
+  \label{ch1:eqomega}
+  \omega = 2 \pi f.
+\end{equation}
+It feels nice, doesn't it? With the definitions (\ref{ch1:eqk}) and
+(\ref{ch1:eqomega}) for $k$ and $\omega$, both spatial and temporal cycles (or
+frequencies) are being compared against the archetypal cycle---the ``gold
+standard''---which is the unit circle, in the form of the number 2$\pi$.
+
+I hope you find the foregoing explanation as aesthetically pleasing as I do. But
+I am aware that aesthetic satisfaction doesn't correspond to comprehension, so
+let me illustrate the concept of spatial frequency at work. For my first
+example, you don't even have to take your eyes off this or the succeeding lines
+of text: the distance between the top of one letter on this line to the top of a
+letter on the next line is 40 pts,\footnote{A pt (or ``point''), which is a
+  typographical unit, is such that 72~pts~$=$~1~inches.}  or roughly 0.5~inches
+(get a ruler if you want to check yourself). We could say
+$\lambda \simeq$~0.5~inches, or
+$k = \frac{2 \pi}{\lambda} \simeq 4 \pi$~rad/inch. We could probably do some
+simple tests to find that books that humans can read with the naked eye must
+have $k_{\textrm{max}} \lesssim$~16$\pi$~rad/in. It's nothing more than a mathy
+way of saying, ``If the text is too small, no one will be able to read
+it''---something you already knew, cast in terms of spatial frequency.
+
+I'll give you one more example, which is shown in
+Figure~\ref{ch1:FigDesert}. There were clearly waves in the sand when the
+picture was taken, and they clearly weren't going anywhere anytime soon; by all
+appearances the temporal frequency of these waves was $f =$~0~Hz.  How about
+spatial frequency? My estimate is that the average distance between wave crests,
+or the average wavelength $\lambda =$~10~cm (about 4~inches), which is
+equivalent to $k =$~$\frac{\pi}{5}$~rad/cm.  If you pay attention to clouds in
+the sky, it won't be long before you're rewarded with a sighting of spatially
+periodic structures in the clouds.
+
+% ---------------- FIGURE
+
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.9\textwidth]{./ch1/figs/Shaybah-Wavy-Sand-Dunes.jpg}
+  \caption[Desert waves]{Waves in desert sand that, unlike ocean waves (for
+    example), are \emph{fixed} in time and therefore have a temporal frequency of
+    zero! Their spatial frequency is not zero, however.}
+  \label{ch1:FigDesert}
+\end{figure}
+
+% ----------------
+
+% OK, we now see that spatial frequency is ``out in the real world.'' Still,
+% couldn't we stick with $\lambda$ instead? Figure~\ref{ch1:FigDesert} beautifully
+% illustrates the reason why there's no special reason to stick with $\lambda$. A
+% question for you: Can you tell me where the peak of the wave is in
+% Figure~\ref{ch1:FigDesert}? I hope you are bothered by my question, and that you
+% are saying to yourself, ``Spencer is off his rocker. Those are ridgelines, not
+% peaks, and there are probably fifty separate ridgelines in that shot!''
+% Exactly. Compared to talking about wavelength, it makes at least as much sense
+% to talk about the repeating pattern of waves in the sand in terms of spatial
+% frequency.
+
+I keep threatening to put time and space are on equal footing. If I rearrange
+(\ref{ch1:eqk}) and (\ref{ch1:eqomega}) so that $\lambda = \frac{2 \pi}{k}$ and
+$f = \frac{\omega}{2 \pi}$, and insert these expressions for $\lambda$ and $f$
+into (\ref{ch1:eqvs}), I get
+\begin{equation}
+  \label{ch1:eqvomegak}
+  \lambda f = \Big ( \dfrac{\cancel{2 \pi}}{k} \Big ) \Big ( \dfrac{\omega}{\cancel{2 \pi}} \Big ) = \dfrac{\omega}{k} = v_s.
+\end{equation}
+The two rightmost expressions, $\omega / k = v_s$, are indeed
+satisfying. Equation \ref{ch1:eqvomegak} would make any physicist who deals with
+continuous matter\footnote{This includes physicists working in hydrodynamics,
+  tectonics, solid state and condensed matter, plasma, and statistical
+  mechanics, to name a few.} feel more or less at home.
+
+\subsection{What determines the speed at which waves propagate in a fluid?}
+\label{subsec:wavspeed}
+
+Besides talking about the existence of the speed of sound and fiddling with
+definitions, there's another question we might ask: How did the air decide to
+pick $v_s$ as the ``right speed'' for sound waves to travel? Why not the speed
+of light, $c$? Why not my Buick's top speed, 80~mph ($\sim$129~kph)? If I hadn't
+skipped the details that lead to equation (\ref{ch1:eqvs}), we would have seen
+that nature picks $v_s$ based on the air temperature $T$ and the mass of
+consituent molecules\footnote{We'll keep things simple and say the
+  \emph{average} mass of a molecule in the air you're breathing. Poke around in
+  the right books and you'll find that the average mass of an air molecule is
+  5.6$\times$10$^{-26}$~kg.} $m$.
+% WRONG VERSION. It doesn't depend on number density!!
+% that nature picks $v_s$ based on the air temperature $T$ and number
+% density\footnote{``Number density'' meaning ``the number of air molecules and
+%   atoms that fit in a box of a size that we agree upon.'' For example we could
+%   use a box with dimensions 1~cm~$\times$~1~cm~$\times$~1~cm, which is 1 cm$^3$,
+%   or a cubic centimeter. If you stuck a box of this size into the open air and
+%   did some counting, you would find roughly \numprint{25000000000000000000}
+%   molecules and atoms inside, or $n$ = 2.5$\times$~10$^{19}$~cm$^{-3}$.} $n$.
+
+We're all grown-ups here, so let me show you exactly what I mean. Try
+the following definition\footnote{This is the definition appropriate for an
+  ideal gas. I've replaced the usual adiabatic index $\gamma$ with 1.4, which is
+  roughly true for diatomic molecules when $T = 0 ^{\circ}$C, and
+  $k_B \simeq$~1.38$\times$10$^{-23}$~J/K.} of $v_s$ on for size:
+\begin{equation}
+  \label{ch1:eqvsreal}
+  v_s (T,m) = \sqrt{\dfrac{1.4 k_B T}{m}}.
+\end{equation}
+What you see in (\ref{ch1:eqvsreal}) is the explicit demonstration of what I
+already mentioned---that the speed of sound depends on air temperature and the
+(average) mass of an air molecule. And I think you'll agree that
+(\ref{ch1:eqvsreal}) makes sense: If $T = 0$~K, $v_s = 0$; i.e., there are no sound
+waves. On the other hand as $m$ increases, $v_s$ decreases.
+
+What to conclude? That the properties of a system determine how (or perhaps
+whether) it resonates. Stated in alternate fashion, \emph{the system properties
+  determine the dispersion relation}.  As another example, if you pluck a guitar
+string it will pick a single frequency (and probably harmonics) at which to
+resonate based on the string tension as well as how thick and how long the
+string is.\footnote{Look up standing waves on a string. It's a classic in
+  introductory physics courses.} That's the system---a string fixed at two
+ends. Like we discussed in the last section, there is a whole spectrum of
+frequencies and wavelengths that the air allows, including the whole range of
+human hearing,\footnote{My own unfounded speculation is that humans must have
+  evolved to hear over the range of frequencies that carry information most
+  meaningful to our survival. However, I am not ignorant of those without
+  hearing, and the words of Nietzsche in \textit{Menschliches,
+    Allzumenschliches} come to mind: ``There is rarely a degeneration, a
+  truncation, or even a vice or any physical or moral loss without an advantage
+  somewhere else. In a warlike and restless clan, for example, the sicklier may
+  have occasion to be alone, and may therefore become quieter and wiser; the
+  one-eyed will have one eye the stronger; the blind will see deeper inwardly,
+  and certainly hear better. To this extent, the famous theory of the survival
+  of the fittest does not seem to me to be the only viewpoint from which to
+  explain the progress of strengthening of [\dots] a race.''} and much more. But
+equations (\ref{ch1:eqvomegak}) and (\ref{ch1:eqvsreal}) say that no matter how
+you slice it, the waves move at the constant speed $v_s$.
 
 It doesn't have to be so simple, you know. Instead of
-equation~(\ref{ch1:eqvs}) I could turn up the heat in a
-generalized\footnote{In physics speak, the word ``generalized''
-  signals to all physicists in the area that the ideas are about to
-  become far-reaching, or impossible to comprehend, or worse, descend
-  into quackery. It's a word that can only be taken on a case-by-case
-  basis, so beware!}  way, and tell you something like
+equation~(\ref{ch1:eqvsreal}) I could turn up the heat in a
+generalized\footnote{In physics speak, the word ``generalized'' signals to all
+  physicists in the area that the ideas are about to become far-reaching, or
+  impossible to comprehend, or worse, descend into quackery. It's a word that
+  can only be taken on a case-by-case basis, so beware!}  way, and tell you
+something like
 \begin{equation}
   \label{ch1:eqvsgen}
-  v_s = v_s (T, N),
+  v_s = v_s (T, m),
 \end{equation}
-which is wonderfully vague. It looks meaningless, doesn't it? But
-no--it's telling you that the ``the speed of sound is related to air
-temperature and density,'' just like equation~(\ref{ch1:eqvs}); the
-difference is that equation (\ref{ch1:eqvsgen}) hasn't bothered to
-specify \emph{how} they are related. 
+which is wonderfully vague. It looks meaningless, doesn't it? But no--it's
+telling you that the ``the speed of sound is related to air temperature and the
+mass of an air molecule,'' just like equation~(\ref{ch1:eqvsreal}). The
+difference is that (\ref{ch1:eqvsgen}) hasn't bothered to specify the
+relationship between system variables and the speed of sound, and instead only
+states that a relationship exists.
 
-Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys us power
-to dream a little. Suppose you and I are investigating some exotic
-fluid---we'll pretend for kicks that it behaves sort of like a gas, so
-that it can be described by quantities like temperature and density
-that we know so well.\footnote{If you think you don't know them well,
-  you simply haven't realized that you make everyday decisions, like
-  whether to go running, on the basis of temperature (``Is it too hot
-  out there?'') and density (``Is it going to be gross and humid?'').}
-Let's futher pretend that this exotic fluid is made up of charged
-particles, so that it is also subject to electrodynamics and can do
-fancy things under special conditions, like freeze a magnetic field
-into itself\footnote{Within our solar system, the ``frozen magnetic
-  field'' thing happens all over the neighborhood, so to speak. It is
-  usually fair to describe the solar wind as an ``MHD fluid''
-  (discussed in the text) as some of us are wont to call it, with a
-  frozen-in magnetic field whose field lines twist like the skirt of a
-  ballerina as she twirls, or the water sprayed by the sprinkler head
-  on your lawn as it spins. In the case of the solar wind, these
-  spirals happen because of the rotation of the sun, the flow of the
-  solar wind \emph{away} from the sun, and the whole ``fluid that
-  freezes magnetic fields into itself'' idea.}  and conduct electrical
-currents.
+Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys us power to dream a
+little. Suppose you and I are investigating some exotic fluid---we'll pretend
+for kicks that it behaves sort of like a gas, so that it can be described by
+quantities like temperature and particle mass. Let's further pretend that this
+exotic fluid is made up of charged particles, so that it is also subject to
+electrodynamics and can do fancy things under special conditions, like freeze a
+magnetic field into itself\footnote{Within our solar system, the ``frozen
+  magnetic field'' thing happens all over the neighborhood, so to speak. It is
+  usually fair to describe the solar wind as an ``MHD fluid'' (discussed in the
+  text) as some of us are wont to call it, with a frozen-in magnetic field whose
+  field lines twist like the skirt of a ballerina as she twirls, or the water
+  sprayed by the sprinkler head on your lawn as it spins. In the case of the
+  solar wind, these spirals happen because of the rotation of the sun, the flow
+  of the solar wind \emph{away} from the sun, and the whole ``fluid that freezes
+  magnetic fields into itself'' idea.}  and conduct electrical currents.
 
 So what might the dispersion relation, the ``updated'' version of
-equation~(\ref{ch1:eqvs}), look like for this ungodly
-``magnetohydrodynamic,''\footnote{It might surprise you that at the
-  healthy length of eight syllables, this is a word that gets used
-  regularly in plasma physics.} or MHD, fluid? Back in 1942 Hannes
-\Alf proposed
+equation~(\ref{ch1:eqvsgen}), look like for this ungodly
+``magnetohydrodynamic,''\footnote{It might surprise you that at the healthy
+  length of eight syllables, this is a word that gets used regularly in plasma
+  physics.} or MHD, fluid? Back in 1942 Hannes \Alf proposed
 \begin{equation}
   \label{ch1:eqmhd}
-  v = v ( T, n, B).
+  v = v ( T, m, n, B).
 \end{equation}
-Comparing equation \ref{ch1:eqmhd} with equation (\ref{ch1:eqvsgen})
-informs you of this: all he did was suggest dependence on the magnetic
-field $B$!  The reasons why he suggested this dependence, though, are
-more sophisticated than his simply ``taking a crack at it'' and
-shoving another alphabet letter into the right-hand side of equation
-(\ref{ch1:eqvsgen}).\footnote{A good, old-fashioned wild guess is
-  nonetheless a respectable strategy when attacking, for instance,
-  nonlinear differential equations; solving them seems to be the
-  mathematician's equivalent of shooting beer cans off a fencepost.}
-
-He went a step further and nailed down an explicit dispersion
-relation\footnote{Some dust-bunny details are going under the rug, but
-  not many, considering Alfv\'{e}n's original letter to
+Comparing equation \ref{ch1:eqmhd} with equation (\ref{ch1:eqvsgen}) informs you
+of this: all he did was suggest additional dependence on the magnetic field $B$
+and the number density\footnote{``Number density'' meaning ``the number of gas
+  particles that fit in a box of a size that we agree upon.'' For example we
+  could use a box with dimensions 1~cm~$\times$~1~cm~$\times$~1~cm, which is 1
+  cm$^3$, or a cubic centimeter. If you stuck a box of this size into the open
+  air and did some counting, you would find roughly
+  \numprint{25000000000000000000} molecules inside, or $n$ =
+  2.5$\times$~10$^{19}$~cm$^{-3}$.} of particles $n$!  The reasons why he
+suggested this dependence, though, are more sophisticated than his simply
+``taking a crack at it'' and shoving some extra alphabet letters into the
+right-hand side of (\ref{ch1:eqvsgen}).\footnote{A good, old-fashioned wild
+  guess is nonetheless a respectable strategy when attacking, for instance,
+  nonlinear differential equations; solving them seems to be the mathematician's
+  equivalent of shooting beer cans off a fencepost.} He went a step further and
+nailed down an explicit dispersion relation\footnote{Some dust-bunny details are
+  going under the rug, but not many, considering Alfv\'{e}n's original letter to
   \textsl{Nature} was only six paragraphs! (In case you didn't know,
-  \textsl{Nature} is considered by many to be the darling of the
-  physical sciences as far as publication goes, the obvious corollary
-  being that most scientists have developed a strong opinion about or
-  have emotional baggage related to it.)} comparable to equation
-(\ref{ch1:eqvs}):
+  \textsl{Nature} is considered by many to be the darling of the physical
+  sciences as far as publication goes, the obvious corollary being that most
+  scientists have developed a strong opinion about or have emotional baggage
+  related to it.)} comparable to (\ref{ch1:eqvsreal}):
 \begin{equation}
   \label{ch1:eqAlf}
-  \lambda f = v_A \equiv \frac{B}{\sqrt{\mu_o m n}},
+  \dfrac{\omega}{k_\parallel} = v_A \equiv \frac{B}{\sqrt{\mu_o m_i n}},
 \end{equation}
-where $v_A$ is the eponymous and rather famous \textsl{\Alf speed} (I
-doubt \Alf ever called it that), $B$ is the strength of the
-background\footnote{When physicists talk about ``background'' elements
-  to their storyboard, they often just mean that these elements aren't
-  changing, or are changing slowly compared to whatever they want to
-  investigate. For equation (\ref{ch1:eqAlf}), \Alf was assuming the
-  presence of a background magnetic field.} magnetic field, and $m$
-and $n$ are the mass and number density of the ions that make up the
-fluid. 
+where $v_A$ is the eponymous and rather famous \textsl{\Alf speed} (I doubt \Alf
+ever called it that), $B$ is the strength of the background magnetic
+field,\footnote{When physicists talk about a ``background'' element of their
+  storyboard, they usually mean that that element is changing slowly enough
+  compared to whatever they want to investigate that it makes more sense to
+  treat the element as static in time. For equation (\ref{ch1:eqAlf}), \Alf was
+  assuming the presence of a background (or static) magnetic field.} and $m_i$
+and $n$ are the mass and number density of the ions that make up the fluid.
 
-A small aside: If there were \emph{only} ions present, and no
-electrons to counterbalance the charge of the ions, you can easily
-understand that we couldn't have this conversation because the ions
-would repulse each other and there wouldn't be an MHD fluid to speak
-of. We're only talking about the mass of ions and ignoring electrons
-in equation (\ref{ch1:eqAlf}) because as you may know, even the
-smallest ion (or naked hydrogen, which is just a proton) outweighs an
-electron by almost 2,000 times.
+If you are paying close attention to (\ref{ch1:eqAlf}), you might wonder why I
+choose to mark ion mass with the subscript `$i$', but not the ion number
+density. The short answers are these: We only care about ions when it comes to
+mass, and we care about ions \emph{and} electrons when it comes to number
+density.
 
-Don't let the details cause you to to miss the point, though. The
-dispersion relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
-equation~(\ref{ch1:eqvs}). To wit\footnote{An expression frequently
-  employed by D.J. Griffiths, the celebrated author of undergraduate
-  physics textbooks. (If you don't believe me that textbook authors
-  are on the level of celebrities or---dare I betray the pettiness of
-  scientists?---public enemies, ask physics majors what classes they
-  are taking. Then ask about the textbook for each class, and how
-  these majors feel about the textbook author.)}, $ \lambda f = $(some
-speed). You should be aware of something else: \Alf obtained the
-result (\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid ($n
->$~0) whose constituent particles are not massless ($m >$~0) and that
-a magnetic field $B$ exists in the fluid. As soon as we start
-two-timing on equation (\ref{ch1:eqAlf}) and telling it that $B =$~0,
-or that $n =$~0 or $m =$~0, violating the assumptions that brought it
-into being, equation (\ref{ch1:eqAlf}) seeks to repay the favor by
-helpfully informing you that (nonsense)~$=$~(nonsense).
+I recognize the short answers probably fall short of helpful, so let's expand:
+First, we only care about the ion mass $m_i$ (and ignore the electron mass,
+$m_e$) in equation (\ref{ch1:eqAlf}) because as you may know, even the smallest
+ion\footnote{Naked hydrogen, which is just a proton.} outweighs an electron by a
+factor of almost two thousand.\footnote{To be a bit more exact the
+  proton-to-electron mass ratio is \numprint{1836.15267389}(17), according to
+  the \textsl{2014 CODATA recommended values.}}
 
-Finally, to bring you up to speed, at this point there is a mountain
-of textbooks and peer-reviewed literature that refer to the \Alf speed
-and (surprise!) \Alf waves. Why? In his review of experiments dealing
-with \Alf waves, \cite{Gekelman1999} put it this way: ``These waves
-are ubiquitous in space plasmas and are the means by which information
-about changing currents and magnetic fields are
-communicated.''\footnote{There are also tip-top reviews and reports of
-  \Alf waves in the magnetosphere, ionosphere, and the region in
-  between \citep{Stasiewicz2000,Berthomier2011,Mottez2015}, in the
-  magnetotail \citep{Keiling2009}, at the Sun
-  \citep{Mathioudakis2013}, in various combinations of all of these
-  places \citep{Wu2016a}, and even around otherworldy objects like
-  neutrino stars \citep{Duncan1996}.} 
+``Fair enough,'' you say, ``but why no subscript on the number density $n$?  Why
+not write `$n_i$' instead of writing `$n$'? We only care about ions, right?''
+Aha! If there were \emph{only} ions present, and no electrons to counterbalance
+the mutual repulsion of the positively charged ions, you can easily appreciate
+that we couldn't have this conversation: ions simply would not hang around each
+other without the presence of a roughly equal number electrons. The presence of
+roughly equal numbers of both positive and negative particles---ions and
+electrons---is a condition known as \emph{quasineutrality} among plasma
+physicists. More formally stated,
+\begin{equation}
+  \label{ch1:eqAlf}
+  n_i \approx n_e.
+\end{equation}
+Since the ion number density $n_i$ and the electron number density $n_e$ are
+more or less the same throughout the plasma, we don't bother making a
+distinction between the number densities $n_i$ and $n_e$; in other words, we are
+satisfied with the approximation $n_i = n_e = n$.\footnote{Be aware that this
+  is a white lie; it is a good approximation in a lot of situations, but it
+  certainly not true in every situation.}
 
-In fact, with the solitary exception of chapter~6, gratuitous
-references to \Alf this-and-that are found throughout the chapters
-comprising this thesis; I doubt if there are more than five total
-pages in chapters 2--6 that fail to mention the name.
 
-\section[When dispersion relations become dispersive]{When dispersion
-  relations become dispersive,\protect{\footnote{*gasp!*}} or, ``How
-  you found out that scientists are probably only telling you half the
-  story''}
+% ---------------- FIGURE
 
-Let's review in a sentence what we just picked up. [Check.] It now
-behooves us to get on a nittier, grittier level with \Alf waves.
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.95\textwidth]{./ch1/figs/HaywardDungey1982}
+  \caption[\Alf wave propagation]{This figure has too much information. Just
+    notice that the path of propagation of an \Alf wave, marked with a dashed
+    line, is along geomagnetic field lines [Adapted from
+    \citeauthor{Hayward1983}, 1983].}
+  \label{ch1:FigAlfProp}
+\end{figure}
 
-It turns out that the properties of a system determines how (or
-perhaps whether) it will resonate. Stated in alternate fashion,
-\emph{the system properties determine the dispersion relation}. If you
-pluck a guitar string, say, it will pick a single frequency (and
-probably harmonics) at which to resonate based on how tight, how
-thick, and how long the string is. Like we discussed in the last
-section, there is a whole spectrum of frequencies and wavelengths that
-the air allows---the whole range of human hearing\footnote{My own
-  unfounded speculation is that humans must have evolved to hear over
-  the range of frequencies that carry information most meaningful to
-  our survival.}, of course, and much more---but equation
-(\ref{ch1:eqvs}) says that no matter how you slice it, the waves move
-at the constant speed $v_s$. 
+% ----------------
 
-Equation (\ref{ch1:eqAlf}) says that the same goes for waves in an MHD
-fluid, at the speed $v_A$ instead of $v_s$, and both equations,
-despite the name we gave them earlier, describe \emph{nondispersive}
-waves. That's what we mean when we say that the speed of a wave is
-fixed, regardless of $\lambda$ and $f$. If sound waves that we're
-familiar with \emph{were} dispersive---imagine waves traveled at a
-speed proportional to their frequency so that higher-frequency waves
-consistently arrived before low-frequency waves---your experience at a
-live concert or symphony would stand to be rather different: audience
-members on the front-row might have a shot at a coherent experience,
-but people in the nosebleeds would run the risk of hearing the violas
-a second or two after they heard the violins!\footnote{The element of
-  surprise in Haydn's famed ``Surprise'' symphony would be a rather
-  difficult, and conceivably impossible, feat to achieve.}
+One more point of trickery, this time on an important difference between the
+parallel wave number $k_\parallel$ that you see in the denominator of the
+left-hand side of (\ref{ch1:eqAlf}), and the wave number $k$ that you see in
+(\ref{ch1:eqvomegak}): The subscript, $\parallel$, informs you that the wave in
+question is propagating (i.e., physics speak for ``moving'') in a particular
+direction---\emph{along} the magnetic field.\footnote{In plasma physics,
+  whenever the subscripts $\parallel$ and $\perp$ (``parallel'' and
+  ``perpendicular'', as you probably guessed) start appearing, they indicate the
+  orientation or measurement of the quantity in question relative to the
+  geometry of the local magnetic field.}
 
-I have now exhausted my stores of knowledge on sound waves, and I'm
-afraid I'm under necessity of submerging you in plasma---theory, that
-is---and subjecting you to the harsh reality that by the numbers, the
-universe at present likes plasma much, much more than it likes the
-ocean of neutral gas that we live under.\footnote{Take comfort knowing
-  that the visible universe is on your side; people like Dennis
-  Gallagher propound the idea that 99\% or more is made up of plasma,
-  which is not hard to believe even if one only takes a stroll around
-  our solar system.} We have to wander outside the realm of our
-direct, or at least regular, experience, where as far as any human
-that has looked (and of which I am aware) can tell, the universe cares
-not if our nosebleed symphony experience is confusing and
-upsetting---by which I mean that dispersive waves are not hard to
-find. In order to forge ahead (and especially to understand what we
-discuss in upcoming chapters), we've got to develop some understanding
-about what leads to dispersive waves, and we've got to do it in the
-context of plasma physics.
+The idea of a preferred direction of propagation is not totally foreign to you,
+even if you don't recognize it immediately. For example, if you want to get your
+friend's attention with a whistle or a shout, why do you turn your head to face
+them? Presumably because you know that there is a better chance to be heard if
+you whistle or shout in your friend's direction. \textit{Voil\`{a}}---you
+understand that there \emph{can be} a preferred direction of wave
+propagation. Notice, however, that information about the direction of
+propagation is utterly absent in
+(\ref{ch1:eqvs})--(\ref{ch1:eqvsreal}).\footnote{If we wanted to theoretically
+  investigate, for example, how far a wave could propagate before dissipating
+  into thermal noise (which is something like air friction), we would need to
+  supplement the foregoing dispersion relations with equations describing how a
+  sound wave interacts with a gas as it propagates---stuff like wave energy and
+  wave spreading. For examples that can only be described as awesome, you could
+  check out Sir Geoffrey Taylor's [\citeyear{Taylor1950},\citeyear{Taylor1950a}]
+  famous papers dealing with the propagation of a nuclear blast wave. The first
+  is thorough and necessary, while the second, in my opinion, is elegant; to
+  read it borders on pleasure.}
 
-Never fear! Many faithful guides have made the trek before us; we're
-going to follow a few in right now, in fact: \citet{Goertz1979}, and
-\citet{Kletzing1994}. My presentation is essentially a rip-off of
-theirs, supplemented with commentary at the level of junior trail
-boss. Boots on?
+% A preferred direction of propagation is probably a little difficult to
+% appreciate. To illustrate the difference, consider what happens when you drop a
+% pebble in a still pond. The ripples move outward from the point on the
+% surface where you dropped the pebble, and if the pond is truly
+% still, the ripples are concentric---that is, no particular direction  that \Alf waves, however,
+% \emph{do} have a preference: along magnetic field lines. The idea is shown in
+% Figure~\ref{ch1:FigAlfProp}.
+
+I've been slinging details, but don't let them cause you to to miss the
+point. The dispersion relation (\ref{ch1:eqAlf}) is \emph{identical} in form to
+equation~(\ref{ch1:eqvomegak}). To wit,\footnote{An expression frequently
+  employed by D.J. Griffiths, the celebrated author of undergraduate physics
+  textbooks. (If you don't believe me that textbook authors are on the level of
+  celebrities or---dare I betray the pettiness of scientists?---public enemies,
+  ask physics majors what classes they are taking. Then ask about the textbook
+  for each class, and how these majors feel about each textbook author.)}
+$ \omega / k = $(some speed). You should be aware of something else: \Alf
+obtained the result (\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid
+(translation: $n >$~0) whose constituent particles are not massless
+(translation: $m >$~0) and that a magnetic field $B$ exists in the fluid. As
+soon as we start two-timing on equation (\ref{ch1:eqAlf}) and telling it that
+$B =$~0, or that $n =$~0 or $m =$~0, violating the assumptions that brought it
+into being, equation (\ref{ch1:eqAlf}) seeks to repay the favor by helpfully
+informing you either that $v_A =$~0 or that $v_A =$~(nonsense). Give it a shot:
+plug $B =$~0 into (\ref{ch1:eqAlf}). See? $v_A =$~ 0.\footnote{This result makes
+  sense: No magnetic field (translation: $B =$~0) means the \Alf speed
+  $v_A =$~0, which means no \Alf waves.}  Now try the other two options by
+plugging $m =$~0 or $n =$~0 into (\ref{ch1:eqAlf}). See?
+$v_A =$~(nonsense).\footnote{Instead of just writing the situation off as
+  nonsense, a more interesting route would be to imagine a plasma such that the
+  ion mass, number density, and magnetic field were such that the \Alf speed
+  approached the speed of light, in which case things get relativistic---you
+  know, \textit{\`{a} la} Einstein---in which case \citet{Gedalin1993} has
+  reported that the dispersion relation (\ref{ch1:eqAlf}) is rather expressed
+  $\omega / k = c \sqrt{B^2/\mu_o / (B^2/\mu_o + \epsilon + P)}$. (You'll need
+  to visit \citeauthor{Gedalin1993}'s [1993] treatise if you want to know more;
+  I mention it here to give you the flavor of other
+  possibilities.)}% \footnote{Siri has explained a form of this phenomenon thus:
+  % ``Imagine that you have zero cookies and you split them evenly among zero
+  % friends. How many cookies does each person get? See? It doesn't make
+  % sense. And Cookie Monster is sad that there are no cookies, and you are sad
+  % that you have no friends.'' A more interesting route would be to imagine a
+  % plasma such that the ion mass, number density, and magnetic field were such
+  % that the \Alf speed approached the speed of light, in which case
+  % \citet{Gedalin1993} has reported that the dispersion relation
+  % (\ref{ch1:eqAlf}) is rather
+  % $\omega / k = c \sqrt{B^2/\mu_o / (B^2/\mu_o + \epsilon + P)}$. (Gonna have to
+  % visit \citeauthor{Gedalin1993}'s [1993] treatise if you want to know more.)}
+
+Finally, to bring you up to speed, there is a mountain of
+textbooks and peer-reviewed literature that refer to the \Alf speed and
+(surprise!) \Alf waves. Why? In his review of experiments dealing with \Alf
+waves, \cite{Gekelman1999} put it this way: ``These waves are ubiquitous in
+space plasmas and are the means by which information about changing currents and
+magnetic fields are communicated.''\footnote{There are also tip-top reviews and
+  reports of \Alf waves in the magnetosphere, ionosphere, and the region in
+  between \citep{Stasiewicz2000,Berthomier2011,Mottez2015}, in the magnetotail
+  \citep{Keiling2009}, at the Sun \citep{Mathioudakis2013}, in various
+  combinations of all of these places \citep{Wu2016a}, and even around
+  otherworldly objects like neutrino stars \citep{Thompson1996}. If you wanted a
+  summary of the entire scientific enterprise surrounding \Alf waves, you might
+  have a look at \citeauthor{Cramer2001}'s [2001] expansive review of the
+  subject.}
+
+In fact, with the solitary exception of chapter~6, gratuitous references to \Alf
+this-and-that are found throughout the chapters comprising this thesis; I doubt
+if there are more than five total pages in chapters 2--6 that fail to mention
+the name.
+
+\section[When dispersion relations become dispersive]{When dispersion relations
+  become dispersive\protect{\footnote{*gasp!*}}}
+
+Let's summarize in a few points what we just picked up.
+\begin{itemize}
+% \item The relationship between spatial and temporal frequencies of waves 
+\item The properties of a system (e.g., temperature, density, magnetic field
+  strength) determine the speed of wave propagation.
+\item The most basic wave mode that exists in a neutral gas is a wave of
+  pressure pulsations, otherwise known as a sound wave.
+\item The \Alf wave is a basic wave mode that exists in a \textsl{quasineutral}
+  plasma when a background magnetic field is present.\footnote{There are one or
+    two other basic wave modes we could talk about; you'll find the discussion
+    of them in any introductory text on magnetohydrodynamics.}
+\item In their simplest form, \Alf waves propagate along magnetic field lines.
+\item Physicists use \textsl{dispersion relations}, which are dependent on the
+  properties of a system (among other things), to describe how wave modes
+  propagate within that system.\footnote{Dispersion relations can also describe
+    how different wave modes couple, how different systems couple (e.g., how a
+    vibrating guitar string causes the air to vibrate), and the energy transfer
+    between particles and waves in the same system or different systems.}
+\end{itemize}
+
+To introduce the present topic, which is \emph{wave dispersion}, notice that
+(\ref{ch1:eqvomegak}) and (\ref{ch1:eqAlf}) both describe waves that propagate
+at a constant speed ($v_s$ in regular old air and $v_A$ in a magnetized plasma)
+no matter what the wave number or frequency of the waves in question. We need to
+emphasize this: the wave speeds described by the dispersion relations
+(\ref{ch1:eqvomegak}) and (\ref{ch1:eqAlf}) are \emph{independent of wave number
+  and frequency}, which is to say that they are \emph{nondispersive}. 
+
+Does it feel like a contradiction in terms to describe nondispersive waves using
+a dispersion relation? If so, you may be comforted to know that
+(\ref{ch1:eqvomegak}) and (\ref{ch1:eqAlf}) still achieve the purpose of a
+dispersion relation that I originally stated, which is specification of the
+relationship between wave number and frequency as a function of system
+properties. Remember what I stated about $\lambda$ and $f$ being inversely
+proportional---or equivalently, that $\omega$ and $k$ are directly
+proportional---when we discussed (\ref{ch1:eqvsdiff})? Even that basic statement
+constitutes a dispersion relation.
+
+You might ask, ``So wait---I understand that (\ref{ch1:eqvomegak}) and
+(\ref{ch1:eqAlf}) are examples of some sort of fringe case in which waves aren't
+dispersive, but all that tells me is what dispersive waves \emph{aren't}. Can we
+venture out of the negative space and into the positive?'' Your wish is my
+command.
+
+Imagine waves traveled at a speed proportional to their frequency so that
+higher-frequency waves consistently arrived before waves at lower
+frequencies. Your experience at a live concert could be rather different,
+depending on how close you were to the performers: audience members on the
+front-row might have a shot at a coherent experience, but people in the
+nosebleeds would run the risk of hearing the violas about a second or two after
+they heard the violins!\footnote{The element of surprise in Haydn's famed
+  ``Surprise'' symphony would be a rather difficult, and conceivably impossible,
+  feat to achieve. Never mind evenly arpeggiated chords, and coherent runs and
+  fast improvisation would be right out.} Why? In my contrived example with wave
+speed proportional to frequency, the C produced by bowing the lowest string of a
+cello (otherwise known as $\textrm{C}_3$) would take twice as long\footnote{As
+  you know, the frequency of the first octave above a particular note is double
+  the frequency (e.g., the frequency of middle C, or $\textrm{C}_4$ is about
+  262~Hz, and the frequency of the open note produced by an openly bowed first
+  string of a viola, $\textrm{C}_3$, is $\sim$131~Hz.} to reach your ears as the
+lowest C playable by a violin ($\textrm{C}_4$, which is middle C). Take this
+fictitious little example as an instantiation of strong\footnote{Before you
+  accuse me of tacking a content-free adjective like ``strong'' onto dispersion,
+  be aware that in the literature of space physics, this adverb and others like
+  it are often intended to signal an effect or phenomenon that we cannot gloss
+  over or ignore in understanding the physical picture being presented. I have
+  used the phrase ``strongly dispersive'' to present a (hypothetical) situation
+  in which sound waves are dispersive to a degree that is totally unfamiliar to
+  humans.}  dispersion.
+
+It now behooves us to get on a nittier, grittier level with \Alf waves. I have
+now exhausted my stores of knowledge on sound waves, and I'm afraid I'm under
+necessity of submerging you in plasma---theory, that is---and subjecting you to
+the harsh reality that by the numbers, the universe at present likes plasma
+much, much more than it likes the ocean of neutral gas that we live
+under.\footnote{People like Dennis Gallagher propound the idea that 99\% or more
+  is made up of plasma, which is not hard to believe even if one only takes a
+  stroll around our solar system.} We have to wander outside the realm of
+direct, or at least regular, human experience, where as far as any human that
+has investigated (and of whom I am aware) can tell, in many situations the
+universe would not care if our nosebleed symphony experience were confused and
+upset by wave dispersion; that is, examples of dispersive waves are easy to find
+in nature. 
+
+Call our situation as humans whatever you want---chance, good luck, providence,
+order within chaos,\footnote{Regarding humans themselves, I realize a case could
+  be made for oppositely ordering these words.}  hyper-order within order, or
+the only plausible scenario\footnote{By definition!}---the fact is that when we
+carefully do the science, it turns out our almost exclusively
+\emph{nondispersive} experience with sound waves is not representative of the
+way various types of waves behave in plasmas,\footnote{As a solitary example,
+  see \citeauthor{Stix1962}'s [1962] famous treatise on waves in plasmas.}
+solids,\footnote{A classic example of the is the dispersion relation for
+  vibrations in Peter Debye's model of a solid; his model and related extensions
+  (say, Sommerfeld's model of fermions) predict, for example, the heat capacity
+  of a solid.}, or neutral fluids, including air itself.\footnote{In fact, no
+  earlier than 2008 \citeauthor{Alvarez2008} gave a general dispersion relation
+  for sound waves in air, which they show to be accurate for a variety of
+  humidities and frequencies.}  I mean, come on---the reason rainbows appear in
+the sky?  Dispersion of the electromagnetic waves we call
+light!\footnote{Refraction is the answer from your high-school or freshman
+  physics class, and that's right, but refraction itself is a result of
+  dispersion.}
+
+In order to forge ahead (and especially to understand what we discuss in
+upcoming chapters), we've got to develop some understanding about what causes
+wave dispersion, and such as my craft is, we've got to do it in the context of
+plasma physics. Never fear! Many faithful guides have made the trek before us;
+we're going to follow a few in right now, in fact: \citet{Goertz1979}, and
+\citet{Kletzing1994}. My presentation is essentially a rip-off of theirs,
+supplemented with commentary at the level of junior trail boss. Boots on?
 
 \subsection[A ``big wheel'' derivation of the IAW dispersion
 relation]{A ``big wheel''\protect{\footnote{Remember that trike with
@@ -364,14 +704,254 @@ relation]{A ``big wheel''\protect{\footnote{Remember that trike with
       three?}} derivation of the inertial \Alf wave dispersion
   relation}
 
-We need to look at that old plasma theorist's standby, the continuity
-equation.
+The math is about to get girthy---pack some real \emph{oomph}---and since a
+proper, from-the-ground-up explanation would drag both of us into a mud bog
+filled with heaving, steamy piles of calculus I will simply present the math in
+full gore and comment upon the meaning as we go.\footnote{I used the 6th edition
+  of James Stewart's \textsl{Calculus} to pick up the fundamentals as an
+  undergraduate. Later on, I used (as has some non-negligible majority of
+  physics majors in the past two decades) D.J. Griffiths's \textsl{Introduction
+    to Electrodynamics} to develop vector calculus chops. Would I recommend
+  them? Heartily.} That said, we serve ourselves well to mark our destination at
+the outset. Here is the goal:
+\begin{equation}
+  \label{ch1:eqIAW}
+  % \dfrac{\omega}{k_\parallel} = v_A \sqrt{\dfrac{1}{1 + k_\perp^2 \lambda_e^2}}
+  % \dfrac{\omega}{k_\parallel} = v_A \big ( 1 + k_\perp^2 \lambda_e^2 \big )^{-1/2}
+  \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }}
+\end{equation}
+
+Not bad as I made it sound, right? Equation (\ref{ch1:eqIAW}) is the dispersion
+relation for---guess what?---\emph{dispersive} \Alf waves, and more particularly
+\emph{inertial \Alf waves} (I'll refer to them as IAWs),\footnote{This is just
+  one of the flavors that dispersive \Alf waves come in. If you aren't satisfied
+  with merely walking the beaten path and tend to prefer craggier climbs and
+  more majestic views, you might follow \citeauthor{Lysak1996}'s [1996]
+  \emph{generalized}(!) approach to dispersive \Alf waves. The bonus vista is
+  discussion of imaginary terms for wave growth and damping.} in which you
+immediately recognize the definition of the \Alf speed $v_A$ given in
+(\ref{ch1:eqAlf}).  But oh---what's that $\perp$ doing, dangling off $k$ on the
+right-hand side of (\ref{ch1:eqIAW})?  That, \textit{mes cheres amis}, indicates
+the wave number that is \emph{perpendicular} to the magnetic field line. 
+
+I hear you saying, ``But, but''---I know. I said that \Alf waves like to
+propagate \emph{along} field lines, not across them. In the spirit of
+Epimenides\footnote{The compatriot-slandering (and possibly mythical)
+  philosopher credited with the statement that all Cretans are liars.} I tell
+you, all physicists are liars and purveyors of half truths.\footnote{And in the
+  spirit of Zeno, I ask: If a full truth exists and a physicist only reveals
+  half, and a short while after the first revelation reveals only half of that
+  which remains to be disclosed, and this pattern is continued \textit{ad
+    infinitum}, may one ever hope to learn the full truth from a physicist?} A
+portion of the undisclosed truth during our chat about the \Alf speed near
+(\ref{ch1:eqAlf}) is that \Alf waves certainly can propagate at angles to the
+magnetic field; they are more generally known as shear \Alf waves, and there is
+a good body of literature showing the connection between shear \Alf waves and
+IAWs.\footnote{Just a sampling:
+  \citet{Heyvaerts1983,Lysak1996,Rankin1999,Drozdenko2000,Vincena2004,Tsiklauri2005,Chaston2007d,Watt2009}. Believe
+  it.}
+
+The layers of complication are that there are now \emph{two} terms involving
+wave number, $k_\perp$ and $k_\parallel$, and the new term in parentheses
+involving $k_\perp \lambda_e$, which serves to \emph{reduce} the \Alf speed
+(observe: when $k_\perp \lambda_e \gtrsim$~1, the whole factor multiplying $v_A$
+is less than 1). They aren't much to be worried about, but I should be careful
+to point out that I have not said (and unfortunately will not say) \emph{a
+  thing} about how to generate these waves. Many of the references given in the
+footnotes are great resources on this topic, as are the aforementioned work by
+\citet{Lysak1996} and \citet{Genot2004a}.
+
+% So let's open the bag and let the first cat out: $k_\parallel$ represents the
+% wave number (which you recall from Section~\ref{subsec:k} is just the inverse of
+% wavelength multiplied by 2$\pi$) that is parallel to the magnetic field.
+
+% So let's open the bag and let the first cat out: $k_\parallel$ represents the
+% wave number that is parallel to the magnetic field.
+
+% We need to look at that old plasma theorist's standby, the continuity
+% equation.
 % \begin{equation}
 %   \label{ch1:eqCont}
 %   J_{E} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots .
 % \end{equation}
 
-[Insert awesome derivation]
+Now I'll introduce you to two of the old plasma theorist's standbys,
+\begin{subequations}
+  \begin{align} 
+    \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \big (n_{\alpha} \mathbf{v}_{\alpha} \big ) &= 0, \label{ch1:eqCont} \\
+    m_{\alpha} n_{\alpha} \Big ( \dfrac{\partial
+    \mathbf{v}_{\alpha}}{\partial t} + \mathbf{v}_{\alpha} \cdot \grad
+    \mathbf{v}_{\alpha} \Big ) + \grad p_{\alpha} + \grad \cdot
+    \overleftrightarrow{\Pi}_{\alpha} &= e_{\alpha} n_{\alpha} \Big
+                                            ( \mathbf{E} + \dfrac{1}{c}
+                                            \mathbf{v}_{\alpha} \times
+                                            \mathbf{B} \Big ) +
+                                            \mathbf{F}_{\alpha}, \label{ch1:eqMom}
+  \end{align}
+\end{subequations}
+which are respectively the continuity equation and the momentum equation. (The
+latter is sometimes affectionately referred to as the ``mom equation.'') They
+will serve as our description of the way that the collection of particles
+constituting our plasma respond to each other (``internal forces''), including
+the electric and magnetic fields that a plasma can internally sustain, and to
+external forces, like a background magnetic field.
+
+You can see that the key players in the continuity equation (\ref{ch1:eqCont})
+are $n_{\alpha}$ and $\mathbf{v}_{\alpha}$, which are number density and
+velocity. In the plainest English I can muster, (\ref{ch1:eqCont}) simply says
+that no particles are created or destroyed within the system under
+investigation. ``Um, `system under investigation?' \dots'' Don't be baffled by
+my language. When I say ``system''\footnote{Others might use ``setup'' or
+  ``configuration'' instead of ``system.'' They're all the same in this
+  context.} all I mean is the cast of characters, the amount of time and space,
+and the level of detail necessary to execute an investigation of the science
+question I have in mind. Here, our cast members are electrons and ions that are
+subject to a background magnetic field and mutual effects of attraction and
+repulsion, but are otherwise free to move. This cast turns out to be a pretty
+excellent description of much of what goes on within and around the terrestrial
+magnetosphere, as well as in the solar wind.
+
+``But how many electrons and ions, and over what period of time and what region
+of space?'' Prepare for a level of freedom that is often unsettling for
+newcomers: we have $N$ electrons and ions, and as much time and space as we
+need. (We're just scratching on notepads and paper at this point, so let's dream
+big!) At this stage we don't need to worry about those types of details; save
+those worries for \emph{application},\footnote{Or if you're a theorist, leave
+  all the worrying to the experimentalists! They'll let you know where you
+  screwed up or weren't detailed enough.} when we want to apply our theoretical
+results to a particular situation.
+
+As long as we're talking in broad terms, what about the subscript $\alpha$?
+It can indicate electrons or ions (i.e, $\alpha = e,i$). To be more
+explicit, whenever you see the subscript $\alpha$ you should be cognizant
+that there are really \emph{two} equations on display---one for electrons and
+one for ions---but we're using $\alpha$ to keep things compact. My
+dual-purpose of $\alpha$ is an example of what physicists might refer to as
+``notational convenience.'' Go ahead---impress your friends when they ask about
+$\alpha$.
+
+But where were we? Oh, yes---as far as (\ref{ch1:eqCont}) is
+concerned,\footnote{And of course neglecting whatever the momentum equation
+  (\ref{ch1:eqMom}) dictates about particle motion.}  particles are free to move
+all over the system---bunch into heaping piles, spread out uniformly, and so
+on---but if we start with $N$ total particles, we must end with $N$ particles,
+let $n_{\alpha}(\mathbf{x},t)$ change how it will.\footnote{In math speak I
+  am saying that from eternity to eternity,
+  $\int_{\mathrm{sys}} d^3\mathbf{x} \, n(\mathbf{x},t) = N$ regardless of the
+  variation of number density in time and space within the confines of our
+  system.}
+
+How about the momentum equation? 
+
+Two questions now arise. They are questions so worthy that if you haven't
+thought to ask, I'm asking on behalf of us all: Where did (\ref{ch1:eqCont}) and
+(\ref{ch1:eqMom}) come from? Are they laws of some sort? 
+
+To the first question, (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) came from the
+\emph{Vlasov equation}, also known as the ``collisionless Boltzmann
+equation.''\footnote{Wanna see it?  Here's the nonrelativistic version:
+  $\frac{\partial f}{\partial t} + \mathbf{v} \cdot \frac{\partial f}{\partial
+    \mathbf{x}} + \mathbf{a} \cdot \frac{\partial f}{\partial \mathbf{v}}$.
+  $f = f (\mathbf{x}, \mathbf{v}, t)$ is known as a distribution function, and
+  it gives the density of particles at $\mathbf{x}$---which is the position
+  vector---having velocity $\mathbf{v}$.} The Vlasov equation completely ignores
+particle-particle (or pair) collisions. (Hence the ``collisionless'' in
+``collisionless Boltzmann equation.'') Believe it or not, it is often valid to
+assume space plasmas are collisionless.\footnote{But not always!  When the
+  assumption is not valid one turns of necessity to the ``collisionful'' (my own
+  neologism) Boltzmann equation, which is known for leaving bruised, black-eyed,
+  and bloodied physicists in its wake.} On the other hand, the Vlasov equation
+allows for long-range\footnote{As opposed to ``short-range'' interaction, or
+  direct collisions between particles.}  interaction between all particles via
+the Coulomb force.\footnote{The eponymous Coulomb force, after Charles-Augustin
+  de Coulomb, just describes the repulsive or attractive force between charged
+  particles: $F_{\textrm{Coul}} = k \frac{q_1 q_2}{r^2}$. Can you see that the
+  force is positive (i.e., repulsive) if $q_1$ and $q_2$ have the same sign, and
+  negative (i.e., attractive) otherwise? Coulomb's law is scientific bedrock.}
+
+To the second question, I suppose in a manner of speaking we could call
+(\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) laws---or rather, you can think of them
+as true statements with the following proviso: At no point in the course of our
+using (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) are we permitted to treat a
+situation violating the assumptions that brought them about, which I summarized
+in the previous paragraph. I am not going to launch into an exposition of the
+Vlasov equation, or else we'd never get out of here,\footnote{You can turn to
+  someone like \citet{Chen1974} or \citet{Bellan2008} for that.} but I will
+broadly warn that we wander into dangerous territory when we take imprudent
+liberty and practice Blind application Of Formulas---let's call it ``boffing,''
+and those who practice it ``boffers.'' I will try to point out where the
+unsuspecting may be led into boffing, though all the ways in which one might
+possibly boff are far too many to hope to enumerate, or (as I have learned by
+sad experience) even know.\footnote{Undergraduates are among the most expert
+  boffers, having seemingly limitless capacity to sleuth out and demonstrate new
+  ways to boff. It is tempting to believe (though I know better) that they take
+  up boffing as an innocent-seeming, though ultimately sinister, pastime
+  calculated to harm their physics professors and teaching assistants.}
+
+I would not leave you hanging without at least one concrete example to
+demonstrate when one ought to become suspicious of (\ref{ch1:eqCont}) and
+(\ref{ch1:eqMom}): The ionosphere. In the ionosphere, where the electron number
+density is waaay higher than in the magnetosphere, the total number of particles
+$N$ can change all the time\footnote{I.e., the right-hand side of
+  (\ref{ch1:eqCont}) is not zero.} as a result of---oh, I don't know, how about
+sunlight-induced photoionization of ionospheric particles?---the continuity
+equation (\ref{ch1:eqCont}) is much more often false than it is true.
+
+In short, once we have decided to make the assumptions that make
+(\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) valid, there's no going back; we can't
+introduce elements to our model that end up violating those assumptions. And now
+you know: (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) are \emph{not} always
+true. They are not laws of nature, but they tell us how particles move around in
+a plasma in situations where it is safe to neglect particle-particle collisions,
+and where the number of particles $N$ is sufficiently large to render valid a
+statistical treatment of the plasma.\footnote{You'd have to venture into a
+  textbook on statistical mechanics to get a feel for what it means for $N$ to
+  be ``sufficiently large.''}
+
+Fewf! This is a good place to stop and do some ruminating, both on what I've
+just told you and on a sandwich, if so inclined. Otherwise, let's continue.
+
+Besides (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}), we need two of Maxwell's
+equations,\footnote{The four laws constituting Maxwell's equations---Gauss's
+  law, Divergenceless B, Faraday's law, and Amp\`{e}re's law---are the
+  foundation of classical electrodynamics. As gates of understanding through
+  which all would-be physicists must pass, and given both their ubiquity and
+  their overall degree of importance in more fields than I am aware exist, in my
+  opinion emotional and reverential responses to the mention of their names are
+  not improper.}
+\begin{subequations}
+  \begin{align} \grad \times \mathbf{E} &= - \dfrac{\partial \mathbf{B}}{\partial t}; \label{ch1:eqFar} \\
+    \grad \times \mathbf{B} &= \mu_o \mathbf{J}. \label{ch1:eqAmp}
+  \end{align}
+\end{subequations}
+In contrast to (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) which I continue to
+emphasize are \emph{not} laws of nature, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp})
+\emph{are} laws. As far as we know, they are genuinely immutable.\footnote{Some
+  of you will note I've discarded Maxwell's famous addition to
+  (\ref{ch1:eqAmp}), the displace current
+  $\mu_o \epsilon_o \frac{\partial \mathbf{E}}{\partial t}$. We're assuming our
+  system evolves slowly enough that we can neglect it.}
+
+The first of these, (\ref{ch1:eqFar}) or Faraday's law, is telling you that
+wherever you see an electric field having nonzero curl,\footnote{The concept of
+  ``curl''---represented in (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) as
+  $\grad \times$---comes from vector calculus, but you and I know that vector
+  calculus is totally contrived, a concession to our human inabilities to think
+  of a better description! I attempt to momentarily circumvent this human
+  limitation: Can you imagine a tornado? If so, imagine further the flow of
+  winds around the eye of a tornado; they swirl around the eye of the tornado,
+  right? Well, that's a cheap example of a curling, or ``vortical,'' field of
+  vectors. (The vector field in this case is fluid flow.) } somewhere in the
+vicinity there is a corresponding magnetic field changing in time.
+
+The second, (\ref{ch1:eqAmp}) or Amp\`{e}re's law, is telling you that a
+magnetic field $\mathbf{B}$ with nonzero curl is the same as, and cannot be
+separated from, a current density $\mathbf{J}$---up to a constant of
+proportionality $\mu_o$, at any rate.
+
+Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) can tell us how electric
+fields and magnetic fields evolve in time, and they are \emph{laws}. You can
+imagine how incredibly important this is: 
 
 [Set up the stage: Two-dimensional ($\hat{x}$ and $\hat{z}$), assumed
 perp. electric field, variations are low-frequency so that $\partial^2
@@ -390,23 +970,27 @@ z, t)$]
 
 \section{From waves to electrons}
 
-Let's talk about the aurora then. Even during geomagnetically quiet
-times, roughly 20~GW\footnote{[Real-life way to comprehend number]}
-\citep{Newell2009} are raining down on the poles\footnote{Magnetic,
-  not geographic.} of the earth through various types of aurora, and
-so-called ``wave aurora''\footnote{Because, you know, it's powered by
-  waves like---that's right, inertial \Alf waves!} contributes about
-5\% of the total energy budget. When things really start moving---for
-example, during a geomagnetic storm---the electron precipitation
-associated with \Alf waves increases quite a bit, and broadband
-electron energy and number flux can become sizeable fractions of the
-electron precipitation budget.
+Let's talk about the aurora then. Even during geomagnetically quiet times,
+roughly 20~GW\footnote{``How much is that?'' The average rate of energy
+  consumption per household in the United States is $\sim$1.4~kW (as of 2014,
+  according to the World Energy Council's ``Average electricity consumption per
+  electrified household''). So 20~GW is enough to power roughly
+  $\sim$\numprint{14000} homes in the United States. (For a more conservative
+  rate of consumption, such as that in New Zealand---0.84~kW---20~GW could cover
+  almost \numprint{24000} homes.)} \citep{Newell2009} are raining down on the
+poles\footnote{Magnetic, not geographic.} of the earth through various types of
+aurora, and so-called ``wave aurora''\footnote{Because, you know, it's powered
+  by waves like---that's right, inertial \Alf waves!} contributes about 5\% of
+the total energy budget. When things really start moving---for example, during a
+geomagnetic storm---the electron precipitation associated with \Alf waves
+increases quite a bit, and broadband electron energy and number flux can become
+sizable fractions of the electron precipitation budget.
 
 \subsection{You mean ``broadband'' like DSL?}
 
 But just what are broadband electrons, and what do they have to do
 with \Alf waves? The name refers to the tell-tale signature they leave
-when we plot their differential energy flux---a nasty-souding term, I
+when we plot their differential energy flux---a nasty-sounding term, I
 know.
 
 Here's a sketch: Pick up a piece of paper. Imagine that during the
@@ -426,21 +1010,23 @@ how fast it's going)\footnote{The relationship between kinetic
 and then summing up the energy contribution of all the electrons
 passing through the page within a second.
 
-Last of all, suppose we wanted to know not just the \emph{total}
-electron energy flux through the page, but the \emph{contribution}
-made by electrons \emph{within some energy range} to the total energy
-flux.\footnote{Why would this be useful?  For the same reasons that it
-  would be useful to know [insert TBD analogy].}  Here's an idea: You
-could slap an energy filter on the page---never mind where we got this
-little device, just imagine---so that we only count electrons with
-energies between, say, 100~eV and 200~eV.\footnote{``An 'eV'?''  you
-  say? One eV is one electron-volt---which is to say, it's the amount
-  of energy that an electron has after being accelerated through a
-  one-volt potential difference.} If we added up all the energy
-carried by \emph{those} electrons, repeated the process for electrons
-having energies of 200--500~eV, then 500--1200~eV, so on and so forth,
-we'd have a list of electron energy ranges, and an energy flux
-measurement for each energy range, \emph{capisce}? Like this:
+Last of all, suppose we wanted to know not just the \emph{total} electron energy
+flux through the page, but the \emph{contribution} made by electrons
+\emph{within some energy range} to the total energy flux.\footnote{What's the
+  use, or utility, in sorting the electrons by energy? This information can tell
+  us a lot about what is driving, or accelerating the electrons. In a word, it's
+  knowing the difference between one bowling ball coming toward you at 100~mph
+  versus 100 bowling balls coming toward you at 1~mph. Rather distinct
+  scenarios, don't you think?} Here's an idea: You could slap an energy filter
+on the page---never mind where we got this little device, just imagine---so that
+we only count electrons with energies between, say, 100~eV and
+200~eV.\footnote{``An `eV'?''  you say? One eV is one electron-volt---which is
+  to say, it's the amount of energy that an electron has after being accelerated
+  through a one-volt potential difference.} If we added up all the energy
+carried by \emph{those} electrons, repeated the process for electrons having
+energies of 200--500~eV, then 500--1200~eV, so on and so forth, we'd have a list
+of electron energy ranges, and an energy flux measurement for each energy range,
+\emph{capisce}? Like this:
 \begin{equation}
   \label{ch1:eqeFlux}
   J_{E} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots .
@@ -462,7 +1048,7 @@ chapters when I bring up broadband electrons.
 
 \begin{figure}
   \centering
-  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/Chaston2003_alfelec}
+  \noindent\includegraphics[width=0.95\textwidth]{./ch1/figs/Chaston2003_alfelec}
   \caption[\Alfically accelerated (broadband) electrons]{\Alfically
     accelerated (often called ``broadband'') electrons observed by
     the FAST satellite [adapted from Figures~1c and 1d in
@@ -474,7 +1060,7 @@ chapters when I bring up broadband electrons.
 
 % ----------------
 
-Speaking of which, back to broaband electrons. When we fly satellites
+Speaking of which, back to broadband electrons. When we fly satellites
 above the aurora and measure the differential energy flux of auroral
 electrons, we often get a response that is typified by what you see in
 Figure~\ref{ch1:FigAlfElec}. The plot in the upper panel shows what
@@ -521,10 +1107,10 @@ Figure~\ref{ch1:FigAlfElec} depending on where exactly you were.
 
 \begin{figure}
   \centering
-  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/dombeck2013}
+  \noindent\includegraphics[width=0.95\textwidth]{./ch1/figs/dombeck2013}
   \caption[Inverted V (monoenergetic) electrons]{Monoenergetically
     accelerated (often called ``inverted V) electrons observed by
-    the FAST satellite [adapted from Figure~4b in \citet{Dombeck2013}].}
+    the FAST satellite [adapted from Figure~4b in \citealp{Dombeck2013}].}
   \label{ch1:FigDombeck}
 \end{figure}
 
@@ -545,7 +1131,7 @@ The way to make this plot is, instead of adding up the contribution to
 differential energy flux from each \emph{energy range} to a given
 \emph{pitch angle} , to add up the contribution to differential energy
 flux from each \emph{pitch angle} to a given \emph{energy range}, and
-\emph{average}. Thus, one might say that each type of spectrogram
+\emph{average}. Therefore, one might say that each type of spectrogram
 shown in Figure~\ref{ch1:FigAlfElec} is a different way of looking at
 the same coin, and clearly each type of spectrogram conveys different
 information about the local electrons.
@@ -559,7 +1145,7 @@ In the auroral zone---an altitude of a few hundred km and above at
 latitudes\footnote{As before, I mean magnetic latitude and not
   geographic.}  above $\sim$60$^\circ$---field-aligned electrons
 barrel toward the atmosphere and are near the top of the list of
-causes of aurora. The complication is, as you might guess, that there
+causes of aurora. The complication is, as you can imagine, that there
 are several ways one could get field-aligned
 acceleration.\footnote{\citet{Wygant2002}, \citet{Bostrom2003a},
   \citet{Morooka2004}, \citet{Newell2009}, \citet{Hull2010},
@@ -597,21 +1183,126 @@ on the nose of the bow shock (Figure~\ref{ch1:FigBowShock}),
 
 
 
-Let's get into it
+% Let's get into it
 
-\subsection{The solar wind (that old bully!)}
+% \subsection{The solar wind (that old bully!)}
 
-Solar this 
+% Solar this 
 
-\subsection{Things that go ``bump'' on the nightside}
+% \subsection{Things that go ``bump'' on the nightside}
 
-And nightside that 
+% And nightside that 
 
-\section{And now, in parting \dots}
+\section{``\dots They've gone to plaid!''}
 
-% Finished with the parindent stuff? Reset 'em
-% \setlength\parindent{\savedparindent}
-% \setlength\parskip{\savedparskip}
+Your ship has been prepared for ludicrous speed.\footnote{Dark Helmet,
+  Spaceballs.} You now know twhat \Alf waves are, what inertial \Alf waves (or
+IAWs) are, the icky math swamp they arise from, and what the signatures of
+\Alfic electron acceleration are in pitch-angle and energy spectrograms. 
+
+``I mean, yeah! That was an extremely engaging introduction to the topic,
+Spencer. You really know your stuff.'' Ha! I appreciate the compliment, and
+you'll see in succeeding chapters that it is unsubstantiated: Many, many
+questions remain around the role of ionospheric IAWs in dynamic
+coupling\footnote{\textit{Dynamic coupling}: Space-physics speak for those periods of
+  time when the magnetosphere-ionosphere coupling is too rapid to ignore the
+  scary math that we normally try to avoid because it's complicated, but on the
+  other hand is capable of describing ``dynamic'' effects. To cite a concrete
+  example or two, I mention studies like those by \citet{Mishin2015} or
+  \citet{Verkhoglyadova2016}, who investigate definite instances when dynamic
+  (or sometimes ``inductive'') effects can't be ignored.} in thermospheric
+heating, in the exact processes by which large-scale waves become small-scale,
+and the like. In fact, let me give you a rundown on each of the succeeding
+chapters so you can appreciate what questions my advisers, mentors, and
+colleagues and I have been researching and why.
+
+\subsection{(Barn)stormed ionosphere: IAWs!!!}
+
+% \section{``And your aim, Mr. Hatch?'' }
+
+\subsection{Next }
+
+
+By now we are both tired of mudslogging, and we're just in time to turn around
+and get the lay of the land: let me tell you what the rest of this thesis is
+about. Reading the following summary will be your first exercise in synthesizing
+all the new concepts you just picked up! There will be a handshake waiting for
+you on the other side of this section.
+
+The magnetosphere-ionosphere (M-I) transition region is the several
+thousand--kilometer stretch between the cold, dense and variably resistive
+region of ionized atmospheric gases that begins some tens of kilometers above
+the terrestrial surface, and the hot, tenuous, and highly conductive plasmas
+that interface with the solar wind at higher altitudes. The M-I transition
+region is therefore the site through which magnetospheric conditions, which are
+strongly susceptible to dynamics in the solar wind, are communicated to
+ionospheric plasmas, and vice versa.
+
+We systematically study the influence of solar wind conditions and geomagnetic
+storms on energy input and particle precipitation in the M-I transition region,
+emphasizing the role of inertial \Alf waves both as a preferred mechanism for
+dynamic (as opposed to static) energy transfer and particle acceleration between
+the magnetosphere and the ionosphere, and as a low-altitude manifestation of
+high-altitude dynamic interaction between the solar wind and the
+magnetosphere. We examine the influence of inertial \Alf waves via the
+electromagnetic and electron energy deposition, electron precipitation, and ion
+outflow coincident with these waves as observed by the Fast Auroral SnapshoT
+Explorer (FAST) satellite.  
+
+We investigate the effect of storms on these measures via a superposed epoch
+analysis, and find that dayside and nightside occurrences rates of \Alf waves,
+as well as the concomitant rates of energy deposition, electron precipitation,
+and ion upflow, rapidly and dramatically increase at storm sudden
+commencement. We also derive high-latitude distributions of these measures as a
+function of storm phase, showing that storm main and recovery phase correspond
+to strong variation in each signature of \Alfic activity, particularly on the
+dayside at and in the vicinity of the cusp as well as premidnight.  
+
+From calculation of global rates of \Alfic energy deposition, electron
+precipitation, and ion outflow in each hemisphere, we explicitly demonstrate
+that storm main and recovery phases together account for more than 65\% of
+global \Alfic energy deposition and electron precipitation, and more than 70\%
+of the coincident ion outflow, even though the combined occurrence rate of storm
+main and recovery phase is statistically only 33\%.  We also carry out an
+investigation of interplanetary magnetic field (IMF) control of inertial \Alf
+wave activity in the M-I transition region.
+
+Our investigation takes the form of an observational test of the
+Lyon-Fedder-Mobarry global MHD simulations conducted by \textsl{Zhang et al.}
+[2014], which predict that southward IMF conditions lead to enhanced generation
+of power in the magnetotail that is then manifest as bursty bulk flows and
+\Alfic power on the nightside. We confirm this prediction, as well as the
+simulation prediction that in the Northern Hemisphere, dayside \Alfic power is
+preferentially enhanced in the prenoon sector under predominantly duskward IMF
+conditions. The observed and predicted prenoon enhancement in \Alfic power
+stands in contrast with the established response [e.g., \textsl{Zhou et al.},
+2000] to duskward IMF exhibited by direct-entry precipitation, which becomes
+enhanced in the postnoon sector. This situation reverses under dawnward IMF
+conditions. Though the effect is present in both simulation and observation, the
+mechanism for dayside generation of \Alfic power remains unclear.  
+
+We then compare \Alfic Poynting flux distributions under several IMF orientation
+to corresponding distributions of broadband precipitation, identified as such
+using a version of the \textsl{Newell et al.}  [2009] scheme for categorizing
+electron precipitation adapted for FAST instrumentation. We incidentally find
+that $\approx$95\% of cusp-region inertial \Alf wave events are associated with
+precipitation that is categorized by the \textsl{Newell et al.} [2009] scheme as
+diffuse, purely on the basis of the criterion imposed on minimum average energy
+($E_{av} \geq$~300~eV) for cusp-region broadband precipitation. This suggests
+that the prevailing definition of diffuse precipitation, as it applies to the
+cusp region, needs further qualification.
+
+Last, we present FAST observations on the nightside of discrete, field-aligned
+precipitation with corresponding differential number flux spectra that are much
+better described by a kappa distribution than by a Maxwellian distribution. With
+only a few exceptions in the literature discrete precipitation has been
+theoretically treated and modeled as with Maxwellian distributions, while the
+spectral shapes of discrete precipitation that we present have often been viewed
+as a feature of diffuse precipitation. Guided by theoretical work performed by
+\textsl{Dors and Kletzing} [1999], we examine the implications of these
+observations for the commonly used Knight Relation.
+
+
 
 % And chapter 1 bib
 \bibliographystyle{agufull08}
