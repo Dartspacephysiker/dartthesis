@@ -459,7 +459,7 @@ roughly equal numbers of both positive and negative particles---ions and
 electrons---is a condition known as \emph{quasineutrality} among plasma
 physicists. More formally stated,
 \begin{equation}
-  \label{ch1:eqAlf}
+  \label{ch1:eqQuasi}
   n_i \approx n_e.
 \end{equation}
 Since the ion number density $n_i$ and the electron number density $n_e$ are
@@ -779,22 +779,32 @@ Now I'll introduce you to two of the old plasma theorist's standbys,
 \begin{subequations}
   \begin{align} 
     \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \big (n_{\alpha} \mathbf{v}_{\alpha} \big ) &= 0, \label{ch1:eqCont} \\
-    m_{\alpha} n_{\alpha} \Big ( \dfrac{\partial
-    \mathbf{v}_{\alpha}}{\partial t} + \mathbf{v}_{\alpha} \cdot \grad
-    \mathbf{v}_{\alpha} \Big ) + \grad p_{\alpha} + \grad \cdot
-    \overleftrightarrow{\Pi}_{\alpha} &= e_{\alpha} n_{\alpha} \Big
-                                            ( \mathbf{E} + \dfrac{1}{c}
-                                            \mathbf{v}_{\alpha} \times
-                                            \mathbf{B} \Big ) +
-                                            \mathbf{F}_{\alpha}, \label{ch1:eqMom}
+    m_{\alpha} n_{\alpha} \dfrac{\partial \mathbf{v}_{\alpha}}{\partial t} &=
+    q_{\alpha} n_{\alpha} \Big ( \mathbf{E} + \dfrac{1}{c} \mathbf{v}_{\alpha}
+    \times \mathbf{B} \Big ), \label{ch1:eqMom}
   \end{align}
 \end{subequations}
+% \begin{subequations}
+%   \begin{align} 
+%     \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \big (n_{\alpha} \mathbf{v}_{\alpha} \big ) &= 0, \label{ch1:eqCont} \\
+%     m_{\alpha} n_{\alpha} \Big ( \dfrac{\partial
+%     \mathbf{v}_{\alpha}}{\partial t} + \mathbf{v}_{\alpha} \cdot \grad
+%     \mathbf{v}_{\alpha} \Big ) + \grad p_{\alpha} + \grad \cdot
+%     \overleftrightarrow{\Pi}_{\alpha} &= q_{\alpha} n_{\alpha} \Big
+%                                             ( \mathbf{E} + \dfrac{1}{c}
+%                                             \mathbf{v}_{\alpha} \times
+%                                             \mathbf{B} \Big ) +
+%                                             \mathbf{F}_{\alpha}, \label{ch1:eqMom}
+%   \end{align}
+% \end{subequations}
 which are respectively the continuity equation and the momentum equation. (The
-latter is sometimes affectionately referred to as the ``mom equation.'') They
-will serve as our description of the way that the collection of particles
-constituting our plasma respond to each other (``internal forces''), including
-the electric and magnetic fields that a plasma can internally sustain, and to
-external forces, like a background magnetic field.
+latter is sometimes affectionately referred to as the ``mom equation.'' In order
+to focus on the physics of interest I have thrown away a bunch of terms
+describing the effects of pressure and other, external forces.) They will serve
+as our description of the way that the collection of particles constituting our
+plasma respond to each other (``internal forces''), including the electric and
+magnetic fields that a plasma can internally sustain, and to external forces,
+like a background magnetic field.
 
 You can see that the key players in the continuity equation (\ref{ch1:eqCont})
 are $n_{\alpha}$ and $\mathbf{v}_{\alpha}$, which are number density and
@@ -890,12 +900,13 @@ sad experience) even know.\footnote{Undergraduates are among the most expert
 
 I would not leave you hanging without at least one concrete example to
 demonstrate when one ought to become suspicious of (\ref{ch1:eqCont}) and
-(\ref{ch1:eqMom}): The ionosphere. In the ionosphere, where the electron number
+(\ref{ch1:eqMom}): the ionosphere. In the ionosphere, where the electron number
 density is waaay higher than in the magnetosphere, the total number of particles
 $N$ can change all the time\footnote{I.e., the right-hand side of
   (\ref{ch1:eqCont}) is not zero.} as a result of---oh, I don't know, how about
-sunlight-induced photoionization of ionospheric particles?---the continuity
-equation (\ref{ch1:eqCont}) is much more often false than it is true.
+sunlight-induced photoionization of ionospheric particles? Strictly speaking,
+when the total number of particles changes the continuity equation
+(\ref{ch1:eqCont}) is no longer true.
 
 In short, once we have decided to make the assumptions that make
 (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) valid, there's no going back; we can't
@@ -926,41 +937,76 @@ equations,\footnote{The four laws constituting Maxwell's equations---Gauss's
 \end{subequations}
 In contrast to (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) which I continue to
 emphasize are \emph{not} laws of nature, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp})
-\emph{are} laws. As far as we know, they are genuinely immutable.\footnote{Some
+\emph{are} laws. As far as I know, they are genuinely immutable.\footnote{Some
   of you will note I've discarded Maxwell's famous addition to
-  (\ref{ch1:eqAmp}), the displace current
-  $\mu_o \epsilon_o \frac{\partial \mathbf{E}}{\partial t}$. We're assuming our
-  system evolves slowly enough that we can neglect it.}
+  (\ref{ch1:eqAmp}), the displace current $\mu_o \epsilon_o \frac{\partial
+    \mathbf{E}}{\partial t}$. We're assuming our system evolves slowly enough
+  that we can neglect it.}
 
 The first of these, (\ref{ch1:eqFar}) or Faraday's law, is telling you that
 wherever you see an electric field having nonzero curl,\footnote{The concept of
-  ``curl''---represented in (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) as
-  $\grad \times$---comes from vector calculus, but you and I know that vector
-  calculus is totally contrived, a concession to our human inabilities to think
-  of a better description! I attempt to momentarily circumvent this human
-  limitation: Can you imagine a tornado? If so, imagine further the flow of
-  winds around the eye of a tornado; they swirl around the eye of the tornado,
-  right? Well, that's a cheap example of a curling, or ``vortical,'' field of
-  vectors. (The vector field in this case is fluid flow.) } somewhere in the
-vicinity there is a corresponding magnetic field changing in time.
+  ``curl''---represented in (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) as $\grad
+  \times$---comes from vector calculus, but you and I know that vector calculus
+  is totally contrived, a concession to our human inabilities to think of a
+  better description! I attempt to momentarily circumvent this human limitation:
+  Can you imagine a tornado? If so, imagine further the flow of winds around the
+  eye of a tornado; they swirl around the eye of the tornado, right? Well,
+  that's a cheap example of a curling, or ``vortical,'' field of vectors. (The
+  vector field in this case is fluid flow.) } somewhere in the vicinity there is
+a corresponding magnetic field changing in time. The second, (\ref{ch1:eqAmp})
+or Amp\`{e}re's law, is telling you that a magnetic field $\mathbf{B}$ with
+nonzero curl is the same as, and cannot be separated from, a current density
+$\mathbf{J}$---up to a constant of proportionality $\mu_o$, at any
+rate. Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) tell us how electric
+fields and magnetic fields evolve in time, and they are \emph{laws}. 
 
-The second, (\ref{ch1:eqAmp}) or Amp\`{e}re's law, is telling you that a
-magnetic field $\mathbf{B}$ with nonzero curl is the same as, and cannot be
-separated from, a current density $\mathbf{J}$---up to a constant of
-proportionality $\mu_o$, at any rate.
+Now for the fun part. We get to make a bunch of assumptions, whittling away at
+(\ref{ch1:eqCont}--\ref{ch1:eqFar}) as we go. First of all, let's set up a
+Cartesian coordinate system\footnote{We could use a dipolar coordinate system,
+  as do \citet{Lysak2013}, but I'd rather keep it simple for the sake of both of
+  us.} such that the $x$ coordinate is perpendicular to the local geomagnetic
+field, the $y$ coordinate is negligible (i.e., nothing varies in the $y$
+direction, which means that inside the symbol $\grad$, the differential operator
+$\partial / \partial y = 0$), and the $z$ coordinate is along the local
+geomagnetic field. We won't outrightly say that the $y$ coordinate doesn't
+exist, since that would render meaningless the three-dimensional definitions of,
+for example, the cross product and curl operator.
 
-Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) can tell us how electric
-fields and magnetic fields evolve in time, and they are \emph{laws}. You can
-imagine how incredibly important this is: 
+So much for spatial variation. How about variation in time? We'll assume that
+everything in our system happens slowly enough so that $\partial^2 / \partial
+t^2 \ll \Omega_{ci}^2$, which is to say that variations in the electric and
+magnetic field are over timescales that are much less than the ion cyclotron
+period; in more practical language, I mean that we are interested in
+\emph{low-frequency} oscillations. 
 
-[Set up the stage: Two-dimensional ($\hat{x}$ and $\hat{z}$), assumed
-perp. electric field, variations are low-frequency so that $\partial^2
-/ \partial t^2 \ll \Omega_{ci}^2$, $\vec{E}_{app} = \vec{E}_{app} (x,
-z, t)$]
+We're also going to assume the existence of an electric field
+$\mathbf{E}_{\textrm{app}}$ that only varies in the $x-z$ plane:
+$\mathbf{E}_{\textrm{app}} = \mathbf{E}_{\textrm{app}} (x, z, t)$.
 
-[Show continuity equations]
+With these assumptions let's bob and weave, baby. Start by multiplying each
+continuity equation by the corresponding charge of the species
+$q_\alpha$---positive for ions and negative for electrons---and adding these two
+continuity equations (\ref{ch1:eqCont}) together (remember that there are really
+two equations, since $\alpha$ is used to denote either electrons or ions),
+\begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \big (
+  \cancel{q_i n_i + q_e n_e} \big ) + \grad \cdot \big ( q_{e} n_{e}
+  \mathbf{v}_{e} + q_i n_i \mathbf{v}_i \big ) = 0.
+\end{equation}
+If we now recall the quasineutrality condition (\ref{ch1:eqQuasi}), you can see
+that the divergence term (that's the symbol $\grad \cdot$ and all the stuff in
+parentheses that follows after) is $\grad \cdot \mathbf{j}$, where $\mathbf{j}
+\equiv q n ( \mathbf{v}_i - \mathbf{v}_e )$.
 
-[Show momentum equations give polarization drift]
+For to-be-disclosed reasons, let's take the time derivative of
+(\ref{ch1:eqCont1}) so that
+\begin{equation} \label{ch1:eqCont2} \dfrac{\partial^2}{\partial x \partial t}
+  j_x + \dfrac{\partial^2}{\partial z \partial t} j_z = 0;
+\end{equation}
+you'll recall that our assumption, $\partial / \partial y = 0$, accounts for the
+conspicuous absence of any terms or derivatives involving $y$. Let's keep this
+equation in our back pocket and keep moving.
+
+Turning now to the momentum equations (\ref{ch1:eqMom})
 
 [Show parallel electron acceleration from $E_z$ ]
 
