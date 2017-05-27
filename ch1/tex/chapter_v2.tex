@@ -960,17 +960,29 @@ $\mathbf{J}$---up to a constant of proportionality $\mu_o$, at any
 rate. Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) tell us how electric
 fields and magnetic fields evolve in time, and they are \emph{laws}. 
 
-Now for the fun part. We get to make a bunch of assumptions, whittling away at
-(\ref{ch1:eqCont}--\ref{ch1:eqFar}) as we go. First of all, let's set up a
-Cartesian coordinate system\footnote{We could use a dipolar coordinate system,
-  as do \citet{Lysak2013}, but I'd rather keep it simple for the sake of both of
-  us.} such that the $x$ coordinate is perpendicular to the local geomagnetic
-field, the $y$ coordinate is negligible (i.e., nothing varies in the $y$
-direction, which means that inside the symbol $\grad$, the differential operator
-$\partial / \partial y = 0$), and the $z$ coordinate is along the local
-geomagnetic field. We won't outrightly say that the $y$ coordinate doesn't
-exist, since that would render meaningless the three-dimensional definitions of,
-for example, the cross product and curl operator.
+Now for the fun part. We get to make a bunch of assumptions about the way that
+magnetic and electric fields vary in time, how the constituent particle species
+(which are ions and electrons) move and interact, whether or not we allow what
+in the biz we call \emph{nonlinear terms}\footnote{Nonlinear terms involve
+  products and/or quotients of variables (e.g., $xy$ or $x/y$) instead of sums
+  and differences (e.g., $x+y$ or $x-y$). They are the fastest, most basic, and
+  most obvious route to making a theoretical problem intractable that I am aware
+  of.}, all of which whittle away the unnecessary details of
+(\ref{ch1:eqCont}--\ref{ch1:eqFar}). In other words, I suppose in making any
+assumption we are hoping to save ourselves from distraction by unnecessary
+details in the course of investigation.
+
+First of all, I propose a Cartesian coordinate system\footnote{We could use a
+  dipolar coordinate system, as do \citet{Lysak2013}, but I'd rather keep it
+  simple for the sake of both of us.} such that the $z$ coordinate is along the
+local geomagnetic field $\mathbf{B}_o$ (that is, $\mathbf{B}_o = B_o \hat{z}$),
+the $x$ coordinate is perpendicular to the local geomagnetic field, and the $y$
+coordinate is negligible (i.e., nothing varies in the $y$ direction, which means
+that inside the symbol $\grad$, the differential operator
+$\partial / \partial y = 0$). I won't outrightly say that the $y$ coordinate
+doesn't exist, since, for example, the curl operator $\grad \times$ is a
+three-dimensional creature and doesn't make sense if we are strict in saying
+that there are only two dimensions in our system.
 
 So much for spatial variation. How about variation in time? We'll assume that
 everything in our system happens slowly enough so that $\partial^2 / \partial
@@ -982,6 +994,9 @@ period; in more practical language, I mean that we are interested in
 We're also going to assume the existence of an electric field
 $\mathbf{E}_{\textrm{app}}$ that only varies in the $x-z$ plane:
 $\mathbf{E}_{\textrm{app}} = \mathbf{E}_{\textrm{app}} (x, z, t)$.
+
+Last of all, I will assume a singly charged ion species so that $q_i = q$ and
+$q_e = -q$.
 
 With these assumptions let's bob and weave, baby. Start by multiplying each
 continuity equation by the corresponding charge of the species
@@ -997,8 +1012,8 @@ that the divergence term (that's the symbol $\grad \cdot$ and all the stuff in
 parentheses that follows after) is $\grad \cdot \mathbf{j}$, where $\mathbf{j}
 \equiv q n ( \mathbf{v}_i - \mathbf{v}_e )$.
 
-For to-be-disclosed reasons, let's take the time derivative of
-(\ref{ch1:eqCont1}) so that
+For to-be-disclosed reasons, I take the time derivative of (\ref{ch1:eqCont1})
+so that
 \begin{equation} \label{ch1:eqCont2} \dfrac{\partial^2}{\partial x \partial t}
   j_x + \dfrac{\partial^2}{\partial z \partial t} j_z = 0;
 \end{equation}
@@ -1006,9 +1021,50 @@ you'll recall that our assumption, $\partial / \partial y = 0$, accounts for the
 conspicuous absence of any terms or derivatives involving $y$. Let's keep this
 equation in our back pocket and keep moving.
 
-Turning now to the momentum equations (\ref{ch1:eqMom})
+Why don't we take a look at the $y$ component of the momentum equations
+(\ref{ch1:eqMom})? This suggestion might seem strange since I've explicitly assumed that
+$\partial / \partial y = 0$, but never mind: writing out the $y$ components,
+we find that
+\begin{equation} 
+  \begin{aligned}
+    \label{ch1:eqMomy} \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
+    \dfrac{q_e}{m_e}v_{\textrm{e}x} B_o \\
+    \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
+    \dfrac{q_e}{m_i}v_{\textrm{i}x} B_o \\
+    \implies v_{\textrm{e}x} = -
+    \dfrac{m_e}{m_i} v_{\textrm{i}x}.
+  \end{aligned}
+\end{equation}
+Ah, so! It turns out that in the $x$ direction, electron motion is opposite that
+of the ions at a speed that is less than that of ions by a factor of
+$m_e / m_i$. (In plain English: electrons move much, much more slowly than ions
+in the $x$ direction.) If you were skeptical about looking at the $y$ component
+(''There's no variation in the $y$ direction, quit wasting time!'') you'd better
+take a moment to reexamine (\ref{ch1:eqMomy}) to see what just happened.
 
-[Show parallel electron acceleration from $E_z$ ]
+The main question is, why the shortage of a species-specifying subscript
+(alliterate!) on $v_y$? Doubtless you remember all those things I was saying
+about making life easy via simplifying assumptions; $v_y$ is Exhibit A, a
+ramification of my decision to set $\partial / \partial y = 0$---or rather, the
+assumption $\partial / \partial y = 0$ obviously means that
+$\partial v_{\textrm{e}y} / \partial y = \partial v_{\textrm{i}y} / \partial y =
+0$,
+and that there is no need for specifying a species because derivatives with
+respect to $y$ are all zero anyway. 
+
+``Should we care?'' Yes! We do care! The beauty is that we can solve both of the
+expressions (\ref{ch1:eqMomx}) for $v_y$
+
+
+Why don't we take a look at the $x$ component of the momentum equations (\ref{ch1:eqMom})? They are
+\begin{equation}
+  \begin{aligned} \label{ch1:eqMomx} \dfrac{\partial v_{\textrm{ex}}}{\partial t} = \dfrac{q_e E_x}{m_e} + \dfrac{q_e}{m_e}v_y B_o; \\
+    \dfrac{\partial v_{\textrm{ix}}}{\partial t} = \dfrac{q_i E_x}{m_i} + \dfrac{q_e}{m_i}v_y B_o.
+  \end{aligned}
+\end{equation}
+
+[Show parallel electron acceleration from
+$E_z$ ]
 
 [Amp`{e}re's $+$ Faraday's $+$ polarization drift to get second-order eq. in $E_x$ and $E_z$ ]
 
