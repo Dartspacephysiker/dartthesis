@@ -978,9 +978,9 @@ First of all, I propose a Cartesian coordinate system\footnote{We could use a
 local geomagnetic field $\mathbf{B}_o$ (that is, $\mathbf{B}_o = B_o \hat{z}$),
 the $x$ coordinate is perpendicular to the local geomagnetic field, and the $y$
 coordinate is negligible (i.e., nothing varies in the $y$ direction, which means
-that inside the symbol $\grad$, the differential operator
-$\partial / \partial y = 0$). I won't outrightly say that the $y$ coordinate
-doesn't exist, since, for example, the curl operator $\grad \times$ is a
+that inside the symbol $\grad$, the differential operator $\partial / \partial y
+= 0$). However, I won't outrightly say that the $y$ coordinate doesn't exist
+since, among other issues, the curl operator $\grad \times$ is a
 three-dimensional creature and doesn't make sense if we are strict in saying
 that there are only two dimensions in our system.
 
@@ -995,8 +995,8 @@ We're also going to assume the existence of an electric field
 $\mathbf{E}_{\textrm{app}}$ that only varies in the $x-z$ plane:
 $\mathbf{E}_{\textrm{app}} = \mathbf{E}_{\textrm{app}} (x, z, t)$.
 
-Last of all, I will assume a singly charged ion species so that $q_i = q$ and
-$q_e = -q$.
+Last of all, I will assume a singly charged ion species so that $q_i = q$ (and
+of course $q_e = -q$).
 
 With these assumptions let's bob and weave, baby. Start by multiplying each
 continuity equation by the corresponding charge of the species
@@ -1004,67 +1004,87 @@ $q_\alpha$---positive for ions and negative for electrons---and adding these two
 continuity equations (\ref{ch1:eqCont}) together (remember that there are really
 two equations, since $\alpha$ is used to denote either electrons or ions),
 \begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \big (
-  \cancel{q_i n_i + q_e n_e} \big ) + \grad \cdot \big ( q_{e} n_{e}
-  \mathbf{v}_{e} + q_i n_i \mathbf{v}_i \big ) = 0.
+  n_i - n_e \big ) + \grad \cdot \big (n_i \mathbf{v}_i - n_{e}
+  \mathbf{v}_{e} \big ) = 0.
 \end{equation}
-If we now recall the quasineutrality condition (\ref{ch1:eqQuasi}), you can see
-that the divergence term (that's the symbol $\grad \cdot$ and all the stuff in
-parentheses that follows after) is $\grad \cdot \mathbf{j}$, where $\mathbf{j}
-\equiv q n ( \mathbf{v}_i - \mathbf{v}_e )$.
+If we now recall the quasineutrality condition (\ref{ch1:eqQuasi}) you can see
+that the terms involving the time derivative of density go to zero, and if I
+define the current density $\mathbf{j} \equiv q n ( \mathbf{v}_i - \mathbf{v}_e
+)$, the divergence term (that's the symbol $\grad \cdot$ and all the stuff in
+parentheses that follows after) can be rewritten $\grad \cdot \mathbf{j}$:
+\begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \big (
+  \cancel{n_i - n_e} \big ) + \grad \cdot \big (n_i \mathbf{v}_i - n_{e}
+  \mathbf{v}_{e} \big ) = \grad \cdot \mathbf{j} = 0.
+\end{equation}
 
-For to-be-disclosed reasons, I take the time derivative of (\ref{ch1:eqCont1})
-so that
+
+For to-be-disclosed reasons, I take the time derivative of $\grad \cdot
+\mathbf{j} = 0$ and write out the components of the divergence term
+\emph{as\'{i}}:
 \begin{equation} \label{ch1:eqCont2} \dfrac{\partial^2}{\partial x \partial t}
-  j_x + \dfrac{\partial^2}{\partial z \partial t} j_z = 0;
+  j_x + \dfrac{\partial^2}{\partial z \partial t} j_z = 0.
 \end{equation}
-you'll recall that our assumption, $\partial / \partial y = 0$, accounts for the
+You'll recall that our assumption, $\partial / \partial y = 0$, accounts for the
 conspicuous absence of any terms or derivatives involving $y$. Let's keep this
 equation in our back pocket and keep moving.
 
-Why don't we take a look at the $y$ component of the momentum equations
-(\ref{ch1:eqMom})? This suggestion might seem strange since I've explicitly assumed that
-$\partial / \partial y = 0$, but never mind: writing out the $y$ components,
-we find that
+How about taking a look at the $y$ component of the momentum equations
+(\ref{ch1:eqMom})? This suggestion might seem strange since I've explicitly
+assumed that $\partial / \partial y = 0$, but hang on to your hat: writing out
+the $y$ components, we find that
 \begin{equation} 
-  \begin{aligned}
+  \begin{alignedat}{2}
     \label{ch1:eqMomy} \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
-    \dfrac{q_e}{m_e}v_{\textrm{e}x} B_o \\
-    \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
-    \dfrac{q_e}{m_i}v_{\textrm{i}x} B_o \\
-    \implies v_{\textrm{e}x} = -
-    \dfrac{m_e}{m_i} v_{\textrm{i}x}.
-  \end{aligned}
+    - &\dfrac{q}{m_e}v_{\textrm{e}x} ~ B_o &= 0; \\
+    \dfrac{\partial v_{\textrm{i}y}}{\partial t} &=
+    &\dfrac{q}{m_i}v_{\textrm{i}x} ~ B_o &= 0. \\
+  \end{alignedat}
 \end{equation}
-Ah, so! It turns out that in the $x$ direction, electron motion is opposite that
-of the ions at a speed that is less than that of ions by a factor of
-$m_e / m_i$. (In plain English: electrons move much, much more slowly than ions
-in the $x$ direction.) If you were skeptical about looking at the $y$ component
-(''There's no variation in the $y$ direction, quit wasting time!'') you'd better
-take a moment to reexamine (\ref{ch1:eqMomy}) to see what just happened.
+Why are the right-hand sides of (\ref{ch1:eqMomy}) 0? Well, if they weren't zero
+the possibility of a time-varying current density $j_y \neq 0$ arises, which we
+simply won't hear of! Once we're through with this derivation you'll see that a
+time-varying $j_y$ is unnecessary to include, and in the meantime I ask you to
+trust that I have the benefit of foresight. Plus, this assumptions lets us
+equate the two expressions (\ref{ch1:eqMomy}) to find that
+\begin{equation} 
+  v_{\textrm{e}x} = - \dfrac{m_e}{m_i} v_{\textrm{i}x}.
+\end{equation}
+% Wait, did you just miss something? Oh, right---you're wondering why the shortage
+% of a species-specifying subscript (alliterate!) on $v_y$. Doubtless you remember
+% all those things I was saying about making life easy via simplifying
+% assumptions; $v_y$ is Exhibit A, a ramification of my decision to set $\partial
+% / \partial y = 0$---or rather, the assumption $\partial / \partial y = 0$
+% obviously means that $\partial v_{\textrm{e}y} / \partial y = \partial
+% v_{\textrm{i}y} / \partial y = 0$, and that there is no need for specifying a
+% species because derivatives with respect to $y$ are all zero anyway.
+Ah, so! It turns out that in the $x$ direction electron motion is opposite that
+of the ions, and at a speed that is less than that of ions by a factor of $m_e /
+m_i$. (In plain English: electrons move much, much more slowly than ions in the
+$x$ direction.) This is somewhat counterintuitive since electrons are much
+lighter than ions and presumably a lot easier to shove around, but that's often why
+we need the math to guide when intuition is faulty.
 
-The main question is, why the shortage of a species-specifying subscript
-(alliterate!) on $v_y$? Doubtless you remember all those things I was saying
-about making life easy via simplifying assumptions; $v_y$ is Exhibit A, a
-ramification of my decision to set $\partial / \partial y = 0$---or rather, the
-assumption $\partial / \partial y = 0$ obviously means that
-$\partial v_{\textrm{e}y} / \partial y = \partial v_{\textrm{i}y} / \partial y =
-0$,
-and that there is no need for specifying a species because derivatives with
-respect to $y$ are all zero anyway. 
-
-``Should we care?'' Yes! We do care! The beauty is that we can solve both of the
-expressions (\ref{ch1:eqMomx}) for $v_y$
-
-
-Why don't we take a look at the $x$ component of the momentum equations (\ref{ch1:eqMom})? They are
+Next, why don't we take a look at the $x$ component of the momentum equations
+(\ref{ch1:eqMom})? They are
 \begin{equation}
-  \begin{aligned} \label{ch1:eqMomx} \dfrac{\partial v_{\textrm{ex}}}{\partial t} = \dfrac{q_e E_x}{m_e} + \dfrac{q_e}{m_e}v_y B_o; \\
-    \dfrac{\partial v_{\textrm{ix}}}{\partial t} = \dfrac{q_i E_x}{m_i} + \dfrac{q_e}{m_i}v_y B_o.
+  \begin{aligned} \label{ch1:eqMomx} \dfrac{\partial v_{\textrm{ex}}}{\partial t} &= \dfrac{q_e E_x}{m_e} + \dfrac{q_e}{m_e}v_y B_o; \\
+    \dfrac{\partial v_{\textrm{ix}}}{\partial t} &= ~ \dfrac{q_i E_x}{m_i} + \dfrac{q_e}{m_i}v_y B_o.
   \end{aligned}
 \end{equation}
+Can you see that if I take the time derivative of (\ref{ch1:eqMomx}),
+$\frac{\partial v_{\textrm{e}x}}{\partial t}$ and $\frac{\partial
+  v_{\textrm{i}x}}{\partial t}$ will appear on the right-hand sides? In their places I
+can then ladle in expressions (\ref{ch1:eqMomy}):
+\begin{equation}
+  % \begin{aligned} \label{ch1:eqMomxdt} 
+\begin{alignedat}{5} \label{ch1:eqMomxdt} 
+    \dfrac{\partial^2 v_{\textrm{ex}}}{\partial t^2} &= - &\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} - \dfrac{q}{m_e}\dfrac{\partial v_{\textrm{e}y}}{\partial t} B_o &= -&\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} + \big( \dfrac{q B_o}{m_e} \big )^2 v_{\textrm{e}x}; \\
+    \dfrac{\partial^2 v_{\textrm{ix}}}{\partial t^2} &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \dfrac{q}{m_i}\dfrac{\partial v_{\textrm{i}y}}{\partial t} B_o &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \big( \dfrac{q B_o}{m_i} \big )^2 v_{\textrm{i}x}.
+\end{alignedat}
+%   \end{aligned}
+\end{equation}
 
-[Show parallel electron acceleration from
-$E_z$ ]
+[Show parallel electron acceleration from $E_z$ ]
 
 [Amp`{e}re's $+$ Faraday's $+$ polarization drift to get second-order eq. in $E_x$ and $E_z$ ]
 
