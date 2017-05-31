@@ -187,7 +187,7 @@
   % more) although a strict limit to the acceleration region may be
   % difficult to establish experimentally
 
-  Equation (\hyperref{ch6:eqKnight}), otherwise known as the J-V or Knight
+  Equation (\ref{ch6:eqKnight}), otherwise known as the J-V or Knight
   relation, elucidates the role of field-aligned potential differences
   within the large-scale current system connecting the magnetosphere
   and the ionosphere that was posited by Kristian Birkeland more than
@@ -219,7 +219,7 @@
   precipitation \citep[see, e.g., ][]{Newell2009,McIntosh2014}, the
   possibility of a source distribution with a ``high energy tail'' was
   in fact acknowledged by \citet{Knight1973}, and reformulations of
-  the J-V relation (\hyperref{ch6:eqKnight}) assuming a variety of
+  the J-V relation (\ref{ch6:eqKnight}) assuming a variety of
   alternative source distributions have since been developed
   \citep{Pierrard1996,Janhunen1998,Dors1999,Bostrom2003a,Bostrom2004}.
 
@@ -237,7 +237,7 @@
  high-energy tails of observed solar wind plasmas
  \citep{Vasyliunas1968}. Relaxing the assumption of a magnetospheric
  source population in thermal equilibrium, \citet{Dors1999} showed
- that the J-V relation (\hyperref{ch6:eqKnight}) becomes
+ that the J-V relation (\ref{ch6:eqKnight}) becomes
   % \begin{linenomath*}
  \begin{align}
    \label{ch6:eqDors}
@@ -251,8 +251,8 @@
  % \end{linenomath*}
 
  The additional parameter $\kappa \in [ \, 3/2, \infty )$ in the
- distribution (\hyperref{ch6:eqKappa1D}) and J-V relation
- (\hyperref{ch6:eqDors}) parameterizes the degree to which particle motion
+ distribution (\ref{ch6:eqKappa1D}) and J-V relation
+ (\ref{ch6:eqDors}) parameterizes the degree to which particle motion
  is correlated, and is therefore related to the ``thermodynamic
  distance'' between a given stationary, non-equilibrium state and
  thermal equilibrium. The theoretical minimum (in three dimensions)
@@ -287,8 +287,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   Using 2-D model distributions based on either a 1-D Maxwellian
-  distribution (\hyperref{ch6:eqMax1D}) or a 1-D kappa distribution
-  (\hyperref{ch6:eqKappa1D}), we perform fits to the electron
+  distribution (\ref{ch6:eqMax1D}) or a 1-D kappa distribution
+  (\ref{ch6:eqKappa1D}), we perform fits to the electron
   precipitation within the precipitating loss cone as measured by FAST
   electrostatic analyzers (ESAs) \citep{Carlson2001}. Four adjustable
   parameters are used for the kappa distribution and three parameters
@@ -311,8 +311,8 @@
   % \end{linenomath*}
     where $E^*$ and $\theta$ are respectively the (possibly modified)
     electron energy and pitch angle, $f_{1D}$ is either the 1-D
-    Maxwellian distribution (\hyperref{ch6:eqMax1D}) or the 1-D kappa
-    distribution (\hyperref{ch6:eqKappa1D}), and $g(\theta )$ is a
+    Maxwellian distribution (\ref{ch6:eqMax1D}) or the 1-D kappa
+    distribution (\ref{ch6:eqKappa1D}), and $g(\theta )$ is a
     function describing, for example, the effects of the mirror force
     or the maser instability on the source distribution. Each group of
     authors employing the 2-D model (\ref{ch6:eq2DMod}) prescribe
@@ -353,52 +353,46 @@
 
   % ----------------
 
-  The focus of this study is the portion of the source population
-  within the precipitating loss cone $\theta_{\textrm{lc}}$, which is
-  often $\sim$30$^\circ$ near FAST apogee at 4175~km. We therefore use
-  $g(\theta) =$~1 in the 2-D model (\ref{ch6:eq2DMod}) and assume the
-  electron energy $E$ is offset by a field-aligned potential drop
-  $\Delta \Phi$, or $E^* = \big( \sqrt{e \Delta \Phi} - \sqrt{E}
-  \big)^2$.
+  The focus of this study is the portion of the source population within the
+  precipitating loss cone $\theta_{\textrm{lc}}$, which is often
+  $\sim$30$^\circ$ near FAST apogee at 4175~km. We therefore use $g(\theta) =$~1
+  in the 2-D model (\ref{ch6:eq2DMod}) and assume the electron energy $E$ is
+  offset by a field-aligned potential drop $\Delta \Phi$, or
+  $E^* = \big( \sqrt{e \Delta \Phi} - \sqrt{E} \big)^2$.
 
-  Our procedure for estimating the parameters of $f_{2D}$ in
-  (\ref{ch6:eq2DMod}) from measured electron distributions is the
-  following: first, a 1-D differential energy flux spectrum is
-  calculated by averaging the differential energy flux at each energy
-  over the range of angles within the precipitating loss cone, after
-  which a 1-D fit of the resulting average spectrum is
-  performed. Parameters from the 1-D fit are then used as the initial
-  estimate of the parameters used to perform a direct 2-D fit of the
-  observed differential energy flux distribution over a range of
-  energies and angles selected to avoid inclusion of possible
-  secondaries and other background populations. The range of angles
-  includes all within the precipitating loss cone
-  $\theta_{\textrm{lc}}$; the range of energies extends from two
-  energy bins below that in which the peak energy flux is observed to
-  the ESA energy limit at 30~keV. Throughout this study the reported
-  fit parameters are those resulting from 2-D fits.
+  Our procedure for estimating the parameters of $f_{2D}$ in (\ref{ch6:eq2DMod})
+  from measured electron distributions is the following: first, a 1-D
+  differential energy flux spectrum is calculated by averaging the differential
+  energy flux at each energy over the range of angles within the precipitating
+  loss cone, after which a 1-D fit of the resulting average spectrum is
+  performed. Parameters from the 1-D fit are then used as the initial estimate
+  of the parameters used to perform a direct 2-D fit of the observed
+  differential energy flux distribution over a range of energies and angles
+  selected to avoid inclusion of possible secondaries and other background
+  populations. The range of angles includes all within the precipitating loss
+  cone $\theta_{\textrm{lc}}$; the range of energies extends from two energy
+  bins below that in which the peak energy flux is observed to the ESA energy
+  limit at 30~keV. Throughout this study the reported fit parameters are those
+  resulting from 2-D fits.
 
   \section{FAST Orbit 1773}
 
-  During an approximately 60-s interval on Feb 1, 1997 that was
-  originally reported by \citet{Elphic1998}, the FAST satellite
-  observed inverted V electron precipitation
-  (Figures~\hyperref[ch6:Fig1]{6.1a} and \hyperref[ch6:Fig1]{6.1b})
-  and intermittent upgoing ion beams (not shown) near midnight MLT
-  during a period of low geomagnetic activity ($K_p =$~1$^-$).
+  During an approximately 60-s interval on Feb 1, 1997 that was originally
+  reported by \citet{Elphic1998}, the FAST satellite observed inverted V
+  electron precipitation (Figures~\ref{ch6:Fig1}a and Figure~\ref{ch6:Fig1}b)
+  and intermittent upgoing ion beams (not shown) near midnight MLT during a
+  period of low geomagnetic activity ($K_p =$~1$^-$).
 
-  Performing 2-D fits of the electron distributions within the
-  precipitating loss cone shows that many of the distributions are
-  highly nonthermal, with $\kappa \lesssim$~2.0
-  (Figure~\ref{ch6:Fig1}c). Values of the reduced chi-squared
-  statistic $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) -
-    y_i(x)}{\mathrm{dof}}$ for 2-D fits with a kappa distribution are
-  at times much smaller than corresponding $\chi^2_{\textrm{red}}$
-  values for fits with a Maxwellian distribution
-  (Figure~\ref{ch6:Fig1}c), most markedly during the period between
-  red bars (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when
-  $\kappa$ is frequently near the theoretical minimum
-  $\kappa_{\mathrm{min}} =$~3/2.
+  Performing 2-D fits of the electron distributions within the precipitating
+  loss cone shows that many of the distributions are highly nonthermal, with
+  $\kappa \lesssim$~2.0 (Figure~\ref{ch6:Fig1}c). Values of the reduced
+  chi-squared statistic
+  $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) - y_i(x)}{\mathrm{dof}}$ for 2-D
+  fits with a kappa distribution are at times much smaller than corresponding
+  $\chi^2_{\textrm{red}}$ values for fits with a Maxwellian distribution
+  (Figure~\ref{ch6:Fig1}c), most markedly during the period between red bars
+  (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when $\kappa$ is frequently
+  near the theoretical minimum $\kappa_{\mathrm{min}} =$~3/2.
 
   % ---------------- FIGURE 2
 
@@ -757,19 +751,16 @@
   \end{figure}
 
   % ----------------
-  \hyperref[ch6:Fig6]{Figure~6.6} displays ($\kappa, R_B$) parameter
-  space in the same format as \hyperref[ch6:Fig3]{Figure~6.3a}. The
-  same three most likely physical scenarios shown in
-  Figure~\ref{ch6:Fig3}a, a distant nonthermal source, a nearby
-  nonthermal source, and a thermal source, are also evident in
-  Figure~\ref{ch6:Fig6}a. Because $\kappa$ often exceeds 2 in
-  \ref{ch6:Fig4}, and because \hyperref[ch6:Fig5]{Figure~6.5} argues
-  that $R_B$ cannot exceed $\sim$22, the likelihood of a distant
-  nonthermal source is remote; instead, the balance of the evidence in
-  this case is in favor of a source population at less than
-  2.5~$R_E$. This conclusion about the source altitude is compatible
-  with the work of \citet{Ergun1998} discussed at the beginning of
-  this section.
+  Figure~\ref{ch6:Fig6} displays ($\kappa, R_B$) parameter space in the same
+  format as Figure~\ref{ch6:Fig3}a. The same three most likely physical
+  scenarios shown in Figure~\ref{ch6:Fig3}a, a distant nonthermal source, a
+  nearby nonthermal source, and a thermal source, are also evident in
+  Figure~\ref{ch6:Fig6}a. Because $\kappa$ often exceeds 2 in \ref{ch6:Fig4},
+  and because Figure~\ref{ch6:Fig5} argues that $R_B$ cannot exceed $\sim$22,
+  the likelihood of a distant nonthermal source is remote; instead, the balance
+  of the evidence in this case is in favor of a source population at less than
+  2.5~$R_E$. This conclusion about the source altitude is compatible with the
+  work of \citet{Ergun1998} discussed at the beginning of this section.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -788,7 +779,7 @@
   The results of this study suggest that a nonthermal source
   population may significantly modify the Knight relation. Given the
   restriction on source regions to $>$~4.7~$R_E$, the results in
-  \hyperref[ch6:Fig3]{Figure~6.3a} in particular show that the observed J-V
+  Figure~\ref{ch6:Fig3}a in particular show that the observed J-V
   relation is only compatible with a highly nonthermal source
   population. Further study is clearly necessary to determine both the
   conditions leading to development of highly nonthermal
