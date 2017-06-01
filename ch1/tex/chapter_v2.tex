@@ -984,20 +984,32 @@ since, among other issues, the curl operator $\grad \times$ is a
 three-dimensional creature and doesn't make sense if we are strict in saying
 that there are only two dimensions in our system.
 
-So much for spatial variation. How about variation in time? We'll assume that
-everything in our system happens slowly enough so that $\partial^2 / \partial
-t^2 \ll \Omega_{ci}^2$, which is to say that variations in the electric and
-magnetic field are over timescales that are much less than the ion cyclotron
-period\footnote{I know---I just dropped ``cyclotron period'' out of the
-  blue. It's like this: whenever a charged particle finds itself in the presence
-  of a steady magnetic field and the charged particle is more or less free to
-  move without bumping into a neighbor, the charged particle moves in a helical
-  path around the magnetic field line, or simply a circular path if the particle
-  has no velocity component along the magnetic field. (Never mind electric
-  fields, which complicate the description I just gave.) The frequency at which
-  this gyration about the field line takes place is the cyclotron frequency, and
-  the period of this motion is the cyclotron period.}; in more practical
-language, I mean that we are interested in \emph{low-frequency} oscillations.
+So much for spatial variation. How about variation in time? I shouldn't even
+talk about temporal variation without first introducing you to a
+bread-and-butter concept in plasma physics, cyclotron motion. It's like this: a
+charged particle that is moving perpendicular to a steady magnetic field (and
+that is free to move without bumping into a neighboring particle) will begin to
+gyrate---or execute periodic, circular motion---around the magnetic field line
+as a consequence of the magnetic force
+$\mathbf{F}_m = q_\alpha \mathbf{v}_\alpha \times \mathbf{B}$. If the particle
+has some velocity component along the magnetic field, its path around the
+magnetic field line is helical. (Never mind what happens when an electric field
+is also present, since it complicates the description I just gave.) The
+frequency at which this gyration about the field line occurs is the cyclotron
+frequency $\omega_{c \alpha} = \vert q_\alpha B_o /m_\alpha \vert$. 
+
+Back to our question about variation in time. You can see that
+$\omega_{ci} / \omega_{ce} = m_e/m_i$, or that the ion-cyclotron frequency
+$\omega_{ci}$ is much less than the electron-cyclotron frequency $\omega_{ce}$,
+and thus we have at least three timescales that we \emph{could} be interested in, \par
+\begin{enumerate}
+\item \makebox[4.5cm]{\qquad $ \partial / \partial t \gg \omega_{ce} $} (high frequencies),
+\item \makebox[4.5cm]{$ \omega_{ci} < \partial / \partial t < \omega_{ce} $} (intermediate frequencies),
+\item \makebox[4.5cm]{\qquad $ \partial / \partial t \ll \omega_{ci} $} (low frequencies).
+\end{enumerate}
+We'll assume that the electric and magnetic field as well as the particles in
+our system vary at low frequencies (option \#3) so that
+$\partial^2 / \partial t^2 \ll \omega_{ci}^2$. 
 
 We're also going to assume the existence of an electric field
 $\mathbf{E}_{\textrm{app}}$ that only varies in the $x-z$ plane:
@@ -1046,11 +1058,9 @@ the $y$ components explicitly for each species, we find that
     \label{ch1:eqMomy} \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
     - &\omega_{ce} v_{\textrm{e}x} &= 0; \\
     \dfrac{\partial v_{\textrm{i}y}}{\partial t} &=
-    &\omega_{ci} v_{\textrm{i}x} &= 0; \\
+    &\omega_{ci} v_{\textrm{i}x} &= 0. \\
   \end{alignedat}
 \end{equation}
-where $\omega_{c \alpha} = ( \pm ) \vert q_\alpha B_o /m_\alpha \vert$ is the
-cyclotron frequency, the plus sign for ions and the negative sign for electrons.
 Why are the right-hand sides of (\ref{ch1:eqMomy}) zero?  Well, if they weren't
 zero the possibility of a time-varying current density $j_y \neq 0$ arises,
 which we simply won't hear of! This isn't to say that nonzero $j_y$ is
@@ -1088,7 +1098,7 @@ Next, why don't we take a look at the $x$ component of the momentum equation
 \label{ch1:eqMomx} \dfrac{\partial v_{\alpha, x}}{\partial t} = \dfrac{q_\alpha}{m_\alpha} E_x \pm \omega_{c \alpha} v_{\alpha, y},
 \end{equation}
 where the plus sign on the right-hand sign is for ions and the minus sign is for
-electrons, as I mentioned when I introduced the cyclotron frequency.  
+electrons. (The extra signage is necessary because $\omega_{c \alpha}$ only  but the charge of an electrons
 
 Can you see that if I take the time derivative of (\ref{ch1:eqMomx}),
 $\frac{\partial v_{\alpha y}}{\partial t}$ will appear on the right-hand side?
