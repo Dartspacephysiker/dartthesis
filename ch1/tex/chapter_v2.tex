@@ -778,7 +778,7 @@ footnotes are great resources on this topic, as are the aforementioned work by
 Now I'll introduce you to two of the old plasma theorist's standbys,
 \begin{subequations}
   \begin{align} 
-    \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \big (n_{\alpha} \mathbf{v}_{\alpha} \big ) &= 0, \label{ch1:eqCont} \\
+    \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \Big (n_{\alpha} \mathbf{v}_{\alpha} \Big ) &= 0, \label{ch1:eqCont} \\
     m_{\alpha} n_{\alpha} \dfrac{\partial \mathbf{v}_{\alpha}}{\partial t} &=
     q_{\alpha} n_{\alpha} \Big ( \mathbf{E} + \dfrac{1}{c} \mathbf{v}_{\alpha}
     \times \mathbf{B} \Big ), \label{ch1:eqMom}
@@ -991,12 +991,19 @@ charged particle that is moving perpendicular to a steady magnetic field (and
 that is free to move without bumping into a neighboring particle) will begin to
 gyrate---or execute periodic, circular motion---around the magnetic field line
 as a consequence of the magnetic force
-$\mathbf{F}_m = q_\alpha \mathbf{v}_\alpha \times \mathbf{B}$. If the particle
-has some velocity component along the magnetic field, its path around the
-magnetic field line is helical. (Never mind what happens when an electric field
-is also present, since it complicates the description I just gave.) The
-frequency at which this gyration about the field line occurs is the cyclotron
-frequency $\omega_{c \alpha} = \vert q_\alpha B_o /m_\alpha \vert$. 
+\begin{equation} \label{ch1:eqMagForce} 
+\mathbf{F}_m = q_\alpha \mathbf{v}_\alpha \times \mathbf{B}.
+\end{equation} 
+If the particle has some velocity component along the magnetic field, its path
+around the magnetic field line is helical. (Never mind what happens when an
+electric field is also present, since it complicates the description I just
+gave.) The frequency at which this gyration about the field line occurs is the
+cyclotron frequency $\omega_{c \alpha} = \vert q_\alpha B /m_\alpha
+\vert$. Also, see how the direction of $\mathbf{F}_m$ depends on the sign of
+$q_\alpha$? It means that the force due to the magnetic field $\mathbf{B}$ on
+electrons, which are negatively charged, is in a direction opposite the force
+exerted on ions, which are positively charged; electrons and ions thus gyrate
+about the magnetic field line in opposite senses.
 
 Back to our question about variation in time. You can see that
 $\omega_{ci} / \omega_{ce} = m_e/m_i$, or that the ion-cyclotron frequency
@@ -1011,9 +1018,8 @@ We'll assume that the electric and magnetic field as well as the particles in
 our system vary at low frequencies (option \#3) so that
 $\partial^2 / \partial t^2 \ll \omega_{ci}^2$. 
 
-We're also going to assume the existence of an electric field
-$\mathbf{E}_{\textrm{app}}$ that only varies in the $x-z$ plane:
-$\mathbf{E}_{\textrm{app}} = \mathbf{E}_{\textrm{app}} (x, z, t)$.
+We're also going to assume the existence of an electric field $\mathbf{E}$ that
+only varies in the $x-z$ plane: $\mathbf{E} = \mathbf{E} (x, z, t)$.
 
 Last of all, I will assume a singly charged ion species so that $q_i = q$ (and
 of course $q_e = -q$).
@@ -1023,27 +1029,27 @@ continuity equation by the corresponding charge of the species
 $q_\alpha$---positive for ions and negative for electrons---and adding the two
 continuity equations (\ref{ch1:eqCont}) together (remember that there are really
 two equations, since $\alpha$ denotes electrons or ions),
-\begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \big (
-  n_i - n_e \big ) + \grad \cdot \big (n_i \mathbf{v}_i - n_{e}
-  \mathbf{v}_{e} \big ) = 0.
+\begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \Big (
+  n_i - n_e \Big ) + \grad \cdot \Big (n_i \mathbf{v}_i - n_{e}
+  \mathbf{v}_{e} \Big ) = 0.
 \end{equation}
 If we now recall the quasineutrality condition (\ref{ch1:eqQuasi}) you can see
 that the terms involving the time derivative of density go to zero (i.e., $n_i -
 n_e \approx 0$) and if I define the current density $\mathbf{j} \equiv q n (
 \mathbf{v}_i - \mathbf{v}_e )$, the divergence term (that's the symbol $\grad
 \cdot$ and all the stuff in parentheses that follows after) can be rewritten
-$\grad \cdot \mathbf{j}$:
-\begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \big (
-  \cancel{n_i - n_e} \big ) + \grad \cdot \big (n_i \mathbf{v}_i - n_{e}
-  \mathbf{v}_{e} \big ) = \grad \cdot \mathbf{j} = 0.
-\end{equation}
-
+$\grad \cdot \mathbf{j}$ :
+\begin{equation*} 
+  \dfrac{\partial}{\partial t} \Big ( \cancel{n_i - n_e} \Big )
+  + \grad \cdot \Big (n_i \mathbf{v}_i - n_{e} \mathbf{v}_{e} \Big ) = \grad
+  \cdot \mathbf{j} = 0.
+\end{equation*}
 
 For to-be-disclosed reasons, I take the time derivative of $\grad \cdot
 \mathbf{j} = 0$ and write out the components of the divergence term
 \emph{as\'{i}}:
-\begin{equation} \label{ch1:eqCont2} \dfrac{\partial^2}{\partial x \partial t}
-  j_x + \dfrac{\partial^2}{\partial z \partial t} j_z = 0.
+\begin{equation} 
+  \label{ch1:eqCont2} \dfrac{\partial^2 j_x}{\partial x \partial t} + \dfrac{\partial^2 j_z}{\partial z \partial t} = 0.
 \end{equation}
 You'll recall that our assumption, $\partial / \partial y = 0$, accounts for the
 conspicuous absence of any terms or derivatives involving $y$. Let's keep this
@@ -1056,9 +1062,9 @@ the $y$ components explicitly for each species, we find that
 \begin{equation} 
   \begin{alignedat}{2}
     \label{ch1:eqMomy} \dfrac{\partial v_{\textrm{e}y}}{\partial t} &=
-    - &\omega_{ce} v_{\textrm{e}x} &= 0; \\
+    &\omega_{ce} v_{\textrm{e}x} &= 0; \\
     \dfrac{\partial v_{\textrm{i}y}}{\partial t} &=
-    &\omega_{ci} v_{\textrm{i}x} &= 0. \\
+    - &\omega_{ci} v_{\textrm{i}x} &= 0. \\
   \end{alignedat}
 \end{equation}
 Why are the right-hand sides of (\ref{ch1:eqMomy}) zero?  Well, if they weren't
@@ -1094,21 +1100,25 @@ Next, why don't we take a look at the $x$ component of the momentum equation
 %     \dfrac{\partial v_{\textrm{ix}}}{\partial t} &= &\dfrac{q}{m_i} E_x + \omega_{ci} v_y.
 %   \end{alignedat}
 % \end{equation}
-\begin{equation}
-\label{ch1:eqMomx} \dfrac{\partial v_{\alpha, x}}{\partial t} = \dfrac{q_\alpha}{m_\alpha} E_x \pm \omega_{c \alpha} v_{\alpha, y},
+\begin{equation} \label{ch1:eqMomx} \dfrac{\partial v_{x,\alpha}}{\partial t} =
+  \dfrac{q_\alpha}{m_\alpha} \Big ( E_x + v_{y,\alpha} B_o - \cancel{v_{z,\alpha} B_y}
+  \Big ) = \dfrac{q_\alpha}{m_\alpha} E_x \pm \omega_{c \alpha} v_{y,\alpha},
 \end{equation}
-where the plus sign on the right-hand sign is for ions and the minus sign is for
-electrons. (The extra signage is necessary because $\omega_{c \alpha}$ only  but the charge of an electrons
+where I've junked the $v_{z,\alpha} B_y$ term because it is \emph{nonlinear}
+(i.e., the product of two small quantities, as mentioned above), and the upper
+sign on the right-hand side is for ions and the lower sign is for electrons,
+here and in the future. The extra signage is necessary to account for the
+charge-dependent direction of the magnetic force (\ref{ch1:eqMagForce}).
 
 Can you see that if I take the time derivative of (\ref{ch1:eqMomx}),
-$\frac{\partial v_{\alpha y}}{\partial t}$ will appear on the right-hand side?
-I can then ladle in the expression (\ref{ch1:eqMomy}) for $\frac{\partial
-  v_{\alpha y}}{\partial t}$,
+$\frac{\partial v_{y,\alpha}}{\partial t}$ will appear on the right-hand side?
+I can then ladle in (\ref{ch1:eqMomy}) for $\frac{\partial
+  v_{y,\alpha}}{\partial t}$,
 % \begin{equation}
 %   % \begin{aligned} \label{ch1:eqMomxdt} 
 % \begin{alignedat}{5} \label{ch1:eqMomxdt} 
-%     \dfrac{\partial^2 v_{\textrm{ex}}}{\partial t^2} &= - &\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} - \dfrac{q}{m_e}\dfrac{\partial v_{\textrm{e}y}}{\partial t} B_o &= -&\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} + \big( \dfrac{q B_o}{m_e} \big )^2 v_{\textrm{e}x}; \\
-%     \dfrac{\partial^2 v_{\textrm{ix}}}{\partial t^2} &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \dfrac{q}{m_i}\dfrac{\partial v_{\textrm{i}y}}{\partial t} B_o &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \big( \dfrac{q B_o}{m_i} \big )^2 v_{\textrm{i}x}.
+%     \dfrac{\partial^2 v_{\textrm{ex}}}{\partial t^2} &= - &\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} - \dfrac{q}{m_e}\dfrac{\partial v_{\textrm{e}y}}{\partial t} B_o &= -&\dfrac{q}{m_e}\dfrac{\partial E_x}{\partial t} + \Big( \dfrac{q B_o}{m_e} \Big )^2 v_{\textrm{e}x}; \\
+%     \dfrac{\partial^2 v_{\textrm{ix}}}{\partial t^2} &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \dfrac{q}{m_i}\dfrac{\partial v_{\textrm{i}y}}{\partial t} B_o &= &\dfrac{q}{m_i}\dfrac{\partial E_x}{\partial t} + \Big( \dfrac{q B_o}{m_i} \Big )^2 v_{\textrm{i}x}.
 % \end{alignedat}
 % %   \end{aligned}
 % \end{equation}
@@ -1120,25 +1130,72 @@ I can then ladle in the expression (\ref{ch1:eqMomy}) for $\frac{\partial
 % \end{alignedat}
 % %   \end{aligned}
 % \end{equation}
-\begin{equation*} \label{ch1:eqMomxdt} \dfrac{\partial^2 v_{\alpha,x}}{\partial
+\begin{equation*} \label{ch1:eqMomxdt} \dfrac{\partial^2 v_{x,\alpha}}{\partial
     t^2} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial t} \pm
-  \omega_{c \alpha} \dfrac{\partial v_{\alpha,y}}{\partial t} =
-  \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial t} + \omega_{c
-    \alpha}^2 v_{\alpha,x},
+  \omega_{c \alpha} \dfrac{\partial v_{y,\alpha}}{\partial t} =
+  \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial t} - \omega_{c
+    \alpha}^2 v_{x,\alpha},
 \end{equation*}
-and moving the term at far right to the left-hand side
-\begin{equation*} \big ( \dfrac{\partial^2}{\partial t^2} - \omega_{c \alpha}^2
-  \big ) v_{\alpha,x} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial
+and moving the term at far right to the left-hand side,
+\begin{equation*} \Big ( \dfrac{\partial^2}{\partial t^2} + \omega_{c \alpha}^2
+  \Big ) v_{x,\alpha} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial
     t},
 \end{equation*}
-we can draw on our assumption of low 
+I draw on my assumption that only low frequencies are of interest so that
+$\partial^2 / \partial t^2 + \omega_{c i}^2~\approx~\omega_{c i}^2$. Thus
+\begin{equation} \label{ch1:eqvxEx}
+  v_{x,\alpha} = \pm \dfrac{1}{\omega_{c \alpha} B_o}\dfrac{\partial
+    E_x}{\partial t}.
+\end{equation}
 
-  [Show parallel
-electron acceleration from $E_z$ ]
+Only the $z$ component of (\ref{ch1:eqMom}) remains to be examined. It's a cakewalk:
+\begin{equation} \label{ch1:eqvzEz} \dfrac{\partial v_{z,\alpha}}{\partial t} =
+  \dfrac{q_\alpha}{m_\alpha} \Big ( E_z + \cancel{v_{x,\alpha} B_y} -
+  \cancel{v_{y,\alpha} B_x} \Big ) = \pm \dfrac{\omega_{c \alpha}}{B_o} E_z.
+\end{equation}
+Baller, right? For my next trick, I'll plug (\ref{ch1:eqvxEx}) and
+(\ref{ch1:eqvzEz}) into the appropriate components of $\mathbf{j}$,
+\begin{equation*} 
+  \begin{alignedat}{4}
+    j_x                              &= q &\Big ( v_{x,i} - &v_{x,e} \Big ) &= \dfrac{1}{B_o^2} &\Big( m_i + m_e \Big) \dfrac{\partial E_x}{\partial t}; \\
+    \dfrac{\partial j_z}{\partial t} &= q \dfrac{\partial}{\partial t} &\Big ( v_{z,i} - &v_{z,e} \Big ) &= q^2 &\Big( \dfrac{1}{m_i} + \dfrac{1}{m_e} \Big) E_z. \\
+  \end{alignedat}
+\end{equation*}
+Now we do the famous ``drop all terms of order [uninteresting science],'' in this case $m_e/m_i$, so that
+\begin{equation} \label{ch1:eqDaddy}
+  \begin{alignedat}{4}
+    j_x                              &= \dfrac{m_i}{B_o^2} \dfrac{\partial E_x}{\partial t}; \\
+    \dfrac{\partial j_z}{\partial t} &= \dfrac{q^2}{m_e} E_z. \\
+  \end{alignedat}
+\end{equation}
 
-[Amp\`{e}re's $+$ Faraday's $+$ polarization drift to get second-order eq. in $E_x$ and $E_z$ ]
+I'm sure you're feeling more and more disoriented: ``Where on earth is he taking
+us? I've always hated camping and I wish I were home.'' But (in the words of
+Robert Frost) we're out for stars! First we enter a veritable thicket of math,
+in which you are almost definitely going to lose your sense of direction if
+you've never before traversed such terrain. If I plug the expressions
+(\ref{ch1:eqDaddy}) for $j_x$ and $j_z$ into (\ref{ch1:eqCont2}), I obtain the
+seemingly meaningless result
+\begin{equation*}
+  % \begin{alignedat}{4}
+    \dfrac{\partial^2}{\partial t \partial x} j_x + \dfrac{\partial}{\partial z}
+    \Big( \dfrac{\partial j_z}{\partial t} \Big) = \dfrac{\partial^2}{\partial
+      t \partial x} \Big(\dfrac{m_i}{B_o^2}\dfrac{\partial E_x}{\partial t} \Big) +
+    \dfrac{\partial}{\partial z} \Big( \dfrac{q^2}{m_e} E_z \Big) = 0.
+  % \end{alignedat}
+\end{equation*}
+If I multiply the whole thing by $\mu_o c^2 n$ I get 
+\begin{equation*}
+  \dfrac{c^2}{v_A^2}\dfrac{\partial^3 }{\partial t^2 \partial x} E_x + \dfrac{1}{\omega_{pe}}\dfrac{\partial}{\partial z} E_z = 0,
+\end{equation*}
+which you have to admit is a little better; old friends like $v_A$ and the speed
+of light $c$ are also out in the woods today! Say---have I introduced you to
+$\omega_{pe}$, that leathery looking chap standing by $E_z$?
 
-[Inertial \Alf wave dispersion relation]
+Take heart, tenderfoot. pwe're near the top.
+
+OK, let's take it to the top! Plugging 
+
 
 \section{From waves to electrons}
 
