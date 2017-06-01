@@ -793,9 +793,9 @@ concrete, $0.05^2 = 0.0025 \ll 1^2 = 1$.
 
 Let's leap into the physics and introduce background quantities and perturbed quantities \par
 \begin{itemize}
-\item \makebox[4.5cm]{$ n = n_o + \tilde n $} (number density),
-\item \makebox[4.5cm]{$ \mathbf{v} = \mathbf{v}_o + \mathbf{\tilde v} = \mathbf{ \tilde v} $ } (velocity),
-\item \makebox[4.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field).
+\item \makebox[6.5cm]{$ n = n_o + \tilde n $} (number density),
+\item \makebox[6.5cm]{$ \mathbf{v} = \mathbf{v}_o + \mathbf{\tilde v} = \mathbf{ \tilde v} $ } (velocity),
+\item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field).
 \end{itemize}
 Background quantities have the ``o'' dangling off the front of them and do not
 vary in time or space (i.e., they are constants). Perturbed quantities are all
@@ -834,7 +834,7 @@ which are respectively the continuity equation and the momentum
 equation.\footnote{The latter is sometimes affectionately referred to as the
   ``mom equation.''} In order to focus on the physics of interest I have thrown
 away a bunch of terms describing the effects of pressure and other, external
-forces., and I have junked all terms that are nonlinear in perturbed
+forces, and I have junked all terms that are nonlinear in perturbed
 quantities. These equations serve as our description of the way that the
 collection of particles constituting our plasma respond to each other
 (``internal forces''), including the electric and magnetic fields that a plasma
@@ -842,19 +842,20 @@ can internally sustain, and to external forces, like a background magnetic
 field.
 
 You can see that the key players in the continuity equation (\ref{ch1:eqCont})
-are $n_{\alpha}$ and $\mathbf{v}_{\alpha}$, which are number density and
-velocity. In the plainest English I can muster, (\ref{ch1:eqCont}) simply says
-that no particles are created or destroyed within the system under
-investigation. ``Um, `system under investigation?' \dots'' Don't be baffled by
-my language. When I say ``system''\footnote{Others might use ``setup'' or
-  ``configuration'' instead of ``system.'' They're all the same in this
-  context.} all I mean is the cast of characters, the amount of time and space,
-and the level of detail necessary to execute an investigation of the science
-question I have in mind. Here, our cast members are electrons and ions that are
-subject to a background magnetic field and mutual effects of attraction and
-repulsion, but are otherwise free to move. This cast turns out to be a pretty
-excellent description of much of what goes on within and around the terrestrial
-magnetosphere, as well as in the solar wind.
+are $n_{\alpha}$ and $\mathbf{\tilde v}_{\alpha}$, which are (perturbed and
+background) number density and (perturbed) velocity. In the plainest English I
+can muster, (\ref{ch1:eqCont}) simply says that no particles are created or
+destroyed within the system under investigation. ``Um, `system under
+investigation?' \dots'' Don't be baffled by my language. When I say
+``system''\footnote{Others might use ``setup'' or ``configuration'' instead of
+  ``system.'' They're all the same in this context.} all I mean is the cast of
+characters, the amount of time and space, and the level of detail necessary to
+execute an investigation of the science question I have in mind. Here, our cast
+members are electrons and ions that are subject to a background magnetic field
+and mutual effects of attraction and repulsion, but are otherwise free to
+move. This cast turns out to be a pretty excellent description of much of what
+goes on within and around the terrestrial magnetosphere, as well as in the solar
+wind.
 
 ``But how many electrons and ions, and over what period of time and what region
 of space?'' Prepare for a level of freedom that is often unsettling for
@@ -878,13 +879,12 @@ $\alpha$.
 But where were we? Oh, yes---as far as (\ref{ch1:eqCont}) is
 concerned,\footnote{And of course neglecting whatever the momentum equation
   (\ref{ch1:eqMom}) dictates about particle motion.}  particles are free to move
-all over the system---bunch into heaping piles, spread out uniformly, and so
-on---but if we start with $N$ total particles, we must end with $N$ particles,
-let $\tilde n_{\alpha}(\mathbf{x},t)$ change how it will.\footnote{In math speak
-  I am saying that from eternity to eternity,
-  $\int_{\mathrm{sys}} d^3\mathbf{x} \, n(\mathbf{x},t) = N$ regardless of the
-  variation of number density in time and space within the confines of our
-  system.}
+all over the system, bunch into heaping piles, spread out uniformly---you name
+it, pal---but if we start with $N$ total particles, we must end with $N$
+particles, let $\tilde n_{\alpha}(\mathbf{x},t)$ change how it will.\footnote{In
+  math speak I am saying that from eternity to eternity, $\int_{\mathrm{sys}}
+  d^3\mathbf{x} \, n(\mathbf{x},t) = N$ regardless of the variation of number
+  density in time and space within the confines of our system.}
 
 How about the momentum equation? 
 
@@ -1244,7 +1244,6 @@ Equating each side,
 \end{equation}
 we obtain our second seemingly meaningless result.
 
-
 And now the fire is burning, and you're utterly bewildered! Don't stop there;
 we've got to take the derivative of (\ref{ch1:eqMeaningless}) with respect to
 $x$ and divide by $\omega_{pe}^2$, which will give us a term
@@ -1254,14 +1253,38 @@ the derivative with respect to $x$ and dividing by $\omega_{pe}^2$, we find
 \begin{equation*}
   -\dfrac{\partial^2 \tilde E_z}{\partial x \partial z} = \dfrac{c^2}{\omega_{pe}^2 v_A^2} \dfrac{\partial^4 \tilde E_x}{\partial x^2 \partial z^2}.
 \end{equation*}
-See how nicely that'll slip right into (\ref{ch1:eqMeaningless2})? Go ahead and
-slap it in, multiplying both sides by $\frac{\omega_{pe}^2}{v_A^2}$ as you go, to find
-\begin{equation*}
+See how nicely that'll slip right into (\ref{ch1:eqMeaningless2}) and rid us of any terms having to do with smelly old $\tilde E_z$? Go
+ahead and slap it in, multiplying both sides by $\frac{\omega_{pe}^2}{v_A^2}$ as you go, to find
+\begin{equation} \label{ch1:eqAlmost}
   \Big [ \omega_{pe}^2 \Big ( \dfrac{\partial^2}{\partial z^2} - \dfrac{1}{v_A^2} \dfrac{\partial^2}{\partial t^2} \Big ) + \dfrac{c^2}{v_A^2} \dfrac{\partial^4}{\partial x^2 \partial t^2} \Big ] \tilde E_x = 0.
+\end{equation}
+
+Whoa: a millionth-order differential equation in $\tilde E_x$---all right,
+fourth-order equation, but who has actually heard of those? It doesn't matter;
+let's slay the beast in a single stroke by assuming the cheapest thing we possibly could,
+\begin{equation*}
+  \tilde E_x = \tilde E_{x,o} \mathrm{exp} \Big ( k_\perp x + k_\parallel z - \omega t \Big ),
 \end{equation*}
+so that 
+\begin{equation} \label{ch1:bro}
+  \begin{alignedat}{2}
+\frac{\partial \tilde E_x}{\partial t} &=  -i \omega \tilde E_x; \\
+\frac{\partial \tilde E_x}{\partial x} &=   i k_\perp \tilde E_x; \\
+\frac{\partial \tilde E_x}{\partial z} &=   i k_\parallel \tilde E_x. \\
+  \end{alignedat}
+\end{equation}
 
-OK, let's take it to the top! Plugging 
-
+OK, let's to the top! Plugging the expressions (\ref{ch1:bro}) into
+(\ref{ch1:eqAlmost}) finally gives
+\begin{equation} \label{ch1:bro}
+  \Big [ \omega_{pe}^2 \Big ( \dfrac{\omega^2}{v_A^2} - k_\parallel^2 \Big ) + \dfrac{c^2}{v_A^2} k_\perp^2 \omega^2 \Big ] \tilde E_x = 0,
+\end{equation}
+and casting $\tilde E_x$ aside like the piece of garbage it has shown itself to
+be, we can easily rearrange things to show
+\begin{equation}
+  \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }},
+\end{equation}
+which was to be demonstrated.
 
 \section{From waves to electrons}
 
