@@ -1284,7 +1284,54 @@ be, we can easily rearrange things to show
 \begin{equation}
   \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }},
 \end{equation}
-which was to be demonstrated.
+which was to be demonstrated, and is triple baller. 
+
+\subsubsection{Survey the landscape (and what exactly does the plasma skin depth $\lambda_e$ mean?) } 
+
+Now that we've arrived let's survey the scene a little. Hey, tell me what you
+see if you set $k_\perp \lambda_e = 0$. \dots What's that? You say it bears
+uncanny resemblance to (\ref{ch1:eqAlf})? Excellent observation! I guess it
+means that when the mood is right, the dispersion relation for inertial \Alf
+waves can be equivalent to the dispersion relation (\ref{ch1:eqAlf}) for
+nondispersive \Alf waves. But what role does $\lambda_e = \frac{c}{\omega_{pe}}$
+play?  Why is it relevant? More specifically, why are the waves nondispersive if
+$k_\perp \lambda_e \ll 1$?
+
+Let's come at the question from a different angle. Why does our would-be
+dispersive \Alf wave need to have a perpendicular wavelength $\lambda_\perp
+\lesssim 2 \pi \lambda_e$ to play ball? Well I hope you're sitting down, because
+I'm going to tell you. $\lambda_e$ is the electron inertial length, or
+\emph{plasma skin depth}, OK? Forget plasmas for a moment---in general terms, if
+you throw electomagnetic waves of increasing frequency at the conductor, the
+conductor acts increasingly resistive, and vice versa. There will be some
+limiting frequency above which electromagnetic waves are given the boot right at
+the door and bounce right off. On the other hand, for some incredibly low
+frequency the conductor is lulled into a false sense of security by the
+siren-like movement of the wave, and the conductor lets the wave \emph{right
+  inside the door}---that is, inside itself. These are the two extremes, of
+course.
+
+What does any of that have to do with skin depth? The skin depth is a measure of
+how the conducting material in question is going to deal with a wave of a
+particular frequency that you try to throw at it, or into it. Normally when
+people have a discussion about skin depths (e.g., in a course on E\&M or an
+electrical engineering course or something like that) they're talking about the
+more commonly defined skin depth $\delta = \sqrt{2 / \sigma \mu \omega}$, which
+says, ``If you tell me the frequency you're interested in, I'll tell you the
+skin depth.'' Ignoring wave phase, a typical scenario might involve you asking,
+``How ably will some current density $\mathbf{J}$ penetrate my conductor'' The
+answer is, in a typical scenario, that the current density falls off as $J (d) =
+J_s \mathrm{exp} ( - d / \delta )$.
+
+Not so with $\lambda_e$, even though $\lambda_e$ \emph{is} a skin
+depth. Instead, the skin depth of a plasma is fixed by the plasma frequency. In
+other words, the plasma wants to do its business at $\omega_{pe}$---that's the
+natural frequency of oscillations for the plasma, you see---and instead of
+asking what the plasma is going to do with a particular frequency, as you
+typically might when thinking of a conductor with a regular old skin depth
+$\delta$, instead you can ask what the plasma is going to do with a particular
+\emph{wavelength}: $J ( \lambda_\perp ) = J_s \mathrm{exp} ( - \lambda_e / 2 \pi
+\lambda_e )$. See? Your wave will die if $\lambda_\perp$ is too big!
 
 \section{From waves to electrons}
 
