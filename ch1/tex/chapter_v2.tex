@@ -1246,8 +1246,19 @@ we obtain our second seemingly meaningless result.
 
 
 And now the fire is burning, and you're utterly bewildered! Don't stop there;
-we've got to combine (\ref{ch1:eqMeaningless}) and
-(\ref{ch1:eqMeaningless2}) by . Take heart, tenderfoot. we're near the top.
+we've got to take the derivative of (\ref{ch1:eqMeaningless}) with respect to
+$x$ and divide by $\omega_{pe}^2$, which will give us a term
+$-\frac{\partial^2 \tilde E_z}{\partial x \partial z}$ that we can slip into
+(\ref{ch1:eqMeaningless2}). Take heart, tenderfoot. We're near the top! Taking
+the derivative with respect to $x$ and dividing by $\omega_{pe}^2$, we find
+\begin{equation*}
+  -\dfrac{\partial^2 \tilde E_z}{\partial x \partial z} = \dfrac{c^2}{\omega_{pe}^2 v_A^2} \dfrac{\partial^4 \tilde E_x}{\partial x^2 \partial z^2}.
+\end{equation*}
+See how nicely that'll slip right into (\ref{ch1:eqMeaningless2})? Go ahead and
+slap it in, multiplying both sides by $\frac{\omega_{pe}^2}{v_A^2}$ as you go, to find
+\begin{equation*}
+  \Big [ \omega_{pe}^2 \Big ( \dfrac{\partial^2}{\partial z^2} - \dfrac{1}{v_A^2} \dfrac{\partial^2}{\partial t^2} \Big ) + \dfrac{c^2}{v_A^2} \dfrac{\partial^4}{\partial x^2 \partial t^2} \Big ] \tilde E_x = 0.
+\end{equation*}
 
 OK, let's take it to the top! Plugging 
 
