@@ -306,7 +306,7 @@ pick $v_s$ as the ``right speed'' for sound waves to travel? Why not the speed
 of light, $c$? Why not my Buick's top speed, 80~mph ($\sim$129~kph)? If I hadn't
 skipped the details that lead to equation (\ref{ch1:eqvs}), we would have seen
 that nature picks $v_s$ based on the air temperature $T$ and the mass of
-consituent molecules\footnote{We'll keep things simple and say the
+constituent molecules\footnote{We'll keep things simple and say the
   \emph{average} mass of a molecule in the air you're breathing. Poke around in
   the right books and you'll find that the average mass of an air molecule is
   5.6$\times$10$^{-26}$~kg.} $m$.
@@ -639,7 +639,7 @@ front-row might have a shot at a coherent experience, but people in the
 nosebleeds would run the risk of hearing the violas about a second or two after
 they heard the violins!\footnote{The element of surprise in Haydn's famed
   ``Surprise'' symphony would be a rather difficult, and conceivably impossible,
-  feat to achieve. Never mind evenly arpeggiated chords, and coherent runs and
+  feat to achieve. Evenly arpeggiated chords, coherent runs, and
   fast improvisation would be right out.} Why? In my contrived example with wave
 speed proportional to frequency, the C produced by bowing the lowest string of a
 cello (otherwise known as $\textrm{C}_3$) would take twice as long\footnote{As
@@ -685,7 +685,7 @@ solids,\footnote{A classic example of the is the dispersion relation for
   of a solid.}, or neutral fluids, including air itself.\footnote{In fact, no
   earlier than 2008 \citeauthor{Alvarez2008} gave a general dispersion relation
   for sound waves in air, which they show to be accurate for a variety of
-  humidities and frequencies.}  I mean, come on---the reason rainbows appear in
+  humidity levels and frequencies.}  I mean, come on---the reason rainbows appear in
 the sky?  Dispersion of the electromagnetic waves we call
 light!\footnote{Refraction is the answer from your high-school or freshman
   physics class, and that's right, but refraction itself is a result of
@@ -1287,7 +1287,7 @@ be, we can easily rearrange the spoils of victory to show
 \end{equation}
 which was to be demonstrated, and is triple baller. 
 
-\subsubsection{Survey the landscape (and what exactly does the plasma skin depth $\lambda_e$ mean?) } 
+\subsubsection{What exactly does the plasma skin depth $\lambda_e$ mean?} 
 
 Now that we've arrived let's survey the scene a little. Hey, tell me what you
 see if you set $k_\perp \lambda_e = 0$. \dots What's that? You say it bears
@@ -1298,43 +1298,58 @@ nondispersive \Alf waves. But what role does $\lambda_e = \frac{c}{\omega_{pe}}$
 play?  Why is it relevant? More specifically, why are the waves nondispersive if
 $k_\perp \lambda_e \ll 1$?
 
-Let's come at the question from a different angle. Why does our would-be
-dispersive \Alf wave need to have a perpendicular wavelength
-$\lambda_\perp \lesssim 2 \pi \lambda_e$ to play ball? Well I hope you're
-sitting down, because I'm going to tell you. $\lambda_e$ is the electron
-inertial length, or \emph{plasma skin depth}, OK? Forget plasmas for a
-moment---in general terms, if you throw electomagnetic waves of increasing
-frequency at a conductor, the conductor acts increasingly resistive, and vice
-versa. There will be some limiting frequency above which electromagnetic waves
-are given the boot right at the door and bounce right off. On the other hand,
-for some incredibly low frequency the conductor is lulled into a false sense of
-security by the siren-like movement of the wave, and the conductor lets the wave
-\emph{right inside the door}---that is, inside itself. These are the two
-extremes, of course.
+Let's come at the question from a different angle. Why does an \Alf wave need to
+have a perpendicular wavelength $\lambda_\perp \lesssim 2 \pi \lambda_e$ to be
+dispersive? Well I hope you're sitting down, because I'm going to tell
+you. $\lambda_e$ is the electron inertial length, or \emph{plasma skin depth},
+OK? Now, forget plasmas for a moment. In general terms, if you throw
+electromagnetic waves of increasing frequency at a conductor, the conductor acts
+increasingly resistive, and vice versa. There will be some high-frequency limit
+above which the current density associated with an electromagnetic wave is
+essentially confined to the surface, or ``skin,'' of a conductor. On the other
+hand, for some incredibly low frequency the conductor is lulled into a false
+sense of security by the siren-like movement of the wave, and the conductor lets
+the wave \emph{right inside}---that is, inside itself. These are the two
+extremes.
 
-What does any of that have to do with skin depth? The skin depth is a measure of
-how the conducting material in question is going to deal with a wave of a
-particular frequency that you try to throw at it, or into it. Normally when
-people have a discussion about skin depths (e.g., in a course on E\&M or an
-electrical engineering course or something like that) they're talking about the
-more commonly defined skin depth $\delta = \sqrt{2 / \sigma \mu \omega}$, which
-says, ``If you tell me the frequency you're interested in, I'll tell you the
-skin depth.'' Ignoring wave phase, a typical scenario might involve you asking,
-``How ably will some current density $\mathbf{J}$ penetrate my conductor?'' The
-answer is, in a typical scenario, that the current density falls off as $J (d) =
-J_s \mathrm{exp} ( - d / \delta )$.
+So, in general terms, what is the skin depth of a conductor? It is a measure of
+how the conductor in question is going to deal with a wave of a particular
+frequency that you try to throw at it, or into it. Normally when people have a
+discussion about skin depths (e.g., in a course on E\&M or an electrical
+engineering course or something like that) they're talking about the more common
+skin depth $\delta = \sqrt{2 / \sigma \mu \omega}$, which says, ``If you tell me
+the frequency you're interested in, I'll tell you how deeply into the conductor
+the current associated with that frequency can penetrate.'' In math (ignoring
+wave phase) the answer is, in a vanilla-ized scenario, that the current density
+at a depth $d$ in the conductor is $J (d) = J_s \mathrm{exp} ( - d / \delta )$,
+where $J_s$ is the current density at the surface of the conductor.
 
-Not so with $\lambda_e$, even though $\lambda_e$ \emph{is} a skin
-depth. Instead, the skin depth of a plasma is fixed by the plasma frequency. In
-other words, the plasma wants to conduct\footnote{Pun!} its business at
-$\omega_{pe}$---that's the natural frequency of oscillations for the plasma, you
-see---and instead of asking what the plasma is going to do with a particular
-frequency, as you typically might when thinking of a conductor with a regular
-old skin depth $\delta$, instead you can ask what the plasma is going to do with
-a particular \emph{wavelength}:
-$J ( \lambda_\perp ) = J_s \mathrm{exp} ( - \lambda_\perp / 2 \pi \lambda_e )$.
-See? An inertial \Alf wave is as good as dead in a plasma if $\lambda_\perp$ is
-much larger than $2 \pi \lambda_e$!
+Leaving generalities and coming back to our plasma scenario, $\lambda_e$ is
+indeed a curiosity. Even though $\lambda_e$ \emph{is} a skin depth, it is
+\emph{fixed} by the plasma frequency $\omega_{pe}$. Contrast this with the
+expression for the frequency-dependent skin depth $\delta$ in the previous
+paragraph. With $\delta$, you get to dictate which frequency you ask about. With
+$\lambda_e$ you don't. The plasma wants to conduct\footnote{Pun!} its business
+at $\omega_{pe}$---that's the natural frequency of oscillations for the plasma,
+you see---and instead of asking what the plasma is going to do with a particular
+frequency, instead you can ask what the plasma is going to do with a particular
+\emph{wavelength}, or rather a particular perpendicular wave number $k_\perp$:
+$J ( k_\perp ) = J_s \mathrm{exp} ( - / k_\perp \lambda_e )$.  See? The current
+density associated with an inertial \Alf wave is as good as dead in a plasma if
+$k_\perp \lambda_e \ll 1$! But never mind my musings, talk to
+\citet{Morales1994} if you want the skinny (depth). Here's a snippet from their
+abstract to get you excited:
+
+\begin{displayquote}
+  Shear \Alf waves having transverse scale on the order of the electron skin
+  depth exhibit a collisionless divergence determined by propagation cones that
+  emanate from the edges of the exciting structures. Axial current channels are
+  found to spread radially due to the skin effect up to the cone trajectories
+  and at distances of a few wavelengths from the exciter develop radial
+  diffraction patterns.
+\end{displayquote}
+
+Oh yeah!
 
 \section{From waves to electrons}
 
@@ -1510,42 +1525,41 @@ says 'jiggly magnetic field lines' or 'guitar string' to me. Wasn't
 that the idea?'' Yes, young padowan. 
 
 In the auroral zone---an altitude of a few hundred km and above at
-latitudes\footnote{As before, I mean magnetic latitude and not
-  geographic.}  above $\sim$60$^\circ$---field-aligned electrons
-barrel toward the atmosphere and are near the top of the list of
-causes of aurora. The complication is, as you can imagine, that there
-are several ways one could get field-aligned
+latitudes\footnote{As before, I mean magnetic latitude and not geographic.}
+above $\sim$60$^\circ$---field-aligned electrons barrel toward the atmosphere
+and are near the top of the list of causes of aurora. The complication is, as
+you can imagine, that there are several ways one could get field-aligned
 acceleration.\footnote{\citet{Wygant2002}, \citet{Bostrom2003a},
-  \citet{Morooka2004}, \citet{Newell2009}, \citet{Hull2010},
-  \citet{Mottez2016}, are only a handful among many, many current or
-  recently retired researchers who would love to tell you more, and
-  they aren't even the historical giants (like \citet{Knight1973},
-  \citet{Evans1974}, \citet{Hasegawa1976}, and \citet{Lyons1980a}, to
-  name a few) who laid the groundwork!}
-\citet{Chaston2002,Chaston2003a,Chaston2007,Chaston2008} in particular
-will tell you that \Alf waves are certainly on the short list of
-culprits, and are in fact the cause of what we see in
-Figure~\ref{ch1:FigAlfElec}, but how would they know?
+  \citet{Morooka2004}, \citet{Newell2009}, \citet{Hull2010}, \citet{Mottez2016},
+  are only a handful among many, many current or recently retired researchers
+  who would love to tell you more, and they aren't even the historical giants
+  (like \citet{Knight1973}, \citet{Evans1974}, \citet{Hasegawa1976}, and
+  \citet{Lyons1980a}, to name a few) who laid the groundwork!}
+\citet{Chaston2002,Chaston2003a,Chaston2007,Chaston2008} in particular will tell
+you that \Alf waves are certainly on the short list of culprits, and are in fact
+the cause of what we see in Figure~\ref{ch1:FigAlfElec}. You are left to your
+own devices to understand why; I am merely asserting that that is what has been
+learned.
 
-\subsection{Why are electrons accelerated along the field line?}
+% \subsection{Why are electrons accelerated along the field line?}
 
 
 
-\section{Geomagnetic storms, interplanetary magnetic fields}
+% \section{Geomagnetic storms, interplanetary magnetic fields}
 
-So if there is some disturbance like a coronal mass ejection banging
-on the nose of the bow shock (Figure~\ref{ch1:FigBowShock}),
+% So if there is some disturbance like a coronal mass ejection banging
+% on the nose of the bow shock (Figure~\ref{ch1:FigBowShock}),
 
-% ---------------- FIGURE
+% % ---------------- FIGURE
 
-\begin{figure}
-  \centering
-  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/figbowshock}
-  \caption[The Earth's Bow Shock]{The Earth's Bow Shock [Retrieved
-    from the WIND Magnetic Field Investigation (MFI) Team
-    \href{https://wind.nasa.gov/mfi/team_sciencea.html}{website}].}
-  \label{ch1:FigBowShock}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/figbowshock}
+%   \caption[The Earth's Bow Shock]{The Earth's Bow Shock [Retrieved
+%     from the WIND Magnetic Field Investigation (MFI) Team
+%     \href{https://wind.nasa.gov/mfi/team_sciencea.html}{website}].}
+%   \label{ch1:FigBowShock}
+% \end{figure}
 
 % ----------------
 
@@ -1563,10 +1577,11 @@ on the nose of the bow shock (Figure~\ref{ch1:FigBowShock}),
 
 \section{``\dots They've gone to plaid!''}
 
-Your ship has been prepared for ludicrous speed.\footnote{Dark Helmet,
-  Spaceballs.} You now know twhat \Alf waves are, what inertial \Alf waves (or
-IAWs) are, the icky math swamp they arise from, and what the signatures of
-\Alfic electron acceleration are in pitch-angle and energy spectrograms. 
+Your ship has been prepared for ludicrous speed.\footnote{Think Dark Helmet from
+  Spaceballs (the movie, of course, not the cereal).} You now know what \Alf
+waves are, what inertial \Alf waves (or IAWs) are, the icky math bogs and demon-
+and derivative-filled canyons that conjure them, and what the signatures of
+\Alfic electron acceleration are in pitch-angle and energy spectrograms.
 
 ``I mean, yeah! That was an extremely engaging introduction to the topic,
 Spencer. You really know your stuff.'' I sincerely appreciate the compliment,
@@ -1586,16 +1601,7 @@ colleagues and I have been researching and why. Reading the following summary
 will be your first exercise in synthesizing all the new concepts you just picked
 up! There will be a handshake waiting for you on the other side.
 
-% \subsection{(Barn)stormed ionosphere: IAWs!!!}
-
-% \section{``And your aim, Mr. Hatch?'' }
-
-% \subsection{Next }
-
 \subsubsection{Study \#1: IAWs during geomagnetic storms}
-% By now we are both tired of mudslogging, and we're just in time to turn around
-% and get the lay of the land: let me tell you what the rest of this thesis is
-% about. 
 
 People like \citet{Chaston2007} and \citet{Newell2009} have given some
 preliminary indicators of the importance of \Alf waves during ``geomagnetically
@@ -1621,13 +1627,28 @@ Enter: Chapter 1. My coauthors and I have performed just such a study, chunking
 things up by geomagnetic storm phase and relative to so-called \emph{storm
   sudden commencement.} I've provided the canonical picture of a geomagnetic
 storm in Figure (ref), with a few colored lines to give you a sense for each of
-the threee storm phases, quiesence, storm main phase, and storm recovery
+the three storm phases, quiescence, storm main phase, and storm recovery
 phase.\footnote{If you're in need of help in order to understand what causes
-  each storm phase, or if you're plumb curious, pay a visit to [], [], [].} As
-sugested by \citet{Chaston2007}, my coauthors and I have found that the
+  each storm phase, or if you're plumb curious, pay a visit to
+  \citet{Gonzalez1994}, \citet{Denton2006}, or \citet{Lakhina2008}.} As
+suggested by \citet{Chaston2007}, my coauthors and I have found that the
 \emph{measures of \Alfic activity} that I mentioned in the last paragraph all
 pick up dramatically just following storm sudden commencement and during storm
 main phase.
+
+% % ---------------- FIGURE
+
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/figbowshock}
+  \caption[The Earth's Bow Shock]{The Earth's Bow Shock [Retrieved
+    from the WIND Magnetic Field Investigation (MFI) Team
+    \href{https://wind.nasa.gov/mfi/team_sciencea.html}{website}].}
+  \label{ch1:FigBowShock}
+\end{figure}
+
+% ----------------
+
 
 \subsubsection{Study \#2: IAW ``peak usage'' and ``off hours''}
 
@@ -1662,23 +1683,27 @@ MF?'' You jokester, I'm not going to egg you on by answering any more silly
 questions. This is graduate school! You have to grow up!
 
 So like I was saying, MFs and waves. Scientists of yesteryear (notably
-Parker[]adfadfssafd) figured out that there is a magnetic field frozen into the
+\citet{Parker1958}) figured out that there is a magnetic field frozen into the
 solar wind; these days it goes under the name of interplanetary magnetic field,
 or IMF---what I was calling interplanetary MF just to razz you. The direction
-taht the IMF is pointing at any given time dictates, or (perhaps better stated)
+that the IMF is pointing at any given time dictates, or (perhaps better stated)
 leads to variation in a surprising number of magnetospheric and ionospheric (and
 even thermospheric) phenomena. You can find lots of details at the beginning of
-chapter 4, where coauthors and I review the literature related to a selection of
+Chapter 4, where coauthors and I review the literature related to a selection of
 these phenomena.
 
 The thing is, among the ocean of studies detailing the role of the solar wind
-and IMF in everything from wave generation []sdfsdfsdf and [insert
-phenom][pasdfsdf] to which direction water in your toilet swirls\footnote{I'm
-  lying, no one has actually studies this (to my knowledge).} and your
-horoscope\footnote{Another bold-faced lie.}, no one has systematically studied
-the role of the solar wind and IMF in conroolling IAWs in the
-magnetosphere-ionosphere transition region! It thus behooved my coauthors and me
-to tease this out.
+and IMF in everything from wave generation \citep[][for
+example]{Claudepierre2008} and low-latitude boundary layer formation
+\citep{Song2003a}\footnote{These examples are completely arbitrary, you
+  realize.}  to which direction water in your toilet swirls\footnote{I'm lying,
+  no one has actually studies this (to my knowledge).} and your
+horoscope,\footnote{Another bold-faced lie.} no one has systematically studied
+the role of the solar wind and IMF in controlling IAWs in the
+magnetosphere-ionosphere transition region!  It thus behooved my coauthors and
+me to say something on the subject.
+
+
 
 \subsubsection{The finalest of words }
 
