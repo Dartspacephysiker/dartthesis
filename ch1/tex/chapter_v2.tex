@@ -819,7 +819,8 @@ even got to show their true colors. I also murdalized $\tilde E_y$ without so
 much as showing it the light of day. In this instantiation of the universe you
 and I will have no need of them, and they are accordingly cast off as dross.
 
-\subsubsection{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
+% \subsubsection{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
+\textbf{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
 
 With the foregoing ideas about linearized quantities in mind, let's look at the
 number flux
@@ -846,74 +847,127 @@ The \emph{linearized} number flux is therefore
 \end{equation}
 See how nice that is? Only linearized terms.
 
-\subsubsection{Preliminary \#2: Meet the (linearized) equations}
+% \subsubsection{Preliminary \#2: Meet the equations}
+\subsubsection{Preliminary \#2: Meet the equations}
 
 Now I'll introduce you to two of the old plasma theorist's standbys,
 \begin{subequations}
   \begin{align} 
     \dfrac{\partial \tilde n_{\alpha}}{\partial t} + \grad \cdot \Big (n_{o,\alpha} \mathbf{\tilde v}_{\alpha} \Big ) &= 0, \label{ch1:eqCont} \\
-    m_{\alpha} n_{o,\alpha} \dfrac{\partial \mathbf{\tilde v}_{\alpha}}{\partial t} &=
-    q_{\alpha} n_{o,\alpha} \Big ( \mathbf{E} + \mathbf{\tilde v}_{\alpha}
-    \times \mathbf{B_o} \Big ), \label{ch1:eqMom}
+    \dfrac{\partial \mathbf{\tilde v}_{\alpha}}{\partial t} &=
+    \dfrac{q_{\alpha}}{m_{\alpha}} \Big ( \mathbf{E} + \mathbf{\tilde
+      v}_{\alpha} \times \mathbf{B_o} \Big ), \label{ch1:eqMom}
   \end{align}
 \end{subequations}
 which are respectively the continuity equation and the momentum
-equation.\footnote{The latter is sometimes affectionately referred to as the
-  ``mom equation.''} In order to focus on the physics of interest I have thrown
-away a bunch of terms describing the effects of pressure and other, external
-forces, and I have junked all terms that are nonlinear in perturbed
-quantities. These equations serve as our description of the way that the
-collection of particles constituting our plasma respond to each other
-(``internal forces''), including the electric and magnetic fields that a plasma
-can internally sustain, and to external forces, like a background magnetic
-field.
+equation.\footnote{The latter is sometimes referred to with affection as the
+  ``mom equation.''} In order to focus on the physics of interest I have already
+junked all terms that are nonlinear in perturbed quantities (i.e., the equations
+are linearized) and thrown away a bunch of terms that describe the effects of
+pressures asymmetric or otherwise,\footnote{Junking the pressure terms, by the
+  way, amounts to assuming that the plasma is cold, or that the temperature
+  $T_\alpha$ is effectively zero. It might seem like a bad assumption to make,
+  but it turns out to be perfectly safe for our purposes, and for many others.}
+and other, external forces.\footnote{Just to frighten you, let me flash these
+  two equations before gutting the pressure terms and linearizing the others:
+\begin{equation*}
+  \begin{aligned} 
+    \dfrac{\partial n_{\alpha}}{\partial t} + \grad \cdot \big (n_{\alpha} \mathbf{v}_{\alpha} \big ) &= 0; \\
+    m_{\alpha} n_{\alpha} \Big ( \dfrac{\partial \mathbf{v}_{\alpha}}{\partial
+      t} + \mathbf{v}_{\alpha} \cdot \grad \mathbf{v}_{\alpha} \Big ) + \grad
+    p_{\alpha} + \grad \cdot \overleftrightarrow{\Pi}_{\alpha} &= q_{\alpha}
+    n_{\alpha} \Big ( \mathbf{\tilde E} + \mathbf{v}_{\alpha} \times \mathbf{B} \Big )
+    + \mathbf{F}_{\alpha}.
+  \end{aligned}
+\end{equation*}
+In the momentum equation, $p_\alpha$ is the scalar pressure,
+$\overleftrightarrow{\Pi}_{\alpha}$ the plasma tensor with off-diagonal terms,
+and $\mathbf{F}_\alpha$ represents any other external force---for example, the
+earth's gravitational field---that one might want to toss in. Compare these
+full-blown equations with their linearized counterparts (\ref{ch1:eqCont}) and
+(\ref{ch1:eqMom}), keeping in mind that $n_\alpha = n_{o,\alpha} + \tilde
+n_\alpha$ and $\mathbf{v}_\alpha = \mathbf{v}_{o,\alpha} + \mathbf{\tilde
+  v}_\alpha$. I hope you'll agree that the linearized equations are much less
+spooky.}
 
-You can see that the key players in the continuity equation (\ref{ch1:eqCont})
+These equations will serve as our description of the way that the collection of
+particles constituting the plasma collectively respond to each other (``internal
+forces,'' including the electric fields, magnetic fields, and currents that a
+plasma can house), and to external forces, like a background magnetic field.
+
+\textbf{Preliminary \#2a: the continuity equation}
+% \subsubsection{Preliminary \#2a: the continuity equation}
+
+In the continuity equation (\ref{ch1:eqCont}) you can see that the key players
 are $n_{\alpha}$ and $\mathbf{\tilde v}_{\alpha}$, which are (perturbed and
 background) number density and (perturbed) velocity. In the plainest English I
 can muster, (\ref{ch1:eqCont}) simply says that no particles are created or
-destroyed within the system under investigation. ``Um, `system under
-investigation?' \dots'' Don't be baffled by my language. When I say
+destroyed within the system under investigation. ``Um, what do you mean by
+'system'?'' Don't be baffled by my language. When I say
 ``system''\footnote{Others might use ``setup'' or ``configuration'' instead of
   ``system.'' They're all the same in this context.} all I mean is the cast of
 characters, the amount of time and space, and the level of detail necessary to
-execute an investigation of the science question I have in mind. Here, our cast
-members are electrons and ions that are subject to a background magnetic field
-and mutual effects of attraction and repulsion, but are otherwise free to
-move. This cast turns out to be a pretty excellent description of much of what
-goes on within and around the terrestrial magnetosphere, as well as in the solar
-wind.
+carry out a theoretical investigation\footnote{As opposed to experimental
+  investigation.} of the phenomena I have in mind. Here, our cast members are
+electrons and ions that are subject to a background magnetic field and to mutual
+effects of attraction and repulsion, but are otherwise free to move around. It
+turns out that this cast---electrons, ions, background magnetic field---can
+provide a pretty good description of much of the plasma goings-on within and
+around the terrestrial magnetosphere, as well as in the solar wind.
 
 ``But how many electrons and ions, and over what period of time and what region
 of space?'' Prepare for a level of freedom that is often unsettling for
-newcomers: we have $N$ electrons and ions, and as much time and space as we
-need. (We're just scratching on notepads and paper at this point, so let's dream
-big!) At this stage we don't need to worry about those types of details; save
-those worries for \emph{application},\footnote{Or if you're a theorist, leave
-  all the worrying to the experimentalists! They'll let you know where you
-  screwed up or weren't detailed enough.} when we want to apply our theoretical
-results to a particular situation.
+newcomers: we have as much time and space as we need, and $N$ electrons and
+ions---by which I mean an unspecified number of electrons and ions that is
+sufficiently huge for statistics about electrons and ions to be
+meaningful. Think millions, billions, $10^{23}$---those sorts of numbers. We're
+just fooling around on notepads and paper, so we can afford to dream big! Don't
+bother asking yet again, ``But how many electrons and ions, exactly?'' I already
+told you: $N$! We have $N$ of each.
 
-As long as we're talking in broad terms, what about the subscript $\alpha$?
-It can indicate electrons or ions (i.e, $\alpha = e,i$). To be more
-explicit, whenever you see the subscript $\alpha$ you should be cognizant
+I should acknowledge that it takes time to appreciate such abstract thinking,
+but make no mistake about the value and power of the abstract. If you're still
+worried and want to know if we'll ever come out of the clouds, the answer is
+yes, when we want to apply our theoretical results to a particular situation. So
+in a word, save your worries for \emph{application}!\footnote{Or if you're a
+  theorist, leave all the worrying to the experimentalists! They'll let you know
+  where you screwed up, weren't detailed enough, or otherwise made fatal
+  omissions or assumptions.}
+
+As long as we're talking about the abstract, what about the subscript $\alpha$?
+It can indicate electrons or ions (i.e, $\alpha = e,i$). To be more explicit,
+whenever you see the subscript $\alpha$ in an equation you should be cognizant
 that there are really \emph{two} equations on display---one for electrons and
-one for ions---but we're using $\alpha$ to keep things compact. My
-dual-purpose of $\alpha$ is an example of what physicists might refer to as
-``notational convenience.'' Go ahead---impress your friends when they ask about
-$\alpha$.
+one for ions. I use $\alpha$ just to keep things compact. My dual-purpose of
+$\alpha$ is an example of what physicists might refer to as ``notational
+convenience.''
 
-But where were we? Oh, yes---as far as (\ref{ch1:eqCont}) is
+But where were we? Oh yes, as far as (\ref{ch1:eqCont}) is
 concerned,\footnote{And of course neglecting whatever the momentum equation
   (\ref{ch1:eqMom}) dictates about particle motion.}  particles are free to move
 all over the system, bunch into heaping piles, spread out uniformly---you name
-it, pal---but if we start with $N$ total particles, we must end with $N$
-particles, let $\tilde n_{\alpha}(\mathbf{x},t)$ change how it will.\footnote{In
-  math speak I am saying that from eternity to eternity, $\int_{\mathrm{sys}}
-  d^3\mathbf{x} \, n(\mathbf{x},t) = N$ regardless of the variation of number
-  density in time and space within the confines of our system.}
+it, pal. But if we start with $N$ total particles in our system, we must
+maintain at all times and end with $N$ particles, let the number density at a
+particular time and location, $\tilde n_{\alpha}(\mathbf{x},t)$, vary how it
+will.\footnote{In math speak I am saying that from eternity to eternity,
+  $\int_{\mathrm{sys}} d^3\mathbf{x} \, n(\mathbf{x},t) = N$ regardless of the
+  variation of number density in time and space within the confines of our
+  system.}
 
-How about the momentum equation? 
+% \subsubsection{Preliminary \#2b: the momentum equation, and two questions on validity}
+\textbf{Preliminary \#2b: the momentum equation, and two questions on validity}
+
+How about the momentum equation (\ref{ch1:eqMom})? It only has two things going
+on: the left-hand side is the temporal evolution (represented by $\partial
+/ \partial t$ of the velocity perturbations $\mathbf{\tilde v}_\alpha$, and the
+right-hand side describes the effect of the perturbation electric field
+$\mathbf{\tilde E}$ and the background magnetic field $\mathbf{B}_o$ (which
+together comprise what is called the \emph{Lorentz force}) on electrons and
+ions.
+
+The next customer is (\ref{ch1:eqMom}), which, like (\ref{ch1:eqCont}), I have
+already linearized.\footnote{}
+
 
 Two questions now arise. They are questions so worthy that if you haven't
 thought to ask, I'm asking on behalf of us all: Where did (\ref{ch1:eqCont}) and
@@ -983,6 +1037,9 @@ statistical treatment of the plasma.\footnote{You'd have to venture into a
 
 Fewf! This is a good place to stop and do some ruminating, both on what I've
 just told you and on a sandwich, if so inclined. Otherwise, let's continue.
+
+% \subsubsection{Preliminary \#2c: a subset of Maxwell's equations}
+\textbf{Preliminary \#2c: a subset of Maxwell's equations}
 
 Besides (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}), we need two of Maxwell's
 equations,\footnote{The four laws constituting Maxwell's equations---Gauss's
@@ -1640,6 +1697,7 @@ will be your first exercise in synthesizing all the new concepts you just picked
 up! There will be a handshake waiting for you on the other side.
 
 \subsubsection{Study \#1: IAWs during geomagnetic storms}
+% \textbf{Study \#1: IAWs during geomagnetic storms}
 
 People like \citet{Chaston2007} and \citet{Newell2009} have given some
 preliminary indicators of the importance of \Alf waves during ``geomagnetically
@@ -1692,6 +1750,7 @@ the last paragraph all pick up dramatically near and just following storm sudden
 commencement (golden line) and during storm main phase.
 
 \subsubsection{Study \#2: IAW production: ``peak usage'' and ``off hours''}
+% \textbf{Study \#2: IAW production: ``peak usage'' and ``off hours''}
 
 As you might glean from the suggestive meaning of this sub-subsection, the
 second study my coauthors and I have undertaken uses Study \#1 as context and
@@ -1712,12 +1771,13 @@ deposition, and ion outflow must therefore be 4--5 times the corresponding
 global rates during quiescent periods.)
 
 \subsubsection{Study \#3: IAWs, with interplanetary magnetic field starring as taskmaster}
+% \textbf{Study \#3: IAWs, with interplanetary magnetic field starring as taskmaster}
 
 For our third study, a group of coauthors and I formulated a to-be-revealed
 question related to some basic facts about the solar wind and the awesomely
 named \emph{interplanetary MF}. ``An \emph{interplanetary} MF? I can barely
 fathom what an MF is, let alone an interplanetary one!'' Ha! You kill me, would
-you stop that? As every Joe on the street knows, MF stands for---you guessed it,
+you stop that? As every Joe on the street knows, MF stands for---that's right,
 ``magnetic field.'' So yes, my coauthors and I were in pursuit of understanding
 the role of this interplanetary-flavored MF in controlling IAWs. ``A flavored
 MF?'' You jokester, I'm not going to egg you on by answering any more silly
@@ -1749,6 +1809,7 @@ of \emph{nondispersive, large-scale} \Alf waves (as opposed to
 \emph{small-scale, dispersive} \Alf waves).
 
 \subsubsection{Study \#4: Old dogs doing new tricks}
+% \textbf{Study \#4: Old dogs doing new tricks}
 
 The backdrop for this study is classic. A former member of the LaBelle group,
 Matt Broughton (super high-quality chap), occasionally contacts me to ask if I
@@ -1792,6 +1853,7 @@ IAW-centric. If you're the sort to get jazzed about gorgeous math, you should
 definitely pay a visit to Study \#4 (Chapter 5) and \citet{Bellan2016}.
 
 \subsubsection{Study \#5: Imbuing the expression ``from left field'' with new meaning}
+% \textbf{Study \#5: Imbuing the expression ``from left field'' with new meaning}
 
 Maybe I'm going overboard in suggesting that Study \#5 (Chapter 6) has its
 origins in left field, but that it is the greatest departure from the IAW theme
@@ -1838,13 +1900,14 @@ The stage is set: a longstanding and generally accepted theoretical result, the
 Knight relation, is subjected to all the hellfire (in form of observational
 evidence) that a graduate student can brandish against it. The stakes are no
 less than total glory, either for \citet{Knight1973}, or Hatch et al. [please
-pass peer review], or for neither. The last possibility is far and away most
-probable, since for the main, science only proceeds haltingly and in fits and
-spurts.\footnote{I am hosing around with the whole ``total glory'' thing. Did
-  you see the very first footnote in this chapter? Though I here mock that
-  sentiment, to truth, and to truth only, be total glory.}
+let it pass peer review], or for neither. The last possibility is far and away
+most probable, since for the main, science only proceeds haltingly and in fits
+and spurts.\footnote{I am hosing around with the whole ``total glory''
+  thing. Did you see the very first footnote in this chapter? Though I here mock
+  that sentiment, to truth, and to truth only, be total glory.}
 
 \subsubsection{The finalest of words}
+% \textbf{The finalest of words}
 
 The first four studies (Chapters 2--5) form a coherent thesis, while the last
 study (Chapter~6) seems to have been thrown in by the nape of its neck---such is
