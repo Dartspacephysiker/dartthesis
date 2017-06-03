@@ -700,7 +700,7 @@ supplemented with commentary at the level of junior trail boss. Boots on?
 relation]{A ``big wheel''\protect{\footnote{Remember that trike with
       the fat wheel up front that your neighbor had when you were
       three?}} derivation of the inertial \Alf wave dispersion
-  relation}
+  relation} \label{ch1:ssDerivation}
 
 The math is about to get girthy---pack some real \emph{oomph}---and since a
 proper, from-the-ground-up explanation would drag both of us into a mud bog
@@ -759,6 +759,17 @@ to point out that I have not said (and unfortunately will not say) \emph{a
 footnotes are great resources on this topic, as are the aforementioned work by
 \citet{Lysak1996} and \citet{Genot2004a}.
 
+Before beginning to derive (\ref{ch1:eqIAW}), I've got to drag you through a
+bunch of preliminaries. It's the theoretician's equivalent of bringing out that
+table filled with knives, tools, saws, syringes, instruments for cauterizing
+disinfecting, and suturing---you get the idea---at the side of a surgeon before
+beginning an operation. Would you want the surgeon to go in with bare hands,
+sans tools? That's what I thought.
+
+The preliminaries are (1) the process of linearization, (2) introduction of the
+equations and laws that we need to do the job right, and (3) a collection of
+assumptions that will allow us to slice and dice the equations into submission.
+
 % So let's open the bag and let the first cat out: $k_\parallel$ represents the
 % wave number (which you recall from Section~\ref{subsec:k} is just the inverse of
 % wavelength multiplied by 2$\pi$) that is parallel to the magnetic field.
@@ -773,7 +784,7 @@ footnotes are great resources on this topic, as are the aforementioned work by
 %   J_{E} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots .
 % \end{equation}
 
-\subsubsection{``Linearized what?''}
+\subsubsection{Preliminary \#1: ``Linearized what?''}
 
 I'm going to introduce you to a little procedure for making life
 simple---sometimes too simple---when doing theoretical work; in the biz, it's
@@ -789,35 +800,53 @@ The next point to consider is that the product of two perturbed values is
 \emph{really} small compared to the product of two background values. To be
 concrete, $0.05^2 = 0.0025 \ll 1^2 = 1$.
 
-Let's leap into the physics and introduce background quantities and perturbed quantities \par
+Leaping headfirst into the physics, I introduce the \emph{background quantities} and
+the \emph{perturbed quantities} \par
 \begin{itemize}
 \item \makebox[6.5cm]{$ n = n_o + \tilde n $} (number density),
-\item \makebox[6.5cm]{$ \mathbf{v} = \mathbf{v}_o + \mathbf{\tilde v} = \mathbf{ \tilde v} $ } (velocity),
+\item \makebox[6.5cm]{$ \mathbf{v} = \cancel{\mathbf{v}_o} + \mathbf{\tilde v} $ } (velocity),
 \item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field).
+\item \makebox[6.5cm]{$ \mathbf{E} = \cancel{\mathbf{E}_o} + \mathbf{\tilde E} =
+    \langle \tilde E_x, 0, \tilde E_z \rangle $} (electric field).
 \end{itemize}
-Background quantities have the ``o'' dangling off the front of them and do not
-vary in time or space (i.e., they are constants). Perturbed quantities are all
-marked with a tilde over the top with the exception of $\mathbf{b}$, and they
-\emph{can} vary in time and space.
+\emph{Background quantities} have the ``o'' dangling off the front of them and
+do not vary in time or space (i.e., they are constants). \emph{Perturbed
+  quantities} are all marked with a tilde over the top with the exception of
+$\mathbf{b}$, and they \emph{can} vary in time and space. 
 
-With these ideas in mind, let's look at the number flux
+I hope you noticed that I killed $\mathbf{E}_o$ and $\mathbf{v}_o$ before they
+even got to show their true colors. I also murdalized $\tilde E_y$ without so
+much as showing it the light of day. In this instantiation of the universe you
+and I will have no need of them, and they are accordingly cast off as dross.
+
+\subsubsection{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
+
+With the foregoing ideas about linearized quantities in mind, let's look at the
+number flux
 \begin{equation}
-  n \mathbf{v} = \Big ( n_o + \tilde n \Big ) \Big ( \mathbf{v}_o + \mathbf{\tilde v} \Big ) = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o + \tilde n \mathbf{\tilde v}.
+  % n \mathbf{v} = \Big ( n_o + \tilde n \Big ) \Big ( \mathbf{v}_o + \mathbf{\tilde v} \Big ) = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o + \tilde n \mathbf{\tilde v}.
+  n \mathbf{v} = \Big ( n_o + \tilde n \Big ) \Big ( \mathbf{\tilde v} \Big ) = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{\tilde v}.
 \end{equation}
 Can you spot the term on the right-hand side that involves the product of two
-perturbed quantities? Yes, it's $\tilde n \mathbf{\tilde v}$ and we have to kill
-it because it is \emph{nonlinear} with respect to perturbed quantities, meaning
-it involves the product of two perturbed variables---specifically $\tilde n$ and
-$\mathbf{\tilde v}$. Nonlinear terms are the fastest, most basic, and most
-obvious route to making a theoretical problem intractable that I am aware of,
-and we are going to rid ourselves of them at every step possible. The
-\emph{linearized} number flux is therefore
+perturbed quantities? Yes, it's $\tilde n \mathbf{\tilde v}$, and we have to
+kill this term because it is \emph{nonlinear} with respect to perturbed
+quantities, meaning it is made up of the product of the perturbed variables
+$\tilde n$ and $\mathbf{\tilde v}$.
+
+Why deal in such a ruthless and merciless manner with nonlinear terms? Nonlinear
+terms are the fastest, most basic, and most obvious route to making a
+theoretical problem intractable that I am aware of, and we are going to rid
+ourselves of them at every step possible. Especially if our aim is to keep
+distracting details , they spell nothing but \emph{trouble}!
+
+The \emph{linearized} number flux is therefore
 \begin{equation}
-  n \mathbf{v} = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o.
+  % n \mathbf{v} = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o.
+  n \mathbf{v} = n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o.
 \end{equation}
 See how nice that is? Only linearized terms.
 
-\subsubsection{Meet the (linearized) equations}
+\subsubsection{Preliminary \#2: Meet the (linearized) equations}
 
 Now I'll introduce you to two of the old plasma theorist's standbys,
 \begin{subequations}
@@ -981,19 +1010,24 @@ wherever you see an electric field having nonzero curl,\footnote{The concept of
   ``curl''---represented in (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) as $\grad
   \times$---comes from vector calculus, but you and I know that vector calculus
   is totally contrived, a concession to our human inabilities to think of a
-  better description! I attempt to momentarily circumvent this human limitation:
-  Can you imagine a tornado? If so, imagine further the flow of winds around the
-  eye of a tornado; they swirl around the eye of the tornado, right? Well,
-  that's a cheap example of a curling, or ``vortical,'' field of vectors. (The
-  vector field in this case is fluid flow.) } somewhere in the vicinity there is
-a corresponding magnetic field changing in time. The second, (\ref{ch1:eqAmp})
-or Amp\`{e}re's law, is telling you that a magnetic field $\mathbf{b}$ with
-nonzero curl is the same as, and cannot be separated from, a current density
-$\mathbf{\tilde j}$---up to a constant of proportionality $\mu_o$, at any
-rate. Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) tell us how electric
-fields and magnetic fields evolve in time, and they are \emph{laws}. 
+  better description! Here's my attempt to circumvent the feeling that vector
+  calculus could be a fiction: Can you see a tornado in your mind? If so, take a
+  closer look at the flow of winds around the eye of a tornado. The winds swirl
+  around the eye, right? More precisely stated, if you drew a circle just
+  outside the boundary of and centered on the eye, and measured the direction
+  that the wind blows at each point around the circle, would you not find at
+  every point that the direction that the wind blows is tangent to the circle?
+  Well, that's a cheap example of a curling, or ``vortical,'' field of
+  vectors. (The vector field in this case is fluid flow.)  } somewhere in the
+vicinity there is a corresponding magnetic field changing in time. The second,
+(\ref{ch1:eqAmp}) or Amp\`{e}re's law, is telling you that a magnetic field
+$\mathbf{b}$ with nonzero curl is the same as, and cannot be separated from, a
+current density $\mathbf{\tilde j}$---up to a constant of proportionality
+$\mu_o$, at any rate. Together, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp}) tell us
+how electric fields and magnetic fields evolve in time, and they are
+\emph{laws}.
 
-\subsubsection{Tamed equations via simplifying assumptions} \label{ch1:sssAssume}
+\subsubsection{Preliminary \#3: Taming the equations with simplifying assumptions} \label{ch1:sssAssume}
 
 Now for one of the fun parts. We get to make a bunch of assumptions about (for
 example) the way that magnetic and electric fields vary in time, and how the
@@ -1066,11 +1100,14 @@ with it?)
 Last of all, I will assume a singly charged ion species so that $q_i = q$ (and
 of course $q_e = -q$).
 
-With these assumptions let's bob and weave, baby. Start by multiplying each
-continuity equation by the corresponding charge of the species
-$q_\alpha$---positive for ions and negative for electrons---and adding the two
-continuity equations (\ref{ch1:eqCont}) together (remember that there are really
-two equations, since $\alpha$ denotes electrons or ions),
+\subsubsection{Without further ado, the derivation}
+
+With the linearized equations in hand and the baby mountain of assumptions I
+have just made, let's bob and weave, baby. Start by multiplying each continuity
+equation by the corresponding charge of the species $q_\alpha$---positive for
+ions and negative for electrons---and adding the two continuity equations
+(\ref{ch1:eqCont}) together (remember that there are really two equations, since
+$\alpha$ denotes electrons or ions),
 \begin{equation} \label{ch1:eqCont1} \dfrac{\partial}{\partial t} \Big (
   \tilde n_i - \tilde n_e \Big ) + \grad \cdot \Big (n_{o,i} \mathbf{\tilde v}_i - n_{o,e}
   \mathbf{\tilde v}_{e} \Big ) = 0.
@@ -1113,7 +1150,7 @@ Why are the right-hand sides of (\ref{ch1:eqMomy}) zero?  Well, if they weren't
 zero the possibility of a time-varying current density $\tilde j_y \neq 0$
 arises, which we simply won't hear of! This isn't to say that nonzero
 $\tilde j_y$ is impossible---of course it's \emph{possible}---but once we're
-through deriving a dispersion relation for inertial \Alf waves, you'll see that
+through deriving a dispersion relation for IAWs, you'll see that
 a nonzero $\tilde j_y$ would amount to a distraction. In the meantime I ask you
 to trust that I have the benefit of foresight. Plus, if I assume
 $\tilde j_y = 0$ I can equate the two expressions (\ref{ch1:eqMomy}) to find
@@ -1193,10 +1230,11 @@ I'm sure you're feeling more and more disoriented: ``Where on earth is he taking
 us? I've always hated camping and I wish I were at home playing video games.''
 That's OK---the type of exploration we embark on now is best suited for the
 hardier and more sanguinely disposed wayfarer. You're better off leaving now if
-you don't find yourself rounding your shoulders, since we are about to enter a
-veritable thicket of maths\footnote{An intentional nod to the English-speaking
-  world outside the United States.} in which you are almost definitely going to
-lose your sense of direction if you've never before traversed such terrain.
+you aren't rounding your shoulders and stiffening your back, since we are about
+to enter a brief but veritable thicket of maths\footnote{An intentional nod to
+  the English-speaking world outside the United States.} in which you are almost
+definitely going to lose your sense of direction if you've never before
+traversed such terrain.
 
 If I plug the expressions (\ref{ch1:eqDaddy}) for $\tilde j_x$ and $\tilde j_z$ into
 (\ref{ch1:eqCont2}), I obtain the seemingly meaningless result
@@ -1213,23 +1251,25 @@ If I multiply the whole thing by $\mu_o c^2$ I get
   \dfrac{c^2}{v_A^2}\dfrac{\partial^3 }{\partial t^2 \partial x} \tilde E_x + \dfrac{1}{\omega_{pe}}\dfrac{\partial}{\partial z} \tilde E_z = 0,
 \end{equation}
 which you have to admit is a little better; old friends like $v_A$ and the speed
-of light $c$ are also out in the woods today! Say, have I introduced you to
-that leathery-looking bloke standing underneath $E_z$? That's the electron
+of light $c$ are also out in the woods today! Say, have I introduced you to that
+leathery-looking bloke standing underneath $\tilde E_z$? That's the electron
 plasma frequency
 \begin{equation*}
 \omega_{pe} = \sqrt{ \dfrac{n_o q^2}{m_e \epsilon_o}};
 \end{equation*}
-in terrestrial plasmas it is generally well above $\omega_{ci}$. It will rear
-its head, so don't completely forget about it.  
+in terrestrial plasmas it is well above $\omega_{ci}$. $\omega_{pe}$ has not
+finished rearing its head, so don't completely forget about it.
 
-To really start a grease fire we need to get together with the $y$ component of Faraday's law,
+To really start a grease fire we need to get together with the $y$ component of
+Faraday's law,
 \begin{equation*}
-  \dfrac{\partial \tilde E_x}{\partial z} - \dfrac{\partial \tilde E_z}{\partial x} = - \dfrac{\partial b_y}{\partial t},
+  \Big ( \grad \times \mathbf{\tilde E} \Big )_y = \dfrac{\partial \tilde E_x}{\partial z} - \dfrac{\partial \tilde E_z}{\partial x} = - \dfrac{\partial b_y}{\partial t},
 \end{equation*}
-the expressions (\ref{ch1:eqDaddy}) for $\tilde j_x$ and
-$\frac{\partial \tilde j_z}{\partial t}$, and the $x$ component of Amp\`{e}re's law. The left-hand side of Amp\`{e}re's law is 
+the expressions for $\tilde j_x$ and $\frac{\partial \tilde j_z}{\partial t}$ in
+(\ref{ch1:eqDaddy}), and the $x$ component of Amp\`{e}re's law. The left-hand
+side of the $x$ component of Amp\`{e}re's law is
 \begin{equation*}
-  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big ) = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_o} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 \tilde E_x}{\partial z^2} - \dfrac{\partial^2 \tilde E_z}{\partial x \partial z},
+  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big )_x = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_o} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 \tilde E_x}{\partial z^2} - \dfrac{\partial^2 \tilde E_z}{\partial x \partial z},
 \end{equation*}
 while the right-hand side is 
 \begin{equation*}
@@ -1259,7 +1299,10 @@ ahead and slap it in, multiplying both sides by $\frac{\omega_{pe}^2}{v_A^2}$ as
 
 Whoa: a millionth-order differential equation in $\tilde E_x$---all right,
 fourth-order equation, but who has actually heard of those? It doesn't matter;
-let's slay the beast in a single stroke by assuming the cheapest thing we possibly could,
+let's slay the beast in a single stroke by making the cheapest
+assumption\footnote{The experienced will recognize this assumption as the good
+  old \emph{plane wave ansatz}. To quote Jimi Hendrix, ``Are you experienced?''}
+about $E_x$ that we possibly could,
 \begin{equation*}
   \tilde E_x = \tilde E_{x,o} \mathrm{exp} \Big ( k_\perp x + k_\parallel z - \omega t \Big ),
 \end{equation*}
@@ -1282,18 +1325,19 @@ be, we can easily rearrange the spoils of victory to show
 \begin{equation}
   \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }},
 \end{equation}
-which was to be demonstrated, and is triple baller. 
+which was to be demonstrated, and is triple baller. (Oh, and $\lambda_e = c /
+\omega_{pe}$.)
 
 \subsubsection{What exactly does the plasma skin depth $\lambda_e$ mean?} 
 
 Now that we've arrived let's survey the scene a little. Hey, tell me what you
 see if you set $k_\perp \lambda_e = 0$. \dots What's that? You say it bears
 uncanny resemblance to (\ref{ch1:eqAlf})? Excellent observation! I guess it
-means that when the mood is right, the dispersion relation for inertial \Alf
-waves can be equivalent to the dispersion relation (\ref{ch1:eqAlf}) for
-nondispersive \Alf waves. But what role does $\lambda_e = \frac{c}{\omega_{pe}}$
-play?  Why is it relevant? More specifically, why are the waves nondispersive if
-$k_\perp \lambda_e \ll 1$?
+means that when the mood is right, the IAW dispersion relation can be
+equivalent to the dispersion relation (\ref{ch1:eqAlf}) for nondispersive \Alf
+waves. But what role does $\lambda_e = \frac{c}{\omega_{pe}}$ play?  Why is it
+relevant? More specifically, why are the waves nondispersive if $k_\perp
+\lambda_e \ll 1$?
 
 Let's come at the question from a different angle. Why does an \Alf wave need to
 have a perpendicular wavelength $\lambda_\perp \lesssim 2 \pi \lambda_e$ to be
@@ -1332,10 +1376,10 @@ you see---and instead of asking what the plasma is going to do with a particular
 frequency, instead you can ask what the plasma is going to do with a particular
 \emph{wavelength}, or rather a particular perpendicular wave number $k_\perp$:
 $J ( k_\perp ) = J_s \mathrm{exp} ( - / k_\perp \lambda_e )$.  See? The current
-density associated with an inertial \Alf wave is as good as dead in a plasma if
-$k_\perp \lambda_e \ll 1$! But never mind my musings, talk to
-\citet{Morales1994} if you want the skinny (depth). Here's a snippet from their
-abstract to get you excited:
+density associated with an IAW is as good as dead in a plasma if $k_\perp
+\lambda_e \ll 1$! But never mind my musings, talk to \citet{Morales1994} if you
+want the skinny (depth). Here's a snippet from their abstract to get you
+excited:
 
 \begin{displayquote}
   Shear \Alf waves having transverse scale on the order of the electron skin
@@ -1574,7 +1618,7 @@ learned.
 Your ship has been prepared for ludicrous speed.\footnote{Think Dark Helmet from
   Spaceballs (the movie, of course, not the cereal).} You now know what \Alf
 waves are, what inertial \Alf waves (or IAWs) are, the icky math bogs and demon-
-and derivative-filled canyons that conjure them, and what the signatures of
+and derivative-filled canyons that conjure IAWs, and what the signatures of
 \Alfic electron acceleration are in pitch-angle and energy spectrograms.
 
 ``I mean, yeah! That was an extremely engaging introduction to the topic,
@@ -1612,10 +1656,10 @@ active'' periods,\footnote{In kid speak, an example of a geomagnetically active
 the ionosphere, the amount of energy that \Alf waves dump into electrons in
 order to accelerate them \textit{en masse} toward earth, etc., had not been
 systematically studied as a function of, or in response to, geomagnetic
-storms. (By the way, I'll be referring to ``the frequency of \Alf wave
-observation, the amount of energy directly carried by \Alf waves into the
-ionosphere, the amount of \dots'' etc. etc., as \emph{measures of \Alfic
-  activity} in succeeding paragraphs.)
+storms. (By the way, I'll use the code word \emph{measures of \Alfic activity}
+in place of ``the frequency of \Alf wave observation, the amount of energy
+directly carried by \Alf waves into the ionosphere, the amount of \dots''
+etc. etc., in succeeding paragraphs.)
 
 % % ---------------- FIGURE
 
@@ -1623,7 +1667,8 @@ ionosphere, the amount of \dots'' etc. etc., as \emph{measures of \Alfic
   \centering
   \noindent\includegraphics[width=0.8\textwidth]{./ch1/figs/Sec2--stormExample_labeled--w_SSC}
   \caption[Anatomy of a geomagnetic storm \`{a} la \textit{Dst}]{Anatomy of a
-    geomagnetic storm from the vantage point of the \textit{Dst} index.}
+    geomagnetic storm as manifest in the \textit{Dst} index [Credit: Lund
+    Observatory].}
   \label{ch1:fDstStorm}
 \end{figure}
 
@@ -1631,18 +1676,22 @@ ionosphere, the amount of \dots'' etc. etc., as \emph{measures of \Alfic
 
 Enter: Chapter 1. My coauthors and I have performed just such a study, chunking
 things up by geomagnetic storm phase and relative to so-called \emph{storm
-  sudden commencement.} I've provided the canonical picture of a geomagnetic
-storm in Figure~\ref{ch1:fDstStorm}, with colored lines to give you a sense for
-each of the three storm phases: quiescence (green line), storm main phase (red
-line), and storm recovery phase (blue line).\footnote{If you're in need of help
-  in order to understand what causes each storm phase, or if you're plumb
-  curious, pay a visit to \citet{Gonzalez1994}, \citet{Denton2006}, or
-  \citet{Lakhina2008}. I also recommend \citet{Lundstedt2002}; they'll tell you how they go about \emph{predicting} geomagnetic storms. (More honestly, they'll describe how they predict the \textit{Dst} index---but the \textit{Dst} index is, I dare say, strongly associated with   } As suggested by \citet{Chaston2007}, my coauthors and I
-have found that the \emph{measures of \Alfic activity} that I mentioned in the
-last paragraph all pick up dramatically just following storm sudden commencement
-and during storm main phase.
+  sudden commencement.} I've provided a more or less canonical picture of a
+geomagnetic storm in Figure~\ref{ch1:fDstStorm}, with colored lines to give you
+a sense for each of the three storm phases: quiescence (green line), storm main
+phase (red line), and storm recovery phase (blue line).\footnote{If you're in
+  need of help in order to understand what causes each storm phase, or if you're
+  plumb curious, pay a visit to \citet{Gonzalez1994}, \citet{Denton2006}, or
+  \citet{Lakhina2008}. I also recommend \citet{Lundstedt2002}; they'll tell you
+  how they go about \emph{predicting} geomagnetic storms. (More honestly,
+  they'll describe how they predict the \textit{Dst} index---but the
+  \textit{Dst} index has been, I dare say, the go-to measure for geomagnetic
+  storms for years and years.} As suggested by \citet{Chaston2007}, my coauthors
+and I have found that the \emph{measures of \Alfic activity} that I mentioned in
+the last paragraph all pick up dramatically near and just following storm sudden
+commencement (golden line) and during storm main phase.
 
-\subsubsection{Study \#2: IAW ``peak usage'' and ``off hours''}
+\subsubsection{Study \#2: IAW production: ``peak usage'' and ``off hours''}
 
 As you might glean from the suggestive meaning of this sub-subsection, the
 second study my coauthors and I have undertaken uses Study \#1 as context and
@@ -1687,11 +1736,11 @@ these phenomena.
 The thing is, among the ocean of studies detailing the role of the solar wind
 and IMF in everything from wave generation \citep[][for
 example]{Claudepierre2008} and low-latitude boundary layer formation
-\citep{Song2003a}\footnote{These examples are completely arbitrary, you
-  realize.}  to which direction water in your toilet swirls\footnote{I'm lying,
-  no one has actually studies this (to my knowledge).} and your
-horoscope,\footnote{Another bold-faced lie.} no one has systematically studied
-the role of the solar wind and IMF in controlling IAWs in the
+\citep{Song2003a}\footnote{You no doubt realize that these examples are
+  completely arbitrary.}  to which direction water in your toilet
+swirls\footnote{I'm lying; to my knowledge no one has actually studied this.}
+and your horoscope,\footnote{Another bold-faced lie.} no one has systematically
+studied the role of the solar wind and IMF in controlling IAWs in the
 magnetosphere-ionosphere transition region!  It thus behooved my coauthors and
 me to say something on the subject, and one of the results seems to confirm an
 effect observed in simulation that is counterintuitive based on what other
@@ -1701,60 +1750,132 @@ of \emph{nondispersive, large-scale} \Alf waves (as opposed to
 
 \subsubsection{Study \#4: Old dogs doing new tricks}
 
-All right, the backdrop for this study is classic. A former member of the
-LaBelle group, Matt Broughton (super high-quality chap), occasionally contacts
-me to ask if I can relay some recently published study or other to him---you
-know, cost of subscription and all that\footnote{Does this practice cause me to
-  scruple? Frankly, no, although maybe it should. I am pained by the reality
-  that knowledge has a price in today's world; I feel it a matter about which
-  all humans ought to reflect and ask internally if they feel any shame (and I
-  think they should). The extent to which the reality exists is, to me, a direct
-  measure of the degreee to which our hearts, collectively speaking, are fixated
-  upon the banal, the perishable, the mammon from which springs forth so much
-  inequity, pride, and unhappiness. I remove from the pulpit.}---and I say,
-``Sure, have it rought over to ya, buddy.'' Well, I get to reading this
+The backdrop for this study is classic. A former member of the LaBelle group,
+Matt Broughton (super high-quality chap), occasionally contacts me to ask if I
+can relay some recently published study or other to him---yes, skipping the cost
+of subscription\footnote{Does this practice cause me to scruple?  Frankly, no,
+  although maybe it should. I am pained by the reality that knowledge has a
+  price in today's world; I feel it a matter about which all humans ought to
+  reflect and ask internally if they feel any shame (and I think we should). The
+  extent to which the reality exists is, to me, a more-or-less direct measure of
+  the degree to which our hearts, collectively speaking, are fixated upon the
+  banal, the perishable, the mammon from which springs forth so much inequity,
+  pride, and unhappiness. I remove from the pulpit.} and all that---and I say,
+``Sure, have it right over to ya, buddy.'' Well, I get to reading this
 thing---\citet{Bellan2016}, that is---and I says to myself, ``Hmmm \dots'' And
 then I think a little more and I says ``Hmmm \dots . \dots I'm pretty sure I can
-give this a shot.''Fast-forward eight months---BAM! Study \#4 (or Chapter 5).
+give this a shot.'' Fast-forward eight months: BAM! Study \#4 (or Chapter 5).
 
 The idea is that in days of yore (i.e., the fourth quarter of last century or so
-up until---well, the present, I suppose) if one wanted t omake an in situ
-estimate of the wave vector of a an electrogmagnetic wave using a rocket or a
+up until---well, the present, I suppose) if one wanted to make an in situ
+estimate of the wave vector of a an electromagnetic wave using a rocket or a
 satellite, one's option was basically spaced probe measurements of the local
 electric field. It's essentially an exercise in interferometry. So what's new
 about \citet{Bellan2016}, then? Get this: no electric field measurements
 necessary to estimate the wave vector! All one needs is
-high-resolution\footnote{By \emph{high-resolution} I mean that the Nyquist
+high-resolution\footnote{By \emph{high resolution} I mean that the Nyquist
   frequency lies pretty well above twice the frequency of interest.}, reasonably
 accurate measurements of the local magnetic field and particle-based
 measurements of the local current density. \citet{Bellan2016} walks through the
-necessary theory to show how it all works.
+relevant theory to show how it all works.
 
 So here's one last kicker: Please tell me that if you were on a quiz show and
-you were asked how the frequency of inertial \Alf waves compares to electron-
-oand ion-cyclotron frequencies, you could confidently resond \dots come on, say
-it! YES! IAWs are \emph{low-frequency} beasts. See what's going on here?
-\citeauthor{Bellan2016}'s [2016] method is prime for application to
-low-frequency waves such as IAWs! From this standpoint Study \#4, which is
-application of the \citet{Bellan2016} methodology to IAW observations, fits in
-nicely with Studies 1--3 (Chapters 2--4), which are all IAW-centric. If you're
-the sort to get jazzed about gorgeous math, you should definitely visit with
-Study \#4 (Chapter 5) and \citet{Bellan2016}.
+you were asked how the frequency of IAWs compares to electron- and ion-cyclotron
+frequencies, you could confidently respond \dots come on, say it! YES! IAWs are
+\emph{low-frequency} beasts.
 
-\subsubsection{Study \#5: Imbuing ``from left field'' with new meaning}
+See what's going on here?  \citeauthor{Bellan2016}'s [2016] methodology is prime
+for application to low-frequency waves such as IAWs! From this standpoint Study
+\#4, which is application of the \citet{Bellan2016} methodology to IAW
+observations, fits in nicely with Studies 1--3 (Chapters 2--4), which are all
+IAW-centric. If you're the sort to get jazzed about gorgeous math, you should
+definitely pay a visit to Study \#4 (Chapter 5) and \citet{Bellan2016}.
 
+\subsubsection{Study \#5: Imbuing the expression ``from left field'' with new meaning}
 
+Maybe I'm going overboard in suggesting that Study \#5 (Chapter 6) has its
+origins in left field, but that it is the greatest departure from the IAW theme
+in the rest of this thesis is objectively undeniable. How have events thus transpired?
 
+It all happened one fateful day in early 2016 (April or May, if memory serves)
+when I got an email from Chris Chaston asking if I'd be interested in a little
+project involving reexamination of the famous relationship (among space plasma
+physikers) between auroral current density and potential drop along a
+geomagnetic field line---also know ans the J-V relation---predicted by
+\citet{Knight1973}. One could fairly ask, ``If it's famous and accepted, why
+bother to undertake reexamination? And what do you mean by 'reexamination'
+anyway?''
 
-\subsubsection{The finalest of words }
+Hark back momentarily to the derivation of the IAW dispersion relation in
+Section~\ref{ch1:ssDerivation} that we walked through. Do you remember how much
+time I devoted to making assumptions and explaining (or at least trying to
+explain) why those assumptions were valid or perhaps even necessary? We threw
+away a \emph{ton} of information in order to keep the derivation simple!
+\citeauthor{Knight1973}'s [1973] work is no different: it's Assumption City, and
+Chris Chaston's idea for reexamination of the Knight relation was to see
+whether we, as a research community, have inadvertently contented ourselves with
+only a fraction of the truth.
 
-You might have noticed that the first three studies form a coherent thesis,
-while the last two seem to have been thrown, by nape of neck, into this
-thesis. Even if you didn't notice it, that's my personal feeling. It doesn't
-matter; they are work that was accomplished during my time as a graduate
-student, and apparently that's good enough for Jim, my adviser. Now begone!
-(And bless your soul for having reached this line. You are among the 0.0000005\%
-of humanity who I expect will achieve the feat.)
+In specific, the Knight relation assumes that the population of electrons (the
+\emph{magnetospheric source population}) that gets accelerated toward earth by
+these large-scale\footnote{``large-scale'' meaning roughly the same size as the
+  system itself---in this case the coupled magnetosphere--ionosphere system.}
+potential drops is fairly represented by a Maxwellian velocity
+distribution.\footnote{Look in virtually any introductory textbook on
+  thermodynamics or statistical mechanics (or plasma kinetic theory, if you're
+  less humble) to learn about the famous \emph{Maxwellian velocity distribution}
+  (or, when cast in scalar form, the \emph{Maxwellian speed distribution}).}
+This assumption is equivalent to assuming hat the source population is in
+thermal equilibrium, but multiple works using a variety of spacecraft over the
+course of years\footnote{Check out the introduction in Chapter~6 for a little
+  review of these studies.} have found that plasmas in the magnetospheric source
+region are often \emph{not} in thermal equilibrium, which could mean that
+assuming the magnetospheric source population is well represented by a
+Maxwellian distribution throws away altogether too much information to always be
+valid.
+
+The stage is set: a longstanding and generally accepted theoretical result, the
+Knight relation, is subjected to all the hellfire (in form of observational
+evidence) that a graduate student can brandish against it. The stakes are no
+less than total glory, either for \citet{Knight1973}, or Hatch et al. [please
+pass peer review], or for neither. The last possibility is far and away most
+probable, since for the main, science only proceeds haltingly and in fits and
+spurts.\footnote{I am hosing around with the whole ``total glory'' thing. Did
+  you see the very first footnote in this chapter? Though I here mock that
+  sentiment, to truth, and to truth only, be total glory.}
+
+\subsubsection{The finalest of words}
+
+The first four studies (Chapters 2--5) form a coherent thesis, while the last
+study (Chapter~6) seems to have been thrown in by the nape of its neck---such is
+my personal feeling. It doesn't matter; each study represents work that was
+accomplished during my time as a graduate student, and apparently that's good
+enough for my adviser Jim. 
+
+So what if I were to distill my thesis into two sentences? People have ``taught
+and thought a lot'' (to quote Ronald A. Rasband) about \Alf waves, and even the
+more specialized brand known as inertial \Alf waves, but until the body of work
+I present in this thesis appeared, there have not been any systematic studies of
+the influence of the interplanetary MF,\footnote{There I go again!} the solar wind,
+and geomagnetic storms on high-latitude inertial \Alf waves. I believe my
+coauthors and I will ultimately have produced from the depths of the sea of
+knowledge several basic facts on these points, all while standing on the
+unknowably vast shore of deeply (and I believe incorrigibly) couched human
+ignorance---once and if the studies in following chapters make it through peer
+review, that is. 
+
+In acknowledgement of the many areas where our work may be expanded, I have
+buried several treasure maps in Chapter~7. If you take a shovel and are willing
+to make a sacrificial offering of five of the best years of your life, I think
+those treasure maps could lead you to one or two of the gazillion theses that
+are buried along the shore.
+
+As we stand here at the trailhead of the places I have been walking for the past
+five years, I want to thank you for having reached this line. You are among the
+0.000000025\% of humanity who I expect will achieve this feat.\footnote{I have
+  grossly assumed a steady population of 8 billion. If you were to do the math,
+  you'd find I don't expect even two members of my committee to have reached
+  the end of this chapter.}
 
 % And chapter 1 bib
 \bibliographystyle{agufull08}
