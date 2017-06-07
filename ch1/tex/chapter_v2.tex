@@ -784,35 +784,78 @@ assumptions that will allow us to slice and dice the equations into submission.
 %   J_{E} = J_{E,\textrm{100--200 eV}} + J_{E,\textrm{200--500 eV}} + J_{E,\textrm{500--1200 eV}} + \dots .
 % \end{equation}
 
-\subsubsection{Preliminary \#1: ``Linearized what?''}
+\subsubsection{Preliminary \#1: The what, why, when, and how of linearization }
 
 I'm going to introduce you to a little procedure for making life
-simple---sometimes too simple---when doing theoretical work; in the biz, it's
-what we call \emph{linearization}. Here's a question to illustrate the idea:
-what happens if you pick a number that is small compared to 1---let's say
-0.05---and then you square it? Right, you get a number that we might say is
-\emph{really} small compared to 1---0.0025, if we start with 0.05.
+simple---sometimes too simple---when doing theoretical work. In the biz, it's
+what we call \emph{linearization}. 
 
-For the sake of introducing terminology I'll say that 1 is a ``background''
-value, and 0.05 is a ``perturbed'' value. With this language I can say that the
-perturbation value 0.05 is small relative to the background value 1. Get it?
-The next point to consider is that the product of two perturbed values is
-\emph{really} small compared to the product of two background values. To be
-concrete, $0.05^2 = 0.0025 \ll 1^2 = 1$.
+Here's a little illustration of the idea: Take two numbers like $a = 1.05$, and
+$a_o = 1$. How much does $a$ differ from $a_o$? $a - a_o =$~0.05, or
+equivalently, $a$ is 5\% greater than $a_o$. The difference isn't huge, but it's
+not exactly tiny either. I define this not-huge-but-not-tiny number as $ \tilde
+a \equiv a - a_o =$~0.05. For the sake of simplifying the discussion I'll call
+$a_o$ a \emph{background value}, and $\tilde a$ a \emph{perturbation value} that is
+somewhat small relative to $a_o$.
 
-Leaping headfirst into the physics, I introduce the \emph{background quantities} and
-the \emph{perturbed quantities} \par
+Now, let's consider the \emph{nonlinear quantity}\footnote{For any exponent $n
+  \neq$~1, the quantity $a^n$ is ``nonlinear.'' For the very special, very
+  particular case $n =$~1, the quantity $a^n$ is ``linear,'' meaning it is $a$
+  itself: $a^n = a^1 = a$.} $a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate
+$a^2$ again in a similar fashion, only this time we'll use $a = a_o + \tilde a$:
+\begin{equation*}
+  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+\end{equation*}
+The term that doesn't have anything to do with $\tilde a$ at all, $a_o^2$, is
+said to be $zeroth order$ in $\tilde a$. (You know, because it involves $\tilde
+a$ to the zeoth power, $\tilde a^0 =$~1.) The term that doesn't have anything to
+do with $\tilde a$ at all, $a_o^2$, is said to be $first order$ in $\tilde a$
+(because it involves $\tilde a$ to the first power, $\tilde a^1 =\tilde a$.)
+
+ Question: What is the relative contribution of
+each of the three terms $a_o^2$, $2 a_o \tilde a$, and $\tilde a^2$ to $a^2$?
 \begin{itemize}
-\item \makebox[6.5cm]{$ n = n_o + \tilde n $} (number density),
-\item \makebox[6.5cm]{$ \mathbf{v} = \cancel{\mathbf{v}_o} + \mathbf{\tilde v} $ } (velocity),
-\item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field).
+\item \makebox[6.5cm]{$ a_o^2 =$~1} 0th order  ,
+\item \makebox[6.5cm]{$ 2 a_o \tilde a = 0.1 $ } ($\tilde a^1$),
+\item \makebox[6.5cm]{$ = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
 \item \makebox[6.5cm]{$ \mathbf{E} = \cancel{\mathbf{E}_o} + \mathbf{\tilde E} =
     \langle \tilde E_x, 0, \tilde E_z \rangle $} (electric field).
 \end{itemize}
-\emph{Background quantities} have the ``o'' dangling off the front of them and
-do not vary in time or space (i.e., they are constants). \emph{Perturbed
-  quantities} are all marked with a tilde over the top with the exception of
-$\mathbf{b}$, and they \emph{can} vary in time and space. 
+
+
+The difference between the actual value $a^2$ and our approximation, which
+neglected $\tilde a^2$, is 0.0025---a measly 0.23\% of $a^2$.
+
+What's the message here? That terms involving a product of perturbation values
+are \emph{really small} compared 
+
+Leaping headfirst into the physics, I introduce each variable that we're
+interested in as a sum of a \emph{background quantity} and a \emph{perturbed
+  quantity}: \par
+\begin{itemize}
+\item \makebox[6.5cm]{$ n = n_o + \tilde n $} (number density),
+\item \makebox[6.5cm]{$ \mathbf{v} = \cancel{\mathbf{v}_o} + \mathbf{\tilde v} $ } (velocity),
+\item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
+\item \makebox[6.5cm]{$ \mathbf{E} = \cancel{\mathbf{E}_o} + \mathbf{\tilde E} =
+    \langle \tilde E_x, 0, \tilde E_z \rangle $} (electric field).
+\end{itemize}
+\emph{Background quantities} have the ``o'' dangling off the front of them, and
+under the prescription of linearization, they do not vary in time or space
+(i.e., they are constants). \emph{Perturbed quantities} are all marked with a
+tilde over the top (with the solitary exception of $\mathbf{b}$), and they
+\emph{can} vary in time and space. Dividing each variable into a background and
+a perturbed quantity constitutes the ``what'' of linearization.
+
+
+This little example illustrates one of the two cruxes that determine whether
+linearization is valid: a perturbed quantity must be small relative to the
+corresponding background value, and the background value must be more or less
+static (i.e., a constant) in time and space. Failure to adhere
+
+there exist many scenarios where 
+
+Now let me address the ``why'' of linearization. Why do it? You can easily
+imagine that linearization is not always valid. Returning to my example, what if I had picked 0.5 as my perturbed value? The 
 
 I hope you noticed that I killed $\mathbf{E}_o$ and $\mathbf{v}_o$ before they
 even got to show their true colors. I also murdalized $\tilde E_y$ without so
@@ -820,7 +863,7 @@ much as showing it the light of day. In this instantiation of the universe you
 and I will have no need of them, and they are accordingly cast off as dross.
 
 % \subsubsection{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
-\textbf{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
+\textbf{Preliminary \#1a:  How (and) to kill nonlinear perturbed quantities: an illustration}
 
 With the foregoing ideas about linearized quantities in mind, let's look at the
 number flux
@@ -834,11 +877,14 @@ kill this term because it is \emph{nonlinear} with respect to perturbed
 quantities, meaning it is made up of the product of the perturbed variables
 $\tilde n$ and $\mathbf{\tilde v}$.
 
-Why deal in such a ruthless and merciless manner with nonlinear terms? Nonlinear
-terms are the fastest, most basic, and most obvious route to making a
-theoretical problem intractable that I am aware of, and we are going to rid
-ourselves of them at every step possible. Especially if our aim is to keep
-distracting details , they spell nothing but \emph{trouble}!
+Why deal in such a ruthless and merciless manner with nonlinear terms? Remember
+that perturbed quantities are already small relative to background quantities,
+and the product of perturbed quantities is \emph{really} small compared to the
+product of background quantities. Nonlinear terms are the fastest, most basic,
+and most obvious route to making a theoretical problem intractable that I am
+aware of, and we are going to rid ourselves of them at every step
+possible. Especially if our aim is to keep distracting details , they spell
+nothing but \emph{trouble}!
 
 The \emph{linearized} number flux is therefore
 \begin{equation}
