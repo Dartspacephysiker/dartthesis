@@ -798,22 +798,29 @@ a \equiv a - a_o =$~0.05. For the sake of simplifying the discussion I'll call
 $a_o$ a \emph{background value}, and $\tilde a$ a \emph{perturbation value} that is
 somewhat small relative to $a_o$.
 
-Now, let's consider the \emph{nonlinear quantity}\footnote{For any exponent $n
+% Now, consider the number $b = 2050$. I'll separate it in the same manner that I
+% did $a$: a background value, $b_o =$~2000, and a perturbation value, $\tilde b
+% \equiv b - b_o =$~50.
+Now, consider the \emph{nonlinear quantity}\footnote{For any exponent $n
   \neq$~1, the quantity $a^n$ is ``nonlinear.'' For the very special, very
   particular case $n =$~1, the quantity $a^n$ is ``linear,'' meaning it is $a$
   itself: $a^n = a^1 = a$.} $a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate
 $a^2$ again in a similar fashion, only this time we'll use $a = a_o + \tilde a$:
 \begin{equation*}
-  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  % (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + {\tilde a}^2 = (1)^2 + 2(1)(0.05) + (0.05)^2 = 1 + 0.1 + 0.0025 = 1.1025.
 \end{equation*}
-The term that doesn't have anything to do with $\tilde a$ at all, $a_o^2$, is
-said to be $zeroth order$ in $\tilde a$. (You know, because it involves $\tilde
-a$ to the zeoth power, $\tilde a^0 =$~1.) The term that doesn't have anything to
-do with $\tilde a$ at all, $a_o^2$, is said to be $first order$ in $\tilde a$
-(because it involves $\tilde a$ to the first power, $\tilde a^1 =\tilde a$.)
 
- Question: What is the relative contribution of
-each of the three terms $a_o^2$, $2 a_o \tilde a$, and $\tilde a^2$ to $a^2$?
+Question: What is the relative contribution of each of the three terms $a_o^2$,
+$2 a_o \tilde a$, and $\tilde a^2$ to $a^2$ The term that doesn't have anything
+to do with $\tilde a$ at all, $a_o^2$, is said to be $zeroth order$ in $\tilde
+a$ (because it involves $\tilde a$ to the zeroth power---$\tilde a^0 =$~1). The
+term that doesn't have anything to do with $\tilde a$ at all, $a_o^2$, is said
+to be $first order$ in $\tilde a$ (because it involves $\tilde a$ to the first
+power, $\tilde a^1 =\tilde a$.)
+
+Question: What is the relative contribution of each of the three terms $a_o^2$,
+$2 a_o \tilde a$, and $\tilde a^2$ to $a^2$?
 \begin{itemize}
 \item \makebox[6.5cm]{$ a_o^2 =$~1} 0th order  ,
 \item \makebox[6.5cm]{$ 2 a_o \tilde a = 0.1 $ } ($\tilde a^1$),
