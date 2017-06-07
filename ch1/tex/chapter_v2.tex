@@ -338,7 +338,7 @@ string it will pick a single frequency (and probably harmonics) at which to
 resonate based on the string tension as well as how thick and how long the
 string is.\footnote{Look up standing waves on a string. It's a classic in
   introductory physics courses.} That's the system---a string fixed at two
-ends. Like we discussed in the last section, there is a whole spectrum of
+ends. As we discussed in the last section, there is a whole spectrum of
 frequencies and wavelengths that the air allows, including the whole range of
 human hearing,\footnote{My own unfounded speculation is that humans must have
   evolved to hear over the range of frequencies that carry information most
@@ -683,7 +683,7 @@ solids,\footnote{A classic example of the is the dispersion relation for
   earlier than 2008 \citeauthor{Alvarez2008} gave a general dispersion relation
   for sound waves in air, which they show to be accurate for a variety of
   humidity levels and frequencies.}  I mean, come on: the reason rainbows appear
-in the sky?  Dispersion of the electromagnetic waves we call
+in the sky? Dispersion of the electromagnetic waves we call
 light!\footnote{Refraction is the answer from your high-school or freshman
   physics class, and that's right, but refraction itself is a result of
   dispersion.}
@@ -729,10 +729,10 @@ relation for---guess what?---\emph{dispersive} \Alf waves, and more particularly
   discussion of imaginary terms for wave growth and damping.} in which you
 immediately recognize the definition of the \Alf speed $v_A$ given in
 (\ref{ch1:eqAlf}).  But oh---what's that $\perp$ doing, dangling off $k$ on the
-right-hand side of (\ref{ch1:eqIAW})?  That, \textit{mes cheres amis}, indicates
-the wave number that is \emph{perpendicular} to the magnetic field line. 
+right-hand side of (\ref{ch1:eqIAW})?  I use it to denote the wave number that
+is \emph{perpendicular} to the magnetic field line.
 
-I hear you saying, ``But, but''---I know. I said that \Alf waves like to
+I hear you saying, ``But, but---'' I know. I said that \Alf waves like to
 propagate \emph{along} field lines, not across them. In the spirit of
 Epimenides\footnote{The compatriot-slandering (and possibly mythical)
   philosopher credited with the statement that all Cretans are liars.} I tell
@@ -751,13 +751,13 @@ IAWs.\footnote{Just a sampling:
 
 The layers of complication are that there are now \emph{two} terms involving
 wave number, $k_\perp$ and $k_\parallel$, and the new term in parentheses
-involving $k_\perp \lambda_e$, which serves to \emph{reduce} the \Alf speed
-(observe: when $k_\perp \lambda_e \gtrsim$~1, the whole factor multiplying $v_A$
-is less than 1). They aren't much to be worried about, but I should be careful
-to point out that I have not said (and unfortunately will not say) \emph{a
-  thing} about how to generate these waves. Many of the references given in the
-footnotes are great resources on this topic, as are the aforementioned work by
-\citet{Lysak1996} and \citet{Genot2004a}.
+involving $k_\perp \lambda_e$, which serves to reduce the \Alf speed (observe:
+when $k_\perp \lambda_e \gtrsim$~1, the whole factor multiplying $v_A$ is less
+than 1). They aren't much to be worried about, but I should be careful to point
+out that I have not said (and unfortunately will not say) \emph{a thing} about
+how to generate these waves. Many of the references given in the footnotes are
+great resources on this topic, as are the aforementioned work by
+\citet{Lysak1996}, \citet{Genot2004a}, and \citet{Morales1994}.
 
 Before beginning to derive (\ref{ch1:eqIAW}), I've got to drag you through a
 bunch of preliminaries. It's the theoretician's equivalent of bringing out that
@@ -788,86 +788,139 @@ assumptions that will allow us to slice and dice the equations into submission.
 
 I'm going to introduce you to a little procedure for making life
 simple---sometimes too simple---when doing theoretical work. In the biz, it's
-what we call \emph{linearization}. 
+what we call \emph{linearization}. But first I need to introduce you to some
+terminology surrounding the concept of \emph{ordering}, out of which
+linearization arises. I will introduce you by way of example.
 
-Here's a little illustration of the idea: Take two numbers like $a = 1.05$, and
-$a_o = 1$. How much does $a$ differ from $a_o$? $a - a_o =$~0.05, or
-equivalently, $a$ is 5\% greater than $a_o$. The difference isn't huge, but it's
-not exactly tiny either. I define this not-huge-but-not-tiny number as $ \tilde
-a \equiv a - a_o =$~0.05. For the sake of simplifying the discussion I'll call
-$a_o$ a \emph{background value}, and $\tilde a$ a \emph{perturbation value} that is
-somewhat small relative to $a_o$.
+Consider the nth-degree polynomial
+\begin{equation*}
+  % (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  A_n = \sum\limits_i^n c_n x^n = c_o + c_1 x^1 + c_2 x^2 + \dots + c_n x^n,
+\end{equation*}
+where the $i$th term in the polynomial has a constant coefficient $c_i$. Some of
+the orders have special names that you would recognize. For example, the
+first-order term ($i =$~1) is often called the \emph{linear} term. The
+second-order term ($i =$~2) is sometimes known as the \emph{quadratic} term. The
+third-order term ($i =$~3) is occasionally called the \emph{cubic} term, so on
+and so forth.
+
+Perhaps based on the name of the first-order (i.e., linear) term, you can start
+letting your wheels turn about how it might relate to linearization. In the
+meantime, let's continue forward.
+
+Here's a separate, but ultimately related idea: Take two numbers like
+$a = 1.05$, and $a_o = 1$. How much does $a$ differ from $a_o$?
+$a - a_o =$~0.05, or equivalently stated, $a$ is 5\% greater than $a_o$. The
+difference isn't huge, but it's not exactly tiny either. I define this
+not-huge-but-not-tiny number as $ \tilde a \equiv a - a_o =$~0.05. For the sake
+of simplifying the discussion I'll call $a_o$ a \emph{background value}, and
+$\tilde a$ a \emph{perturbation value} that is somewhat small relative to $a_o$.
 
 % Now, consider the number $b = 2050$. I'll separate it in the same manner that I
 % did $a$: a background value, $b_o =$~2000, and a perturbation value, $\tilde b
 % \equiv b - b_o =$~50.
-Now, consider the \emph{nonlinear quantity}\footnote{For any exponent $n
-  \neq$~1, the quantity $a^n$ is ``nonlinear.'' For the very special, very
-  particular case $n =$~1, the quantity $a^n$ is ``linear,'' meaning it is $a$
-  itself: $a^n = a^1 = a$.} $a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate
-$a^2$ again in a similar fashion, only this time we'll use $a = a_o + \tilde a$:
+Now, consider the \emph{nonlinear quantity}\footnote{For the very special, very
+  particular case $n =$~1, the quantity $a^n = a^1 = a$ is \emph{linear}, or $a$
+  itself. The reason for the name is that the general equation of a line is
+  restricted to the first power of $a$:
+  $y(a) = \sum_i^{n=1} \alpha_i a^i = \alpha_0 + \alpha_1 a$. Otherwise, for
+  $n > 1$, the relationship between $y(a)$ and $a$ is nonlinear.  }
+$a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate $a^2$ again in a similar
+fashion, only this time we'll use $a = a_o + \tilde a$:
 \begin{equation*}
   % (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
   (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + {\tilde a}^2 = (1)^2 + 2(1)(0.05) + (0.05)^2 = 1 + 0.1 + 0.0025 = 1.1025.
 \end{equation*}
+If we compare this equation to our polynomial and apply the concept of ordering
+to the perturbation value $\tilde a$, the term that doesn't have anything to do
+with $\tilde a$ at all, $a_o^2$, is the zeroth-order term $\tilde a$ because it
+involves $\tilde a$ to the zeroth power: $\tilde a^0 =$~1. The term
+$2 a_o \tilde a$ is first order, or linear, in $\tilde a$ because it involves
+$\tilde a$ to the first power: $\tilde a^1 =\tilde a$. The term $\tilde a^2$ is
+second order, or quadratic, in $\tilde a$ because it involves $\tilde a$ to
+the second power.  
 
 Question: What is the relative contribution of each of the three terms $a_o^2$,
-$2 a_o \tilde a$, and $\tilde a^2$ to $a^2$ The term that doesn't have anything
-to do with $\tilde a$ at all, $a_o^2$, is said to be $zeroth order$ in $\tilde
-a$ (because it involves $\tilde a$ to the zeroth power---$\tilde a^0 =$~1). The
-term that doesn't have anything to do with $\tilde a$ at all, $a_o^2$, is said
-to be $first order$ in $\tilde a$ (because it involves $\tilde a$ to the first
-power, $\tilde a^1 =\tilde a$.)
-
-Question: What is the relative contribution of each of the three terms $a_o^2$,
-$2 a_o \tilde a$, and $\tilde a^2$ to $a^2$?
+$2 a_o \tilde a$, and $\tilde a^2$ to the full value, $a^2$?
 \begin{itemize}
-\item \makebox[6.5cm]{$ a_o^2 =$~1} 0th order  ,
-\item \makebox[6.5cm]{$ 2 a_o \tilde a = 0.1 $ } ($\tilde a^1$),
-\item \makebox[6.5cm]{$ = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
-\item \makebox[6.5cm]{$ \mathbf{E} = \cancel{\mathbf{E}_o} + \mathbf{\tilde E} =
-    \langle \tilde E_x, 0, \tilde E_z \rangle $} (electric field).
+\item \makebox[6.5cm]{$ a_o^2 =$~1} (0th order in $\tilde a$),
+\item \makebox[6.5cm]{$ 2 a_o \tilde a = 0.1 $ } (first order in $\tilde a$),
+\item \makebox[6.5cm]{$ \tilde a^2 = 0.0025 $} (second order in $\tilde a$).
 \end{itemize}
 
-
+Can you see that the zeroth- and first-order terms are the most substantial? If
+we neglect the second-order term and only keep terms through the first degree in
+the expression for $a^2 = (a_o + \tilde a)^2$ above---that is, if we
+\emph{linearize} the expression---we would get
+\begin{equation*}
+  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+\end{equation*}
 The difference between the actual value $a^2$ and our approximation, which
-neglected $\tilde a^2$, is 0.0025---a measly 0.23\% of $a^2$.
+neglected $\tilde a^2$, is 0.0025---a measly 0.23\% of $a^2$. This fact is what
+motivates linearization: The second-order term (and any terms of higher order)
+are really small compared to the zeroth- and first-order terms.
 
-What's the message here? That terms involving a product of perturbation values
-are \emph{really small} compared 
+This, then, is the process of linearization: 
+\begin{enumerate}
+\item Separate each variable into a \emph{background value} and a
+  \emph{perturbation variable}.  (E.g., variables $a$ and $b$ become
+  $a = a_o + \tilde a$ and $b = b_o + \tilde b$.)
+\item Insert the expression that divides each variable into a background value
+  and a perturbation variable into the equation(s) under scrutiny, and perform
+  any necessary expansion so that each term can be ordered by degree in
+  perturbed quantities.
+\item Discard any terms that are nonlinear in perturbed variables. (E.g., if our
+  variables are $a$ and $b$, we discard any terms where the combinations
+  $\tilde a^2$, $\tilde b^2$, and $\tilde a \tilde b$ appear since they are nonlinear.)
+\end{enumerate}
+
+The whole process may strike you as much ado about nothing, but the fact is that
+linearization works just fine in a variety of physical scenarios. For example,
+the magnitude of the earth's magnetic field at an altitude of several hundred
+kilometers is in the neighborhood of tens of thousands of nanotesla, whereas the
+magnitude of magnetic field fluctuations associated with IAWs are often more
+like tens or hundreds of nanotesla. It would make sense, then, to divide the
+variable $\mathbf{B}$ that represents the magnetic field into a background value
+$\mathbf{B}_o$ (the earth's magnetic field) and a perturbation variable
+$\mathbf{b}$ (IAW-associated magnetic field fluctuations):
+$\mathbf{B} = \mathbf{B}_o + \mathbf{b}$.
+
+A frequently arising benefit of linearization is that it reduces the complexity
+of many problems. On the other hand, there are many situations where
+linearization is a bad idea. These situations include, for instance, when there
+is no steady background value to speak of, or when the fluctuations of a
+variable quantity are similar in magnitude to the background value. (Consider,
+for example, the outcome of the situation above if I had picked $a =$~1.5 and
+$\tilde a =$~0.5. The second-order term that would be neglected when linearizing
+$a^2$, $\tilde a^2 = 0.25$, is a much more substantial 12.5\% of the actual
+value $a^2 =$~2.25. In such a case, the validity of linearization should
+probably be questioned.)
 
 Leaping headfirst into the physics, I introduce each variable that we're
-interested in as a sum of a \emph{background quantity} and a \emph{perturbed
-  quantity}: \par
+interested in, a subset of which I separate into a sum of a \emph{background
+  value} and a \emph{perturbation variable}: \par
 \begin{itemize}
 \item \makebox[6.5cm]{$ n = n_o + \tilde n $} (number density),
 \item \makebox[6.5cm]{$ \mathbf{v} = \cancel{\mathbf{v}_o} + \mathbf{\tilde v} $ } (velocity),
 \item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
-\item \makebox[6.5cm]{$ \mathbf{E} = \cancel{\mathbf{E}_o} + \mathbf{\tilde E} =
-    \langle \tilde E_x, 0, \tilde E_z \rangle $} (electric field).
+\item \makebox[6.5cm]{$ \mathbf{E} = \langle E_x, 0, E_z \rangle $} (electric field).
 \end{itemize}
-\emph{Background quantities} have the ``o'' dangling off the front of them, and
-under the prescription of linearization, they do not vary in time or space
-(i.e., they are constants). \emph{Perturbed quantities} are all marked with a
-tilde over the top (with the solitary exception of $\mathbf{b}$), and they
-\emph{can} vary in time and space. Dividing each variable into a background and
-a perturbed quantity constitutes the ``what'' of linearization.
+\emph{Background values} have the ``o'' dangling off the front of them, and
+under the prescription of linearization I gave above, they do not vary in time
+or space (i.e., they are constants). \emph{Perturbation variables} are all
+marked with a tilde over the top (with the solitary exception of $\mathbf{b}$),
+and they \emph{can} vary in time and space.
 
+I hope you noticed that I dropped $\mathbf{v}_o$. The reason I have done this is
+that $\mathbf{v}_o$ represents steady background motion of the plasma, which is
+exactly what we are \emph{not} interested in. We're interested in fluctuations
+related to plasma waves, you see. The reason that we couldn't neglect
+$\mathbf{B}_o$ is, for one thing, that the presence of a background magnetic
+field is a necessary precondition for \Alf waves, both nondispersive and
+inertial! $\mathbf{B}_o$ is accordingly here to stay.
 
-This little example illustrates one of the two cruxes that determine whether
-linearization is valid: a perturbed quantity must be small relative to the
-corresponding background value, and the background value must be more or less
-static (i.e., a constant) in time and space. Failure to adhere
-
-there exist many scenarios where 
-
-Now let me address the ``why'' of linearization. Why do it? You can easily
-imagine that linearization is not always valid. Returning to my example, what if I had picked 0.5 as my perturbed value? The 
-
-I hope you noticed that I killed $\mathbf{E}_o$ and $\mathbf{v}_o$ before they
-even got to show their true colors. I also murdalized $\tilde E_y$ without so
-much as showing it the light of day. In this instantiation of the universe you
-and I will have no need of them, and they are accordingly cast off as dross.
+I also discarded any possibility of a $y$ component of the electric field by
+assuming $\mathbf{E}_y =$~0. Why? This one is motivated by observations of IAWs.
 
 % \subsubsection{Preliminary \#1a:  How to kill nonlinear perturbed quantities: an oh-so-brief illustration}
 \textbf{Preliminary \#1a:  How (and) to kill nonlinear perturbed quantities: an illustration}
@@ -880,25 +933,17 @@ number flux
 \end{equation}
 Can you spot the term on the right-hand side that involves the product of two
 perturbed quantities? Yes, it's $\tilde n \mathbf{\tilde v}$, and we have to
-kill this term because it is \emph{nonlinear} with respect to perturbed
-quantities, meaning it is made up of the product of the perturbed variables
-$\tilde n$ and $\mathbf{\tilde v}$.
-
-Why deal in such a ruthless and merciless manner with nonlinear terms? Remember
-that perturbed quantities are already small relative to background quantities,
-and the product of perturbed quantities is \emph{really} small compared to the
-product of background quantities. Nonlinear terms are the fastest, most basic,
-and most obvious route to making a theoretical problem intractable that I am
-aware of, and we are going to rid ourselves of them at every step
-possible. Especially if our aim is to keep distracting details , they spell
-nothing but \emph{trouble}!
+kill this term because it is \emph{nonlinear} with respect to perturbation
+variables, by which I mean that it is made up of the product of the perturbation
+variables $\tilde n$ and $\mathbf{\tilde v}$, and is consequently tiny compared
+to terms that are zeroth and first order in perturbation variables.
 
 The \emph{linearized} number flux is therefore
 \begin{equation}
   % n \mathbf{v} = n_o \mathbf{v}_o + n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o.
   n \mathbf{v} = n_o \mathbf{\tilde v} + \tilde n \mathbf{v}_o.
 \end{equation}
-See how nice that is? Only linearized terms.
+Isn't that nice? Only linearized terms.
 
 % \subsubsection{Preliminary \#2: Meet the equations}
 \subsubsection{Preliminary \#2: Meet the equations}
@@ -929,7 +974,7 @@ and other, external forces.\footnote{Just to frighten you, let me flash these
     m_{\alpha} n_{\alpha} \Big ( \dfrac{\partial \mathbf{v}_{\alpha}}{\partial
       t} + \mathbf{v}_{\alpha} \cdot \grad \mathbf{v}_{\alpha} \Big ) + \grad
     p_{\alpha} + \grad \cdot \overleftrightarrow{\Pi}_{\alpha} &= q_{\alpha}
-    n_{\alpha} \Big ( \mathbf{\tilde E} + \mathbf{v}_{\alpha} \times \mathbf{B} \Big )
+    n_{\alpha} \Big ( \mathbf{E} + \mathbf{v}_{\alpha} \times \mathbf{B} \Big )
     + \mathbf{F}_{\alpha}.
   \end{aligned}
 \end{equation*}
@@ -962,11 +1007,12 @@ destroyed within the system under investigation. ``Um, what do you mean by
 characters, the amount of time and space, and the level of detail necessary to
 carry out a theoretical investigation\footnote{As opposed to experimental
   investigation.} of the phenomena I have in mind. Here, our cast members are
-electrons and ions that are subject to a background magnetic field and to mutual
-effects of attraction and repulsion, but are otherwise free to move around. It
-turns out that this cast---electrons, ions, background magnetic field---can
-provide a pretty good description of much of the plasma goings-on within and
-around the terrestrial magnetosphere, as well as in the solar wind.
+electrons and ions that are subject to a magnetic field, an electric field, and
+to mutual effects of attraction and repulsion, but are otherwise free to move
+around. It turns out that this cast---electrons, ions, magnetic field, and
+electric field---can provide a pretty good description of much of the plasma
+goings-on within and around the terrestrial magnetosphere, as well as in the
+solar wind.
 
 ``But how many electrons and ions, and over what period of time and what region
 of space?'' Prepare for a level of freedom that is often unsettling for
@@ -982,7 +1028,7 @@ I should acknowledge that it takes time to appreciate such abstract thinking,
 but make no mistake about the value and power of the abstract. If you're still
 worried and want to know if we'll ever come out of the clouds, the answer is
 yes, when we want to apply our theoretical results to a particular situation. So
-in a word, save your worries for \emph{application}!\footnote{Or if you're a
+in a word, save your worries for \emph{application}.\footnote{Or if you're a
   theorist, leave all the worrying to the experimentalists! They'll let you know
   where you screwed up, weren't detailed enough, or otherwise made fatal
   omissions or assumptions.}
@@ -1014,7 +1060,7 @@ How about the momentum equation (\ref{ch1:eqMom})? It only has two things going
 on: the left-hand side is the temporal evolution (represented by $\partial
 / \partial t$ of the velocity perturbations $\mathbf{\tilde v}_\alpha$, and the
 right-hand side describes the effect of the perturbation electric field
-$\mathbf{\tilde E}$ and the background magnetic field $\mathbf{B}_o$ (which
+$\mathbf{E}$ and the background magnetic field $\mathbf{B}_o$ (which
 together comprise what is called the \emph{Lorentz force}) on electrons and
 ions.
 
@@ -1033,20 +1079,34 @@ equation.''\footnote{Wanna see it?  Here's the nonrelativistic version:
     \mathbf{x}} + \mathbf{a} \cdot \frac{\partial f}{\partial \mathbf{v}}$.
   $f = f (\mathbf{x}, \mathbf{v}, t)$ is known as a distribution function, and
   it gives the density of particles at $\mathbf{x}$---which is the position
-  vector---having velocity $\mathbf{v}$.} The Vlasov equation completely ignores
-particle-particle (or pair) collisions. (Hence the ``collisionless'' in
-``collisionless Boltzmann equation.'') Believe it or not, it is often valid to
-assume space plasmas are collisionless.\footnote{But not always!  When the
-  assumption is not valid one turns of necessity to the ``collisionful'' (my own
-  neologism) Boltzmann equation, which is known for leaving bruised, black-eyed,
-  and bloodied physicists in its wake.} On the other hand, the Vlasov equation
-allows for long-range\footnote{As opposed to ``short-range'' interaction, or
-  direct collisions between particles.}  interaction between all particles via
-the Coulomb force.\footnote{The eponymous Coulomb force, after Charles-Augustin
-  de Coulomb, just describes the repulsive or attractive force between charged
-  particles: $F_{\textrm{Coul}} = k \frac{q_1 q_2}{r^2}$. Can you see that the
-  force is positive (i.e., repulsive) if $q_1$ and $q_2$ have the same sign, and
-  negative (i.e., attractive) otherwise? Coulomb's law is scientific bedrock.}
+  vector---having velocity $\mathbf{v}$.} The Vlasov equation allows for
+long-range interaction between particles via the Coulomb force\footnote{The
+  eponymous Coulomb force, after Charles-Augustin de Coulomb, just describes the
+  repulsive or attractive force between charged particles:
+  $F_{\textrm{Coul}} = k \frac{q_1 q_2}{r^2}$. Can you see that the force is
+  positive (i.e., repulsive) if $q_1$ and $q_2$ have the same sign, and negative
+  (i.e., attractive) otherwise? Coulomb's law is scientific bedrock.}  but
+completely ignores short-range interactions such as particle-particle (or pair)
+collisions. (Hence the ``collisionless'' in ``collisionless Boltzmann
+equation.'') 
+
+Believe it or not, it is often valid to assume space plasmas are
+collisionless.\footnote{But not always!  When the assumption is not valid one
+  turns of necessity to the \emph{collisional} Boltzmann equation.} Here's the
+idea: Suppose the length that characterizes the length our system is $L$, and
+that the average distance that an ion or electron travels before banging into
+some other ion or electron is $l$.\footnote{What I have called $l$ is sometimes
+  known as the ``mean free path.''} If $l \gtrsim L$ (meaning $l$ is similar to
+or larger than $L$, or that the average distance between collissions is
+approximately the length scale of the system), the plasma is collisionless. If
+$l \ll L$ (meaning that it is virtually impossible for a particle at one end of
+the system to reach the other side without banging into a neighbor), the plasma
+is ``collisional.'' It's the difference between starting at one end of a
+ballroom and walking to the other side when the ballroom is empty
+(collisionless) and trying to walk to the other side when the floor is packed
+with dancers (collisional).
+
+
 
 To the second question, I suppose in a manner of speaking we could call
 (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) laws---or rather, you can think of them
@@ -1073,9 +1133,9 @@ demonstrate when one ought to become suspicious of (\ref{ch1:eqCont}) and
 density is waaay higher than in the magnetosphere, the total number of particles
 $N$ can change all the time\footnote{I.e., the right-hand side of
   (\ref{ch1:eqCont}) is not zero.} as a result of---oh, I don't know, let's say
-sunlight-induced photoionization of ionospheric particles. Strictly speaking,
-when the total number of particles changes the continuity equation
-(\ref{ch1:eqCont}) is no longer true.
+sunlight-induced photoionization of neutral particles in the
+ionosphere. Strictly speaking, when the total number of particles changes the
+continuity equation (\ref{ch1:eqCont}) is no longer true.
 
 In short, once we have decided to make the assumptions that make
 (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) valid, there's no going back; we can't
@@ -1107,13 +1167,13 @@ equations,\footnote{The four laws constituting Maxwell's equations---Gauss's
     \grad \times \mathbf{b} &= \mu_o \mathbf{\tilde j}. \label{ch1:eqAmp}
   \end{align}
 \end{subequations}
-In contrast to (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}) which I continue to
+In contrast to (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}), which I continue to
 emphasize are \emph{not} laws of nature, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp})
 \emph{are} laws. As far as I know, they are genuinely immutable.\footnote{Some
   of you will note I've discarded Maxwell's famous addition to
-  (\ref{ch1:eqAmp}), the displace current $\mu_o \epsilon_o \frac{\partial
-    \mathbf{E}}{\partial t}$. We're assuming our system evolves slowly enough
-  that we can neglect it.}
+  (\ref{ch1:eqAmp}), the displace current
+  $\mu_o \epsilon_o \frac{\partial \mathbf{E}}{\partial t}$. We're assuming our
+  system evolves slowly enough that we can neglect it.}
 
 The first of these, (\ref{ch1:eqFar}) or Faraday's law, is telling you that
 wherever you see an electric field having nonzero curl,\footnote{The concept of
@@ -1143,11 +1203,11 @@ Now for one of the fun parts. We get to make a bunch of assumptions about (for
 example) the way that magnetic and electric fields vary in time, and how the
 constituent particle species (which are ions and electrons) move and interact,
 all of which whittle away the unnecessary details of
-(\ref{ch1:eqCont}--\ref{ch1:eqFar}). At least right here and right now, my
+(\ref{ch1:eqCont})--(\ref{ch1:eqFar}). At least right here and right now, my
 motive in making any assumption is to save us from distraction by unnecessary
 details in the course of investigation. The commonness of this practice is the
-reason you will sometimes hear reference made to ``simplifying assumptions''; I
-have yet to hear reference made to ``complicating assumptions.''
+reason you will sometimes hear reference made to ``simplifying assumptions''. (I
+have yet to hear reference made to ``complicating assumptions.'')
 
 First of all, I propose a Cartesian coordinate system\footnote{We could use a
   dipolar coordinate system, as do \citet{Lysak2013}, but I'd rather keep it
@@ -1196,16 +1256,15 @@ We'll assume that the electric and magnetic field as well as the motion of
 particles in our system vary at low frequencies (option \#3) so that
 $\partial^2 / \partial t^2 \ll \omega_{ci}^2$.
 
+% It is fair for me to assume that throughout the scenario I'm about to concoct,
+% the variation in density is always small compared to the background density
 
-It is fair for me to assume that throughout the scenario I'm about to concoct,
-the variation in density is always small compared to the background density
-
-I'm also going to assume the existence of a (perturbation) electric field
-$\mathbf{\tilde E}$ that only varies in the $x-z$ plane:
-$\mathbf{\tilde E} (x, z, t) = \langle \tilde E_x (x, z, t), 0, \tilde E_z (x,
-z, t) \rangle$.
-(And yes, I have assumed $\tilde E_y = 0$; we simply don't need $\tilde E_y$, so why bother
-with it?)
+% I'm also going to assume the existence of a (perturbation) electric field
+% $\mathbf{E}$ that only varies in the $x-z$ plane:
+% $\mathbf{E} (x, z, t) = \langle E_x (x, z, t), 0, E_z (x,
+% z, t) \rangle$.
+% (And yes, I have assumed $E_y = 0$; we simply don't need $E_y$, so why bother
+% with it?)
 
 Last of all, I will assume a singly charged ion species so that $q_i = q$ (and
 of course $q_e = -q$).
@@ -1270,99 +1329,116 @@ that
 \end{equation}
 Ah, so! In this case the $x$ direction electron motion is opposite that of the
 ions, and at a speed that is less than that of ions by a factor of $m_e /
-m_i$. (In plain English: electrons move much, much more slowly than ions in the
-$x$ direction.) This is somewhat counterintuitive since electrons are much
-lighter than ions and presumably a lot easier to shove around, but that's why
-the math and physics do the driving and intuition takes the backseat.
+m_i$.
+(In plain English: electrons move much, much more slowly than ions in the $x$
+direction.) This is somewhat counterintuitive since electrons are much lighter
+than ions and presumably a lot easier to shove around, but that's why the math
+and physics do the driving and we force our intuition to take the backseat.
 
 Next, why don't we take a look at the $x$ component of the momentum equation
 (\ref{ch1:eqMom})? It is
 \begin{equation} \label{ch1:eqMomx} \dfrac{\partial \tilde v_{x,\alpha}}{\partial t} =
-  \dfrac{q_\alpha}{m_\alpha} \Big ( \tilde E_x + \tilde v_{y,\alpha} B_o - \cancel{\tilde v_{z,\alpha} b_y}
-  \Big ) = \dfrac{q_\alpha}{m_\alpha} \tilde E_x \pm \omega_{c \alpha} \tilde v_{y,\alpha},
+  \dfrac{q_\alpha}{m_\alpha} \Big ( E_x + \tilde v_{y,\alpha} B_o - \cancel{\tilde v_{z,\alpha} b_y}
+  \Big ) = \dfrac{q_\alpha}{m_\alpha} E_x \pm \omega_{c \alpha} \tilde v_{y,\alpha},
 \end{equation}
-where I've junked the $\tilde v_{z,\alpha} b_y$ term because it is \emph{nonlinear}
-(i.e., the product of two small quantities, as mentioned above), and the upper
-sign on the right-hand side is for ions and the lower sign is for electrons,
-here and in the future. The extra signage is necessary to account for the
+where I am junking the $\tilde v_{z,\alpha} b_y$ term because it is nonlinear
+(or the product of two small quantities, as mentioned above), and the upper sign
+on the right-hand side is for ions and the lower sign is for electrons, here and
+in the future. The extra signage is necessary to account for the
 charge-dependent direction of the magnetic force (\ref{ch1:eqMagForce}).
 
 Can you see that if I take the time derivative of (\ref{ch1:eqMomx}),
-$\frac{\partial \tilde v_{y,\alpha}}{\partial t}$ will appear on the right-hand side?
-I can then ladle in (\ref{ch1:eqMomy}) for $\frac{\partial
-  \tilde v_{y,\alpha}}{\partial t}$,
-\begin{equation*} \label{ch1:eqMomxdt} \dfrac{\partial^2 \tilde v_{x,\alpha}}{\partial
-    t^2} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial \tilde E_x}{\partial t} \pm
-  \omega_{c \alpha} \dfrac{\partial \tilde v_{y,\alpha}}{\partial t} =
-  \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial \tilde E_x}{\partial t} - \omega_{c
-    \alpha}^2 \tilde v_{x,\alpha},
+$\frac{\partial \tilde v_{y,\alpha}}{\partial t}$ will appear on the right-hand
+side?  I can then ladle in (\ref{ch1:eqMomy}) for
+$\frac{\partial \tilde v_{y,\alpha}}{\partial t}$,
+\begin{equation*} \label{ch1:eqMomxdt} \dfrac{\partial^2 \tilde
+    v_{x,\alpha}}{\partial t^2} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial
+    E_x}{\partial t} \pm \omega_{c \alpha} \dfrac{\partial \tilde
+    v_{y,\alpha}}{\partial t} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial
+    E_x}{\partial t} - \omega_{c \alpha}^2 \tilde v_{x,\alpha},
 \end{equation*}
 and moving the term at far right to the left-hand side,
 \begin{equation*} \Big ( \dfrac{\partial^2}{\partial t^2} + \omega_{c \alpha}^2
-  \Big ) \tilde v_{x,\alpha} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial \tilde E_x}{\partial
+  \Big ) \tilde v_{x,\alpha} = \dfrac{q_\alpha}{m_\alpha}\dfrac{\partial E_x}{\partial
     t},
 \end{equation*}
 I draw on my assumption that only low frequencies are of interest so that
 $\partial^2 / \partial t^2 + \omega_{c i}^2~\approx~\omega_{c i}^2$. Thus
 \begin{equation} \label{ch1:eqvxEx}
   \tilde v_{x,\alpha} = \pm \dfrac{1}{\omega_{c \alpha} B_o}\dfrac{\partial
-    \tilde E_x}{\partial t}.
+    E_x}{\partial t}.
 \end{equation}
 
+The beauty of \ref{ch1:eqvxEx} is that it relates $\tilde v_{x,\alpha}$ to the
+$x$ component of the electric field, with no other variables to get in the
+way. This will be handy later on.
+
 Only the $z$ component of (\ref{ch1:eqMom}) remains to be examined. It's a cakewalk:
-\begin{equation} \label{ch1:eqvzEz} \dfrac{\partial v_{z,\alpha}}{\partial t} =
-  \dfrac{q_\alpha}{m_\alpha} \Big ( \tilde E_z + \cancel{\tilde v_{x,\alpha} b_y} -
-  \cancel{\tilde v_{y,\alpha} b_x} \Big ) = \pm \dfrac{\omega_{c \alpha}}{B_o} \tilde E_z.
+\begin{equation} \label{ch1:eqvzEz} \dfrac{\partial \tilde
+    v_{z,\alpha}}{\partial t} = \dfrac{q_\alpha}{m_\alpha} \Big ( E_z +
+  \cancel{\tilde v_{x,\alpha} b_y} - \cancel{\tilde v_{y,\alpha} b_x} \Big ) =
+  \pm \dfrac{\omega_{c \alpha}}{B_o} E_z.
 \end{equation}
-Baller, right? For my next trick, I'll plug (\ref{ch1:eqvxEx}) and
-(\ref{ch1:eqvzEz}) into the appropriate components of $\mathbf{\tilde j}$,
+Baller, right? Now we have expressions relating $\tilde v_{x,\alpha}$ and
+$\tilde v_{z,\alpha}$ to $E_x$ and $E_z$, respectively. For my next trick, I'll
+plug (\ref{ch1:eqvxEx}) and (\ref{ch1:eqvzEz}) into the appropriate components
+of $\mathbf{\tilde j}$,
 \begin{equation*} 
   \begin{alignedat}{4}
-    \tilde j_x                              &= q n_o &\Big ( \tilde v_{x,i} - & \tilde v_{x,e} \Big ) = & \dfrac{n_o}{B_o^2} &\Big( m_i + m_e \Big) \dfrac{\partial \tilde E_x}{\partial t}; \\
-    \dfrac{\partial \tilde j_z}{\partial t} &= q n_o \dfrac{\partial}{\partial t} &\Big ( \tilde v_{z,i} - & \tilde v_{z,e} \Big ) =& q^2 n_o &\Big( \dfrac{1}{m_i} + \dfrac{1}{m_e} \Big) \tilde E_z. \\
+    \tilde j_x                              &= q n_o &\Big ( \tilde v_{x,i} - & \tilde v_{x,e} \Big ) = & \dfrac{n_o}{B_o^2} &\Big( m_i + m_e \Big) \dfrac{\partial E_x}{\partial t}; \\
+    \dfrac{\partial \tilde j_z}{\partial t} &= q n_o \dfrac{\partial}{\partial t} &\Big ( \tilde v_{z,i} - & \tilde v_{z,e} \Big ) =& q^2 n_o &\Big( \dfrac{1}{m_i} + \dfrac{1}{m_e} \Big) E_z. \\
   \end{alignedat}
 \end{equation*}
-Now we do the famous ``drop all terms of order [uninteresting science].'' In
-this case I'll drop all terms of order $m_e/m_i$, which means that I tug and
-pull at the expressions for $\tilde j_x$ and $\tilde j_z$ that I just produced
-to try to make the combination $m_e/m_i$ appear. When it does, I blast the whole
-term to which it is joined into next week (i.e., set it to zero)! Here, take my
+Now we do something similar to linearization with these equations. Remember how
+we dropped all terms that were nonlinear in perturbation variables because they
+were really small? Consider the electron-ion mass ratio
+$m_e / m_i \simeq 1 / 1836 \ll 1$. Even to first order, $m_e / m_i$ is a really
+small quantity (compared to 1)! Consequently, I'm going to drop any terms that
+are even first-order in $m_e/m_i$. To do this, I have to tug and pull at the
+expressions for $\tilde j_x$ and $\tilde j_z$ that I just produced to try to
+make the combination $m_e/m_i$ appear. When it does, I blast the whole term to
+which $m_e / m_i$ is joined into next week (i.e., set it to zero). Here, take my
 pistol\footnote{A pencil \emph{is} a theorist's pistol, don't you know.} and
 give it a shot; you should find
 \begin{equation} \label{ch1:eqDaddy}
   \begin{alignedat}{4}
-    \tilde j_x                              &= \dfrac{m_i n_o }{B_o^2} \dfrac{\partial \tilde E_x}{\partial t}; \\
-    \dfrac{\partial \tilde j_z}{\partial t} &= \dfrac{q^2 n_o }{m_e} \tilde E_z. \\
+    \tilde j_x                              &= \dfrac{m_i n_o }{B_o^2} \dfrac{\partial E_x}{\partial t}; \\
+    \dfrac{\partial \tilde j_z}{\partial t} &= \dfrac{q^2 n_o }{m_e} E_z. \\
   \end{alignedat}
 \end{equation}
 
-I'm sure you're feeling more and more disoriented: ``Where on earth is he taking
-us? I've always hated camping and I wish I were at home playing video games.''
-That's OK---the type of exploration we embark on now is best suited for the
-hardier and more sanguinely disposed wayfarer. You're better off leaving now if
-you aren't rounding your shoulders and stiffening your back, since we are about
-to enter a brief but veritable thicket of maths\footnote{An intentional nod to
-  the English-speaking world outside the United States.} in which you are almost
-definitely going to lose your sense of direction if you've never before
-traversed such terrain.
+% I'm sure you're feeling more and more disoriented: ``Where on earth is he taking
+% us? I've always hated camping and I wish I were at home playing video games.''
+% That's OK---the type of exploration we embark on now is best suited for the
+% hardier and more sanguinely disposed wayfarer. You're better off leaving now if
+% you aren't rounding your shoulders and stiffening your back, since we are about
+% to enter a brief but veritable thicket of maths\footnote{An intentional nod to
+%   the English-speaking world outside the United States.} in which you are almost
+% definitely going to lose your sense of direction if you've never before
+% traversed such terrain.
 
-If I plug the expressions (\ref{ch1:eqDaddy}) for $\tilde j_x$ and $\tilde j_z$ into
-(\ref{ch1:eqCont2}), I obtain the seemingly meaningless result
+Nice shot! What we're ultimately aiming for is an equation that is only in terms
+of one component of the electric field. Since I'm leading we're going to seek
+out an equation in terms of $E_x$, but be aware that we would arrive at the same
+place (i.e., the IAW dispersion relation) if we instead chose to focus on $E_z$.
+
+Plugging the expressions (\ref{ch1:eqDaddy}) for $\tilde j_x$ and $\tilde j_z$
+into (\ref{ch1:eqCont2}) gives the seemingly meaningless result
 \begin{equation*}
   % \begin{alignedat}{4}
     \dfrac{\partial^2}{\partial t \partial x} \Big( \tilde j_x \Big) + \dfrac{\partial}{\partial z}
     \Big( \dfrac{\partial \tilde j_z}{\partial t} \Big) = \dfrac{\partial^2}{\partial
-      t \partial x} \Big(\dfrac{m_i n_o }{B_o^2}\dfrac{\partial \tilde E_x}{\partial t} \Big) +
-    \dfrac{\partial}{\partial z} \Big( \dfrac{q^2 n_o}{m_e} \tilde E_z \Big) = 0.
+      t \partial x} \Big(\dfrac{m_i n_o }{B_o^2}\dfrac{\partial E_x}{\partial t} \Big) +
+    \dfrac{\partial}{\partial z} \Big( \dfrac{q^2 n_o}{m_e} E_z \Big) = 0.
   % \end{alignedat}
 \end{equation*}
 If I multiply the whole thing by $\mu_o c^2$ I get 
 \begin{equation} \label{ch1:eqMeaningless}
-  \dfrac{c^2}{v_A^2}\dfrac{\partial^3 }{\partial t^2 \partial x} \tilde E_x + \dfrac{1}{\omega_{pe}}\dfrac{\partial}{\partial z} \tilde E_z = 0,
+  \dfrac{c^2}{v_A^2}\dfrac{\partial^3 }{\partial t^2 \partial x} E_x + \dfrac{1}{\omega_{pe}}\dfrac{\partial}{\partial z} E_z = 0,
 \end{equation}
 which you have to admit is a little better; old friends like $v_A$ and the speed
 of light $c$ are also out in the woods today! Say, have I introduced you to that
-leathery-looking bloke standing underneath $\tilde E_z$? That's the electron
+leathery-looking bloke standing underneath $E_z$? That's the electron
 plasma frequency
 \begin{equation*}
 \omega_{pe} = \sqrt{ \dfrac{n_o q^2}{m_e \epsilon_o}};
@@ -1370,73 +1446,101 @@ plasma frequency
 in terrestrial plasmas it is well above $\omega_{ci}$. $\omega_{pe}$ has not
 finished rearing its head, so don't completely forget about it.
 
-To really start a grease fire we need to get together with the $y$ component of
-Faraday's law,
+At this point, (\ref{ch1:eqMeaningless}) leaves us stuck with a term involving
+$E_z$ that we would like to get rid of or perhaps replace with something
+involving $E_x$. How to do it? Well, did you notice that we obtained
+(\ref{ch1:eqMeaningless}) using only the continuity equation and the momentum
+equation? We can still look at Amp\`{e}re's law (\ref{ch1:eqAmp}) and Faraday's
+law (\ref{ch1:eqFar}) to see what bartering power they might provide.
+
+It turns out that to really start a grease fire we need to get together with the
+$y$ component of Faraday's law,
 \begin{equation*}
-  \Big ( \grad \times \mathbf{\tilde E} \Big )_y = \dfrac{\partial \tilde E_x}{\partial z} - \dfrac{\partial \tilde E_z}{\partial x} = - \dfrac{\partial b_y}{\partial t},
+  \Big ( \grad \times \mathbf{E} \Big )_y = \dfrac{\partial E_x}{\partial z} - \dfrac{\partial E_z}{\partial x} = - \dfrac{\partial b_y}{\partial t},
 \end{equation*}
 the expressions for $\tilde j_x$ and $\frac{\partial \tilde j_z}{\partial t}$ in
 (\ref{ch1:eqDaddy}), and the $x$ component of Amp\`{e}re's law. The left-hand
 side of the $x$ component of Amp\`{e}re's law is
 \begin{equation*}
-  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big )_x = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_o} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 \tilde E_x}{\partial z^2} - \dfrac{\partial^2 \tilde E_z}{\partial x \partial z},
+  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big )_x = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_o} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 E_x}{\partial z^2} - \dfrac{\partial^2 E_z}{\partial x \partial z},
 \end{equation*}
 while the right-hand side is 
 \begin{equation*}
-  \mu_o \dfrac{\partial}{\partial t} \tilde j_x = \mu_o \dfrac{\partial}{\partial t} \Big ( \dfrac{n_o m_i}{B_o^2} \dfrac{\partial \tilde E_x}{\partial t} \Big ) = \mu_o \Big ( \dfrac{n_o m_i}{B_o^2} \Big ) \dfrac{\partial^2 \tilde E_x}{\partial t^2} = \dfrac{1}{v_A^2} \dfrac{\partial^2 \tilde E_x}{\partial t^2}.
+  \mu_o \dfrac{\partial}{\partial t} \tilde j_x = \mu_o \dfrac{\partial}{\partial t} \Big ( \dfrac{n_o m_i}{B_o^2} \dfrac{\partial E_x}{\partial t} \Big ) = \mu_o \Big ( \dfrac{n_o m_i}{B_o^2} \Big ) \dfrac{\partial^2 E_x}{\partial t^2} = \dfrac{1}{v_A^2} \dfrac{\partial^2 E_x}{\partial t^2}.
 \end{equation*}
 Equating each side, 
 \begin{equation} \label{ch1:eqMeaningless2} \dfrac{\partial^2 \tilde
-    E_x}{\partial z^2} - \dfrac{\partial^2 \tilde E_z}{\partial x \partial z} =
-  \dfrac{1}{v_A^2} \dfrac{\partial^2 \tilde E_x}{\partial t^2},
+    E_x}{\partial z^2} - \dfrac{\partial^2 E_z}{\partial x \partial z} =
+  \dfrac{1}{v_A^2} \dfrac{\partial^2 E_x}{\partial t^2},
 \end{equation}
-we obtain our second seemingly meaningless result.
-
-And now the fire is burning, and you're utterly bewildered! Don't stop there;
-we've got to take the derivative of (\ref{ch1:eqMeaningless}) with respect to
-$x$ and divide by $\omega_{pe}^2$, which will give us a term
-$-\frac{\partial^2 \tilde E_z}{\partial x \partial z}$ that we can slip into
-(\ref{ch1:eqMeaningless2}). Take heart, tenderfoot; we're near the top! Taking
-the derivative with respect to $x$ and dividing by $\omega_{pe}^2$, we find
+we obtain the second grand (though as yet useless) result, an equation that is
+only in terms of $E_x$ and $E_z$. Take heart, tenderfoot; we're near the top!
+To accomplish this, I need
+to %combine (\ref{ch1:eqMeaningless}) and (\ref{ch1:eqMeaningless2}), all
+take the derivative of (\ref{ch1:eqMeaningless}) with respect to $x$ and divide
+by $\omega_{pe}^2$, which will give us a term
+$-\frac{\partial^2 E_z}{\partial x \partial z}$ that we can slip into
+(\ref{ch1:eqMeaningless2}). Performing this maneuver, we find
+% And now the fire is burning, and you're utterly bewildered! Don't stop there;
+% we've got to take the derivative of (\ref{ch1:eqMeaningless}) with respect to
+% $x$ and divide by $\omega_{pe}^2$, which will give us a term
+% $-\frac{\partial^2 E_z}{\partial x \partial z}$ that we can slip into
+% (\ref{ch1:eqMeaningless2}). Take heart, tenderfoot; we're near the top! Taking
+% the derivative with respect to $x$ and dividing by $\omega_{pe}^2$, we find
 \begin{equation*}
-  -\dfrac{\partial^2 \tilde E_z}{\partial x \partial z} = \dfrac{c^2}{\omega_{pe}^2 v_A^2} \dfrac{\partial^4 \tilde E_x}{\partial x^2 \partial z^2}.
+  -\dfrac{\partial^2 E_z}{\partial x \partial z} = \dfrac{c^2}{\omega_{pe}^2 v_A^2} \dfrac{\partial^4 E_x}{\partial x^2 \partial z^2}.
 \end{equation*}
-See how nicely that'll slip right into (\ref{ch1:eqMeaningless2}) and rid us of any terms having to do with smelly old $\tilde E_z$? Go
-ahead and slap it in, multiplying both sides by $\frac{\omega_{pe}^2}{v_A^2}$ as you go, to find
+See how nicely that'll slip right into (\ref{ch1:eqMeaningless2}) and rid us of
+any terms having to do with $E_z$? Go ahead and slap this result into
+(\ref{ch1:eqMeaningless}), multiplying both sides by
+$\frac{\omega_{pe}^2}{v_A^2}$ as you go, to find
 \begin{equation} \label{ch1:eqAlmost}
-  \Big [ \omega_{pe}^2 \Big ( \dfrac{\partial^2}{\partial z^2} - \dfrac{1}{v_A^2} \dfrac{\partial^2}{\partial t^2} \Big ) + \dfrac{c^2}{v_A^2} \dfrac{\partial^4}{\partial x^2 \partial t^2} \Big ] \tilde E_x = 0.
+  \Big [ \omega_{pe}^2 \Big ( \dfrac{\partial^2}{\partial z^2} - \dfrac{1}{v_A^2} \dfrac{\partial^2}{\partial t^2} \Big ) + \dfrac{c^2}{v_A^2} \dfrac{\partial^4}{\partial x^2 \partial t^2} \Big ] E_x = 0.
 \end{equation}
 
-Whoa: a millionth-order differential equation in $\tilde E_x$---all right,
-fourth-order equation, but who has actually heard of those? It doesn't matter;
-let's slay the beast in a single stroke by making the cheapest
-assumption\footnote{The experienced will recognize this assumption as the good
-  old \emph{plane wave ansatz}. To quote Jimi Hendrix, ``Are you experienced?''}
-about $E_x$ that we possibly could,
+Whoa: a fourth-order\footnote{When I say ``fourth-order'' with reference to
+  (\ref{ch1:eqAlmost}), I mean that it involves up to four derivatives with
+  respect to time, or space (or both)---namely, $\partial^4/\partial t^4$ and
+  $\partial^4 / \partial x^2 \partial t^2$.}  differential equation in $E_x$!
+Who can actually solve one of these? We can, and we can slay the beast in a
+single stroke by making the cheapest assumption\footnote{The experienced will
+  recognize this assumption as the good old \emph{plane wave ansatz}. To quote
+  Jimi Hendrix, ``Are you experienced?''}  about $E_x$ that we possibly could,
+% Whoa: a millionth-order differential equation in $E_x$---all right,
+% fourth-order equation, but who has actually heard of those? It doesn't matter;
+% let's slay the beast in a single stroke by making the cheapest
+% assumption\footnote{The experienced will recognize this assumption as the good
+%   old \emph{plane wave ansatz}. To quote Jimi Hendrix, ``Are you experienced?''}
+% about $E_x$ that we possibly could,
 \begin{equation*}
-  \tilde E_x = \tilde E_{x,o} \mathrm{exp} \Big ( k_\perp x + k_\parallel z - \omega t \Big ),
+  E_x = E_{x,o} \mathrm{exp} \Big ( k_\perp x + k_\parallel z - \omega t \Big ),
 \end{equation*}
 so that 
 \begin{equation} \label{ch1:bro}
   \begin{alignedat}{2}
-\frac{\partial \tilde E_x}{\partial t} &=  -i \omega \tilde E_x; \\
-\frac{\partial \tilde E_x}{\partial x} &=   i k_\perp \tilde E_x; \\
-\frac{\partial \tilde E_x}{\partial z} &=   i k_\parallel \tilde E_x. \\
+\frac{\partial E_x}{\partial t} &=  -i \omega E_x; \\
+\frac{\partial E_x}{\partial x} &=   i k_\perp E_x; \\
+\frac{\partial E_x}{\partial z} &=   i k_\parallel E_x. \\
   \end{alignedat}
 \end{equation}
 
 OK, let's take it to the top! Plugging the expressions (\ref{ch1:bro}) into
 (\ref{ch1:eqAlmost}) finally gives
-\begin{equation} \label{ch1:bro}
-  \Big [ \omega_{pe}^2 \Big ( \dfrac{\omega^2}{v_A^2} - k_\parallel^2 \Big ) + \dfrac{c^2}{v_A^2} k_\perp^2 \omega^2 \Big ] \tilde E_x = 0,
+\begin{equation} \label{ch1:broness}
+  \Big [ \omega_{pe}^2 \Big ( \dfrac{\omega^2}{v_A^2} - k_\parallel^2 \Big ) + \dfrac{c^2}{v_A^2} k_\perp^2 \omega^2 \Big ] E_x = 0.
 \end{equation}
-and casting $\tilde E_x$ aside like the piece of garbage it has shown itself to
-be, we can easily rearrange the spoils of victory to show
+
+There are only two ways for (\ref{ch1:broness}) to be true: Either $E_x =$~0, or
+everything in between the square brackets is zero. We've gone to tremendous
+lengths to carry $E_x$ around and it would be mind-numbingly anticlimactic to
+set $E_x =$~0 now, so we opt for the latter. 
+
+Rearranging the spoils of victory, we find
 \begin{equation}
   \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }},
 \end{equation}
-which was to be demonstrated, and is triple baller. (Oh, and $\lambda_e = c /
-\omega_{pe}$.)
+which was to be demonstrated. Take a moment to survey the terrain we've just
+covered, after which I'll tell you more about $\lambda_e = c / \omega_{pe}$.
 
 \subsubsection{What exactly does the plasma skin depth $\lambda_e$ mean?} 
 
@@ -1762,15 +1866,16 @@ active'' periods,\footnote{In kid speak, an example of a geomagnetically active
   \emph{corotating interaction region} or \emph{coronal mass ejection} or
   \emph{magnetic cloud}.) Another possibility is the sun barfing on the earth
   while hanging upside-down on the monkey bars (i.e., the interplanetary
-  magnetic field is predominantly southward).}, but things like the frequency of
+  magnetic field is predominantly southward), in which case the earth's magnetic
+  field acts like a half-wave rectifier for the solar wind \citep{Burton1975}. How
+  cool is that?} but things like the frequency of \Alf wave observation, the
+amount of energy directly carried by \Alf waves into the ionosphere, the amount
+of energy that \Alf waves dump into electrons in order to accelerate them
+\textit{en masse} toward earth, etc., had not been systematically studied as a
+function of, or in response to, geomagnetic storms. (By the way, I'll use the
+code phrase \emph{measures of \Alfic activity} in place of ``the frequency of
 \Alf wave observation, the amount of energy directly carried by \Alf waves into
-the ionosphere, the amount of energy that \Alf waves dump into electrons in
-order to accelerate them \textit{en masse} toward earth, etc., had not been
-systematically studied as a function of, or in response to, geomagnetic
-storms. (By the way, I'll use the code word \emph{measures of \Alfic activity}
-in place of ``the frequency of \Alf wave observation, the amount of energy
-directly carried by \Alf waves into the ionosphere, the amount of \dots''
-etc. etc., in succeeding paragraphs.)
+the ionosphere, the amount of \dots'' etc. etc., in succeeding paragraphs.)
 
 % % ---------------- FIGURE
 
@@ -1786,8 +1891,15 @@ etc. etc., in succeeding paragraphs.)
 % ----------------
 
 Enter: Chapter 1. My coauthors and I have performed just such a study, chunking
-things up by geomagnetic storm phase and relative to so-called \emph{storm
-  sudden commencement.} I've provided a more or less canonical picture of a
+up measures of \Alfic activity by geomagnetic storm phase and relative to
+so-called \emph{storm sudden commencement}, which signals the sudden arrival of
+one of a few particular forms of nastiness that the sun throws at
+us\footnote{One of the sun's greatest hits for causing sudden commencement is a
+  coronal mass ejection.}, and which results in rapid compression of the bow
+shock, or the interface between the solar wind and the magnetosphere on the side
+of the earth that faces the sun.
+
+I've provided a more or less canonical picture of a
 geomagnetic storm in Figure~\ref{ch1:fDstStorm}, with colored lines to give you
 a sense for each of the three storm phases: quiescence (green line), storm main
 phase (red line), and storm recovery phase (blue line).\footnote{If you're in
@@ -1826,59 +1938,77 @@ global rates during quiescent periods.)
 \subsubsection{Study \#3: IAWs, with interplanetary magnetic field starring as taskmaster}
 % \textbf{Study \#3: IAWs, with interplanetary magnetic field starring as taskmaster}
 
+% For our third study, a group of coauthors and I formulated a to-be-revealed
+% question related to some basic facts about the solar wind and the awesomely
+% named \emph{interplanetary MF}. ``An \emph{interplanetary} MF? I can barely
+% fathom what an MF is, let alone an interplanetary one!'' Ha! You kill me, would
+% you stop that? As every Joe on the street knows, MF stands for---that's right,
+% ``magnetic field.'' So yes, my coauthors and I were in pursuit of understanding
+% the role of this interplanetary-flavored MF in controlling IAWs. ``A flavored
+% MF?'' You jokester, I'm not going to egg you on by answering any more silly
+% questions. This is graduate school! You have to grow up!
 For our third study, a group of coauthors and I formulated a to-be-revealed
-question related to some basic facts about the solar wind and the awesomely
-named \emph{interplanetary MF}. ``An \emph{interplanetary} MF? I can barely
-fathom what an MF is, let alone an interplanetary one!'' Ha! You kill me, would
-you stop that? As every Joe on the street knows, MF stands for---that's right,
-``magnetic field.'' So yes, my coauthors and I were in pursuit of understanding
-the role of this interplanetary-flavored MF in controlling IAWs. ``A flavored
-MF?'' You jokester, I'm not going to egg you on by answering any more silly
-questions. This is graduate school! You have to grow up!
+question related to some basic facts about the role of the solar wind and its
+role in controlling IAWs. Scientists of yesteryear (notably \citet{Parker1958})
+figured out that there is a magnetic field frozen into the solar wind; these
+days it goes under the name of interplanetary magnetic field, or IMF. The
+direction that the IMF is pointing at any given time dictates, or (perhaps
+better stated) leads to variation in a surprising number of magnetospheric and
+ionospheric (and even thermospheric) phenomena. You can find lots of details at
+the beginning of Chapter~4, where coauthors and I review the literature related
+to a selection of these phenomena.
 
-So like I was saying, MFs and waves. Scientists of yesteryear (notably
-\citet{Parker1958}) figured out that there is a magnetic field frozen into the
-solar wind; these days it goes under the name of interplanetary magnetic field,
-or IMF---what I was calling interplanetary MF just to razz you. The direction
-that the IMF is pointing at any given time dictates, or (perhaps better stated)
-leads to variation in a surprising number of magnetospheric and ionospheric (and
-even thermospheric) phenomena. You can find lots of details at the beginning of
-Chapter 4, where coauthors and I review the literature related to a selection of
-these phenomena.
+% ``An \emph{interplanetary} MF? I can barely fathom what an MF
+% is, let alone an interplanetary one!'' Ha! You kill me, would you stop that? As
+% every Joe on the street knows, MF stands for---that's right, ``magnetic field.''
+% So yes, my coauthors and I were in pursuit of understanding the role of this
+% interplanetary-flavored MF in controlling IAWs. ``A flavored MF?'' You jokester,
+% I'm not going to egg you on by answering any more silly questions. This is
+% graduate school! You have to grow up!
+
+% So like I was saying, MFs and waves. 
 
 The thing is, among the ocean of studies detailing the role of the solar wind
 and IMF in everything from wave generation \citep[][for
 example]{Claudepierre2008} and low-latitude boundary layer formation
 \citep{Song2003a}\footnote{You no doubt realize that these examples are
-  completely arbitrary.}  to which direction water in your toilet
-swirls\footnote{I'm lying; to my knowledge no one has actually studied this.}
-and your horoscope,\footnote{Another bold-faced lie.} no one has systematically
-studied the role of the solar wind and IMF in controlling IAWs in the
-magnetosphere-ionosphere transition region!  It thus behooved my coauthors and
-me to say something on the subject, and one of the results seems to confirm an
-effect observed in simulation that is counterintuitive based on what other
-studies have established. In specific, a simulation-based study of IMF control
-of \emph{nondispersive, large-scale} \Alf waves (as opposed to
-\emph{small-scale, dispersive} \Alf waves).
+  completely arbitrary.}  to which direction water in your toilet swirls and
+your horoscope,\footnote{I'm lying; to my knowledge no one has actually studied
+  these connections.} no one has systematically studied the role of the solar
+wind and IMF in controlling IAWs in the magnetosphere-ionosphere transition
+region! 
+
+It thus behooved my coauthors and me to say something on the subject, and one of
+the results seems to confirm an effect observed in simulation that is
+counterintuitive based on what other studies have established. In specific, a
+simulation-based study of IMF control of \emph{nondispersive, large-scale} \Alf
+waves (as opposed to the \emph{small-scale, dispersive} \Alf waves that my work
+has focused on) by \citet{Zhang2014} predicted that the primary locus of \Alfic
+Poynting flux moves in a direction that is more or less opposite the direction
+that the markers of the direct-entry cusp\footnote{I again refer you to the
+  beginning of Chapter~4 for some discussion of the direct-entry cusp.} move. We
+show that a rather similar response is observed in patterns of IAW activity.
 
 \subsubsection{Study \#4: Old dogs doing new tricks}
 % \textbf{Study \#4: Old dogs doing new tricks}
 
 The backdrop for this study is classic. A former member of the LaBelle group,
 Matt Broughton (super high-quality chap), occasionally contacts me to ask if I
-can relay some recently published study or other to him---yes, skipping the cost
-of subscription\footnote{Does this practice cause me to scruple?  Frankly, no,
-  although maybe it should. I am pained by the reality that knowledge has a
-  price in today's world; I feel it a matter about which all humans ought to
-  reflect and ask internally if they feel any shame (and I think we should). The
-  extent to which the reality exists is, to me, a more-or-less direct measure of
-  the degree to which our hearts, collectively speaking, are fixated upon the
-  banal, the perishable, the mammon from which springs forth so much inequity,
-  pride, and unhappiness. I remove from the pulpit.} and all that---and I say,
-``Sure, have it right over to ya, buddy.'' Well, I get to reading this
-thing---\citet{Bellan2016}, that is---and I says to myself, ``Hmmm \dots'' And
-then I think a little more and I says ``Hmmm \dots . \dots I'm pretty sure I can
-give this a shot.'' Fast-forward eight months: BAM! Study \#4 (or Chapter 5).
+can relay some recently published study or other to him---yes, circumventing the
+cost of subscription\footnote{Does this practice cause me to scruple?  Frankly,
+  no, although maybe it should. I am pained by the reality that knowledge has a
+  price in today's world; I feel it is a matter about which anyone in a position
+  of privilege sufficient to chance upon these words (virtually exclusively
+  those of us living in first-world situations) to reflect and ask internally if
+  we feel any shame. (I think we should.) The extent to which the reality exists
+  is, to me, a more-or-less direct measure of the degree to which our hearts,
+  collectively speaking, are fixated upon the banal, the perishable, the mammon
+  from which springs forth so much inequity, pride, and unhappiness. I remove
+  from the pulpit.} and all that---and I say, ``Sure, have it right over to ya,
+buddy.'' Well, I get to reading this thing---\citet{Bellan2016}, that is---and I
+says to myself, ``Hmmm \dots'' And then I think a little more and I says ``Hmmm
+\dots . \dots I'm pretty sure I can give this a shot.'' Fast-forward eight
+months: BAM! Study \#4 (or Chapter 5).
 
 The idea is that in days of yore (i.e., the fourth quarter of last century or so
 up until---well, the present, I suppose) if one wanted to make an in situ
@@ -1887,8 +2017,8 @@ satellite, one's option was basically spaced probe measurements of the local
 electric field. It's essentially an exercise in interferometry. So what's new
 about \citet{Bellan2016}, then? Get this: no electric field measurements
 necessary to estimate the wave vector! All one needs is
-high-resolution\footnote{By \emph{high resolution} I mean that the Nyquist
-  frequency lies pretty well above twice the frequency of interest.}, reasonably
+high-resolution,\footnote{By \emph{high resolution} I mean that the Nyquist
+  frequency lies pretty well above twice the frequency of interest.} reasonably
 accurate measurements of the local magnetic field and particle-based
 measurements of the local current density. \citet{Bellan2016} walks through the
 relevant theory to show how it all works.
@@ -1903,7 +2033,7 @@ for application to low-frequency waves such as IAWs! From this standpoint Study
 \#4, which is application of the \citet{Bellan2016} methodology to IAW
 observations, fits in nicely with Studies 1--3 (Chapters 2--4), which are all
 IAW-centric. If you're the sort to get jazzed about gorgeous math, you should
-definitely pay a visit to Study \#4 (Chapter 5) and \citet{Bellan2016}.
+definitely pay a visit to \citet{Bellan2016} and Study \#4 (Chapter 5).
 
 \subsubsection{Study \#5: Imbuing the expression ``from left field'' with new meaning}
 % \textbf{Study \#5: Imbuing the expression ``from left field'' with new meaning}
@@ -1916,7 +2046,7 @@ It all happened one fateful day in early 2016 (April or May, if memory serves)
 when I got an email from Chris Chaston asking if I'd be interested in a little
 project involving reexamination of the famous relationship (among space plasma
 physikers) between auroral current density and potential drop along a
-geomagnetic field line---also know ans the J-V relation---predicted by
+geomagnetic field line---also know as the J-V relation---predicted by
 \citet{Knight1973}. One could fairly ask, ``If it's famous and accepted, why
 bother to undertake reexamination? And what do you mean by 'reexamination'
 anyway?''
@@ -1951,11 +2081,11 @@ valid.
 
 The stage is set: a longstanding and generally accepted theoretical result, the
 Knight relation, is subjected to all the hellfire (in form of observational
-evidence) that a graduate student can brandish against it. The stakes are no
-less than total glory, either for \citet{Knight1973}, or Hatch et al. [please
-let it pass peer review], or for neither. The last possibility is far and away
-most probable, since for the main, science only proceeds haltingly and in fits
-and spurts.\footnote{I am hosing around with the whole ``total glory''
+evidence) that a graduate student can muster against it. The stakes are no less
+than total glory, either for \citet{Knight1973}, or \textit{Hatch et al.}
+[please let it pass peer review], or for neither. The last possibility is far
+and away most probable, since for the main, science only proceeds haltingly and
+in fits and spurts.\footnote{I am hosing around with the whole ``total glory''
   thing. Did you see the very first footnote in this chapter? Though I here mock
   that sentiment, to truth, and to truth only, be total glory.}
 
@@ -1964,33 +2094,35 @@ and spurts.\footnote{I am hosing around with the whole ``total glory''
 
 The first four studies (Chapters 2--5) form a coherent thesis, while the last
 study (Chapter~6) seems to have been thrown in by the nape of its neck---such is
-my personal feeling. It doesn't matter; each study represents work that was
+my personal feeling, but it doesn't matter: each study represents work that was
 accomplished during my time as a graduate student, and apparently that's good
-enough for my adviser Jim. 
+enough for my adviser Jim. Moreover in all fairness, the work in Chapter~6 is
+decidedly more ``physicsy,'' involving much more substantial maths, theoretical
+results, and calculation than the work in the other chapters, which feels
+primarily phenomenological.
 
-So what if I were to distill my thesis into two sentences? People have ``taught
-and thought a lot'' (to quote Ronald A. Rasband) about \Alf waves, and even the
+So what if I were to distill my thesis into two sentences? People have ``thought
+and taught a lot'' (to quote Ronald A. Rasband) about \Alf waves, including the
 more specialized brand known as inertial \Alf waves, but until the body of work
 I present in this thesis appeared, there have not been any systematic studies of
-the influence of the interplanetary MF,\footnote{There I go again!} the solar wind,
-and geomagnetic storms on high-latitude inertial \Alf waves. I believe my
-coauthors and I will ultimately have produced from the depths of the sea of
-knowledge several basic facts on these points, all while standing on the
-unknowably vast shore of deeply (and I believe incorrigibly) couched human
-ignorance---once and if the studies in following chapters make it through peer
-review, that is. 
+the influence of the interplanetary magnetic field, the solar wind, and
+geomagnetic storms on high-latitude inertial \Alf waves. I believe my coauthors
+and I will ultimately have produced from the depths of the sea of knowledge
+several basic facts on these points, all while standing on the unknowably vast
+shore of deeply and incorrigibly couched human ignorance---once and if the
+studies in following chapters make it through peer review, that is.
 
 In acknowledgement of the many areas where our work may be expanded, I have
 buried several treasure maps in Chapter~7. If you take a shovel and are willing
-to make a sacrificial offering of five of the best years of your life, I think
-those treasure maps could lead you to one or two of the gazillion theses that
-are buried along the shore.
+to make a sacrificial offering of five to seven of the best years of your life,
+I think those treasure maps could lead you to one or two of the gazillion theses
+that are buried along the shore.
 
 As we stand here at the trailhead of the places I have been walking for the past
 five years, I want to thank you for having reached this line. You are among the
 0.000000025\% of humanity who I expect will achieve this feat.\footnote{I have
   grossly assumed a steady population of 8 billion. If you were to do the math,
-  you'd find I don't expect even two members of my committee to have reached
+  you'd find I don't expect more than approximately two humans to have reached
   the end of this chapter.}
 
 % And chapter 1 bib
