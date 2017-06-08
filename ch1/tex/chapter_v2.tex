@@ -563,7 +563,7 @@ $v_A =$~(nonsense).\footnote{Instead of just writing the situation off as
 Finally, to bring you up to speed, there is a mountain of
 textbooks and peer-reviewed literature that refer to the \Alf speed and
 (surprise!) \Alf waves. Why? In his review of experiments dealing with \Alf
-waves, \cite{Gekelman1999} put it this way: ``These waves are ubiquitous in
+waves, \citet{Gekelman1999} put it this way: ``These waves are ubiquitous in
 space plasmas and are the means by which information about changing currents and
 magnetic fields are communicated.''\footnote{There are also tip-top reviews and
   reports of \Alf waves in the magnetosphere, ionosphere, and the region in
@@ -1213,17 +1213,40 @@ reason you will sometimes hear reference made to ``simplifying assumptions''. (I
 have yet to hear reference made to ``complicating assumptions.'')
 
 First of all, I will assume a singly charged ion species so that $q_i = q$ and
-$q_e = -q$. Next, I propose a Cartesian coordinate system\footnote{We could use
-  a dipolar coordinate system, as do \citet{Lysak2013}, but I'd rather keep it
-  simple for the sake of both of us.} such that the $z$ coordinate is along the
-local geomagnetic field $\mathbf{B}_0$ (that is, $\mathbf{B}_0 = B_0 \hat{z}$),
-the $x$ coordinate is perpendicular to the local geomagnetic field, and the $y$
-coordinate is negligible (which means nothing varies in the $y$ direction, which
-in turn means that inside the symbol $\grad$, the differential operator
-$\partial / \partial y = 0$). However, I won't outrightly say that the $y$
-coordinate doesn't exist since, among other issues, the curl operator
-$\grad \times$ is a three-dimensional creature and doesn't make sense if we are
-strict in saying that there are only two dimensions in our system.
+$q_e = -q$. Next, I propose a Cartesian coordinate system such that the $z$
+coordinate is along the local geomagnetic field $\mathbf{B}_0$ (that is,
+$\mathbf{B}_0 = B_0 \hat{z}$), the $x$ coordinate is perpendicular to the local
+geomagnetic field, and the $y$ coordinate is negligible (which means nothing
+varies in the $y$ direction, which in turn means that inside the symbol $\grad$,
+the differential operator $\partial / \partial y = 0$). However, I won't
+outrightly say that the $y$ coordinate doesn't exist since, among other issues,
+the curl operator $\grad \times$ is a three-dimensional creature and doesn't
+make sense if we are strict in saying that there are only two dimensions in our
+system.
+
+If it makes you uncomfortable that I'm blithely ignoring variations along one
+coordinate---$y$ seems like a perfectly good coordinate, doesn't it?---you
+should know that it is not uncommon\footnote{E.g.,
+  \citet{Hasegawa1976,Chmyrev1988,Streltsov1995,Bellan1996}.} for theorists to
+reduce the dimensionality of the system from three to two by assuming that there
+are only two important coordinates: one along the field line, and one
+perpendicular to it. ``But maybe that just means the theorists have some
+fundamental misconception about these waves. It doesn't say anything about
+reality, Spence.'' Hold your horses! Be comforted knowing that both in the
+laboratory \citep[Figure 1 in][]{Vincena1999}\footnote{I recognize that this
+  article purports to be addressing ``electromagnetic ion-cyclotron waves,''
+  which doesn't seem exactly synonymous with inertial \Alf waves. Pay a visit to
+  \S3.5 of the review of small-scale \Alf waves by \citet{Stasiewicz2000} if
+  your doubts won't subside. They show Figure~1 from \citet{Vincena1999} as
+  Figure~26 and give some additional explanation.} and in nature
+\citep{Stasiewicz2000} these waves have been shown to exhibit polarizations that
+are approximately linear or circular. (Another approach, given by
+\citet{Morales1994}, is to assume cylindrical geometry and axial symmetry so
+that the system is, again, effectively two-dimensional. Yet another would be to
+go at it assuming a dipolar geometry, as do \citet{Lysak2013}. I'm not going
+those places, however, because I don't want us to waste time fussing with
+coordinate transformations and the details of cyclindrical- or dipolar-geometry
+versions of vector calculus operators.)
 
 So much for spatial variation. What to say about variation in time? I shouldn't
 even talk about temporal variation without first introducing you to a
