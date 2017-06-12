@@ -144,8 +144,8 @@
       make this crowd laugh, and they were laughing, but now he knew. \dots And
       you should have seen the bookings come in. \dots The Palladium, MCA,
       William Morris. But it was too late. \dots He really knew now. William
-      Morris sends regrets. \\{\small \emph{--- Title track on Charles Mingus's
-          album } The Clown}
+      Morris sends regrets. \\{\small \emph{--- Title track on} The Clown
+        \emph{by Charles Mingus}}
     \end{flushright}
   \end{minipage}
 \end{flushright}
@@ -274,14 +274,21 @@
   or fractal, scales; hence its connection with turbulent and scale-invariant
   processes \citep{West1990,Treumann1999a,Leubner2004}.
 
-  In this chapter we reexamine previously reported FAST observations of
-  precipitating monoenergetic electrons above the auroral ionosphere, and find
-  instances of magnetospheric source populations in stationary states that are
-  far from thermal equilibrium.
+  In this chapter we reexamine two previously reported FAST observations of
+  precipitating monoenergetic electrons above the auroral ionosphere
+  \citep{Elphic1998,Ergun1998a}. In each case we first show via 2-D fits based
+  on kappa and Maxwellian distributions that observed electrons are out of
+  thermal equilibrium. We then estimate the relationship between current density
+  and potential drop, and show that only a subset of all possible source
+  altitudes and $\kappa$ values are consistent with (1) the inferred J-V
+  relationships and (2) the pitch-angle spreading of the precipitating
+  electrons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \section{Observations and Distribution Modeling}
+  \section{Methodology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \subsection{2-D Model Distribution for Precipitating Electrons} \label{ss2D}
 
   Using 2-D model distributions based on either a 1-D Maxwellian distribution
   (\ref{ch6:eqMax1D}) or a 1-D kappa distribution (\ref{ch6:eqKappa1D}), we
@@ -307,12 +314,150 @@
   where $E^*$ and $\theta$ are respectively the (possibly modified) electron
   energy and pitch angle, $f_{1D}$ is either the 1-D Maxwellian distribution
   (\ref{ch6:eqMax1D}) or the 1-D kappa distribution (\ref{ch6:eqKappa1D}), and
-  $g(\theta )$ is a function describing, for example, the effects of the mirror
-  force or the maser instability on the source distribution. Each group of
-  authors employing the 2-D model (\ref{ch6:eq2DMod}) prescribe various forms
-  for $g(\theta)$. An alternative strategy presented by \citet{Pritchett1999}
-  involves reduction of observed 2-D distributions to one dimension via
-  integration.
+  $g(\theta )$ is a function that describes, for example, the effects of the
+  mirror force or the maser instability on the source distribution. Each group
+  of authors employing the 2-D model (\ref{ch6:eq2DMod}) prescribe various forms
+  for $g(\theta)$, with the exception of \citet{Pritchett1999}, who reduce
+  observed 2-D distributions to one dimension via integration.
+
+  Our focus in this chapter is the monoenergetically accelerated source
+  population. We accordingly set $g(\theta) =$~1 in the 2-D model
+  (\ref{ch6:eq2DMod}), and perform 2-D fits over a range of energies and angles
+  selected to avoid inclusion of possible secondaries and other background
+  populations. The range of angles includes all within the earthward loss cone;
+  the range of energies extends from two energy bins below that in which the
+  peak energy flux is observed to the EESA energy limit at 30~keV. We also
+  assume $E^* = \big( \sqrt{E} - \sqrt{E_p} \big)^2$, or that the electron
+  energy $E$ is offset by the energy $E_p$ at which the observed electron
+  distribution is peaked.
+
+  The detailed procedure for estimating the parameters of $f_{2D}$ in
+  (\ref{ch6:eq2DMod}) from measured electron distributions is the following:
+  first, a 1-D differential energy flux spectrum is calculated by averaging the
+  differential energy flux at each energy over the range of angles within the
+  earthward loss cone (sometimes referred to as the source cone), after which
+  1-D fits of the resulting average spectrum are performed using the 1-D
+  Maxwellian (\ref{ch6:eqMax1D}) and 1-D kappa (\ref{ch6:eqKappa1D})
+  distributions. Best-fit parameters from the 1-D Maxwellian and kappa fits are
+  then used as initial estimates of the parameters used to perform a direct 2-D
+  Maxwellian and kappa fits, respectively, of the observed differential energy
+  flux distribution over the previously described range of pitch angles and
+  energies. Throughout this study the reported fit parameters are those
+  resulting from 2-D fits.
+
+  \subsection{The J-V Relationship: Observation and Model Comparison} \label{ssJV}
+
+  We use the J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}) to fit
+  observed potential drops $\Delta \Phi$ and electron current densities
+  $j_{\parallel,i}$ that have been mapped to 100~km. These provide an additional
+  means of constraining $\kappa$, or the degree to which the magnetospheric
+  source population is in a nonthermal stationary state. The necessary elements
+  are a reliable set of measurements of $\Delta \Phi$ and $j_{\parallel,i}$ from
+  which to form an observed J-V relation, which can then be compared with a
+  predicted J-V relation, and the parameters
+  $P_m = \{ n_m, T_m, R_B, \kappa \, \}$, which represent the source population
+  in the magnetosphere and are to be used as inputs for J-V relations
+  (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}). In lieu of in situ magnetosphere
+  observations, we infer $P_m$ on the basis of FAST measurements.
+
+  To form pairs of ($j_{\parallel,i}, \Delta \Phi$) observations suitable for
+  comparing with theory, $j_\parallel$ is calculated from observed velocity
+  distributions over the range of pitch angles within the precipitating loss
+  cone, and over all energies exceeding 200~eV.  $j_{\parallel,i}$ is then
+  obtained by mapping $j_\parallel$ to 100~km using International Geomagnetic
+  Reference Field~11 (IGRF~11). The corresponding total potential drop
+  $\Delta \Phi = \bar{E}_e + \bar{E}_i$ is then calculated, where $\bar{E}_e$ is
+  the average source-cone electron energy and $\bar{E}_i$ is that of the upgoing
+  ion beam, if present, and zero otherwise. (The average energy is defined as
+  the ratio of energy flux and number flux moments, calculated within the
+  earthward portion of the loss cone for electrons, and the anti-earthward
+  portion of the loss cone for ions.)
+
+  In practice only a small number of observed J-V pairs
+  $( j_{\parallel,i} , \Delta \Phi )$ are suitable for our purposes: both
+  Maxwellian and kappa J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors})
+  require a single set of magnetospheric source parameters $P_m$, which in turn
+  requires identification of periods during which observed $P_m$ are
+  sufficiently steady to be meaningfully related to the putative source
+  population. We therefore manually identify periods during which the calculated
+  temperature and density are steady. As we will show, for the two orbits
+  considered these periods of steady temperature and density also correspond to
+  steady $\kappa$ values.
+
+  Once an appropriate set of J-V pairs $( j_{\parallel,i} , \Delta \Phi )$ has
+  been identified we estimate the source parameters $P_m$. The steadiness of
+  temperature, density, and $\kappa$ implies adiabatic field-aligned transport,
+  i.e., $T_m$ and $\kappa$ are largely unmodified in undergoing transport from
+  the magnetospheric source region to FAST altitudes. We therefore identify the
+  average observed temperature at FAST during each period $\bar{T}_F$, as the
+  source temperature $T_m$ and treat $T_m$ as a fixed parameter (i.e., $T_m$ is
+  not allowed to vary), but $\kappa$ is initialized with $\kappa =$~10 and is
+  allowed to vary as part of the fitting procedure.
+
+  From the vantage point of the magnetosphere-ionosphere transition region, the
+  two remaining source parameters $n_m$ and $R_B$ are tied as a consequence of
+  the mirror force and the frozen-in flux condition. Confident estimation of
+  each parameter solely on the basis of FAST observations presents the most
+  serious challenge to this analysis. We assume the source density $n_m$ is a
+  function of the total electron density at FAST $n_F$ (excluding the
+  contribution from the range of anti-earthward angles within which the source
+  population has already been depleted), the mirror ratio between FAST and the
+  magnetospheric source $R_{B,F} = B_\textrm{FAST} / B_m$ (as opposed to the
+  magnetosphere-ionosphere mirror ratio $R_B$), and potential drop $\Delta \Phi$
+  via the relationship \citep{Barbosa1977}
+  \begin{subequations}
+    \begin{align} n_m \big ( n_F, \bar{\phi}, \alpha_F \big ) &= \dfrac{n_F}{Q \big ( \bar{\phi}, \alpha_F \big ) }, \\
+      Q \big ( \bar{\phi}, \alpha_F \big ) &\equiv 1 + 2 \big ( 1 - \alpha_F
+                                             \big ) \dfrac{ \bar{\phi}^{1/2} \,
+                                             e^{- \alpha_F \bar{\phi}}
+                                             }{\textrm{erfc} \big ( -
+                                             \bar{\phi}^{1/2} \big )} {
+                                             \displaystyle
+                                             \int_{-\sqrt{\bar{\phi}}}^{\infty}
+                                             } \, dx \, e^{\alpha_F x^2} \,
+                                             \textrm{erfc} \big ( x \big
+                                             ), \label{ch6:eqBarbosa}
+    \end{align}
+  \end{subequations}
+  % \end{linenomath*}
+  % \end{equation}
+  % \end{linenomath*}
+  where $\bar{\phi} = \Delta \Phi / k_B T $ and $\alpha_F = 1 / R_{B,F}$.
+  $Q (\bar{\phi}, \alpha_F)$ is a sigmoid function \citep[Figure
+  1b][]{Barbosa1977} that describes how the number density of a hot plasma beam
+  moving adiabatically into a region of converging magnetic field lines is
+  modified by field-line compression and the mirror force. Since $n_F$ is fixed
+  by observation, (\ref{ch6:eqBarbosa}) specifies the relationship between
+  $R_{B,F}$ and $n_m$. The final issue is estimation of $R_B$, or equivalently
+  $R_{B,F}$.
+
+  \subsection{Source altitude estimation via pitch-angle spreading} \label{ssSourceAlt}
+
+  We seek to observationally constrain $R_B$ by assuming that acceleration of
+  the precipitating electron population occurs prior to pitch-angle spreading
+  due to the mirror force. The nearly isotropic, shell-like appearance of 2-D
+  distributions that we present in the following sections seems to justify this
+  assumption. On this point \citet{Bostrom2003a} has observed, ``If some
+  preacceleration has taken place at much higher altitudes the mirror effect
+  will make the distribution look more like an isotropically accelerated
+  distribution.''
+
+  We define the angle $\phi_T = \textrm{tan}^{-1} ( \frac{T_m}{2 E_p} )$ such
+  that if $E_p > T_m$, the majority of the phase space density of the
+  precipitating electron beam is contained within the pitch angle range
+  $ \theta < \phi_T$ prior to mirroring. As the beam moves toward lower
+  altitudes, the mirror ratio for which all beam particles with pitch angles
+  $\theta \geq \phi_T$ have already mirrored is
+  \begin{equation} \label{ch6:RBTherm} R_{B,T} = \dfrac{1}{\mathrm{sin}^2 \big
+      (\phi_T \big ) } = 4 \Big ( \dfrac{E_p}{T} \Big )^2 + 1.
+  \end{equation}
+  Provided the electron beam does not mix with secondary populations, the beam
+  distribution appears increasingly shell-like (or ``isotropically
+  accelerated'') as electrons originally at pitch angles $\vert \theta \vert <
+  \phi_T$ spread over an increasing range of angles by virtue of the mirror
+  force. Upon reaching low altitudes for which $R_B \gtrsim R_{B,T}$, the
+  electron distribution appears almost entirely shell-like except within the
+  anti-earthward portion of the losscone.
 
   % ---------------- FIGURE 1
 
@@ -352,46 +497,25 @@
       1, 1997, and corresponding 2-D fit parameters. Parameters related to
       best-fit Maxwellian and kappa distributions are respectively demarked with
       red crosses and blue x's in panels c--f. (a) $>$300~eV electron
-      pitch-angle distribution. (b) Electron energy spectrum within the
-      precipitating loss cone. (c) $\kappa$ fit parameter for the best-fit kappa
+      pitch-angle distribution. (b) Average electron energy spectrum within the
+      earthward loss cone. (c) $\kappa$ fit parameter for the best-fit kappa
       distribution. (d) Reduced chi-squared statistic $\chi^2_{\mathrm{red}}$
       for each fit type. (e) Observed (black diamonds) and best-fit
       temperatures. (f) Observed (black diamonds) and best-fit
       densities. Observed temperatures are calculated from the differential flux
-      measured within the precipitating loss cone and over the energy range
-      .3--30~keV. Observed densities are calculated over the same energy range,
+      measured within the earthward loss cone and over the energy range
+      .2--30~keV. Observed densities are calculated over the same energy range,
       and over all angles except those within the anti-earthward loss
       cone. Uncertainties of observed temperatures and densities are calculated
       using analytic expressions for moment uncertainties related to counting
       statistics for an arbitrary plasma distribution function
-      [\citealt{Gershman2015}; see Appendix~A]. EESA observations have been
+      [\citealt{Gershman2015}; see Appendix~\ref{app:A}]. EESA observations have been
       integrated over three times the survey-mode EESA sampling frequency to
       improve the related counting statistics. This time interval was first
       reported by \citet{Elphic1998}.}
   \end{figure}
 
   % ----------------
-
-  The focus of this study is the portion of the source population within the
-  earthward loss cone. We therefore use $g(\theta) =$~1 in the 2-D model
-  (\ref{ch6:eq2DMod}) and assume the electron energy $E$ is offset by a
-  field-aligned potential drop $\Delta \Phi$, or $E^* = \big( \sqrt{e \Delta
-    \Phi} - \sqrt{E} \big)^2$.
-
-  Our procedure for estimating the parameters of $f_{2D}$ in (\ref{ch6:eq2DMod})
-  from measured electron distributions is the following: first, a 1-D
-  differential energy flux spectrum is calculated by averaging the differential
-  energy flux at each energy over the range of angles within the earthward loss
-  cone (sometimes referred to as the source cone), after which a 1-D fit of the
-  resulting average spectrum is performed. Parameters from the 1-D fit are then
-  used as the initial estimate of the parameters used to perform a direct 2-D
-  fit of the observed differential energy flux distribution over a range of
-  energies and angles selected to avoid inclusion of possible secondaries and
-  other background populations. The range of angles includes all within the
-  earthward loss cone; the range of energies extends from two energy bins below
-  that in which the peak energy flux is observed to the EESA energy limit at
-  30~keV. Throughout this study the reported fit parameters are those resulting
-  from 2-D fits.
 
   \section{FAST Orbit 1773}
 
@@ -401,16 +525,22 @@
   intermittent upgoing ion beams (not shown) near midnight MLT during a period
   of low geomagnetic activity ($K_p =$~1$^-$).
 
+  % Ultimately wants to be replaced with F-test and p value (could place p value on RH colorbar)
+
   Performing 2-D fits of the electron distributions within the precipitating
   loss cone shows that many of the distributions are highly nonthermal, with
   $\kappa \lesssim$~2.0 (Figure~\ref{ch6:Fig1}c). Values of the reduced
-  chi-squared statistic $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) -
-    y_i(x)}{\mathrm{dof}}$ for 2-D fits with a kappa distribution are at times
-  much smaller than corresponding $\chi^2_{\textrm{red}}$ values for fits with a
-  Maxwellian distribution (Figure~\ref{ch6:Fig1}c), most markedly during the
-  period between red bars (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when
-  $\kappa$ is frequently near the theoretical minimum $\kappa_{\mathrm{min}}
-  =$~3/2.
+  chi-squared statistic
+  $\chi^2_{\mathrm{red}} = \frac{\sum_i Y(x) - y_i(x)}{\mathrm{dof}}$ for 2-D
+  fits with a kappa distribution are at times much smaller than corresponding
+  $\chi^2_{\textrm{red}}$ values for fits with a Maxwellian distribution
+  (Figure~\ref{ch6:Fig1}c), most markedly during the period between red bars
+  (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when $\kappa$ is frequently
+  near the theoretical minimum $\kappa_{\mathrm{min}} =$~3/2. Parameter
+  estimates before 09:26:54~UT are dubious, since \citet{Chaston2002b} have
+  reported that the particle observations before this period are immersed in
+  strong coherent ion cyclotron wave emission at frequencies faster than the
+  EESA sampling frequency and are therefore subject to aliasing.
 
   % ---------------- FIGURE 2
 
@@ -441,16 +571,19 @@
   \end{figure}
 
   \begin{figure}
-    \centering
-    \contcaption{Electron spectra observed at 09:27:00.94~UT. (a) 1-D differential
-      number flux spectrum (black crosses) obtained by averaging all
-      differential number flux spectra within the magnetospheric source cone,
-      with best-fit Maxwellian and kappa distributions overlaid (red dash-dotted
-      line and blue dashed line, respectively). The uncertainty of each observed
-      differential number flux is calculated by conversion of the corresponding
-      particle count uncertainty $\sqrt{N}$ to units of differential number
-      flux. (b) Best-fit 2-D kappa distribution (solid contours) with the
-      observed 2-D differential energy flux spectrum overlaid (contour lines). }
+    \centering \contcaption{Electron spectra observed at 09:27:00.94~UT. (a) 1-D
+      differential number flux spectrum (black crosses) obtained by averaging
+      all differential number flux spectra within the magnetospheric source
+      cone, with best-fit Maxwellian and kappa distributions overlaid (red
+      dash-dotted line and blue dashed line, respectively). The uncertainty of
+      each observed differential number flux is calculated by conversion of the
+      corresponding particle count uncertainty $\sqrt{N}$ to units of
+      differential number flux. (b) Best-fit 2-D kappa distribution (solid
+      contours) with the observed 2-D differential energy flux spectrum overlaid
+      (contour lines). For each pitch angle black asterisks indicate the peak
+      energy $E_p = 849.69$~eV and red plus signs indicate the lower edge of the
+      minimum energy bins used to perform the 2-D fit, as described in
+      \ref{ss2D}.}
   \end{figure}
 
   % ----------------
@@ -501,89 +634,14 @@
 
   % ----------------
 
-  To independently infer $\kappa$, or the degree to which the magnetospheric
-  source population is in a nonthermal stationary state, we use the J-V
-  relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}), to fit observed
-  potential drops $\Delta \Phi$ and electron current densities $j_{\parallel,i}$
-  that have been mapped to 100~km. The necessary elements are a reliable set of
-  measurements of $\Delta \Phi$ and $j_{\parallel,i}$ from which to form an
-  observed J-V relation, which can then be compared with a predicted J-V
-  relation, and the parameters $P_m = \{ n_m, T_m, R_B, \kappa \, \}$, which
-  represent the source population in the magnetosphere and are to be used as
-  inputs for J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}). In lieu
-  of in situ magnetosphere observations, we infer $P_m$ on the basis of FAST
-  measurements.
-
-  To form pairs of ($j_{\parallel,i}, \Delta \Phi$) observations suitable for
-  comparing with theory, $j_\parallel$ is calculated from observed velocity
-  distributions over the range of pitch angles within the precipitating loss
-  cone, and over all energies exceeding 200~eV.  $j_{\parallel,i}$ is then
-  obtained by mapping $j_\parallel$ to 100~km using International Geomagnetic
-  Reference Field 11. The corresponding total potential drop $\Delta \Phi =
-  \bar{E}_e + \bar{E}_i$ (white dotted line, Figure~\ref{ch6:Fig1}b) is then
-  calculated, where $\bar{E}_e$ is the average source-cone electron energy and
-  $\bar{E}_i$ is that of the upgoing ion beam, if present, and zero
-  otherwise. The average energy is defined as the ratio of energy flux and
-  number flux moments, calculated within the earthward portion of the loss cone
-  for electrons, and the anti-earthward portion of the loss cone for ions.
-
-  In practice only a small number of observed J-V pairs $( j_{\parallel,i} ,
-  \Delta \Phi )$ are suitable for our purposes: both Maxwellian and kappa J-V
-  relations (\ref{ch6:eqKnight}) (\ref{ch6:eqDors}) require a single set of
-  magnetospheric source parameters $P_m$, which in turn requires identification
-  of periods during which observed $P_m$ are sufficiently steady to be
-  meaningfully related to the putative source population. Perhaps not
-  coincidentally, the period shown in Figure~\ref{ch6:Fig1} during which $\kappa
-  \lesssim 2$ (09:26:54--09:27:05~UT) also delineates a period during which the
-  observed density, temperature, and $\kappa$ are relatively steady. Parameter
-  estimates before this period are dubious, since \citet{Chaston2002b} have
-  reported that the particle observations before this period are immersed in
-  strong coherent ion cyclotron wave emission at frequencies faster than the
-  EESA sampling frequency and are therefore subject to aliasing.
-
-  Having identified an appropriate set of observations, we now describe our
-  methodology for estimating the source parameters $P_m$. The extreme values of
-  $\kappa$ (Figure~\ref{ch6:Fig1}c) together with the steady temperatures
-  (Figures~\ref{ch6:Fig1}e) and densities (Figure~\ref{ch6:Fig1}f) during the
-  period of interest imply adiabatic field-aligned transport, i.e., $T_m$ and
-  $\kappa$ are largely unmodified in undergoing transport from the
-  magnetospheric source region to FAST altitudes. The average observed
-  temperature $\bar{T}_F =$~621.7~eV during this period is therefore identified
-  as the source temperature $T_m$, and is treated as a fixed parameter (i.e.,
-  $T_m$ is not allowed to vary), but $\kappa$ is initialized with $\kappa =$~10
-  and is allowed to vary as part of the fitting procedure.
-  
-  From the vantage point of the magnetosphere-ionosphere transition region, the
-  two remaining parameters $n_m$ and $R_B$ are tied as a consequence of the
-  mirror force and the frozen-in flux condition. Confident estimation of each
-  parameter solely on the basis of the observations in Figure~\ref{ch6:Fig1}
-  presents the most serious challenge to this analysis. We assume the source
-  density $n_m$ is a function of the total electron density at FAST $n_F$
-  (excluding the density within the range of anti-earthward angles within which
-  the source population has already been depleted), the mirror ratio between
-  FAST and the magnetospheric source $R_{B,F} = B_\textrm{FAST} / B_m$ (as
-  opposed to the magnetosphere-ionosphere mirror ratio $R_B$), and potential
-  drop $\Delta \Phi$ via the relationship \citep{Ratner1976,Barbosa1977}
-  \begin{subequations}
-    \begin{align} n_m \big ( n_F, \bar{\phi}, \alpha_F \big ) &= \dfrac{n_F}{Q \big ( \bar{\phi}, \alpha_F \big ) }, \\
-      Q \big ( \bar{\phi}, \alpha_F \big ) &\equiv 1 + 2 \big ( 1 - \alpha_F
-      \big ) \dfrac{ \bar{\phi}^{1/2} \, e^{- \alpha_F \bar{\phi}}
-      }{\textrm{erfc} \big ( - \bar{\phi}^{1/2} \big )} { \displaystyle
-        \int_{-\sqrt{\bar{\phi}}}^{\infty} } \, dx \, e^{\alpha_F x^2} \,
-      \textrm{erfc} \big ( x \big ), \label{ch6:eqBarbosa}
-    \end{align}
-  \end{subequations}
-  % \end{linenomath*}
-  %   \end{equation}
-  % \end{linenomath*}
-  where $\bar{\phi} = \Delta \Phi / k_B T $ and $\alpha_F = 1 /
-  R_{B,F}$. Equation (\ref{ch6:eqBarbosa}) is a sigmoid function \citep[Figure
-  1b][]{Barbosa1977} that describes how the number density of a hot plasma beam
-  moving adiabatically into a region of converging magnetic field lines is
-  modified by field-line compression and the mirror force. Since $n_F$ is fixed
-  by observation, (\ref{ch6:eqBarbosa}) specifies the relationship between
-  $R_{B,F}$ and $n_m$. The final issue is estimation of $R_B$, or equivalently
-  $R_{B,F}$.
+  Perhaps not coincidentally, the period shown in Figure~\ref{ch6:Fig1} during
+  which $\kappa \lesssim 2$ (09:26:54--09:27:05~UT) also delineates a period
+  during which the observed density, temperature, and $\kappa$ are relatively
+  steady. Following the procedure outlined in section~\ref{ssJV} we assume
+  $T_m = \bar{T}_F =$~621.7~eV and form a set of of observed J-V pairs
+  $( j_{\parallel,i} , \Delta \Phi )$ from the current densities, which are
+  mapped to 100~km, and potential drops (white line, \ref{ch6:Fig1}b) during
+  this period.
 
   The top panel of Figure~\ref{ch6:Fig3} displays contours of
   $\chi^2_{\textrm{red}} ( \kappa, R_B )$, where
@@ -595,21 +653,39 @@
   \end{subequations}
   Parameters with hats in (\ref{paramFit}) are fixed, and
   $j_{\textrm{pred}\parallel,i} $ is the current density predicted either by J-V
-  relation (\ref{ch6:eqKnight}) or (\ref{ch6:eqDors}). The best-fit nonthermal
-  J-V relation (i.e., that for which $\chi^2_{\textrm{red}} ( \kappa, R_B )$ is
-  the global minimum) is marked with a gray diamond and is given by $\kappa
-  =$~1.58 and $R_B =$690, corresponding to a source at $\sim$8.5~$R_E$. However,
-  it is apparent that a source region down to altitudes of $\sim$4.7~$R_E$ are
-  similarly plausible for $\kappa \simeq$~1.6. The best-fit thermal J-V
-  relation, for which $\kappa \rightarrow \infty$, is shown as a gray triangle
-  above the plot area and is given by $R_B =$~8.55, corresponding to a source
-  near 2~$R_E$.
+  relation (\ref{ch6:eqKnight}) or (\ref{ch6:eqDors}). 
+
+  The top panel of Figure~\ref{ch6:Fig3} indicates that only two scenarios are
+  plausible: one involves a source population that is located at or beyond
+  $\sim$4.7~$R_E$ and is extremely nonthermal ($\kappa \lesssim 1.7$), and the
+  other involves acceleration at altitudes near FAST and below $\sim$2.2~$R_E$
+  with either a thermal or nonthermal source. 
+
+  The cause of the large gap in ($\kappa, R_B$) parameter space that separates
+  these scenarios is bifold; each has to do with the linearity condition
+  $\Delta \Phi / k_B T \ll R_B $. First, relative to the thermal J-V relation
+  (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$ the kappa J-V relation
+  (\ref{ch6:eqDors}) is greatly influenced by saturation effects, which arise as
+  the linearity condition is violated. Second, for equal number density and
+  temperature, the current density predicted by the kappa J-V relation
+  (\ref{ch6:eqDors}) with $\kappa \simeq 1.65$ is more than double the current
+  density predicted by the Maxwellian J-V relation (\ref{ch6:eqKnight}) at
+  $\bar{\phi} =$~10, for example.
+
+  The best-fit nonthermal J-V relation (defined as that for which
+  $\chi^2_{\textrm{red}} ( \kappa, R_B )$ is the global minimum) is marked with
+  a gray diamond and is given by $\kappa =$~1.58 and $R_B =$690, corresponding
+  to a source at $\sim$8.5~$R_E$. However, it is apparent that a source region
+  down to altitudes of $\sim$4.7~$R_E$ is similarly plausible for
+  $\kappa \simeq$~1.6. The best-fit thermal J-V relation, for which
+  $\kappa \rightarrow \infty$, is shown as a gray triangle above the plot area
+  and is given by $R_B =$~8.55, corresponding to a source near 2~$R_E$.
 
   The lower panel in Figure~\ref{ch6:Fig3} shows the observed J-V relation
-  (black plus signs, with error bars calculated as described in Appendix~A), and
-  best-fit nonthermal and thermal J-V relations given correspondingly by
-  equation (\ref{ch6:eqKnight}) (blued dashed line) and equation
-  (\ref{ch6:eqDors}) (red dash-dotted line).
+  (black plus signs, with error bars calculated as described in
+  Appendix~\ref{app:A}), and best-fit nonthermal and thermal J-V relations given
+  correspondingly by equation (\ref{ch6:eqKnight}) (blued dashed line) and
+  equation (\ref{ch6:eqDors}) (red dash-dotted line).
 
   % SOME LINES ABOUT WHY REDUCED CHI-SQ IS BADDDDD 
   % The J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors})are nonlinear
@@ -632,21 +708,6 @@
   % current density predicted by the Maxwellian J-V relation (\ref{ch6:eqKnight})
   % at $\bar{\phi} =$~10, for example.
 
-  The top panel of Figure~\ref{ch6:Fig3} indicates that only two scenarios are
-  plausible: one involves a source population that is located at or beyond
-  $\sim$4.7~$R_E$ and is extremely nonthermal ($\kappa \lesssim 1.7$); the other
-  involves acceleration at altitudes near FAST and below $\sim$2.2~$R_E$ with
-  either a thermal or nonthermal source. The cause of the large gap in ($\kappa,
-  R_B$) parameter space that separates these scenarios is bifold; each has to do
-  with the linearity condition $\Delta \Phi / k_B T \ll R_B $. First, relative
-  to the thermal J-V relation (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$
-  the kappa J-V relation (\ref{ch6:eqDors}) is greatly influenced by saturation
-  effects, which arise as the linearity condition is violated. Second, for equal
-  number density and temperature, the current density predicted by the kappa J-V
-  relation (\ref{ch6:eqDors}) with $\kappa \simeq 1.65$ is more than double the
-  current density predicted by the Maxwellian J-V relation (\ref{ch6:eqKnight})
-  at $\bar{\phi} =$~10, for example.
-
   As a result of these effects, a highly nonthermal source population is
   plausible in the top panel of Figure~\ref{ch6:Fig3} in two cases: (1) The
   source population is distant ($\gtrsim$~4.7~$R_E$) so that according to
@@ -658,59 +719,32 @@
 
   The distinction to be borne in mind is that according to
   $\chi^2_{\mathrm{red}}$ values shown in the top panel of \ref{ch6:Fig3} a
-  highly nonthermal source is compatible with either a nearby or a distant
-  source region, but a source in thermal equilibrium is only compatible with a
-  nearby source region. Importantly, the electron distributions in
-  Figure~\ref{ch6:Fig2} exhibit a very pronounced high-energy tail, which argues
-  strongly against a source in thermal equilibrium and therefore against a
-  nearby source. 
+  highly nonthermal population is compatible with either low
+  ($\lesssim$~2~$R_E$) or high ($\gtrsim$~4.7~$R_E$) source altitudes, but a
+  source in thermal equilibrium is only compatible with a nearby source
+  region. Importantly, the electron distributions in Figure~\ref{ch6:Fig2}
+  exhibit a very pronounced high-energy tail, which argues strongly against a
+  source in thermal equilibrium and therefore against the scenario involving a
+  nearby ($<$~2.2~$R_E$) source in thermal equilbrium.
 
-  We now attempt to observationally constrain $R_B$ by assuming that
-  acceleration of the precipitating electron population occurs prior to
-  pitch-angle spreading due to the mirror force. The nearly isotropic,
-  shell-like appearance of 2-D distributions during the period of interest in
-  Figure~\ref{ch6:Fig1}, of which the lower panel in Figure~\ref{ch6:Fig2} is an
-  example, seems to justify this assumption. On this point \citet{Bostrom2003a}
-  has observed, ``If some preacceleration has taken place at much higher
-  altitudes the mirror effect will make the distribution look more like an
-  isotropically accelerated distribution.''
-
-  With the foregoing assumption of preacceleration we define a ``thermal angle''
-  $\phi_T = \textrm{tan}^{-1} ( \frac{T_m}{2 \Delta \Phi} )$ such that prior to
-  mirroring and for $\Delta \Phi > T_m$, the majority of the phase space density
-  of the precipitating electron beam is contained within the pitch angle range $
-  \theta < \phi_T$. As the beam moves toward lower altitudes, the mirror ratio
-  for which all beam particles with pitch angles $\theta \geq \phi_T$ undergo
-  mirroring is
-  \begin{equation} \label{ch6:RBTherm} R_{B,T} = \dfrac{1}{\mathrm{sin}^2 \big
-      (\phi_T \big ) } = 4 \Big ( \dfrac{E_b}{T} \Big )^2 + 1.
-  \end{equation}
-  Provided the electron beam does not mix with secondary populations, the beam
-  distribution appears increasingly shell-like (or ``isotropically
-  accelerated'') as electrons originally at pitch angles $\vert \theta \vert <
-  \phi_T$ spread over an increasing range of angles by virtue of the mirror
-  force. Upon reaching low altitudes for which $R_B \gtrsim R_{B,T}$, the
-  electron distribution appears almost entirely shell-like except within the
-  anti-earthward portion of the losscone.
-
-  If this scenario is assumed to be true for the precipitating electrons
-  observed during the period of interest in Figure~\ref{ch6:Fig1}, and for
-  $\Delta \Phi \simeq 850$~V and $T =$~600~eV, one obtains $\phi_T = 19^\circ$
-  and therefore $R_{B,T} = 9$. The abscissa of the top panel in
-  Figure~\ref{ch6:Fig3} shows that $R_{B,T} = 9$ corresponds to minimum source
-  altitude $R_E \approx 2$.
+  If the preacceleration scenario described in section~\ref{ssSourceAlt} is
+  assumed to be true for the precipitating electrons observed during the period
+  of interest in Figure~\ref{ch6:Fig1}, with $E_p \simeq 850$~V and
+  $T =$~600~eV, one obtains $\phi_T = 19^\circ$ and therefore $R_{B,T} = 9$. The
+  abscissa of the top panel in Figure~\ref{ch6:Fig3} shows that $R_{B,T} = 9$
+  corresponds to a minimum source altitude $R_E \approx 2$.
   % \simeq 1.3$~kV and $T =$~600~eV, $\phi_T = 13^\circ$ and $R_{B,T} =
   % 19.8$.
   The shell-like distributions observed throughout the period of interest in
   Figure~\ref{ch6:Fig1} therefore suggest that the source region is
   located at altitudes near or above 2~$R_E$.
 
-  In view of the combined evidences from Figures~\ref{ch6:Fig1} and
-  \ref{ch6:Fig2}, which indicate $\kappa \simeq$~1.7, and the shell-like
-  morphologies of the observed electron distributions, which appear to indicate
-  a minimum source altitude $R_E \approx 2$, the only consistent scenario in the
-  top panel of Figure~\ref{ch6:Fig3} involves a relatively distant
-  ($\gtrsim$~4.7~$R_E$) and highly nonthermal source region.
+  In summary, the observed highly nonthermal electron distributions
+  (Figures~\ref{ch6:Fig1} and \ref{ch6:Fig2}), which show $\kappa
+  \simeq$~1.7, and the shell-like morphologies of the observed electron
+  distributions, which appear to indicate a minimum source altitude $R_E
+  \approx 2$, are most consistent with a source region near or above
+  4.7~$R_E$ (top panel of Figure~\ref{ch6:Fig3}).
 
   % A possible objection to this interpretation centers on secondary
   % electron production (cite cite). A more conservative estimate is
@@ -741,40 +775,39 @@
     \caption[Inverted V precipitation and best-fit Maxwellian and kappa
     distribution parameters (Orbit 1843)]{EESA observations of inverted V
       precipitation on Feb 8, 1997, and corresponding 2-D fit parameters. (a)
-      $>$300~eV electron pitch-angle distribution. (b) Electron energy spectrum
+      $>$300~eV electron pitch-angle distribution. (b) Average electron energy spectrum
       within the precipitating loss cone. (c) $\kappa$ fit parameter for the
       best-fit kappa distribution. (d) Reduced chi-squared statistic
       $\chi^2_{\mathrm{red}}$ for each fit type. (e) Observed (black diamonds)
       and best-fit temperatures. (f) Observed (black diamonds) and best-fit
       densities. This time interval has also been studied by
       \citet{Ergun1998a,Ergun1998}.}
-
     \label{ch6:Fig4}
   \end{figure}
 
   % ----------------
 
   Figure~\ref{ch6:Fig4} shows EESA observations on Feb 7, 1997 during FAST orbit
-  1843, in the same layout as Figure~\ref{ch6:Fig1}. These observations were
-  originally reported by \citet{Ergun1998a,Ergun1998}. While those authors used
+  1843, in the same layout as Figure~\ref{ch6:Fig1}. These observations have
+  also been reported by \citet{Ergun1998a,Ergun1998}. While those authors used
   burst-mode EESA observations, we present survey-mode EESA observations
   integrated over three times the survey-mode EESA sampling frequency in order
-  to improve the uncertainty related to counting statistics in the calculated
+  to decrease the uncertainty related to counting statistics in the calculated
   temperatures and densities (Appendix~\ref{app:A}).
 
-  \citet{Ergun1998} used observations of auroral kilometric radiation (AKR) to
-  conclude that the source region for the precipitating electrons in
-  Figure~\ref{ch6:Fig4} lies ``near the apogee of FAST.''  We may compare this
-  information about the source region altitude, which was derived from the FAST
-  fields instrument \citep{Ergun2001}, with the results of an analysis of orbit
-  1843 paralleling the analysis of orbit 1773 in the previous section.
+  \citet{Ergun1998} used observations of auroral kilometric radiation (AKR) made
+  by the FAST fields instrument \citep{Ergun2001} to conclude that the source
+  region for the precipitating electrons in Figure~\ref{ch6:Fig4} lies ``near
+  the apogee of FAST'' at approximately 4200~km. We may compare this information
+  about the altitude of the source population with the results of an analysis of
+  orbit 1843 that parallels the foregoing analysis of orbit 1773.
 
-  During the period 20:49:48--20:50:11~UT between red bars, the observed
-  properties of the electrons within the precipitating loss cone are $\kappa
-  \simeq $~1.55--2.5, $T =$~2--3~keV, and $n =$~0.7--1.0~cm$^{-3}$. In contrast
-  with the marked period in Figure~\ref{ch6:Fig1}c, during which $\kappa < 1.7$
-  over most of the marked period, Figure~\ref{ch6:Fig4}c instead shows $\kappa >
-  2$ over much of the period of interest during this orbit.
+  During the period 20:49:48--20:50:11~UT that is shown between red bars, the
+  observed properties of the electrons within the precipitating loss cone are
+  $\kappa \simeq $~1.55--2.5, $T_F =$~2--3~keV, and $n_F =$~0.7--1.0~cm$^{-3}$.
+  Best-fit parameters shown in Figure suggest that $\kappa \gtrsim 2$ over much of this period,
+  in contrast to the more extreme best-fit values $\kappa \lesssim 1.7$ during
+  the marked period in Figure~\ref{ch6:Fig1}c.
 
   % ---------------- FIGURE 5
 
@@ -793,16 +826,16 @@
   Figure~\ref{ch6:Fig5} shows a typical example of the 2-D electron
   distributions observed during this period. The observed distribution (contour
   lines) overlays the best-fit 2-D kappa distribution (solid contours). The
-  legend in Figure~\ref{ch6:Fig5} shows the peak energy is $E_b =$~5.25~keV, and
-  Figure~\ref{ch6:Fig4} shows $T \simeq$~2.3~keV; the assumption $E_b > T$
-  underpinning the definition of $\phi_T$ is therefore valid, and the
-  corresponding mirror ratio for which any particle with pitch angle $\vert
-  \theta \vert < \phi_T$ is $R_{B,T} = 22$ or equivalently an altitude of
-  approximately 2.5~$R_E$. The rapid dropoff in differential flux with
-  increasing pitch angle suggests, however, that the isotropic condition is not
-  satisfied. Therefore, we assume the mirror ratio between the source region and
-  FAST is $R_B \lesssim R_{B,T}$, or equivalently, that the source altitude is
-  near or below 2.5~$R_E$.
+  assumption $E_p > T$ underpinning the pitch-angle spreading argument (section
+  \ref{ssSourceAlt}) is valid since $E_p =$~5.25~keV (legend in
+  Figure~\ref{ch6:Fig5}) and $T \simeq$~2.8~keV (Figure~\ref{ch6:Fig4}e). The
+  mirror ratio $R_{B,T} = 22$ (or a source altitude of approximately 2.5~$R_E$)
+  is accordingly that for which a preaccelerated source distribution would
+  appear approximately isotropic. Since differential energy flux drops off
+  somewhat rapidly with increasing pitch angle in the lower panel of
+  Figure~\ref{ch6:Fig5} (i.e., the distribution is not isotropic) we assume the
+  mirror ratio between the source region and FAST is $R_B \lesssim R_{B,T}$, or
+  equivalently that the source altitude is near or below 2.5~$R_E$.
 
   % ---------------- FIGURE 6
 
@@ -822,7 +855,7 @@
     \caption[Orbit 1843: Reduced chi-squared values for observed J-V curves and
     corresponding best-fit J-V curves.]{The top panel shows
       $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the observed J-V relationship
-      between 20:49:48 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T$ held
+      between 20:49:48 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T_m$ held
       fixed and magnetospheric density $n_m \big ( n_F, \bar{\phi}, \alpha_F
       \big )$, $\kappa$ and mirror ratio $R_B$ allowed to vary. The bottom panel
       shows the observed J-V relationship and corresponding best-fit Maxwellian
@@ -831,17 +864,25 @@
   \end{figure}
 
   % ----------------
-  The top panel of Figure~\ref{ch6:Fig6} displays ($\kappa, R_B$) parameter
-  space in the same format as the top panel of Figure~\ref{ch6:Fig3}, and it is
-  evident that the same three scenarios (a distant nonthermal source, a nearby
-  nonthermal source, and a thermal source) are the only ones plausible in the
-  top panel of Figure~\ref{ch6:Fig6}. Because $\kappa$ often exceeds 2 in
-  Figure~\ref{ch6:Fig4}, and because Figure~\ref{ch6:Fig5} argues that $R_B$
-  cannot exceed $\sim$22, the likelihood of a distant nonthermal source is
-  remote; instead, the balance of the evidence in this case is in favor of a
-  source population at less than 2.5~$R_E$. This conclusion about the source
-  altitude is compatible with the work of \citet{Ergun1998} discussed at the
-  beginning of this section.
+  
+  Again following the procedure outlined in section~\ref{ssJV}, we assume
+  $T_m = \bar{T}_F =$~2791.3~eV and form a set of of observed J-V pairs
+  $( j_{\parallel,i} , \Delta \Phi )$ from mapped current densities and
+  potential drops during this period. The top panel of Figure~\ref{ch6:Fig6}
+  displays contours of $\chi^2_{\textrm{red}} ( \kappa, R_B )$ in the same
+  format as the top panel of Figure~\ref{ch6:Fig3}. Two scenarios appear most
+  likely: (1) an extremely nonthermal source at or above $\sim$3.7~$R_E$, and
+  (2) a thermal or perhaps slightly nonthermal source at or below
+  $\sim$2.6~$R_E$. 
+
+  Because $\kappa \gtrsim$~2 is frequently observed during the period of
+  interest in Figure~\ref{ch6:Fig4}, and because Figure~\ref{ch6:Fig5} argues
+  that $R_B$ cannot exceed $\sim$22, the overall likelihood of the first
+  scenario involving a high-altitude nonthermal source is remote. Instead, the
+  balance of the evidence in this case is in favor of a weakly nonthermal source
+  population near or below 2.5~$R_E$. This conclusion about the source altitude
+  is compatible with the work of \citet{Ergun1998} discussed at the beginning of
+  this section.
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{Discussion and Conclusions}
@@ -856,25 +897,30 @@
   AKR \citep{Ergun1998}.
 
   The results of this study suggest that a nonthermal source population may
-  significantly modify the Knight relation. Given the restriction on source
-  regions to $>$~4.7~$R_E$, the results in Figure~\ref{ch6:Fig3}a in particular
-  show that the observed J-V relation is only compatible with a highly
-  nonthermal source population. Further study is clearly necessary to determine
-  both the conditions leading to development of highly nonthermal distributions,
-  as well as the source altitude.
+  significantly modify the Knight relation. Given the shell-like appearance of
+  precipitating electron distributions during the 11-second period marked in
+  Figure~\ref{ch6:Fig1}, which we interpret as evidence that the source altitude
+  can be no less than $>$~2~$R_E$, the results in Figure~\ref{ch6:Fig3}a in
+  particular indicate that the observed J-V relation is only compatible with a
+  highly nonthermal source population located at or above~4.7~$R_E$. Further
+  study is clearly necessary to determine both the conditions leading to
+  development of highly nonthermal distributions, as well as the source
+  altitude.
 
   Regarding the occurrence frequency of highly nonthermal populations, we have
   conducted a preliminary examination of previously reported FAST observations
   of inverted V precipitation
   \citep{McFadden1998a,Carlson2001,Janhunen2001,Dombeck2013}, which suggest
-  geomagnetically quiet periods favor production of ``far-equilibrium'' ($\kappa
-  \leq$~2.5) distributions, though recent statistical work with DMSP satellites
-  performed by \citet{McIntosh2014} seems to represent counterevidence, with
-  precipitation that is best fit with a kappa distribution occurring more
-  regularly during active periods \citep[e.g., Figure~7
-  in][]{McIntosh2014}. Notably, however, \citet{McIntosh2014} do not attempt to
-  distinguish thermal and nonthermal monoenergetic precipitation; the
-  distinction is only made for diffuse precipitation in their study.
+  geomagnetically quiet periods favor production of ``far-equilibrium''
+  ($\kappa \leq$~2.5) distributions. However, recent statistical work with DMSP
+  satellites performed by \citet{McIntosh2014} may represent counterevidence,
+  since they show that diffuse precipitation that is best fit with a kappa
+  distribution occurs more regularly during active periods \citep[e.g., Figure~7
+  in][]{McIntosh2014}. Because \citet{McIntosh2014} only distinguish between
+  Maxwellian and kappa distributions for diffuse (as opposed to monoenergetic)
+  precipitation, whether the same trend away from thermal equilibrium with
+  increasing geomagnetic activity exists for monoenergetic precipitation remains
+  to be seen.
 
   Results from analysis of orbit 1773 could represent the low-altitude
   counterpart of observations reported by \citet{Wygant2002} and
@@ -895,21 +941,39 @@
 
   Passing mention is owed to some existing reports in the literature showing
   $\kappa < 1.5$ and even $\kappa \simeq$~0, but because the three-dimensional
-  theoretical minimum $\kappa_{\mathrm{min}} =$~3/2 corresponds to a correlation
-  coefficient of 1, or perfectly correlated particle motion, how these results
-  were obtained is unclear.
+  theoretical minimum $\kappa_{\mathrm{min}} =$~3/2 corresponds to perfectly
+  correlated ($r =$~1) particle motion, how these results were obtained is
+  unclear.
 
-  The importance of the observations presented here is that they demonstrate the
-  existence of highly nonthermal ($\kappa \simeq$~1.6) monoenergetic
-  precipitation within the auroral acceleration region, clear from contamination
-  by secondary electrons and other thermalization processes. As attention turns
-  increasingly to dynamic M-I coupling, these observations suggest that the
-  effects of deviation from thermal equilibrium (as parameterized by $\kappa$ in
-  the present work) may not be ignorable either in the development of first
-  principles--based models of auroral precipitation, or in the study and
-  interpretation of magnetospheric energization and acceleration processes. A
-  comprehensive study of the conditions that give rise to such observations is
-  intended for future work.
+  Regarding methodology, we have performed the entire analyses of orbits 1773
+  and 1843 using a version of the procedure described in section~\ref{ssJV} that
+  is modified in two ways to obtain ``local'' J-V pairs that rely only on
+  electron observations, and neglect supplementary information available from
+  ion observations and IGRF~11. These modifications are (1) Information about
+  the upgoing ion beam is discarded so that the potential drop
+  $\Delta \Phi = \bar{E}_e$ instead of $\Delta \Phi = \bar{E}_e + \bar{E}_i$;
+  (2) Current densities calculated from the observed electron distributions are
+  calculated over all pitch angles (instead of restricting the pitch-angle range
+  to those within the earthward loss cone), and are not mapped to 100~km. We
+  briefly summarize the results of this alternative analysis.
+
+  The first issue we have encountered in this alternative analysis is 
+  significantly higher uncertainty in the calculated current density due to the
+  inclusion of counting statistics from energy-angle bins at large pitch angles
+  (Appendix~\ref{app:A}). The second issue is
+  !!!FINISH APPENDIX
+
+  In conclusion, the importance of the observations presented here is that they
+  demonstrate the existence of highly nonthermal ($\kappa \simeq$~1.6)
+  monoenergetic precipitation within the auroral acceleration region, clear from
+  contamination by secondary electrons and other thermalization processes. As
+  attention turns increasingly to dynamic M-I coupling, these observations
+  suggest that the effects of deviation from thermal equilibrium (as
+  parameterized by $\kappa$ in the present work) may not be ignorable either in
+  the development of first principles--based models of auroral precipitation, or
+  in the study and interpretation of magnetospheric energization and
+  acceleration processes. A comprehensive study of the conditions that give rise
+  to such observations is intended for future work.
 
 % \textbf{CHRIS: You could emphasize the basic difference of your
 %     observations here relative to those done previously. Some of which were in
@@ -930,6 +994,14 @@
   % atmospheric reflections are all necessary ingredients for producing the
   % observed distributions.
   
+  \section*{Acknowledgments}
+
+  We are grateful to Craig Markwardt for making publicly available an
+  Interactive Data Language version of the MINPACK-1 fitting routines, which we
+  have used extensively in this research. Work at Dartmouth College is supported
+  by NASA Headquarters under the NASA Earth and Space Science Fellowship
+  Program--Grant NNX14AO03H, and at Space Sciences Laboratory by NASA grants
+  NNX15AF57G and NNX16AG69G.
 
 \bibliographystyle{agufull08}
 \bibliography{refs6}
