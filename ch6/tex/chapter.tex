@@ -288,7 +288,7 @@
   \section{Methodology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \subsection{2-D Model Distribution for Precipitating Electrons} \label{ss2D}
+  \subsection{2-D Model Electron Distributions} \label{ss2D}
 
   Using 2-D model distributions based on either a 1-D Maxwellian distribution
   (\ref{ch6:eqMax1D}) or a 1-D kappa distribution (\ref{ch6:eqKappa1D}), we
@@ -487,7 +487,7 @@
   \begin{figure}
     \centering
     % \noindent\includegraphics[width=0.98\textwidth]{./ch6/figs/Kappa_summary--1773}
-    \noindent\includegraphics[width=0.98\textwidth]{./ch6/figs/Kappa_summary--1773__v2__itvl3integ}
+    \noindent\includegraphics[width=0.98\textwidth]{./ch6/figs/Kappa_summary--1773__v3__itvl2integ}
     \caption[Inverted V precipitation and best-fit Maxwellian and kappa
     distribution parameters (Orbit 1773)]{(See caption on next page.)}
     \label{ch6:Fig1}
@@ -496,7 +496,7 @@
     \centering \contcaption{EESA observations of inverted V precipitation on Feb
       1, 1997, and corresponding 2-D fit parameters. Parameters related to
       best-fit Maxwellian and kappa distributions are respectively demarked with
-      red crosses and blue x's in panels c--f. (a) $>$300~eV electron
+      red crosses and blue x's in panels c--f. (a) $>$200~eV electron
       pitch-angle distribution. (b) Average electron energy spectrum within the
       earthward loss cone. (c) $\kappa$ fit parameter for the best-fit kappa
       distribution. (d) Reduced chi-squared statistic $\chi^2_{\mathrm{red}}$
@@ -510,7 +510,7 @@
       using analytic expressions for moment uncertainties related to counting
       statistics for an arbitrary plasma distribution function
       [\citealt{Gershman2015}; see Appendix~\ref{app:A}]. EESA observations have been
-      integrated over three times the survey-mode EESA sampling frequency to
+      integrated over twice the survey-mode EESA sampling frequency to
       improve the related counting statistics. This time interval was first
       reported by \citet{Elphic1998}.}
   \end{figure}
@@ -535,9 +535,9 @@
   fits with a kappa distribution are at times much smaller than corresponding
   $\chi^2_{\textrm{red}}$ values for fits with a Maxwellian distribution
   (Figure~\ref{ch6:Fig1}c), most markedly during the period between red bars
-  (09:26:54--09:27:05~UT) in Figure~\ref{ch6:Fig1} when $\kappa$ is frequently
+  (09:26:53.5--09:27:03.5~UT) in Figure~\ref{ch6:Fig1} when $\kappa$ is frequently
   near the theoretical minimum $\kappa_{\mathrm{min}} =$~3/2. Parameter
-  estimates before 09:26:54~UT are dubious, since \citet{Chaston2002b} have
+  estimates before 09:26:53.5~UT are dubious, since \citet{Chaston2002b} have
   reported that the particle observations before this period are immersed in
   strong coherent ion cyclotron wave emission at frequencies faster than the
   EESA sampling frequency and are therefore subject to aliasing.
@@ -563,46 +563,51 @@
   % \end{figure}
   \begin{figure}
     \centering
+
+    % Alder
     % \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1773--1DFit_2avgItvl__v0_20170423--trim}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773--1DFit_3avgItvl__v1_20170613}
+    % \noindent\includegraphics[width=0.8\textwidth,angle=90]{./ch6/figs/orb_1773-Kappa_fit-09_27_01__57}
+
+    \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1773--1DFit_2avgItvl__v3_20170614--trim}
 
     \vspace{1cm}
 
-    % \noindent\includegraphics[width=0.8\textwidth,angle=90]{./ch6/figs/orb_1773-Kappa_fit-09_27_01__57}
-    \noindent\includegraphics[width=0.9\textwidth,angle=90]{./ch6/figs/orb_1773-Kappa_fit-09_27_04__26}
+    \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1773-Kappa_fit-09_27_01__57--trim}
+
     \caption[Example one- and two-dimensional fits of observed inverted-V
     electron distributions (Orbit 1773)]{(See caption on next page.)}
     \label{ch6:Fig2}
   \end{figure}
 
   \begin{figure}
-    \centering \contcaption{Electron spectra observed at 09:27:00.94~UT. (a) 1-D
-      differential number flux spectrum (black crosses) obtained by averaging
-      all differential number flux spectra within the magnetospheric source
-      cone, with best-fit Maxwellian and kappa distributions overlaid (red
-      dash-dotted line and blue dashed line, respectively). The uncertainty of
-      each observed differential number flux is calculated by conversion of the
-      corresponding particle count uncertainty $\sqrt{N}$ to units of
-      differential number flux. (b) Best-fit 2-D kappa distribution (solid
-      contours) with the observed 2-D differential energy flux spectrum overlaid
-      (contour lines). For each pitch angle black asterisks indicate the peak
-      energy $E_p = 849.69$~eV and red plus signs indicate the lower edge of the
-      minimum energy bins used to perform the 2-D fit, as described in
-      \ref{ss2D}.}
+    \centering \contcaption{Electron spectra observed at
+      09:27:01.261--09:27:01.893~UT. (a) 1-D differential number flux spectrum
+      (black crosses) obtained by averaging all differential number flux spectra
+      within the magnetospheric source cone, with best-fit Maxwellian and kappa
+      distributions overlaid (red dash-dotted line and blue dashed line,
+      respectively). The uncertainty of each observed differential number flux
+      is calculated by conversion of the corresponding particle count
+      uncertainty $\sqrt{N}$ to units of differential number flux. (b) Best-fit
+      2-D kappa distribution (solid contours) with the observed 2-D differential
+      energy flux spectrum overlaid (contour lines). For each pitch angle black
+      asterisks indicate the peak energy $E_p = 849$~eV and red plus signs
+      indicate the lower edge of the minimum energy bins used to perform the 2-D
+      fit, as described in \ref{ss2D}.}
   \end{figure}
 
   % ----------------
 
   As a representative example of electron observations during the period between
   bars in Figure~\ref{ch6:Fig1}, Figure~\ref{ch6:Fig2} shows a 1-D slice and the
-  full 2-D distribution observed at 09:27:00.94~UT.  In Figure~\ref{ch6:Fig1}a
-  the 1-D best-fit kappa and Maxwellian distributions (blue dashed line and red
-  dash-dotted line, respectively) overlay the observed distribution (black
-  crosses). The best-fit kappa distribution is seen to describe both the
-  suprathermal tail and the narrow peak of the observed distribution, whereas
-  the best-fit Maxwellian distribution fails to describe the suprathermal tail
-  but is able to describe the narrow peak via a best-fit temperature that is low
-  compared to the observed temperature (40~eV versus $\sim$600~eV).
+  full 2-D distribution sampled over 09:27:01.261--09:27:01.893~UT. In
+  Figure~\ref{ch6:Fig1}a the 1-D best-fit kappa and Maxwellian distributions
+  (blue dashed line and red dash-dotted line, respectively) overlay the observed
+  distribution (black crosses). The best-fit kappa distribution is seen to
+  describe both the suprathermal tail and the narrow peak of the observed
+  distribution, whereas the best-fit Maxwellian distribution fails to describe
+  the suprathermal tail but is able to describe the narrow peak via a best-fit
+  temperature that is low compared to the observed temperature (40~eV versus
+  $\sim$600~eV).
 
   Typical ranges of electron densities and temperatures in the distant plasma
   sheet are respectively 0.01--0.5~cm$^{-3}$ and 400-900~eV
@@ -611,7 +616,7 @@
   best-fit kappa distribution (blue \emph{x} symbols) densities and temperatures
   are within these typical ranges; best-fit Maxwellian densities are also within
   the corresponding typically observed range, but the range of best-fit
-  Maxwellian temperatures is somewhat low (20--300~eV) compared to the
+  Maxwellian temperatures is somewhat low (20--100~eV) compared to the
   corresponding typical range in the plasma sheet.
 
   % ---------------- FIGURE 3
@@ -620,8 +625,13 @@
     \centering
     % \noindent\includegraphics[width=0.91\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__v0_20170423--trim}
     % \noindent\includegraphics[width=0.91\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__superbestfit__v0_20170423--trim}
-    \noindent\includegraphics[width=0.91\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__v1_20170605--trim}
-    \noindent\includegraphics[width=0.91\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__superbestfit__v1_20170605--trim}
+
+    \noindent\includegraphics[width=0.85\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__v3_20170614--trim}
+
+    \vspace{1cm}
+
+    \noindent\includegraphics[width=0.85\textwidth]{./ch6/figs/orb_1773_lump1_kappa_RB_map__superbestfit__v3_20170614--trim}
+
     \caption[Orbit 1773: Reduced chi-squared values for observed J-V curves with
     $T$ held fixed and magnetospheric density $n_m \big ( n_F, \bar{\phi},
     \alpha_F \big )$ $\kappa$ and $R_B$ allowed to vary, and corresponding
@@ -629,7 +639,7 @@
       (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}). The top panel shows
       $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the
       % reduced chi-squared values for the
-      observed J-V relationship between 09:26:54 and 09:27:05~UT in
+      observed J-V relationship between 09:26:55.5 and 09:27:03.5~UT in
       Figure~\ref{ch6:Fig1}, with $T$ held fixed and magnetospheric density $n_m
       \big ( n_F, \bar{\phi}, \alpha_F \big )$, $\kappa$ and mirror ratio $R_B$
       allowed to vary. The bottom panel shows the observed J-V relationship and
@@ -640,10 +650,10 @@
   % ----------------
 
   Perhaps not coincidentally, the period shown in Figure~\ref{ch6:Fig1} during
-  which $\kappa \lesssim 2$ (09:26:54--09:27:05~UT) also delineates a period
+  which $\kappa \lesssim 2$ (09:26:55.5--09:27:03.5~UT) also delineates a period
   during which the observed density, temperature, and $\kappa$ are relatively
   steady. Following the procedure outlined in section~\ref{ssJV} we assume
-  $T_m = \bar{T}_F =$~621.7~eV and form a set of of observed J-V pairs
+  $T_m = \bar{T}_F =$~621~eV and form a set of of observed J-V pairs
   $( j_{\parallel,i} , \Delta \Phi )$ from the current densities, which are
   mapped to 100~km, and potential drops (white line, \ref{ch6:Fig1}b) during
   this period.
@@ -668,7 +678,7 @@
 
   The cause of the large gap in ($\kappa, R_B$) parameter space that separates
   these scenarios is bifold; each has to do with the linearity condition
-  $\Delta \Phi / k_B T \ll R_B $. First, relative to the thermal J-V relation
+  $\Delta \Phi / k_B T \ll R_B $. First, relative to the Maxwellian J-V relation
   (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$ the kappa J-V relation
   (\ref{ch6:eqDors}) is greatly influenced by saturation effects, which arise as
   the linearity condition is violated. Second, for equal number density and
@@ -677,19 +687,19 @@
   density predicted by the Maxwellian J-V relation (\ref{ch6:eqKnight}) at
   $\bar{\phi} =$~10, for example.
 
-  The best-fit nonthermal J-V relation (defined as that for which
+  The best-fit kappa J-V relation (defined as that for which
   $\chi^2_{\textrm{red}} ( \kappa, R_B )$ is the global minimum) is marked with
-  a gray diamond and is given by $\kappa =$~1.58 and $R_B =$690, corresponding
-  to a source at $h \simeq$~8.5~$R_E$. However, it is apparent that a source
-  region down to $h \simeq$~4.7~$R_E$ is similarly plausible for
-  $\kappa \simeq$~1.6. The best-fit thermal J-V relation, for which
+  a gray diamond and is given by $\kappa =$~1.58 and $R_B =$10$^3$,
+  corresponding to a source at $h \simeq$~12~$R_E$. However, it is apparent that
+  a source region down to $h \simeq$~4.7~$R_E$ is similarly plausible for
+  $\kappa \lesssim$~1.6. The best-fit Maxwellian J-V relation, for which
   $\kappa \rightarrow \infty$, is shown as a gray triangle above the plot area
-  and is given by $R_B =$~8.55, corresponding to a source altitude
-  $h \simeq$~2~$R_E$.
+  and is given by $R_B =$~8.3, corresponding to a source altitude
+  $h \simeq$~2.1~$R_E$.
 
   The lower panel in Figure~\ref{ch6:Fig3} shows the observed J-V relation
   (black plus signs, with error bars calculated as described in
-  Appendix~\ref{app:A}), and best-fit nonthermal and thermal J-V relations given
+  Appendix~\ref{app:A}), and best-fit kappa and Maxwellian J-V relations given
   correspondingly by equation (\ref{ch6:eqKnight}) (blued dashed line) and
   equation (\ref{ch6:eqDors}) (red dash-dotted line).
 
@@ -706,7 +716,7 @@
   % thermal or nonthermal source. The cause of the large gap in ($\kappa, R_B$)
   % parameter space that separates these scenarios is bifold; each has to do with
   % the linearity condition $\Delta \Phi / k_B T \ll R_B $. First, relative to the
-  % thermal J-V relation (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$ the kappa
+  % Maxwellian J-V relation (\ref{ch6:eqKnight}), for $\kappa \lesssim 2.5$ the kappa
   % J-V relation (\ref{ch6:eqDors}) is greatly influenced by saturation effects,
   % which arise as the linearity condition is violated. Second, for equal number
   % density and temperature, the current density predicted by the kappa J-V
@@ -726,16 +736,16 @@
   The distinction to be borne in mind is that according to
   $\chi^2_{\mathrm{red}}$ values shown in the top panel of \ref{ch6:Fig3} a
   highly nonthermal population is compatible with either low
-  ($h \lesssim$~2~$R_E$) or high ($h \gtrsim$~4.7~$R_E$) source region altitudes, but a
-  source in thermal equilibrium is only compatible with a nearby source
-  region. Importantly, the electron distributions in Figure~\ref{ch6:Fig2}
-  exhibit a very pronounced high-energy tail, which argues strongly against a
-  source in thermal equilibrium and therefore against the scenario involving a
-  nearby ($h <$~2.2~$R_E$) source in thermal equilbrium.
+  ($h \lesssim$~2~$R_E$) or high ($h \gtrsim$~4.7~$R_E$) source region
+  altitudes, but a source in thermal equilibrium is only compatible with a
+  nearby source region. Importantly, the electron distributions in
+  Figure~\ref{ch6:Fig2} exhibit a very pronounced high-energy tail, which argues
+  strongly against a source in thermal equilibrium and therefore against the
+  scenario involving a nearby ($h <$~2.2~$R_E$) source in thermal equilbrium.
 
   If the assumed preacceleration scenario described in section~\ref{ssSourceAlt}
   is correct for the precipitating electrons observed during the period of
-  interest in Figure~\ref{ch6:Fig1}, with $E_p \simeq 850$~V and $T =$~600~eV,
+  interest in Figure~\ref{ch6:Fig1}, with $E_p \simeq 850$~V and $T =$~620~eV,
   one obtains $\phi_T = 19^\circ$ and therefore $R_{B,T} = 9$. The abscissa of
   the top panel in Figure~\ref{ch6:Fig3} shows that $R_{B,T} = 9$ corresponds to
   a minimum source altitude $h \simeq$~2~$R_E$. The shell-like distributions
@@ -777,11 +787,11 @@
   \begin{figure}
     \centering
     % \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/Kappa_summary--1843}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/Kappa_summary--1843__v2__itvl3integ}
+    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/Kappa_summary--1843__v3__itvl2integ}
     \caption[Inverted V precipitation and best-fit Maxwellian and kappa
     distribution parameters (Orbit 1843)]{EESA observations of inverted V
       precipitation on Feb 8, 1997, and corresponding 2-D fit parameters. (a)
-      $>$300~eV electron pitch-angle distribution. (b) Average electron energy spectrum
+      $>$500~eV electron pitch-angle distribution. (b) Average electron energy spectrum
       within the precipitating loss cone. (c) $\kappa$ fit parameter for the
       best-fit kappa distribution. (d) Reduced chi-squared statistic
       $\chi^2_{\mathrm{red}}$ for each fit type. (e) Observed (black diamonds)
@@ -797,7 +807,7 @@
   1843, in the same layout as Figure~\ref{ch6:Fig1}. These observations have
   also been reported by \citet{Ergun1998a,Ergun1998}. While those authors used
   burst-mode EESA observations, we present survey-mode EESA observations
-  integrated over three times the survey-mode EESA sampling frequency in order
+  integrated over twice the survey-mode EESA sampling frequency in order
   to decrease the uncertainty related to counting statistics in the calculated
   temperatures and densities (Appendix~\ref{app:A}).
 
@@ -808,7 +818,7 @@
   about the altitude of the source population with the results of an analysis of
   orbit 1843 that parallels the foregoing analysis of orbit 1773.
 
-  During the period 20:49:48--20:50:11~UT that is shown between red bars, the
+  During the period 20:49:50--20:50:11~UT that is shown between red bars, the
   observed properties of the electrons within the precipitating loss cone are
   $\kappa \simeq $~1.55--2.5, $T_F =$~2--3~keV, and $n_F =$~0.7--1.0~cm$^{-3}$.
   Best-fit parameters shown in Figure suggest that $\kappa \gtrsim 2$ over much of this period,
@@ -821,11 +831,17 @@
     \centering
     % \noindent\includegraphics[width=0.95\textwidth,angle=90]{./ch6/figs/orb_1843-Kappa_fit-20_50_08__87}
     % \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1843-Kappa_fit-20_50_09__18__fit1D}
-    \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1843--1DFit_3avgItvl__v1__20170613}
+
+
+    % Alder
+    % \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1843--1DFit_3avgItvl__v1__20170613}
+    % \noindent\includegraphics[width=0.8\textwidth,angle=90]{./ch6/figs/orb_1843-Kappa_fit-20_50_09__18}
+
+    \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1843--1DFit_2avgItvl__v3__20170614--trim}
 
     \vspace{1cm}
 
-    \noindent\includegraphics[width=0.8\textwidth,angle=90]{./ch6/figs/orb_1843-Kappa_fit-20_50_09__18}
+    \noindent\includegraphics[width=0.8\textwidth]{./ch6/figs/orb_1843-Kappa_fit-20_50_08__87--trim}
 
     \caption[Example one- and two-dimensional fits of observed inverted-V
     electron distributions (Orbit 1843)]{(See caption on next page.)}
@@ -834,19 +850,19 @@
   \end{figure}
 
   \begin{figure}
-    \centering \contcaption{Electron spectra observed at 20:50:09.18~UT. (a) 1-D
-      differential number flux spectrum (black crosses) obtained by averaging
-      all differential number flux spectra within the magnetospheric source
-      cone, with best-fit Maxwellian and kappa distributions overlaid (red
-      dash-dotted line and blue dashed line, respectively). The uncertainty of
-      each observed differential number flux is calculated by conversion of the
-      corresponding particle count uncertainty $\sqrt{N}$ to units of
-      differential number flux. (b) Best-fit 2-D kappa distribution (solid
-      contours) with the observed 2-D differential energy flux spectrum overlaid
-      (contour lines). For each pitch angle black asterisks indicate the peak
-      energy $E_p = 849.69$~eV and red plus signs indicate the lower edge of the
-      minimum energy bins used to perform the 2-D fit, as described in
-      \ref{ss2D}.}
+    \centering \contcaption{Electron spectra observed at
+      20:50:08.238--20:50:09.504~UT. (a) 1-D differential number flux spectrum
+      (black crosses) obtained by averaging all differential number flux spectra
+      within the magnetospheric source cone, with best-fit Maxwellian and kappa
+      distributions overlaid (red dash-dotted line and blue dashed line,
+      respectively). The uncertainty of each observed differential number flux
+      is calculated by conversion of the corresponding particle count
+      uncertainty $\sqrt{N}$ to units of differential number flux. (b) Best-fit
+      2-D kappa distribution (solid contours) with the observed 2-D differential
+      energy flux spectrum overlaid (contour lines). For each pitch angle black
+      asterisks indicate the peak energy $E_p = 5250$~eV and red plus signs
+      indicate the lower edge of the minimum energy bins used to perform the 2-D
+      fit, as described in \ref{ss2D}.}
   \end{figure}
 
   % ----------------
@@ -856,8 +872,8 @@
   lines) overlays the best-fit 2-D kappa distribution (solid contours). The
   assumption $E_p > T$ underpinning the pitch-angle spreading argument (section
   \ref{ssSourceAlt}) is valid since $E_p =$~5.25~keV (legend in
-  Figure~\ref{ch6:Fig5}) and $T \simeq$~2.8~keV (Figure~\ref{ch6:Fig4}e). The
-  mirror ratio $R_{B,T} = 22$ (or a source altitude $h \simeq$~2.5~$R_E$) is
+  Figure~\ref{ch6:Fig5}) and $T \simeq$~2.9~keV (Figure~\ref{ch6:Fig4}e). The
+  mirror ratio $R_{B,T} = 14$ (or a source altitude $h \simeq$~2.5~$R_E$) is
   accordingly that for which a preaccelerated source distribution would appear
   approximately isotropic. Since differential energy flux drops off somewhat
   rapidly with increasing pitch angle in the lower panel of
@@ -871,8 +887,14 @@
     \centering
     % \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__kappa_RB_map__20170422}
     % \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__map_linear__bestfit__20170422}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__kappa_RB_map__20170605__v2--trim}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__map_linear__bestfit__20170605__v2--trim}
+
+    \noindent\includegraphics[width=0.85\textwidth]{./ch6/figs/orb_1843__kappa_RB_map__20170614__v3--trim}
+
+    \vspace{1cm}
+
+    \noindent\includegraphics[width=0.85\textwidth]{./ch6/figs/orb_1843__map_linear__bestfit__20170614__v3--trim}
+
+
     % \caption[Orbit 1843: Reduced chi-squared values for observed J-V curves and
     % corresponding best-fit J-V curves.]{Results of J-V curve fits using
     %   equations \ref{ch6:eqKnight} and \ref{ch6:eqDors}. The top panel shows
@@ -880,10 +902,12 @@
     %   20:49:48 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, as in
     %   Figure~\ref{ch6:Fig3}. The bottom panel shows the observed J-V relation
     %   and corresponding best-fit Maxwellian and kappa J-V relations.}
+
+
     \caption[Orbit 1843: Reduced chi-squared values for observed J-V curves and
     corresponding best-fit J-V curves.]{The top panel shows
       $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the observed J-V relationship
-      between 20:49:48 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T_m$ held
+      between 20:49:50 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T_m$ held
       fixed and magnetospheric density $n_m \big ( n_F, \bar{\phi}, \alpha_F
       \big )$, $\kappa$ and mirror ratio $R_B$ allowed to vary. The bottom panel
       shows the observed J-V relationship and corresponding best-fit Maxwellian
@@ -894,14 +918,14 @@
   % ----------------
   
   Again following the procedure outlined in section~\ref{ssJV}, we assume
-  $T_m = \bar{T}_F =$~2791.3~eV and form a set of of observed J-V pairs
+  $T_m = \bar{T}_F \simeq$~2900~eV and form a set of of observed J-V pairs
   $( j_{\parallel,i} , \Delta \Phi )$ from mapped current densities and
   potential drops during this period. The top panel of Figure~\ref{ch6:Fig6}
   displays contours of $\chi^2_{\textrm{red}} ( \kappa, R_B )$ in the same
   format as the top panel of Figure~\ref{ch6:Fig3}. Two scenarios appear most
   likely: (1) an extremely nonthermal source at or above $\sim$3.7~$R_E$, and
   (2) a thermal or perhaps slightly nonthermal source at or below
-  $\sim$2.6~$R_E$. 
+  $\sim$2.6~$R_E$.
 
   Because $\kappa \gtrsim$~2 is frequently observed during the period of
   interest in Figure~\ref{ch6:Fig4}, and because Figure~\ref{ch6:Fig5} argues
@@ -932,13 +956,17 @@
 
   \begin{figure}
     \centering
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773__local_analysis--trim}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773__local_analysis--T_and_N--trim}
+    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773__local_analysis_v3_20170614__avgItvl2--trim}
+
+    \vspace{1cm}
+
+    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1773__local_analysis--T_and_N_v3_20170614__avgItvl2--trim}
+
     \caption[Orbit 1773: Reduced chi-squared values for observed ``local'' J-V
     curves and corresponding best-fit curves.]{Results of ``local'' J-V curve
       fits using J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}). The
       top panel shows $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the observed
-      J-V relationship between 09:26:54 and 09:27:05~UT in
+      J-V relationship between 09:26:55.5 and 09:27:03.5~UT in
       Figure~\ref{ch6:Fig1}, with $T$ held fixed and magnetospheric density
       $n_m \big ( n_F, \bar{\phi}, \alpha_F \big )$, $\kappa$ and mirror ratio
       $R_B$ allowed to vary. The bottom panel shows the observed J-V
@@ -950,7 +978,7 @@
   % ----------------
   
   Figure~\ref{ch6:Fig7} shows $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the
-  11-s period between red bars in Figure~\ref{ch6:Fig1}. It is immediately obvious que los hermanos
+  8-s period between red bars in Figure~\ref{ch6:Fig1}. It is immediately obvious que los hermanos
 
   The first issue we have encountered in this alternative analysis is 
   significantly higher uncertainty in the calculated current density due to the
@@ -959,12 +987,17 @@
 
   \begin{figure}
     \centering
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__local_analysis--trim}
-    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__local_analysis--T_and_N--trim}
+
+    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__local_analysis_v3_20170614--trim}
+
+    \vspace{1cm}
+
+    \noindent\includegraphics[width=0.9\textwidth]{./ch6/figs/orb_1843__local_analysis--T_and_N_v3_20170614--trim}
+
     \caption[Orbit 1843: Reduced chi-squared values for observed ``local'' J-V
     curves and corresponding best-fit curves.]{The top panel shows
       $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the observed J-V relationship
-      between 20:49:48 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T_m$ held
+      between 20:49:50 and 20:50:11~UT in Figure~\ref{ch6:Fig4}, with $T_m$ held
       fixed and magnetospheric density
       $n_m \big ( n_F, \bar{\phi}, \alpha_F \big )$, $\kappa$ and mirror ratio
       $R_B$ allowed to vary. The bottom panel shows the observed J-V
@@ -991,7 +1024,7 @@
 
   The results of this study suggest that a nonthermal source population may
   significantly modify the Knight relation. Given the shell-like appearance of
-  precipitating electron distributions during the 11-s period marked in
+  precipitating electron distributions during the 8-s period marked in
   Figure~\ref{ch6:Fig1}, which we interpret as evidence that the source altitude
   can be no less than 2~$R_E$, the results in Figure~\ref{ch6:Fig3}a in
   particular indicate that the observed J-V relation is only compatible with a
