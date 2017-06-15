@@ -522,7 +522,7 @@
 
   % ----------------
 
-  \section{FAST Orbit 1773}
+  \section{FAST Orbit 1773} \label{ch6:s1773}
 
   During an approximately 60-s interval on Feb 1, 1997 that has previously been
   reported \citep{Elphic1998,Chaston2002b}, the FAST satellite observed inverted
@@ -666,14 +666,16 @@
   The top panel of Figure~\ref{ch6:Fig3} displays contours of
   $\chi^2_{\textrm{red}} ( \kappa, R_B )$, where
   \begin{subequations}
-    \begin{align} \chi^2_{\mathrm{red}} = \dfrac{\sum_i j_{\parallel,i} (\Delta \Phi) - j_{\textrm{pred}\parallel,i}(\Delta \Phi; P_m)}{\mathrm{dof}}; \label{ch6:eqChi2red} \\
+    \begin{align} \chi^2_{\mathrm{red}} = \dfrac{\sum_k \Big ( j_{\parallel,i k} (\Delta \Phi) - j_{\textrm{pred}\parallel,i k}(\Delta \Phi; P_m) \Big )^2 \Big / \sigma_{j_{\parallel,i k}}^2}{\mathrm{dof}}; \label{ch6:eqChi2red} \\
       P_m = \Big \{ n_m ( \hat{n}_F, \bar{\phi} , \alpha_F ), \hat{T}_m, R_B,
       \kappa \, \Big \}. \label{paramFit}
     \end{align}
   \end{subequations}
-  Parameters with hats in (\ref{paramFit}) are fixed, and
-  $j_{\textrm{pred}\parallel,i} $ is the current density predicted either by J-V
-  relation (\ref{ch6:eqKnight}) or (\ref{ch6:eqDors}).
+  Parameters with hats in (\ref{paramFit}) are fixed,
+  $j_{\textrm{pred}\parallel,i} $ is the current density at 100~km predicted
+  either by J-V relation (\ref{ch6:eqKnight}) or (\ref{ch6:eqDors}), and
+  $\sigma_{j_{\parallel,i k}}$ is the moment uncertainty in $j_{\parallel,i k}$
+  due to counting statistics [\citealp{Gershman2015}; see Appendix~A].
 
   The top panel of Figure~\ref{ch6:Fig3} indicates that only two scenarios are
   plausible: one involves a source population that is located at or beyond
@@ -702,7 +704,7 @@
   and is given by $R_B =$~8.3, corresponding to a source altitude
   $h \simeq$~2.1~$R_E$.
 
-  The lower panel in Figure~\ref{ch6:Fig3} shows the observed J-V relation
+  The bottom panel in Figure~\ref{ch6:Fig3} shows the observed J-V relation
   (black plus signs, with error bars calculated as described in
   Appendix~\ref{app:A}), and best-fit kappa and Maxwellian J-V relations (blue
   dashed and red dash-dotted lines, respectively) given by equation
@@ -816,20 +818,6 @@
   to decrease the uncertainty related to counting statistics in the calculated
   temperatures and densities (Appendix~\ref{app:A}).
 
-  \citet{Ergun1998} used observations of auroral kilometric radiation (AKR) made
-  by the FAST fields instrument \citep{Ergun2001} to conclude that the source
-  region for the precipitating electrons in Figure~\ref{ch6:Fig4} lies ``near
-  the apogee of FAST'' at approximately 4200~km. We may compare this information
-  about the altitude of the source population with the results of an analysis of
-  orbit 1843 that parallels the foregoing analysis of orbit 1773.
-
-  During the period 20:49:50--20:50:11~UT that is shown between red bars, the
-  observed properties of the electrons within the precipitating loss cone are
-  $\kappa \simeq $~1.55--2.5, $T_F =$~2--3~keV, and $n_F =$~0.7--1.0~cm$^{-3}$.
-  Best-fit parameters shown in Figure suggest that $\kappa \gtrsim 2$ over much of this period,
-  in contrast to the more extreme best-fit values $\kappa \lesssim 1.7$ during
-  the marked period in Figure~\ref{ch6:Fig1}c.
-
   % ---------------- FIGURE 5
 
   \begin{figure}
@@ -875,16 +863,23 @@
   Figure~\ref{ch6:Fig5} shows a typical example of the 2-D electron
   distributions observed during this period. The observed distribution (contour
   lines) overlays the best-fit 2-D kappa distribution (solid contours). The
-  assumption $E_p > T$ underpinning the pitch-angle spreading argument (section
-  \ref{ssSourceAlt}) is valid since $E_p =$~5.25~keV (legend in
+  assumption $E_p > T$ underpinning the pitch-angle spreading argument in
+  section~\ref{ssSourceAlt} is valid since $E_p =$~5.25~keV (legend in
   Figure~\ref{ch6:Fig5}) and $T \simeq$~2.9~keV (Figure~\ref{ch6:Fig4}e). The
   mirror ratio $R_{B,T} = 14$ (or a source altitude $h \simeq$~2.5~$R_E$) is
   accordingly that for which a preaccelerated source distribution would appear
   approximately isotropic. Since differential energy flux drops off somewhat
-  rapidly with increasing pitch angle in the lower panel of
+  rapidly with increasing pitch angle in the bottom panel of
   Figure~\ref{ch6:Fig5} (i.e., the distribution is not isotropic) we assume the
   mirror ratio between the source region and FAST is $R_B \lesssim R_{B,T}$, or
   equivalently that the source altitude $h \lesssim$~2.5~$R_E$.
+
+  \citet{Ergun1998} used observations of auroral kilometric radiation (AKR) made
+  by the FAST fields instrument \citep{Ergun2001} to conclude that the source
+  region for the precipitating electrons in Figure~\ref{ch6:Fig4} lies ``near
+  the apogee of FAST'' at approximately 4200~km. We may compare this information
+  about the altitude of the source population with the results of an analysis of
+  orbit 1843 that parallels the foregoing analysis of orbit 1773.
 
   % ---------------- FIGURE 6
 
@@ -923,6 +918,13 @@
 
   % ----------------
   
+  During the period 20:49:50--20:50:11~UT that is shown between red bars, the
+  observed properties of the electrons within the precipitating loss cone are
+  $\kappa \simeq $~1.55--2.5, $T_F =$~2--3~keV, and $n_F =$~0.7--1.0~cm$^{-3}$.
+  Best-fit parameters shown in Figure suggest that $\kappa \gtrsim 2$ over much of this period,
+  in contrast to the more extreme best-fit values $\kappa \lesssim 1.7$ during
+  the marked period in Figure~\ref{ch6:Fig1}c.
+
   Again following the procedure outlined in section~\ref{ssJV}, we assume
   $T_m = \bar{T}_F \simeq$~2900~eV and form a set of of observed J-V pairs
   $( j_{\parallel,i} , \Delta \Phi )$ from mapped current densities and
@@ -946,36 +948,6 @@
   \section{Analysis using local potential and current density}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  We have performed analysis of the J-V relationship of orbits 1773 and 1843
-  using a version of the procedure described in section~\ref{ssJV} that is
-  modified in two ways to obtain what we term ``local'' J-V pairs that rely only
-  on electron distribution measurements and IGRF~11, neglecting supplementary
-  information available from ion distribution measurements. These modifications
-  are (1) the contribution to the potential from an upgoing ion beam, if one is
-  present, is neglected so that the potential drop $\Delta \Phi = \bar{E}_e$
-  instead of $\Delta \Phi = \bar{E}_e + \bar{E}_i$; (2) current densities
-  calculated from the observed electron distributions are calculated over all
-  pitch angles outside the anti-earthward loss cone (instead of restricting the
-  pitch-angle range to those within the earthward loss cone), and are not mapped
-  to 100~km. We briefly summarize the results of this local J-V analysis for
-  each orbit.
-
-  The map of values of $\chi^2_{red} (\kappa, R_B)$ shown in the top panel of
-  Figure~\ref{ch6:Fig7} for orbit 1773 indicates that there are two plausible
-  scenarios, neither of which matches any of the three scenarios shown in the
-  top panel of Figure~\ref{ch6:Fig3}. One scenario involves an extremely
-  nonthermal ($\kappa <$~1.55) source at altitudes 
-
-  The results of local analysis for orbits 1773 and 1843 are qualitatively
-  highly similar, the points to be discussed in relation to local analysis for
-  orbit 1773 being largely the same. Namely, the unmapped current densities
-  $j_\parallel$ in the observed local J-V relation (bottom panel,
-  Figure~\ref{ch6:Fig7}) are calculated over all pitch angles outside the
-  anti-earthward loss cone, and are consequently subject to much greater
-  uncertainty than the counterpart mapped current densities $j_{\parallel,i}$
-  (bottom panel, Figure~\ref{ch6:Fig3}), which are calculated over all pitch
-  angles within the earthward loss cone.
-
   % ---------------- FIGURE 7
 
   \begin{figure}
@@ -998,14 +970,6 @@
 
   % ----------------
   
-  Figure~\ref{ch6:Fig7} shows $\chi^2_{\mathrm{red}} ( \kappa, R_B)$ for the
-  8-s period between red bars in Figure~\ref{ch6:Fig1}. It is immediately obvious que los hermanos
-
-  The first issue we have encountered in this alternative analysis is
-  significantly higher uncertainty in the calculated current density due to the
-  inclusion of counting statistics from energy-angle bins at large pitch angles
-  (Appendix~\ref{app:A}). The second issue is
-
   % ---------------- FIGURE 8
 
   \begin{figure}
@@ -1029,6 +993,58 @@
 
   % ----------------
 
+  We have performed analysis of the J-V relationship of orbits 1773 and 1843
+  using a version of the procedure described in section~\ref{ssJV} that is
+  modified in two ways to obtain what we term ``local'' J-V pairs that rely only
+  on electron distribution measurements and IGRF~11, neglecting supplementary
+  information available from ion distribution measurements. These modifications
+  are (1) the contribution to the potential from upgoing ion beams is neglected
+  if present, so that the potential drop $\Delta \Phi = \bar{E}_e$ instead of
+  $\Delta \Phi = \bar{E}_e + \bar{E}_i$; (2) current densities calculated from
+  the observed electron distributions are calculated over all pitch angles
+  outside the anti-earthward loss cone (instead of restricting the pitch-angle
+  range to those within the earthward loss cone), and are not mapped to
+  100~km. We briefly summarize the results of this local J-V analysis for each
+  orbit.
+
+  The map of values of $\chi^2_{\mathrm{red}} (\kappa, R_B)$ shown in the top
+  panel of Figure~\ref{ch6:Fig7} for orbit 1773 indicates that there are two
+  plausible scenarios. The first scenario involves an extremely nonthermal
+  ($\kappa <$~1.55) source at altitudes $h \lesssim$~2.8~$R_E$, and the second
+  involves a weakly nonthermal ($\kappa \gtrsim$~2.4) or thermal source at
+  altitudes $h \gtrsim$~3.8~$R_E$. Neither scenario matches any of the three
+  scenarios in the top panel of Figure~\ref{ch6:Fig3} that were identified and
+  discussed in section~\ref{ch6:s1773}, and neither seems consistent with the
+  range of best-fit parameters 1.54~$< \kappa \leq$~2.3 during the marked 8-s
+  interval in Figure~\ref{ch6:Fig1}c.
+
+  Because each unmapped current density $j_\parallel$ in the observed local J-V
+  relation (bottom panel, Figure~\ref{ch6:Fig7}) is calculated over all pitch
+  angles outside the anti-earthward loss cone, it is consequently subject to
+  much greater uncertainty than the counterpart mapped current density
+  $j_{\parallel,i}$ (bottom panel, Figure~\ref{ch6:Fig3}), which is calculated
+  over all pitch angles within the earthward loss cone.
+  
+  The increased uncertainty is responsible for the broad region in
+  $(\kappa, R_B)$ parameter space $\{ \kappa, R_B : \kappa > 2.4$; $R_B > 50 \}$
+  over which reduced chi-squared values are low
+  ($\chi_{\mathrm{red}}^2 \simeq 1$) compared to those shown in the top panel of
+  Figure~\ref{ch6:Fig3}, since (\ref{ch6:eqChi2red}) shows that
+  $\chi^2_{\mathrm{red}} (\kappa, R_B)$ decreases with increasing uncertainty of
+  each calculated current density.
+
+  The results of local J-V analysis for orbit 1843, shown in
+  Figure~\ref{ch6:Fig8}, are qualitatively highly similar to the results of
+  local J-V analysis for orbit 1773 that we have just presented. A source of
+  difficulty for understanding the results of a local J-V analysis of both
+  orbits is that the current density moments are subject to much higher
+  uncertainty than the counterpart J-V analyses presented in preceding
+  sections. It is also uncertain whether the observational J-V pairs derived
+  from a local J-V analysis should be theoretically interpreted using J-V
+  relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}). In summary, local J-V
+  analysis yields little insight into the main questions posed in this chapter
+  regarding the degree to which magnetospheric source populations are nonthermal
+  and the altitude of the source region.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{Discussion and Conclusions}
@@ -1038,8 +1054,8 @@
   former case we conclude that the evidence is in favor of a highly nonthermal
   source with $\kappa < 1.7$ that is near or above 4.7~$R_E$. In the latter case
   we conclude that the balance of the evidence is in favor of a source that is
-  nonthermal (though not as extreme as in orbit 1773) with $\kappa \simeq 2$, at
-  an altitude not exceeding $\sim$2.5~$R_E$ and reportedly in connection with
+  nonthermal (though not as extremely as in orbit 1773) with $\kappa \simeq 2$,
+  at an altitude not exceeding $\sim$2.5~$R_E$ and reportedly in connection with
   AKR \citep{Ergun1998}.
 
   The results of this study suggest that a nonthermal source population may
@@ -1062,23 +1078,24 @@
   of the true source density, since (\ref{ch6:eqBarbosa}) indicates that $n_m$
   decreases for increasing $R_B$, or source altitude. Underestimation of the
   source density $n_m$ therefore leads to underestimation of the true mirror
-  ratio $R_B$ in the J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}).
+  ratio $R_B$ in J-V relations (\ref{ch6:eqKnight}) and (\ref{ch6:eqDors}).
 
-  Underestimation of $R_B$ in the analysis of orbit 1773 indicates that the local
-  depression in $\chi^2_{red} (\kappa, R_B)$ for 4~$\lesssim R_B \lesssim$~9 and
-  $\kappa gtrsim$~1.8 that is visible in the top panel of Figure~\ref{ch6:Fig3}
-  in reality lies between $R_B$ values that are greater than those between which
-  the depression appears, and therefore that our conclusion that a thermal
-  source is marginally inconsistent with the thermal mirror ratio $R_{B,T} = 9$ 
-  is unwarranted.
+  Underestimation of $R_B$ in the analysis of orbit 1773 indicates that the
+  local depression in $\chi^2_{\mathrm{red}} (\kappa, R_B)$ for
+  4~$\lesssim R_B \lesssim$~9 and $\kappa \gtrsim$~1.8 that is visible in the top
+  panel of Figure~\ref{ch6:Fig3} in reality lies between $R_B$ values that are
+  greater than those between which the depression appears, and therefore that
+  our conclusion that a thermal source is marginally inconsistent with the
+  thermal mirror ratio $R_{B,T} = 9$ is unwarranted.
 
-  In our view, the crucial point is that $\kappa \leq$~1.6 for 50\% of the 12
-  best-fit kappa values estimated from observations during the 8-s period shown
-  in Figure~\ref{ch6:Fig1}c, which is consistent with the range
-  1.55~$\lesssim \kappa \lesssim$~1.6 over which $\chi^2_{red} (\kappa, R_B)$ is
-  lowest in the top panel of Figure~\ref{ch6:Fig3}. Here we emphasize that the
-  estimates of $\kappa$ in Figure~\ref{ch6:Fig1}c and Figure~\ref{ch6:Fig3} are
-  obtained via two distinct methodologies. 
+  In our view, the crucial point is that 1.54~$< \kappa \leq$~1.6 for 50\% of
+  the 12 best-fit kappa values estimated from observations during the 8-s period
+  shown in Figure~\ref{ch6:Fig1}c, which is consistent with the range
+  1.55~$\lesssim \kappa \lesssim$~1.6 over which
+  $\chi^2_{\mathrm{red}} (\kappa, R_B)$ is lowest in the top panel of
+  Figure~\ref{ch6:Fig3}. Here we emphasize that the estimates of $\kappa$ in
+  Figure~\ref{ch6:Fig1}c and Figure~\ref{ch6:Fig3} are obtained via two distinct
+  methodologies.
   
   Regarding the occurrence frequency of highly nonthermal populations, we have
   conducted a preliminary examination of previously reported FAST observations
