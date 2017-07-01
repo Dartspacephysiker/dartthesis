@@ -146,7 +146,9 @@
 \newcommand{\Alfically}{Alfv\'{e}nically }
 
 \newcommand{\fittedpagenoasp}[2] {\noindent \includegraphics[page=#2, width=\textwidth, height=\textheight]{#1} \vfill \newpage}
-\newcommand{\fittedpage}[2] {\noindent \includegraphics[page=#2, width=\textwidth, height=\textheight, keepaspectratio]{#1} \vfill \newpage}
+\newcommand{\fittedpage}[2] {\noindent \setlength{\footskip}{5pt} \includegraphics[page=#2, width=\textwidth, height=\textheight, keepaspectratio]{#1} \vfill \newpage}
+\newcommand{\fittedpageIMF}[2] {\noindent \setlength{\footskip}{30pt} \includegraphics[page=#2, width=\textwidth, height=\textheight, keepaspectratio]{#1} \vfill \newpage}
+
 %--- END NEW COMMANDS SECTION
 
 %--- CITATION ALIASES
@@ -183,6 +185,9 @@
 %       they will begin on a new page.
 
 \include{./pre/tex/front_matter}   % Front Matter: title, preface, abstract, etc.
+
+% Check footskip
+% My footskip is \the\footskip.
 
 % For printing big numbers
 \npthousandsep{ }

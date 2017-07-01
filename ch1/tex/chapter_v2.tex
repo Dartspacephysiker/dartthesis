@@ -23,8 +23,7 @@
     \begin{flushright}
       You have no responsibility to live up to what other people think you ought
       to accomplish. I have no responsibility to be like they expect me to
-      be. It's their mistake, not my failing.  \\{\small \emph{--- Se\~{n}or
-          Feynman} }
+      be. It's their mistake, not my failing. \\{\small \emph{--- Richard Feynman} }
     \end{flushright}
   \end{minipage}
 \end{flushright}
@@ -32,6 +31,9 @@
 % ---END INSPIRATIONAL QUOTE
 
 \section{A word before things pick up}
+
+% Check footskip
+% My footskip is \the\footskip. (Prints as "My footskip is 30.0pt.")
 
 If the pursuit of knowledge fills the soul with joy, then the
 communication of it brings the soul to overflowing.\footnote{We pass
@@ -141,21 +143,21 @@ causes the air pressure to pulsate\footnote{In the lingo, a sound wave is what
   is known as a \emph{compressional mode}. As we'll see later on, some fluids
   also support \emph{transverse modes}.} at a frequency of about 82~Hz, and
 those pulsations travel to your ear and everywhere else. When you hear it, it is
-knocking at your eardrum 82 times each second: $f = $~82~Hz.  Well, suppose
+knocking at your eardrum 82 times each second: $f = $~82~Hz. Well, suppose
 $v_s =$~340~m/s---a pretty good answer by cereal box standards---the wavelength
 $\lambda$ of the sound wave carrying that low E is 4~m, which is about the
-length of my 1993 Buick Century Special. What if we ascend in pitch to the
-next string on guitar, the A string?  $f = $~110~Hz, and according to
-equation~(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m---about the distance from the
-ground to the net of a basketball hoop.
+length of my 1993 Buick Century Special. What if we ascend in pitch to the next
+string on guitar, the A string?  $f = $~110~Hz, and according to
+(\ref{ch1:eqvs}), $\lambda \simeq$~3.1~m---about the distance from the ground to
+the net of a basketball hoop.
 
 You get the picture: if you start ascending the E major scale on your guitar so
 that the pitch of each note steadily increases, nature has informed us that the
 wavelength of the sound wave carrying each note you play gets shorter and
-shorter so that equation~(\ref{ch1:eqvs}) is always true---which is to say that
-sound waves always propagate at the speed of sound.\footnote{Except when they
-  don't, but we'll not rove in this direction because we have other destinations
-  in mind.}
+shorter so that (\ref{ch1:eqvs}) is always true---which is to say that sound
+waves always propagate at the speed of sound.\footnote{Except when they don't,
+  but we'll not rove in this direction because we have other destinations in
+  mind.}
 
 Why are we talking about this? Because there's an important concept illustrated
 here, what some of us laboratory-bound types call a \emph{dispersion relation}
@@ -178,8 +180,8 @@ represent a gross imbalance to the mind of many a physicist.\footnote{The
 
 To put time and space on equal footing (admittedly only in terms of
 units\footnote{Even if our present aim to achieve equal footing for
-  Equation~(\ref{ch1:eqvs}) is base (we're just changing units, after all), the
-  spirit of our aim is lofty. To truly put time and space on equal footing, on
+  (\ref{ch1:eqvs}) is base (we're just changing units, after all), the spirit of
+  our aim is lofty. To truly put time and space on equal footing, on
   simultaneously quantum and relativistic scales, is among the highest and most
   sweeping challenges facing the last century or so of physics.}) let me
 introduce you the concept of \emph{spatial frequency}, the typical,\footnote{We
@@ -212,7 +214,7 @@ standard.\footnote{I'm altogether avoiding the subject of phase of a cycle; you
 at a regular interval (whether spatial or temporal) is a cycle, and the simplest
 and most universal example of a cycle is a circle---particularly a circle having
 a radius of 1 (the celebrated \emph{unit circle}), which has a circumference of
-$2 \pi$.  Adopting the unit circle as our ``standard cycle'' against which to
+$2 \pi$. Adopting the unit circle as our ``standard cycle'' against which to
 measure every other cycle, we compare both temporal and spatial frequencies
 against $2 \pi$, which is the numerical representation of our adopted
 standard.\footnote{At least to me, by comparing various types of cycles against
@@ -249,10 +251,10 @@ it''---something you already knew, cast in terms of spatial frequency.
 I'll give you one more example, which is shown in
 Figure~\ref{ch1:FigDesert}. There were clearly waves in the sand when the
 picture was taken, and they clearly weren't going anywhere anytime soon; by all
-appearances the temporal frequency of these waves was $f =$~0~Hz.  What about
+appearances the temporal frequency of these waves was $f =$~0~Hz. What about
 spatial frequency? My estimate is that the average distance between wave crests,
 or the average wavelength $\lambda =$~10~cm (about 4~inches), which is
-equivalent to $k =$~$\frac{\pi}{5}$~rad/cm.  If you pay attention to clouds in
+equivalent to $k =$~$\frac{\pi}{5}$~rad/cm. If you pay attention to clouds in
 the sky, it won't be long before you're rewarded with a sighting of spatially
 periodic structures in the clouds.
 
@@ -260,10 +262,14 @@ periodic structures in the clouds.
 
 \begin{figure}
   \centering
-  \noindent\includegraphics[width=0.9\textwidth]{./ch1/figs/Shaybah-Wavy-Sand-Dunes.jpg}
-  \caption[Desert waves]{Waves in desert sand that, unlike ocean waves (for
-    example), are \emph{fixed} in time and therefore have a temporal frequency of
-    zero! Their spatial frequency is not zero, however.}
+  % \noindent\includegraphics[width=0.9\textwidth]{./ch1/figs/Shaybah-Wavy-Sand-Dunes.jpg}
+  \noindent\includegraphics[width=0.9\textwidth]{./ch1/figs/EugenKempf.jpg}
+  \caption[Desert waves (\copyright E.K. Kempf, Universit\"{a}t zu
+  K\"{o}ln)]{Waves in desert sand that, unlike ocean waves (for example), are
+    \emph{fixed} in time and therefore have a temporal frequency of zero! Their
+    spatial frequency is not zero, however. \copyright Eugen Karl Kempf,
+    Universit\"{a}t zu K\"{o}ln (used with permission under Creative Commons
+    Attribution-Share Alike 3.0 Unported License).}
   \label{ch1:FigDesert}
 \end{figure}
 
@@ -289,7 +295,7 @@ into (\ref{ch1:eqvs}), I get
   \lambda f = \Big ( \dfrac{\cancel{2 \pi}}{k} \Big ) \Big ( \dfrac{\omega}{\cancel{2 \pi}} \Big ) = \dfrac{\omega}{k} = v_s.
 \end{equation}
 The two rightmost expressions, $\omega / k = v_s$, are indeed
-satisfying. Equation (\ref{ch1:eqvomegak}) would make any physicist who deals with
+satisfying. (\ref{ch1:eqvomegak}) would make any physicist who deals with
 continuous matter\footnote{This includes physicists working in hydrodynamics,
   tectonics, solid state and condensed matter, plasma, and statistical
   mechanics, to name a few.} feel more or less at home.
@@ -301,7 +307,7 @@ Besides talking about the existence of the speed of sound and fiddling with
 definitions, there's another question we might ask: How did the air decide to
 pick $v_s$ as the ``right speed'' for sound waves to travel? Why not the speed
 of light, $c$? Why not my Buick's top speed, 80~mph ($\sim$129~kph)? If I hadn't
-skipped the details that lead to equation (\ref{ch1:eqvs}), we would have seen
+skipped the details that lead to (\ref{ch1:eqvs}), we would have seen
 that nature picks $v_s$ based on the air temperature $T$ and the mass of
 constituent molecules\footnote{We'll keep things simple and say the
   \emph{average} mass of a molecule in the air you're breathing. Poke around in
@@ -333,7 +339,7 @@ sound waves. On the other hand as $m$ increases, $v_s$ decreases.
 
 What to conclude? That the properties of a system determine how (or perhaps
 whether) it resonates. Stated in alternate fashion, \emph{the system properties
-  determine the dispersion relation}.  As another example, if you pluck a guitar
+  determine the dispersion relation}. As another example, if you pluck a guitar
 string it will pick a single frequency (and probably harmonics) at which to
 resonate based on the string tension as well as how thick and how long the
 string is.\footnote{Look up standing waves on a string. It's a classic in
@@ -352,11 +358,11 @@ human hearing,\footnote{My own unfounded speculation is that humans must have
   and certainly hear better. To this extent, the famous theory of the survival
   of the fittest does not seem to me to be the only viewpoint from which to
   explain the progress of strengthening of [\dots] a race.''} and much more. But
-equations (\ref{ch1:eqvomegak}) and (\ref{ch1:eqvsreal}) say that no matter how
+(\ref{ch1:eqvomegak}) and (\ref{ch1:eqvsreal}) say that no matter how
 you slice it, the waves move at the constant speed $v_s$.
 
 It doesn't have to be so simple, you know. Instead of
-equation~(\ref{ch1:eqvsreal}) I could turn up the heat in a
+(\ref{ch1:eqvsreal}) I could turn up the heat in a
 generalized\footnote{In physics speak, the word ``generalized'' signals to all
   physicists in the area that the ideas are about to become far-reaching, or
   impossible to comprehend, or worse, descend into quackery. It's a word that
@@ -368,12 +374,12 @@ something like
 \end{equation}
 which is wonderfully vague. It looks meaningless, doesn't it? But no---it's
 telling you that the ``the speed of sound is related to air temperature and the
-mass of an air molecule,'' just like equation~(\ref{ch1:eqvsreal}). The
+mass of an air molecule,'' just like (\ref{ch1:eqvsreal}). The
 difference is that (\ref{ch1:eqvsgen}) hasn't bothered to specify the
 relationship between system variables and the speed of sound, and instead only
 states that a relationship exists.
 
-Why? For all its vagueness equation~(\ref{ch1:eqvsgen}) buys us power to dream a
+Why? For all its vagueness (\ref{ch1:eqvsgen}) buys us power to dream a
 little. Suppose you and I are investigating some exotic fluid---we'll pretend
 for kicks that it behaves sort of like a gas, so that it can be described by
 quantities like temperature and particle mass. Let's further pretend that this
@@ -390,7 +396,7 @@ magnetic field into itself\footnote{Within our solar system, the ``frozen
   magnetic fields into itself'' idea.}  and conduct electrical currents.
 
 So what might the dispersion relation, the ``updated'' version of
-equation~(\ref{ch1:eqvsgen}), look like for this ungodly
+(\ref{ch1:eqvsgen}), look like for this ungodly
 ``magnetohydrodynamic,''\footnote{It might surprise you that at the healthy
   length of eight syllables, this is a word that gets used regularly in plasma
   physics.} or MHD, fluid? Back in 1942 Hannes \Alf proposed
@@ -428,7 +434,7 @@ ever called it that), $B$ is the strength of the background magnetic
 field,\footnote{When physicists talk about a ``background'' element of their
   storyboard, they usually mean that that element is changing slowly enough
   compared to whatever they want to investigate that it makes more sense to
-  treat the element as static in time. For equation (\ref{ch1:eqAlf}), \Alf was
+  treat the element as static in time. For (\ref{ch1:eqAlf}), \Alf was
   assuming the presence of a background (or static) magnetic field.} and $m_i$
 and $n$ are the mass and number density of the ions that make up the fluid.
 
@@ -440,7 +446,7 @@ density.
 
 I recognize the short answers probably fall short of helpful, so let's expand:
 First, we only care about the ion mass $m_i$ (and ignore the electron mass,
-$m_e$) in equation (\ref{ch1:eqAlf}) because as you may know, even the smallest
+$m_e$) in (\ref{ch1:eqAlf}) because as you may know, even the smallest
 ion\footnote{Naked hydrogen, which is just a proton.} outweighs an electron by a
 factor of almost two thousand.\footnote{To be a bit more exact the
   proton-to-electron mass ratio is \numprint{1836.15267389}(17), according to
@@ -531,9 +537,9 @@ $ \omega / k = $(some speed). You should be aware of something else: \Alf
 obtained the result (\ref{ch1:eqAlf}) by assuming that there \emph{is} a fluid
 (translation: $n >$~0) whose constituent particles are not massless
 (translation: $m >$~0) and that a magnetic field $B$ exists in the fluid. As
-soon as we start two-timing on equation (\ref{ch1:eqAlf}) and telling it that
+soon as we start two-timing on (\ref{ch1:eqAlf}) and telling it that
 $B =$~0, or that $n =$~0 or $m =$~0, violating the assumptions that brought it
-into being, equation (\ref{ch1:eqAlf}) seeks to repay the favor by helpfully
+into being, (\ref{ch1:eqAlf}) seeks to repay the favor by helpfully
 informing you either that $v_A =$~0 or that $v_A =$~(nonsense). Give it a shot:
 plug $B =$~0 into (\ref{ch1:eqAlf}). See? $v_A =$~ 0.\footnote{This result makes
   sense: No magnetic field (translation: $B =$~0) means the \Alf speed
@@ -718,18 +724,18 @@ the outset. Here is the goal:
   \dfrac{\omega}{k_\parallel} = \dfrac{v_A}{ \sqrt{1 + k_\perp^2 \lambda_e^2 }}
 \end{equation}
 
-Not bad as I made it sound, right? Equation (\ref{ch1:eqIAW}) is the dispersion
-relation for---guess what?---\emph{dispersive} \Alf waves, and more particularly
-\emph{inertial \Alf waves} (I'll refer to them as IAWs),\footnote{This is just
-  one of the flavors that dispersive \Alf waves come in. If you aren't satisfied
-  with merely walking the beaten path and tend to prefer craggier climbs and
-  more majestic views, you might follow \citeauthor{Lysak1996}'s [1996]
-  \emph{generalized}(!) approach to dispersive \Alf waves. The bonus vista is
-  discussion of imaginary terms for wave growth and damping.} in which you
-immediately recognize the definition of the \Alf speed $v_A$ given in
-(\ref{ch1:eqAlf}).  But oh---what's that $\perp$ doing, dangling off $k$ on the
-right-hand side of (\ref{ch1:eqIAW})?  I use it to denote the wave number that
-is \emph{perpendicular} to the magnetic field line.
+Not as bad as I made it sound, right? (\ref{ch1:eqIAW}) is the
+dispersion relation for---guess what?---\emph{dispersive} \Alf waves, and more
+particularly \emph{inertial \Alf waves} (I'll refer to them as
+IAWs),\footnote{This is just one of the flavors that dispersive \Alf waves come
+  in. If you aren't satisfied with merely walking the beaten path and tend to
+  prefer craggier climbs and more majestic views, you might follow
+  \citeauthor{Lysak1996}'s [1996] \emph{generalized}(!) approach to dispersive
+  \Alf waves. The bonus vista is discussion of imaginary terms for wave growth
+  and damping.} in which you immediately recognize the definition of the \Alf
+speed $v_A$ given in (\ref{ch1:eqAlf}). But oh---what's that $\perp$ doing,
+dangling off $k$ on the right-hand side of (\ref{ch1:eqIAW})?  I use it to
+denote the wave number that is \emph{perpendicular} to the magnetic field line.
 
 I hear you saying, ``But, but---'' I know. I said that \Alf waves like to
 propagate \emph{along} field lines, not across them. In the spirit of
@@ -823,7 +829,7 @@ Now, consider the \emph{nonlinear quantity}\footnote{For the very special, very
   itself. The reason for the name is that the general equation of a line is
   restricted to the first power of $a$:
   $y(a) = \sum_i^{n=1} \alpha_i a^i = \alpha_0 + \alpha_1 a$. Otherwise, for
-  $n > 1$, the relationship between $y(a)$ and $a$ is nonlinear.  }
+  $n > 1$, the relationship between $y(a)$ and $a$ is nonlinear.}
 $a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate $a^2$ again in a similar
 fashion, only this time we'll use $a = a_o + \tilde a$:
 \begin{equation*}
@@ -837,7 +843,7 @@ involves $\tilde a$ to the zeroth power: $\tilde a^0 =$~1. The term
 $2 a_o \tilde a$ is first order, or linear, in $\tilde a$ because it involves
 $\tilde a$ to the first power: $\tilde a^1 =\tilde a$. The term $\tilde a^2$ is
 second order, or quadratic, in $\tilde a$ because it involves $\tilde a$ to
-the second power.  
+the second power.
 
 Question: What is the relative contribution of each of the three terms $a_o^2$,
 $2 a_o \tilde a$, and $\tilde a^2$ to the full value, $a^2$?
@@ -862,7 +868,7 @@ are really small compared to the zeroth- and first-order terms.
 This, then, is the process of linearization: 
 \begin{enumerate}
 \item Separate each variable into a \emph{background value} and a
-  \emph{perturbation variable}.  (E.g., variables $a$ and $b$ become
+  \emph{perturbation variable}. (E.g., variables $a$ and $b$ become
   $a = a_o + \tilde a$ and $b = b_o + \tilde b$.)
 \item Insert the expression that divides each variable into a background value
   and a perturbation variable into the equation(s) under scrutiny, and perform
@@ -1661,7 +1667,7 @@ at $\omega_{pe}$---that's the natural frequency of oscillations for the plasma,
 you see---and instead of asking what the plasma is going to do with a particular
 frequency, instead you can ask what the plasma is going to do with a particular
 \emph{wavelength}, or rather a particular perpendicular wave number $k_\perp$:
-$J ( k_\perp ) = J_s \mathrm{exp} ( - / k_\perp \lambda_e )$.  See? The current
+$J ( k_\perp ) = J_s \mathrm{exp} ( - / k_\perp \lambda_e )$. See? The current
 density associated with an IAW is as good as dead in a plasma if $k_\perp
 \lambda_e \ll 1$! But never mind my musings, talk to \citet{Morales1994} if you
 want the skinny (depth). Here's a snippet from their abstract to get you
@@ -1781,33 +1787,30 @@ horizontal black strip in the pitch-angle spectrogram? That's telling
 you these puppies (if I may be permitted the expression) are coming in
 hot.
 
-Take a look at the $y$ axis to get a sense of the range of
-angles. Right: they're all within about 30$^\circ$ of 0$^\circ$. They
-are mostly field-aligned. And the way to make a pitch-angle
-spectrogram is to pick a pitch angle (maybe you could start by looking
-at 0$^\circ$, straight down the magnetic field line), sum the
-``filtered'' electron energy fluxes to get $J_E$\footnote{This should
-  really be $\frac{dJ_E}{dE}$, but I'm afraid the return on investment
-  (of \emph{your} time, not mine!) is too low to bother explaining it
-  here. I'm telling you, see what \citet{Bruno2013} have to
-  say. They'll even tell you about those atrocious units you see on
-  the right-hand side of the lower panel, ``eV/cm$^2$-s-sr-eV.''} (use
-equation \ref{ch1:eqeFlux}), pick a new pitch angle and again
-calculate $J_E$, so on and so forth until you've calculated $J_E$ at
-each pitch angle. Now, repeat the entire process over and over again
-at a regular time interval and \emph{plot those data.} Bam!
-Pitch-angle spectrogram.
+Take a look at the $y$ axis to get a sense of the range of angles. Right:
+they're all within about 30$^\circ$ of 0$^\circ$. They are mostly
+field-aligned. And the way to make a pitch-angle spectrogram is to pick a pitch
+angle (maybe you could start by looking at 0$^\circ$, straight down the magnetic
+field line), sum the ``filtered'' electron energy fluxes to get
+$J_E$\footnote{This should really be $\frac{dJ_E}{dE}$, but I'm afraid the
+  return on investment (of \emph{your} time, not mine!) is too low to bother
+  explaining it here. I'm telling you, see what \citet{Bruno2013} have to
+  say. They'll even tell you about those atrocious units you see on the
+  right-hand side of the lower panel, ``eV/cm$^2$-s-sr-eV.''} using
+(\ref{ch1:eqeFlux}), pick a new pitch angle and again calculate $J_E$, so on and
+so forth until you've calculated $J_E$ at each pitch angle. Now, repeat the
+entire process over and over again at a regular time interval and \emph{plot
+  those data.} Bam!  Pitch-angle spectrogram.
 
-Let me back up for a second. By combining this business of pitch
-angles with our discussion of ``filtered'' measurements of electron
-energy flux, the way we did in the last paragraph, you are not far
-from what we actually do with particle detectors on rockets and
-satellites. The goal of these detectors is to measure \emph{how many
-  particles} (electrons, in our case) at \emph{some pitch angle} and
-over \emph{some range of energies}. If you had made these types of
-calculations for the electrons hanging out at $\sim$2700~km on Feb~2,
-1997 somewhere on the nightside of the earth, and had decided to turn
-those calculations into spectrograms, you might get something like
+Let me back up for a second. By combining this business of pitch angles with our
+discussion of ``filtered'' measurements of electron energy flux, the way we did
+in the last paragraph, you are not far from what we actually do with particle
+detectors on rockets and satellites. The goal of these detectors is to measure
+\emph{how many particles} (electrons, in our case) at \emph{some pitch angle}
+and over \emph{some range of energies}. If you had made these types of
+calculations for the electrons hanging out at $\sim$2700~km on Feb~2, 1997
+somewhere on the nightside of the earth, and had decided to turn those
+calculations into spectrograms, you might get something like
 Figure~\ref{ch1:FigAlfElec} depending on where exactly you were.
 
 % ---------------- FIGURE
