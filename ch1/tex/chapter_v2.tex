@@ -41,7 +41,7 @@ communication of it brings the soul to overflowing.\footnote{We pass
   respectable science has evolved into bloodsport.} Science worth its
 mettle and of certifiable vintage will be steeped in a laconic grammar
 befitting pursuit of that brand of truth first minted by Bacon, and
-much later, by Popper's inveterate philosophy, turned to diamond:
+much later, by the philosphical alchemy of Popper, turned to diamond:
 careful, measured, and repeatable observation, followed by deduction
 and falsifiable prediction, corrected for faulty intuition and
 attended to with utter impartiality---or at least a display of it
@@ -427,7 +427,7 @@ nailed down an explicit dispersion relation\footnote{Some dust-bunny details are
   related to it.)} comparable to (\ref{ch1:eqvsreal}):
 \begin{equation}
   \label{ch1:eqAlf}
-  \dfrac{\omega}{k_\parallel} = v_A \equiv \frac{B}{\sqrt{\mu_o m_i n}},
+  \dfrac{\omega}{k_\parallel} = v_A \equiv \frac{B}{\sqrt{\mu_0 m_i n}},
 \end{equation}
 where $v_A$ is the eponymous and rather famous \textsl{\Alf speed} (I doubt \Alf
 ever called it that), $B$ is the strength of the background magnetic
@@ -551,7 +551,7 @@ $v_A =$~(nonsense).\footnote{Instead of just writing the situation off as
   approached the speed of light, in which case things get relativistic---you
   know, \textit{\`{a} la} Einstein---in which case \citet{Gedalin1993} has
   reported that the dispersion relation (\ref{ch1:eqAlf}) is rather expressed
-  $\omega / k = c \sqrt{B^2/\mu_o / (B^2/\mu_o + \epsilon + P)}$. (You'll need
+  $\omega / k = c \sqrt{B^2/\mu_0 / (B^2/\mu_0 + \epsilon + P)}$. (You'll need
   to visit \citeauthor{Gedalin1993}'s [1993] treatise if you want to know more;
   I mention it here to give you the flavor of other
   possibilities.)}% \footnote{Siri has explained a form of this phenomenon thus:
@@ -563,7 +563,7 @@ $v_A =$~(nonsense).\footnote{Instead of just writing the situation off as
   % that the \Alf speed approached the speed of light, in which case
   % \citet{Gedalin1993} has reported that the dispersion relation
   % (\ref{ch1:eqAlf}) is rather
-  % $\omega / k = c \sqrt{B^2/\mu_o / (B^2/\mu_o + \epsilon + P)}$. (Gonna have to
+  % $\omega / k = c \sqrt{B^2/\mu_0 / (B^2/\mu_0 + \epsilon + P)}$. (Gonna have to
   % visit \citeauthor{Gedalin1993}'s [1993] treatise if you want to know more.)}
 
 Finally, to bring you up to speed, there is a mountain of
@@ -799,8 +799,8 @@ linearization arises. I will introduce you by way of example.
 
 Consider the nth-degree polynomial
 \begin{equation*}
-  % (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
-  A_n = \sum\limits_i^n c_n x^n = c_o + c_1 x^1 + c_2 x^2 + \dots + c_n x^n,
+  % (a_0 + \tilde a)^2 = a_0^2 + 2 a_0 \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  A_n = \sum\limits_i^n c_n x^n = c_0 + c_1 x^1 + c_2 x^2 + \dots + c_n x^n,
 \end{equation*}
 where the $i$th term in the polynomial has a constant coefficient $c_i$. Some of
 the orders have special names that you would recognize. For example, the
@@ -814,16 +814,16 @@ letting your wheels turn about how it might relate to linearization. In the
 meantime, let's continue forward.
 
 Here's a separate, but ultimately related idea: Take two numbers like
-$a = 1.05$, and $a_o = 1$. How much does $a$ differ from $a_o$?
-$a - a_o =$~0.05, or equivalently stated, $a$ is 5\% greater than $a_o$. The
+$a = 1.05$, and $a_0 = 1$. How much does $a$ differ from $a_0$?
+$a - a_0 =$~0.05, or equivalently stated, $a$ is 5\% greater than $a_0$. The
 difference isn't huge, but it's not exactly tiny either. I define this
-not-huge-but-not-tiny number as $ \tilde a \equiv a - a_o =$~0.05. For the sake
-of simplifying the discussion I'll call $a_o$ a \emph{background value}, and
-$\tilde a$ a \emph{perturbation value} that is somewhat small relative to $a_o$.
+not-huge-but-not-tiny number as $ \tilde a \equiv a - a_0 =$~0.05. For the sake
+of simplifying the discussion I'll call $a_0$ a \emph{background value}, and
+$\tilde a$ a \emph{perturbation value} that is somewhat small relative to $a_0$.
 
 % Now, consider the number $b = 2050$. I'll separate it in the same manner that I
-% did $a$: a background value, $b_o =$~2000, and a perturbation value, $\tilde b
-% \equiv b - b_o =$~50.
+% did $a$: a background value, $b_0 =$~2000, and a perturbation value, $\tilde b
+% \equiv b - b_0 =$~50.
 Now, consider the \emph{nonlinear quantity}\footnote{For the very special, very
   particular case $n =$~1, the quantity $a^n = a^1 = a$ is \emph{linear}, or $a$
   itself. The reason for the name is that the general equation of a line is
@@ -831,34 +831,34 @@ Now, consider the \emph{nonlinear quantity}\footnote{For the very special, very
   $y(a) = \sum_i^{n=1} \alpha_i a^i = \alpha_0 + \alpha_1 a$. Otherwise, for
   $n > 1$, the relationship between $y(a)$ and $a$ is nonlinear.}
 $a^2 = a a = (1.05)(1.05) = 1.1025$. Let's calculate $a^2$ again in a similar
-fashion, only this time we'll use $a = a_o + \tilde a$:
+fashion, only this time we'll use $a = a_0 + \tilde a$:
 \begin{equation*}
-  % (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
-  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + {\tilde a}^2 = (1)^2 + 2(1)(0.05) + (0.05)^2 = 1 + 0.1 + 0.0025 = 1.1025.
+  % (a_0 + \tilde a)^2 = a_0^2 + 2 a_0 \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  (a_0 + \tilde a)^2 = a_0^2 + 2 a_0 \tilde a + {\tilde a}^2 = (1)^2 + 2(1)(0.05) + (0.05)^2 = 1 + 0.1 + 0.0025 = 1.1025.
 \end{equation*}
 If we compare this equation to our polynomial and apply the concept of ordering
 to the perturbation value $\tilde a$, the term that doesn't have anything to do
-with $\tilde a$ at all, $a_o^2$, is the zeroth-order term $\tilde a$ because it
+with $\tilde a$ at all, $a_0^2$, is the zeroth-order term $\tilde a$ because it
 involves $\tilde a$ to the zeroth power: $\tilde a^0 =$~1. The term
-$2 a_o \tilde a$ is first order, or linear, in $\tilde a$ because it involves
+$2 a_0 \tilde a$ is first order, or linear, in $\tilde a$ because it involves
 $\tilde a$ to the first power: $\tilde a^1 =\tilde a$. The term $\tilde a^2$ is
 second order, or quadratic, in $\tilde a$ because it involves $\tilde a$ to
 the second power.
 
-Question: What is the relative contribution of each of the three terms $a_o^2$,
-$2 a_o \tilde a$, and $\tilde a^2$ to the full value, $a^2$?
+Question: What is the relative contribution of each of the three terms $a_0^2$,
+$2 a_0 \tilde a$, and $\tilde a^2$ to the full value, $a^2$?
 \begin{itemize}
-\item \makebox[6.5cm]{$ a_o^2 =$~1} (0th order in $\tilde a$),
-\item \makebox[6.5cm]{$ 2 a_o \tilde a = 0.1 $ } (first order in $\tilde a$),
+\item \makebox[6.5cm]{$ a_0^2 =$~1} (0th order in $\tilde a$),
+\item \makebox[6.5cm]{$ 2 a_0 \tilde a = 0.1 $ } (first order in $\tilde a$),
 \item \makebox[6.5cm]{$ \tilde a^2 = 0.0025 $} (second order in $\tilde a$).
 \end{itemize}
 
 Can you see that the zeroth- and first-order terms are the most substantial? If
 we neglect the second-order term and only keep terms through the first degree in
-the expression for $a^2 = (a_o + \tilde a)^2$ above---that is, if we
+the expression for $a^2 = (a_0 + \tilde a)^2$ above---that is, if we
 \emph{linearize} the expression---we would get
 \begin{equation*}
-  (a_o + \tilde a)^2 = a_o^2 + 2 a_o \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
+  (a_0 + \tilde a)^2 = a_0^2 + 2 a_0 \tilde a + \cancel{{\tilde a}^2} = (1)^2 + 2(1)(0.05) = 1 + 0.1 = 1.1 \approx 1.1025 = a^2.
 \end{equation*}
 The difference between the actual value $a^2$ and our approximation, which
 neglected $\tilde a^2$, is 0.0025---a measly 0.23\% of $a^2$. This fact is what
@@ -869,7 +869,7 @@ This, then, is the process of linearization:
 \begin{enumerate}
 \item Separate each variable into a \emph{background value} and a
   \emph{perturbation variable}. (E.g., variables $a$ and $b$ become
-  $a = a_o + \tilde a$ and $b = b_o + \tilde b$.)
+  $a = a_0 + \tilde a$ and $b = b_0 + \tilde b$.)
 \item Insert the expression that divides each variable into a background value
   and a perturbation variable into the equation(s) under scrutiny, and perform
   any necessary expansion so that each term can be ordered by degree in
@@ -886,9 +886,9 @@ kilometers is in the neighborhood of tens of thousands of nanotesla, whereas the
 magnitude of magnetic field fluctuations associated with IAWs are often more
 like tens or hundreds of nanotesla. It would make sense, then, to divide the
 variable $\mathbf{B}$ that represents the magnetic field into a background value
-$\mathbf{B}_o$ (the earth's magnetic field) and a perturbation variable
+$\mathbf{B}_0$ (the earth's magnetic field) and a perturbation variable
 $\mathbf{b}$ (IAW-associated magnetic field fluctuations):
-$\mathbf{B} = \mathbf{B}_o + \mathbf{b}$.
+$\mathbf{B} = \mathbf{B}_0 + \mathbf{b}$.
 
 A frequently arising benefit of linearization is that it reduces the complexity
 of many problems. On the other hand, there are many situations where
@@ -907,7 +907,7 @@ interested in, a subset of which I separate into a sum of a \emph{background
 \begin{itemize}
 \item \makebox[6.5cm]{$ n = n_0 + \tilde n $} (number density),
 \item \makebox[6.5cm]{$ \mathbf{v} = \cancel{\mathbf{v}_0} + \mathbf{\tilde v} $ } (velocity),
-\item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_o + \mathbf{b} = B_o \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
+\item \makebox[6.5cm]{$ \mathbf{B} = \mathbf{B}_0 + \mathbf{b} = B_0 \hat{z} + \langle b_x, b_y, b_z \rangle $} (magnetic field),
 \item \makebox[6.5cm]{$ \mathbf{E} = \langle E_x, 0, E_z \rangle $} (electric field).
 \end{itemize}
 \emph{Background values} have the ``o'' dangling off the front of them, and
@@ -920,9 +920,9 @@ I hope you noticed that I dropped $\mathbf{v}_0$. The reason I have done this is
 that $\mathbf{v}_0$ represents steady background motion of the plasma, which is
 exactly what we are \emph{not} interested in. We're interested in fluctuations
 related to plasma waves, you see. The reason that we couldn't neglect
-$\mathbf{B}_o$ is, for one thing, that the presence of a background magnetic
+$\mathbf{B}_0$ is, for one thing, that the presence of a background magnetic
 field is a necessary precondition for \Alf waves, both nondispersive and
-inertial! $\mathbf{B}_o$ is accordingly here to stay.
+inertial! $\mathbf{B}_0$ is accordingly here to stay.
 
 I also discarded any possibility of a $y$ component of the electric field by
 assuming $\mathbf{E}_y =$~0. Why? This one is motivated by observations of IAWs.
@@ -1172,7 +1172,7 @@ equations,\footnote{The four laws constituting Maxwell's equations---Gauss's
   not improper.}
 \begin{subequations}
   \begin{align} \grad \times \mathbf{E} &= - \dfrac{\partial \mathbf{b}}{\partial t}; \label{ch1:eqFar} \\
-    \grad \times \mathbf{b} &= \mu_o \mathbf{\tilde j} + \dfrac{1}{c^2} \dfrac{\partial \mathbf{E}}{\partial t}. \label{ch1:eqAmp}
+    \grad \times \mathbf{b} &= \mu_0 \mathbf{\tilde j} + \dfrac{1}{c^2} \dfrac{\partial \mathbf{E}}{\partial t}. \label{ch1:eqAmp}
   \end{align}
 \end{subequations}
 In contrast to (\ref{ch1:eqCont}) and (\ref{ch1:eqMom}), which I continue to
@@ -1180,7 +1180,7 @@ emphasize are \emph{not} laws of nature, (\ref{ch1:eqFar}) and (\ref{ch1:eqAmp})
 \emph{are} laws. As far as I know, they are genuinely immutable.% \footnote{Some
   % of you will note I've discarded Maxwell's famous addition to
   % (\ref{ch1:eqAmp}), the displace current
-  % $\mu_o \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$. We're assuming our
+  % $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$. We're assuming our
   % system evolves slowly enough that we can neglect it.}
 
 The first of these, (\ref{ch1:eqFar}) or Faraday's law, is telling you that
@@ -1201,7 +1201,7 @@ vicinity there is a corresponding magnetic field changing in time. The second,
 (\ref{ch1:eqAmp}) or Amp\`{e}re's law, is telling you that a magnetic field
 $\mathbf{b}$ with nonzero curl is the same as, and cannot be separated from,
 either a current density $\mathbf{\tilde j}$, or a time-varying electric field
-$\mathbf{E}$ (up to a constants of proportionality $\mu_o$ and $c^2$,
+$\mathbf{E}$ (up to a constants of proportionality $\mu_0$ and $c^2$,
 respectively), or some combination of both. Together, (\ref{ch1:eqFar}) and
 (\ref{ch1:eqAmp}) tell us how electric fields and magnetic fields evolve in
 time, and they are \emph{laws}.
@@ -1251,7 +1251,7 @@ are approximately linear or circular. (Another approach, given by
 that the system is, again, effectively two-dimensional. Yet another would be to
 go at it assuming a dipolar geometry, as do \citet{Lysak2013}. I'm not going
 those places, however, because I don't want us to waste time fussing with
-coordinate transformations and the details of cyclindrical- or dipolar-geometry
+coordinate transformations and the details of cylindrical- or dipolar-geometry
 versions of vector calculus operators.)
 
 So much for spatial variation. What to say about variation in time? I shouldn't
@@ -1298,7 +1298,7 @@ law,\footnote{What I'm about to do is an oft-performed maneuver that yields a
   \emph{wave equation} for electromagnetic waves (light).} I get
 \begin{equation} - \grad \times \grad \times \mathbf{E} = \grad^2 \mathbf{E} -
   \grad \Big ( \grad \cdot \mathbf{E} \Big ) = \grad^2 \mathbf{E} - q \grad
-  \cancel{\Big ( n_i - n_e \Big )} = \grad^2 \mathbf{E} = \mu_o \dfrac{\partial
+  \cancel{\Big ( n_i - n_e \Big )} = \grad^2 \mathbf{E} = \mu_0 \dfrac{\partial
     \mathbf{\tilde j}}{\partial t} + \dfrac{1}{c^2} \dfrac{\partial^2
     \mathbf{E}}{\partial t^2}.
 \end{equation} 
@@ -1306,14 +1306,14 @@ Now let me replace the current density $\mathbf{\tilde j}$ with
 $q ( \mathbf{\tilde v}_i - \mathbf{\tilde v}_e )$, replacing the expressions for
 velocity with the right-hand side of the momentum equation (\ref{ch1:eqMom}) for
 each species. I get
-\begin{equation} \grad^2 \mathbf{E} = \dfrac{q^2 n }{m_e \epsilon_o c^2} \Big [ \big (
+\begin{equation} \grad^2 \mathbf{E} = \dfrac{q^2 n }{m_e \epsilon_0 c^2} \Big [ \big (
   \dfrac{m_e}{m_i} + 1 \big ) \mathbf{E} + \big ( \dfrac{1}{m_i} \mathbf{v_i} +
   \dfrac{1}{m_e} \mathbf{v_e} \big ) \times \mathbf{B}_0 \Big ] + \dfrac{1}{c^2}
   \dfrac{\partial^2 \mathbf{E}}{\partial t^2}.
 \end{equation} 
 Here I used a famous relationship between the permeability of free space
-$\mu_o$, the permittivity of free space $\epsilon_o$, and the speed of light $c$
-to replace $mu_o$ with $1 / \epsilon_o c^2$. 
+$\mu_0$, the permittivity of free space $\epsilon_0$, and the speed of light $c$
+to replace $mu_0$ with $1 / \epsilon_0 c^2$. 
 
 Now I do something similar to linearization with this equation. Remember how I
 dropped all terms that were nonlinear in perturbation variables because they
@@ -1328,7 +1328,7 @@ zero). Here, take my pistol\footnote{A pencil \emph{is} a theorist's pistol,
   \big ) \times \mathbf{B}_0 \Big ] + \dfrac{1}{c^2} \dfrac{\partial^2
     \mathbf{E}}{\partial t^2},
 \end{equation} 
-where $\omega_{pe} = \frac{q^2 n}{m_e \epsilon_o}$ is a \emph{high-frequency}
+where $\omega_{pe} = \frac{q^2 n}{m_e \epsilon_0}$ is a \emph{high-frequency}
 plasma oscillation known as the plasma frequency. Nice!  Rearranging this
 expression in order to make what's happening a little more transparent, we finally get
 \begin{equation} \Big [ c^2 \grad^2 - \dfrac{\partial^2}{\partial t^2} -
@@ -1348,7 +1348,7 @@ just sketched how) the displacement current is negligible for low
 frequencies. For the rest of this derivation, I'm going to use Amp\`{e}re's law
 in the form
 \begin{equation}
-  \grad \times \mathbf{b} = \mu_o \mathbf{\tilde j}.
+  \grad \times \mathbf{b} = \mu_0 \mathbf{\tilde j}.
 \end{equation}
 
 % It is fair for me to assume that throughout the scenario I'm about to concoct,
@@ -1430,7 +1430,7 @@ and physics do the driving and we force our intuition to take the backseat.
 Next, why don't we take a look at the $x$ component of the momentum equation
 (\ref{ch1:eqMom})? It is
 \begin{equation} \label{ch1:eqMomx} \dfrac{\partial \tilde v_{x,\alpha}}{\partial t} =
-  \dfrac{q_\alpha}{m_\alpha} \Big ( E_x + \tilde v_{y,\alpha} B_o - \cancel{\tilde v_{z,\alpha} b_y}
+  \dfrac{q_\alpha}{m_\alpha} \Big ( E_x + \tilde v_{y,\alpha} B_0 - \cancel{\tilde v_{z,\alpha} b_y}
   \Big ) = \dfrac{q_\alpha}{m_\alpha} E_x \pm \omega_{c \alpha} \tilde v_{y,\alpha},
 \end{equation}
 where I am junking the $\tilde v_{z,\alpha} b_y$ term because it is nonlinear
@@ -1457,7 +1457,7 @@ and moving the term at far right to the left-hand side,
 I draw on my assumption that only low frequencies are of interest so that
 $\partial^2 / \partial t^2 + \omega_{c i}^2~\approx~\omega_{c i}^2$. Thus
 \begin{equation} \label{ch1:eqvxEx}
-  \tilde v_{x,\alpha} = \pm \dfrac{1}{\omega_{c \alpha} B_o}\dfrac{\partial
+  \tilde v_{x,\alpha} = \pm \dfrac{1}{\omega_{c \alpha} B_0}\dfrac{\partial
     E_x}{\partial t}.
 \end{equation}
 
@@ -1469,7 +1469,7 @@ Only the $z$ component of (\ref{ch1:eqMom}) remains to be examined. It's a cakew
 \begin{equation} \label{ch1:eqvzEz} \dfrac{\partial \tilde
     v_{z,\alpha}}{\partial t} = \dfrac{q_\alpha}{m_\alpha} \Big ( E_z +
   \cancel{\tilde v_{x,\alpha} b_y} - \cancel{\tilde v_{y,\alpha} b_x} \Big ) =
-  \pm \dfrac{\omega_{c \alpha}}{B_o} E_z.
+  \pm \dfrac{\omega_{c \alpha}}{B_0} E_z.
 \end{equation}
 Baller, right? Now we have expressions relating $\tilde v_{x,\alpha}$ and
 $\tilde v_{z,\alpha}$ to $E_x$ and $E_z$, respectively. For my next trick, I'll
@@ -1477,7 +1477,7 @@ plug (\ref{ch1:eqvxEx}) and (\ref{ch1:eqvzEz}) into the appropriate components
 of $\mathbf{\tilde j}$,
 \begin{equation*} 
   \begin{alignedat}{4}
-    \tilde j_x                              &= q n_0 &\Big ( \tilde v_{x,i} - & \tilde v_{x,e} \Big ) = & \dfrac{n_0}{B_o^2} &\Big( m_i + m_e \Big) \dfrac{\partial E_x}{\partial t}; \\
+    \tilde j_x                              &= q n_0 &\Big ( \tilde v_{x,i} - & \tilde v_{x,e} \Big ) = & \dfrac{n_0}{B_0^2} &\Big( m_i + m_e \Big) \dfrac{\partial E_x}{\partial t}; \\
     \dfrac{\partial \tilde j_z}{\partial t} &= q n_0 \dfrac{\partial}{\partial t} &\Big ( \tilde v_{z,i} - & \tilde v_{z,e} \Big ) =& q^2 n_0 &\Big( \dfrac{1}{m_i} + \dfrac{1}{m_e} \Big) E_z. \\
   \end{alignedat}
 \end{equation*}
@@ -1486,7 +1486,7 @@ I just produced to try to make the combination $m_e/m_i$ appear, and drop terms
 of order $m_e / m_i$ (as I did above), I find
 \begin{equation} \label{ch1:eqDaddy}
   \begin{alignedat}{4}
-    \tilde j_x                              &= \dfrac{m_i n_0 }{B_o^2} \dfrac{\partial E_x}{\partial t}; \\
+    \tilde j_x                              &= \dfrac{m_i n_0 }{B_0^2} \dfrac{\partial E_x}{\partial t}; \\
     \dfrac{\partial \tilde j_z}{\partial t} &= \dfrac{q^2 n_0 }{m_e} E_z. \\
   \end{alignedat}
 \end{equation}
@@ -1512,11 +1512,11 @@ into (\ref{ch1:eqCont2}) gives the seemingly meaningless result
   % \begin{alignedat}{4}
     \dfrac{\partial^2}{\partial t \partial x} \Big( \tilde j_x \Big) + \dfrac{\partial}{\partial z}
     \Big( \dfrac{\partial \tilde j_z}{\partial t} \Big) = \dfrac{\partial^2}{\partial
-      t \partial x} \Big(\dfrac{m_i n_0 }{B_o^2}\dfrac{\partial E_x}{\partial t} \Big) +
+      t \partial x} \Big(\dfrac{m_i n_0 }{B_0^2}\dfrac{\partial E_x}{\partial t} \Big) +
     \dfrac{\partial}{\partial z} \Big( \dfrac{q^2 n_0}{m_e} E_z \Big) = 0.
   % \end{alignedat}
 \end{equation*}
-If I multiply the whole thing by $\mu_o c^2$ I get 
+If I multiply the whole thing by $\mu_0 c^2$ I get 
 \begin{equation} \label{ch1:eqMeaningless}
   \dfrac{c^2}{v_A^2}\dfrac{\partial^3 }{\partial t^2 \partial x} E_x + \dfrac{1}{\omega_{pe}}\dfrac{\partial}{\partial z} E_z = 0,
 \end{equation}
@@ -1540,11 +1540,11 @@ the expressions for $\tilde j_x$ and $\frac{\partial \tilde j_z}{\partial t}$ in
 (\ref{ch1:eqDaddy}), and the $x$ component of Amp\`{e}re's law. The left-hand
 side of the $x$ component of Amp\`{e}re's law is
 \begin{equation*}
-  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big )_x = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_o} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 E_x}{\partial z^2} - \dfrac{\partial^2 E_z}{\partial x \partial z},
+  \dfrac{\partial}{\partial t} \Big ( \grad \times \mathbf{B} \Big )_x = \dfrac{\partial}{\partial t} \Big ( \cancel{\dfrac{\partial}{\partial y} B_0} - \dfrac{\partial}{\partial z} b_y \Big ) = \dfrac{\partial}{\partial z} \Big ( - \dfrac{\partial b_y}{\partial t} \Big ) = \dfrac{\partial^2 E_x}{\partial z^2} - \dfrac{\partial^2 E_z}{\partial x \partial z},
 \end{equation*}
 while the right-hand side is 
 \begin{equation*}
-  \mu_o \dfrac{\partial}{\partial t} \tilde j_x = \mu_o \dfrac{\partial}{\partial t} \Big ( \dfrac{n_0 m_i}{B_o^2} \dfrac{\partial E_x}{\partial t} \Big ) = \mu_o \Big ( \dfrac{n_0 m_i}{B_o^2} \Big ) \dfrac{\partial^2 E_x}{\partial t^2} = \dfrac{1}{v_A^2} \dfrac{\partial^2 E_x}{\partial t^2}.
+  \mu_0 \dfrac{\partial}{\partial t} \tilde j_x = \mu_0 \dfrac{\partial}{\partial t} \Big ( \dfrac{n_0 m_i}{B_0^2} \dfrac{\partial E_x}{\partial t} \Big ) = \mu_0 \Big ( \dfrac{n_0 m_i}{B_0^2} \Big ) \dfrac{\partial^2 E_x}{\partial t^2} = \dfrac{1}{v_A^2} \dfrac{\partial^2 E_x}{\partial t^2}.
 \end{equation*}
 Equating each side, 
 \begin{equation} \label{ch1:eqMeaningless2} \dfrac{\partial^2 \tilde
@@ -1729,7 +1729,7 @@ flux through the page, but the \emph{contribution} made by electrons
   use, or utility, in sorting the electrons by energy? This information can tell
   us a lot about what is driving, or accelerating the electrons. In a word, it's
   knowing the difference between one bowling ball coming toward you at 100~mph
-  versus 100 bowling balls coming toward you at 1~mph. Rather distinct
+  and one hundred bowling balls coming toward you at 1~mph. Rather distinct
   scenarios, don't you think?} Here's an idea: You could slap an energy filter
 on the page---never mind where we got this little device, just imagine---so that
 we only count electrons with energies between, say, 100~eV and
